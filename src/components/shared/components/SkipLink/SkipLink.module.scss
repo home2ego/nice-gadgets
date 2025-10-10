@@ -1,0 +1,52 @@
+@use '../../../../styles/utils/index.scss' as utils;
+
+.skip {
+  &-content {
+    top: 7.5px;
+    left: 7.5px;
+    padding: 12px 6px;
+    border-radius: 4px;
+
+    @include utils.on-desktop {
+      top: 11.5px;
+      left: 11.5px;
+      padding: 16px 8px;
+    }
+  }
+
+  &-forward-slider,
+  &-back-slider,
+  &-forward-carousel,
+  &-back-carousel {
+    left: 0;
+    padding: 18px 6px;
+    border-radius: 4px;
+  }
+
+  &-forward-slider,
+  &-back-slider {
+    @include utils.on-tablet {
+      left: 64px;
+    }
+  }
+
+  &-forward-carousel,
+  &-back-carousel {
+    @include utils.on-tablet {
+      left: 16px;
+    }
+  }
+
+  &-forward-slider,
+  &-forward-carousel {
+    top: 16px;
+  }
+
+  &-back-slider {
+    bottom: 56px;
+  }
+
+  &-back-carousel {
+    bottom: 32px;
+  }
+}

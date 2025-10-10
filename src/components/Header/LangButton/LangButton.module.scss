@@ -1,0 +1,91 @@
+@use '../../../styles/utils/index.scss' as utils;
+
+.lang {
+  position: relative;
+
+  &__toggle {
+    display: inline-flex;
+    padding: 16px;
+    border-left: utils.$border-width solid var(--bd-color-primary);
+    outline-offset: -3px;
+
+    svg {
+      transform: translateZ(0);
+      opacity: 0.7;
+      transition:
+        opacity 0.18s,
+        scale 0.28s;
+    }
+
+    &[aria-expanded='true'] svg,
+    &:focus-visible svg {
+      opacity: 1;
+    }
+
+    &[aria-expanded='true'] svg:nth-child(2),
+    &:focus-visible svg:nth-child(2) {
+      scale: 1.25;
+    }
+
+    @include utils.on-desktop {
+      padding: 24px;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: 30;
+    top: utils.$mobile-navbar-hight;
+    left: 0;
+
+    padding-block: 12px;
+    border: utils.$border-width solid var(--bd-color-primary);
+
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--bg-color-primary);
+
+    transition: opacity 0.18s;
+
+    @include utils.on-desktop {
+      top: utils.$desktop-navbar-hight;
+    }
+  }
+
+  &__toggle[aria-expanded='true'] + &__menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.18s;
+  }
+
+  &__action {
+    display: flex;
+    column-gap: 4px;
+
+    width: 100%;
+    padding-block: 12px;
+    padding-inline: 22px;
+
+    outline-offset: -2px;
+
+    transition: color 0.28s;
+
+    img {
+      border-radius: 50%;
+    }
+
+    &:nth-child(1) {
+      margin-bottom: 12px;
+      border-bottom: utils.$border-width solid var(--bd-color-primary);
+    }
+
+    &[disabled] {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    &:not([disabled]):hover {
+      color: utils.$accent-color;
+    }
+  }
+}

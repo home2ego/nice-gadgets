@@ -1,0 +1,51 @@
+.title--xl {
+  font-size: clamp(32px, 5.4vw, 48px);
+  font-weight: 700;
+  line-height: clamp(41px, 6.92vw, 56px);
+  letter-spacing: -0.01em;
+}
+
+.title--lg {
+  font-size: clamp(22px, 3.71vw, 32px);
+  font-weight: 700;
+  line-height: clamp(31px, 5.23vw, 41px);
+  letter-spacing: -0.01em;
+}
+
+.title--md {
+  font-size: clamp(20px, 3.375vw, 22px);
+  font-weight: 700;
+  line-height: clamp(26px, 4.385vw, 31px);
+}
+
+.title--sm {
+  font-size: clamp(16px, 2.7vw, 20px);
+  font-weight: 600;
+  line-height: clamp(20px, 3.375vw, 26px);
+}
+
+.text--uppercase {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.text--btn {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.text--body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.text--sm {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+}

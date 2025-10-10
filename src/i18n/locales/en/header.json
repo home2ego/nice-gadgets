@@ -1,0 +1,11 @@
+{
+  "home": "Home",
+  "phones": "Phones",
+  "tablets": "Tablets",
+  "accessories": "Accessories",
+  "toggleAriaLabel": "Toggle navigation menu",
+  "favoriteAriaLabel": "View favorite products",
+  "cartAriaLabel": "View shopping cart",
+  "themeAriaLabel": "Dark mode",
+  "langAriaLabel": "Change language"
+}

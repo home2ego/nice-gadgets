@@ -1,0 +1,26 @@
+@font-face {
+  font-family: Mont;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Mont-Bold-subset.woff2') format('woff2');
+  unicode-range: U+00-7F;
+}
+
+@font-face {
+  font-family: Mont;
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Mont-SemiBold-subset.woff2') format('woff2');
+  unicode-range: U+00-7F;
+}
+
+@font-face {
+  font-family: Mont;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../../assets/fonts/Mont-Regular-subset.woff2') format('woff2');
+  unicode-range: U+00-7F;
+}

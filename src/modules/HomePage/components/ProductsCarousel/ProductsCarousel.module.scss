@@ -1,0 +1,165 @@
+@use "../../../../styles/utils/index.scss" as utils;
+
+.section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.prev,
+.next {
+  padding: 7px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.prev {
+  margin-right: 16px;
+}
+
+.prev.disabled,
+.next.disabled {
+  pointer-events: none;
+  border-color: var(--bd-color-primary);
+  background-color: transparent;
+
+  svg {
+    stroke: var(--icon-color);
+  }
+}
+
+.prev:not(.disabled),
+.next:not(.disabled) {
+  border-color: var(--bd-color-icon);
+  background-color: var(--bg-color-primary);
+
+  svg {
+    transform: translateZ(0);
+    opacity: 0.7;
+    transition: scale 0.28s, opacity 0.18s;
+  }
+}
+
+.prev:not(.disabled):hover svg,
+.next:not(.disabled):hover svg {
+  scale: 1.25;
+  opacity: 1;
+}
+
+.products-wrapper {
+  position: relative;
+}
+
+.products {
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  overflow-x: auto;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 16px;
+}
+
+.product {
+  display: grid;
+  grid-template-rows: auto 1fr repeat(4, auto);
+  row-gap: 8px;
+
+  width: clamp(210px, 40vw, 272px);
+  padding: 32px;
+  border: 1px solid var(--bd-color-secondary);
+
+  background-color: var(--bg-color-secondary);
+  outline-offset: -3px;
+
+  img {
+    transform-origin: bottom;
+
+    max-width: 100%;
+    height: clamp(128px, 25vw, 196px);
+
+    object-fit: contain;
+
+    transition: scale 0.28s;
+  }
+
+  &:hover img {
+    scale: 1.05;
+  }
+
+  &__prices {
+    display: flex;
+    column-gap: 8px;
+  }
+
+  &__full-price {
+    color: var(--text-color-secondary);
+    text-decoration: line-through;
+  }
+
+  &__line {
+    height: 1px;
+    background-color: var(--bd-color-primary);
+  }
+
+  &__details {
+    padding-block: 8px;
+  }
+
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__detail:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__subname {
+    color: var(--text-color-secondary);
+  }
+
+  &__controls {
+    display: flex;
+    column-gap: 8px;
+    justify-content: space-between;
+
+    button {
+      outline-offset: -1px;
+    }
+
+    button:nth-child(1) {
+      flex-grow: 1;
+
+      padding-block: 10px;
+
+      color: #fff;
+      text-align: center;
+
+      background-color: var(--accent-color);
+
+      transition: opacity 0.18s;
+    }
+
+    button:nth-child(2) {
+      padding: 12px;
+      border: 1px solid var(--bd-color-icon);
+      background-color: var(--bg-color-primary);
+    }
+
+    button:nth-child(2) svg {
+      transform: translateZ(0);
+      transition: opacity 0.18s, scale 0.28s;
+    }
+
+    button:nth-child(1):hover {
+      opacity: 0.8;
+    }
+
+    button:nth-child(2):hover svg {
+      scale: 1.05;
+      opacity: 0.8;
+    }
+  }
+}

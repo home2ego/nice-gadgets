@@ -1,0 +1,35 @@
+@use '../../styles/utils/index.scss' as utils;
+
+.header {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+
+  display: flex;
+  column-gap: clamp(16px, 2.12vw, 24px);
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: utils.$border-width solid var(--bd-color-primary);
+
+  background-color: var(--bg-nav);
+  -webkit-backdrop-filter: blur(8px); /* Safari support 9-17.6 */
+  backdrop-filter: blur(8px);
+
+  &__logo {
+    padding-inline: 16px;
+
+    @include utils.on-desktop {
+      padding-inline: 24px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+
+    @include utils.on-desktop {
+      flex-grow: 1;
+    }
+  }
+}

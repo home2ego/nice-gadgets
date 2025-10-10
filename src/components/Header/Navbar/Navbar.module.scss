@@ -1,0 +1,177 @@
+@use "../../../styles/utils/index.scss" as utils;
+
+.navbar {
+  @include utils.on-tablet {
+    position: relative;
+  }
+
+  @include utils.on-desktop {
+    flex-grow: 1;
+  }
+
+  &__toggle {
+    display: inline-flex;
+    padding: 23px 16px;
+    border-left: utils.$border-width solid var(--bd-color-primary);
+    outline-offset: -3px;
+
+    &-icon {
+      position: relative;
+      transform: translateZ(0);
+      opacity: 0.7;
+      transition: opacity 0.18s;
+
+      &,
+      &::after,
+      &::before {
+        width: 16px;
+        height: 2px;
+        border-radius: 2px;
+
+        background-color: var(--text-color-primary);
+
+        transition: opacity 0.18s, transform 0.28s;
+      }
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+      }
+
+      &::before {
+        top: -5px;
+      }
+
+      &::after {
+        top: 5px;
+      }
+    }
+
+    &:hover &-icon,
+    &:focus-visible &-icon {
+      opacity: 1;
+    }
+
+    &[aria-expanded="true"] &-icon {
+      transform: rotate(45deg);
+    }
+
+    &[aria-expanded="true"] &-icon::before {
+      transform: rotate(-45deg) translate3d(-5.71429px, 6px, 0);
+      opacity: 0;
+    }
+
+    &[aria-expanded="true"] &-icon::after {
+      transform: translate3d(0, -5px, 0) rotate(-90deg);
+    }
+
+    @include utils.on-desktop {
+      display: none;
+    }
+  }
+
+  &__menu {
+    position: fixed;
+    z-index: 30;
+    top: utils.$mobile-navbar-hight;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: calc(100dvh - utils.$mobile-navbar-hight);
+    padding-top: 24px;
+    border: utils.$border-width solid var(--bd-color-primary);
+
+    background-color: var(--bg-color-primary);
+
+    @include utils.on-tablet {
+      position: absolute;
+      right: -(utils.$border-width);
+      left: initial;
+
+      min-width: 160px;
+      height: auto;
+      min-height: 280px;
+    }
+
+    @include utils.on-desktop {
+      position: initial;
+
+      flex-direction: row;
+      justify-content: space-between;
+
+      min-height: auto;
+      padding-top: initial;
+      border: none;
+
+      background-color: inherit;
+    }
+  }
+
+  &__toggle[aria-expanded="false"] + &__menu {
+    transform: translateX(-100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.36s,
+      opacity 0.72s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      visibility 0s 0.72s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    @include utils.on-tablet {
+      transform: initial;
+      transition: none;
+    }
+
+    @include utils.on-desktop {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__toggle[aria-expanded="true"] + &__menu {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      opacity 0.18s, visibility 0s;
+  }
+
+  &__toggle[aria-expanded="false"] + &__menu.no-transition {
+    transition: none;
+  }
+
+  &__list {
+    &-primary {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      align-items: center;
+
+      @include utils.on-desktop {
+        flex-direction: row;
+        column-gap: 64px;
+      }
+    }
+
+    &-utility {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: utils.$border-width solid var(--bd-color-primary);
+
+      & > li:nth-child(n + 2) {
+        border-left: utils.$border-width solid var(--bd-color-primary);
+      }
+
+      @include utils.on-desktop {
+        border-top: none;
+
+        & > li:nth-child(1) {
+          border-left: utils.$border-width solid var(--bd-color-primary);
+        }
+      }
+    }
+  }
+}

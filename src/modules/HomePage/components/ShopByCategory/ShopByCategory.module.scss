@@ -1,0 +1,74 @@
+@use "../../../../styles/utils/index.scss" as utils;
+@use "sass:list";
+
+.categories {
+  display: grid;
+  column-gap: 16px;
+
+  @include utils.on-tablet {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@each $color in utils.$category-colors {
+  $i: list.index(utils.$category-colors, $color);
+
+  .category:nth-child(#{$i}) img {
+    background-color: $color;
+  }
+}
+
+.category {
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+    padding-bottom: 100%;
+
+    img {
+      position: absolute;
+
+      transform-origin: right;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: scale 0.28s;
+    }
+  }
+
+  &:hover img {
+    scale: 1.025;
+  }
+
+  &__heading {
+    width: fit-content;
+  }
+
+  &__heading::after {
+    content: "";
+
+    transform-origin: right;
+    scale: 0;
+
+    display: block;
+
+    height: 2px;
+
+    background-color: var(--accent-color);
+
+    transition: scale 0.28s;
+  }
+
+  &:hover &__heading::after {
+    scale: 1;
+  }
+
+  &__models {
+    margin-top: 2px;
+    color: var(--text-color-secondary);
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "home": "Etusivu",
+  "phones": "Puhelimet",
+  "tablets": "Tabletit",
+  "accessories": "Lisävarusteet",
+  "toggleAriaLabel": "Vaihda valikkonäkymää",
+  "favoriteAriaLabel": "Näytä suosikkituotteet",
+  "cartAriaLabel": "Näytä ostoskori",
+  "themeAriaLabel": "Tumma tila",
+  "langAriaLabel": "Vaihda kieli"
+}

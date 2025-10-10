@@ -1,0 +1,55 @@
+@use '../../styles/utils/index.scss' as utils;
+
+.typing {
+  @include utils.on-tablet {
+    overflow: hidden;
+
+    width: var(--typing-width);
+    max-width: fit-content;
+    padding-right: 8px;
+    border-right: 3px solid;
+
+    white-space: nowrap;
+
+    animation:
+      typing 0.75s steps(var(--typing-steps)),
+      blink 1.5s step-start infinite;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.heading-welcome {
+  margin-block: 24px;
+
+  @include utils.on-tablet {
+    margin-block: 32px;
+  }
+
+  @include utils.on-desktop {
+    margin-block: 56px;
+  }
+}
+
+.heading {
+  scroll-margin-top: utils.$mobile-navbar-hight + 24px;
+  outline: none;
+
+  @include utils.on-desktop {
+    scroll-margin-top: utils.$desktop-navbar-hight + 24px;
+  }
+
+  &--mb {
+    margin-bottom: 24px;
+  }
+}

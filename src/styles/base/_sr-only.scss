@@ -1,0 +1,33 @@
+.sr-only,
+.sr-skip-link {
+  position: absolute;
+
+  overflow: hidden;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  white-space: nowrap;
+
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+}
+
+.sr-only {
+  padding: 0;
+  border: 0;
+}
+
+.sr-skip-link {
+  z-index: 50;
+  background-color: var(--bg-color-primary);
+  outline-offset: -1px;
+}
+
+.sr-skip-link:focus-visible {
+  width: auto;
+  height: auto;
+  clip: auto;
+  clip-path: none;
+}

@@ -1,0 +1,106 @@
+@use "../utils/index.scss" as utils;
+
+:root {
+  --bg-nav: rgba(15, 17, 33, 0.5);
+  --bg-color-layout: #0f1121;
+  --bg-color-primary: #323542;
+  --bg-color-secondary: #161827;
+  --text-color-primary: #f1f2f9;
+  --text-color-secondary: #81828c;
+  --bd-color-primary: #3b3e4a;
+  --bd-color-secondary: transparent;
+  --bd-color-icon: transparent;
+  --icon-color: #4a4d58;
+  --accent-color: #8755ee;
+
+  font-family: Mont, sans-serif;
+  color: var(--text-color-primary);
+  background-color: var(--bg-color-layout);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+:root.light-theme {
+  --bg-nav: rgba(255, 255, 255, 0.5);
+  --bg-color-layout: #fff;
+  --bg-color-primary: var(--bg-color-layout);
+  --bg-color-secondary: var(--bg-color-layout);
+  --text-color-primary: #313237;
+  --text-color-secondary: #6e767c;
+  --bd-color-primary: #e2e6e9;
+  --bd-color-secondary: var(--bd-color-primary);
+  --bd-color-icon: #b4bdc3;
+  --icon-color: var(--bd-color-icon);
+  --accent-color: var(--text-color-primary);
+
+  -webkit-font-smoothing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+body:has(#navbar-toggle[aria-expanded="true"]) {
+  overflow-y: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+img,
+svg {
+  display: block;
+}
+
+button {
+  all: unset;
+  outline: revert;
+  box-sizing: border-box;
+  cursor: pointer;
+  font: inherit;
+}
+
+main:focus,
+footer:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid utils.$accent-color;
+}
+
+section {
+  @include utils.section-offset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

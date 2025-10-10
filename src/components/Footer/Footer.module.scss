@@ -1,0 +1,65 @@
+@use '../../styles/utils/index.scss' as utils;
+
+.footer {
+  border-top: utils.$border-width solid var(--bd-color-primary);
+
+  &__wrapper {
+    display: grid;
+    row-gap: 32px;
+    padding-block: 32px;
+
+    @include utils.on-tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+      align-items: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include utils.on-tablet {
+      flex-direction: row;
+      column-gap: 13.5px;
+    }
+  }
+
+  &__back {
+    display: inline-flex;
+    column-gap: 16px;
+    align-items: center;
+    justify-self: center;
+
+    @include utils.on-tablet {
+      justify-self: end;
+    }
+
+    span:first-child {
+      opacity: 0.7;
+      transition: opacity 0.18s;
+    }
+
+    span:last-child {
+      display: inline-flex;
+      padding: 7px;
+      border: utils.$border-width solid var(--bd-color-icon);
+      background-color: var(--bg-color-primary);
+    }
+
+    svg {
+      transform: translateZ(0);
+      transition: scale 0.28s;
+    }
+
+    &:hover span:first-child,
+    &:focus-visible span:first-child {
+      opacity: 1;
+    }
+
+    &:hover svg,
+    &:focus-visible svg {
+      scale: 1.25;
+    }
+  }
+}

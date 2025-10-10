@@ -1,0 +1,135 @@
+@use "../../../../styles/utils/index.scss" as utils;
+
+.slider {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+
+  &__content {
+    overflow: hidden;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+
+    @include utils.on-tablet {
+      width: initial;
+      margin-inline: 48px;
+    }
+  }
+
+  &__slide-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+  }
+
+  &__slide {
+    transform: translateZ(0);
+    max-height: 400px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.prev,
+.next {
+  display: none;
+  outline-offset: -1px;
+
+  @include utils.on-tablet {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+
+    display: initial;
+
+    width: 30px;
+    border: 1px solid var(--bd-color-icon);
+
+    background-color: var(--bg-color-primary);
+
+    svg {
+      transform: translateZ(0);
+      width: 100%;
+      opacity: 0.7;
+      transition: scale 0.28s, opacity 0.18s;
+    }
+
+    &:hover svg,
+    &:focus-visible svg {
+      scale: 1.25;
+      opacity: 1;
+    }
+  }
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.paused {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  background-color: #313237;
+  outline-offset: -1px;
+
+  transition: opacity 0.18s;
+
+  @include utils.on-tablet {
+    right: 56px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.dots {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  text-align: center;
+
+  &__dot {
+    display: inline-flex;
+    padding: 14px 9px;
+    outline-offset: -1px;
+
+    span {
+      width: 14px;
+      height: 4px;
+      background-color: var(--bd-color-primary);
+    }
+  }
+
+  &__dot.active span {
+    background-color: var(--text-color-primary);
+  }
+
+  &__dot:not(.active) span {
+    transition: opacity 0.18s;
+  }
+
+  &__dot:not(.active):hover span {
+    opacity: 0.7;
+  }
+}
