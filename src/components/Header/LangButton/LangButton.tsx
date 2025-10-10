@@ -1,17 +1,17 @@
-import { useEffect, useRef, useState } from 'react';
-import clsx from 'clsx';
-import { useTranslation } from 'react-i18next';
-import iconEN from '../../../assets/icons/en.svg';
-import iconFI from '../../../assets/icons/fi.svg';
-import iconPL from '../../../assets/icons/pl.svg';
-import iconUK from '../../../assets/icons/uk.svg';
-import styles from './LangButton.module.scss';
+import { useEffect, useRef, useState } from "react";
+import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import iconEN from "../../../assets/icons/en.svg";
+import iconFI from "../../../assets/icons/fi.svg";
+import iconPL from "../../../assets/icons/pl.svg";
+import iconUK from "../../../assets/icons/uk.svg";
+import styles from "./LangButton.module.scss";
 
 const languages = [
-  { code: 'en', label: 'English', icon: iconEN },
-  { code: 'fi', label: 'Suomi', icon: iconFI },
-  { code: 'pl', label: 'Polski', icon: iconPL },
-  { code: 'uk', label: 'Українська', icon: iconUK },
+  { code: "en", label: "English", icon: iconEN },
+  { code: "fi", label: "Suomi", icon: iconFI },
+  { code: "pl", label: "Polski", icon: iconPL },
+  { code: "uk", label: "Українська", icon: iconUK },
 ];
 
 interface LangProps {
@@ -19,7 +19,7 @@ interface LangProps {
 }
 
 const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
-  const { t, i18n } = useTranslation('header');
+  const { t, i18n } = useTranslation("header");
   const [isExpanded, setIsExpanded] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -36,15 +36,15 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
     };
 
     if (isExpanded) {
-      document.addEventListener('pointerdown', handleOutsideClick);
+      document.addEventListener("pointerdown", handleOutsideClick);
     }
 
     return () =>
-      document.removeEventListener('pointerdown', handleOutsideClick);
+      document.removeEventListener("pointerdown", handleOutsideClick);
   }, [isExpanded]);
 
   const sortedLanguages = [...languages].sort((a, b) =>
-    normalizedLang === a.code ? -1 : normalizedLang === b.code ? 1 : 0,
+    normalizedLang === a.code ? -1 : normalizedLang === b.code ? 1 : 0
   );
 
   return (
@@ -52,11 +52,11 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
       className={styles.lang}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
-      onBlur={e =>
+      onBlur={(e) =>
         !e.currentTarget.contains(e.relatedTarget) && setIsExpanded(false)
       }
-      onKeyUp={e => {
-        if (e.key === 'Escape') {
+      onKeyUp={(e) => {
+        if (e.key === "Escape") {
           setIsExpanded(false);
           btnRef.current?.focus();
         }
@@ -64,17 +64,17 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
       ref={divRef}
     >
       <button
-        aria-label={t('langAriaLabel')}
+        aria-label={t("langAriaLabel")}
         aria-expanded={isExpanded}
         aria-haspopup="menu"
         aria-controls="lang-menu"
         className={styles.lang__toggle}
-        onPointerDown={e =>
-          e.pointerType !== 'mouse' && setIsExpanded(prev => !prev)
+        onPointerDown={(e) =>
+          e.pointerType !== "mouse" && setIsExpanded((prev) => !prev)
         }
-        onKeyUp={e => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            setIsExpanded(prev => !prev);
+        onKeyUp={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            setIsExpanded((prev) => !prev);
           }
         }}
         ref={btnRef}
@@ -110,10 +110,10 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
       </button>
 
       <div id="lang-menu" className={styles.lang__menu}>
-        {sortedLanguages.map(lang => (
+        {sortedLanguages.map((lang) => (
           <button
             key={lang.code}
-            className={clsx(styles.lang__action, 'text--sm')}
+            className={clsx(styles.lang__action, "text--sm")}
             disabled={normalizedLang === lang.code}
             aria-disabled={normalizedLang === lang.code}
             onClick={() => {

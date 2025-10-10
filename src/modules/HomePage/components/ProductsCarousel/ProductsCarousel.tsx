@@ -69,7 +69,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
 
     const observer = new IntersectionObserver(cbObserver, {
       root: containerRef.current,
-      threshold: 1,
+      threshold: 0.5,
     });
 
     for (const card of cards) {

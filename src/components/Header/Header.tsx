@@ -1,9 +1,9 @@
-import { useRef } from 'react';
-import Logo from '../shared/components/Logo';
-import Navbar from './Navbar';
-import LangButton from './LangButton';
-import ThemeButton from './ThemeButton';
-import styles from './Header.module.scss';
+import { useRef } from "react";
+import Logo from "../shared/components/Logo";
+import Navbar from "./Navbar";
+import LangButton from "./LangButton";
+import ThemeButton from "./ThemeButton";
+import styles from "./Header.module.scss";
 
 interface HeaderProps {
   normalizedLang: string;

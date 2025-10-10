@@ -6,10 +6,10 @@ const exchangeRates: Record<string, number> = {
 };
 
 const currencyCodes: Record<string, string> = {
-  en: 'GBP',
-  fi: 'EUR',
-  pl: 'PLN',
-  uk: 'UAH',
+  en: "GBP",
+  fi: "EUR",
+  pl: "PLN",
+  uk: "UAH",
 };
 
 export const formatPrice = (priceUSD: number, lang: string) => {
@@ -19,10 +19,10 @@ export const formatPrice = (priceUSD: number, lang: string) => {
   const localPrice = priceUSD * rate;
 
   const formatted = new Intl.NumberFormat(lang, {
-    style: 'currency',
+    style: "currency",
     currency,
     maximumFractionDigits: 0,
-    currencyDisplay: 'narrowSymbol',
+    currencyDisplay: "narrowSymbol",
   }).format(localPrice);
 
   return formatted;

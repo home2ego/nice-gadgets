@@ -1,15 +1,15 @@
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
-import App from './App';
-import HomePage from './modules/HomePage';
-import PhonesPage from './modules/PhonesPage';
-import TabletsPage from './modules/TabletsPage';
-import AccessoriesPage from './modules/AccessoriesPage';
-import NotFound from './modules/NotFound';
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import App from "./App";
+import HomePage from "./modules/HomePage";
+import PhonesPage from "./modules/PhonesPage";
+import TabletsPage from "./modules/TabletsPage";
+import AccessoriesPage from "./modules/AccessoriesPage";
+import NotFound from "./modules/NotFound";
 
 // React.lazy() for large pages
 
 const Root = () => (
-  <HashRouter>
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<HomePage />} />
@@ -28,7 +28,7 @@ const Root = () => (
 
       <Route path="*" element={<NotFound />} />
     </Routes>
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default Root;

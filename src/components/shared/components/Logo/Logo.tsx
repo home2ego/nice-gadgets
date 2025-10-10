@@ -1,11 +1,11 @@
-import { useTranslation } from 'react-i18next';
-import styles from './Logo.module.scss';
+import { useTranslation } from "react-i18next";
+import styles from "./Logo.module.scss";
 
 const Logo = () => {
   const { t } = useTranslation();
 
   return (
-    <a href="/" aria-label={t('homepageAriaLabel')} className={styles.logo}>
+    <a href="/" aria-label={t("homepageAriaLabel")} className={styles.logo}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="64"

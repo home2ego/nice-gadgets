@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,15 +10,15 @@
     />
     <script>
       const prefersLight = window.matchMedia(
-        '(prefers-color-scheme: light)',
+        "(prefers-color-scheme: light)"
       ).matches;
-      const niceGadgetsTheme = localStorage.getItem('niceGadgetsTheme');
+      const niceGadgetsTheme = localStorage.getItem("niceGadgetsTheme");
 
       if (niceGadgetsTheme === null && prefersLight) {
-        document.documentElement.classList.add('light-theme');
-        localStorage.setItem('niceGadgetsTheme', 'light');
-      } else if (niceGadgetsTheme === 'light') {
-        document.documentElement.classList.add('light-theme');
+        document.documentElement.classList.add("light-theme");
+        localStorage.setItem("niceGadgetsTheme", "light");
+      } else if (niceGadgetsTheme === "light") {
+        document.documentElement.classList.add("light-theme");
       }
     </script>
     <link rel="icon" type="image/svg+xml" href="/img/icon.svg" />

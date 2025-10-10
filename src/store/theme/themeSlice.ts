@@ -1,22 +1,21 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
-const storedTheme = localStorage.getItem('niceGadgetsTheme') ?? 'dark';
+const storedTheme = localStorage.getItem("niceGadgetsTheme") ?? "dark";
 
 const themeSlice = createSlice({
-  name: 'theme',
+  name: "theme",
   initialState: {
     mode: storedTheme,
   },
   reducers: {
-    toggleTheme: state => {
-      const newTheme = state.mode === 'dark' ? 'light' : 'dark';
+    toggleTheme: (state) => {
+      const newTheme = state.mode === "dark" ? "light" : "dark";
 
-      // eslint-disable-next-line no-param-reassign
       state.mode = newTheme;
 
-      localStorage.setItem('niceGadgetsTheme', newTheme);
+      localStorage.setItem("niceGadgetsTheme", newTheme);
 
-      document.documentElement.classList.toggle('light-theme');
+      document.documentElement.classList.toggle("light-theme");
     },
   },
 });

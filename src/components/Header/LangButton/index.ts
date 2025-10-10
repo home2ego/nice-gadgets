@@ -1,1 +1,1 @@
-export { default } from './LangButton';
+export { default } from "./LangButton";

@@ -1,4 +1,4 @@
-@use '../../styles/utils/index.scss' as utils;
+@use "../../styles/utils/index.scss" as utils;
 
 .typing {
   @include utils.on-tablet {
@@ -11,8 +11,7 @@
 
     white-space: nowrap;
 
-    animation:
-      typing 0.75s steps(var(--typing-steps)),
+    animation: typing 0.75s steps(var(--typing-steps)),
       blink 1.5s step-start infinite;
   }
 }

@@ -1,4 +1,4 @@
-@use '../../../styles/utils/index.scss' as utils;
+@use "../../../styles/utils/index.scss" as utils;
 
 .lang {
   position: relative;
@@ -12,17 +12,15 @@
     svg {
       transform: translateZ(0);
       opacity: 0.7;
-      transition:
-        opacity 0.18s,
-        scale 0.28s;
+      transition: opacity 0.18s, scale 0.28s;
     }
 
-    &[aria-expanded='true'] svg,
+    &[aria-expanded="true"] svg,
     &:focus-visible svg {
       opacity: 1;
     }
 
-    &[aria-expanded='true'] svg:nth-child(2),
+    &[aria-expanded="true"] svg:nth-child(2),
     &:focus-visible svg:nth-child(2) {
       scale: 1.25;
     }
@@ -52,7 +50,7 @@
     }
   }
 
-  &__toggle[aria-expanded='true'] + &__menu {
+  &__toggle[aria-expanded="true"] + &__menu {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.18s;

@@ -1,25 +1,25 @@
-import { useTranslation } from 'react-i18next';
-import { useAppDispatch, useAppSelector } from '../../../store/hooks';
-import { toggleTheme } from '../../../store/theme/themeSlice';
-import moon from '../../../assets/icons/moon.svg';
-import sun from '../../../assets/icons/sun.svg';
+import { useTranslation } from "react-i18next";
+import { useAppDispatch, useAppSelector } from "../../../store/hooks";
+import { toggleTheme } from "../../../store/theme/themeSlice";
+import moon from "../../../assets/icons/moon.svg";
+import sun from "../../../assets/icons/sun.svg";
 
 const ThemeButton = () => {
-  const { t } = useTranslation('header');
+  const { t } = useTranslation("header");
   const dispatch = useAppDispatch();
-  const mode = useAppSelector(state => state.theme.mode);
+  const mode = useAppSelector((state) => state.theme.mode);
 
   return (
     <button
       role="switch"
-      aria-label={t('themeAriaLabel')}
-      aria-checked={mode === 'light' ? 'false' : 'true'}
+      aria-label={t("themeAriaLabel")}
+      aria-checked={mode === "light" ? "false" : "true"}
       className="btn--theme"
       onClick={() => dispatch(toggleTheme())}
     >
       <span>
         <img
-          src={mode === 'light' ? moon : sun}
+          src={mode === "light" ? moon : sun}
           alt=""
           width="16"
           height="16"
