@@ -4,5 +4,8 @@
   "skipForwardSlider": "Skip forward past slider",
   "skipBackSlider": "Skip back before slider",
   "skipForwardCarousel": "Skip forward past carousel",
-  "skipBackCarousel": "Skip back before carousel"
+  "skipBackCarousel": "Skip back before carousel",
+  "errorMessage": "Error 404",
+  "notFound": "Page not found",
+  "goHomePage": "Go to home page"
 }

@@ -77,10 +77,16 @@ const PicturesSlider: React.FC<SliderProps> = ({
       return;
     }
 
-    slider.style.transition = transition
-      ? "transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-      : "none";
-    slider.style.transform = `translateX(-${(index + 1) * 100}%)`;
+    requestAnimationFrame(() => {
+      const transitionValue = transition
+        ? "transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95)"
+        : "none";
+
+      slider.style.cssText = `
+        transition: ${transitionValue};
+        transform: translateX(-${(index + 1) * 100}%);
+      `;
+    });
   };
 
   const stopAutoplay = () => {

@@ -4,5 +4,8 @@
   "skipForwardSlider": "Pomiń suwak do przodu",
   "skipBackSlider": "Pomiń suwak do tyłu",
   "skipForwardCarousel": "Pomiń karuzelę do przodu",
-  "skipBackCarousel": "Pomiń karuzelę do tyłu"
+  "skipBackCarousel": "Pomiń karuzelę do tyłu",
+  "errorMessage": "Błąd 404",
+  "notFound": "Nie znaleziono strony",
+  "goHomePage": "Strona główna"
 }

@@ -4,5 +4,8 @@
   "skipForwardSlider": "Пропустити слайдер уперед",
   "skipBackSlider": "Пропустити слайдер назад",
   "skipForwardCarousel": "Пропустити карусель уперед",
-  "skipBackCarousel": "Пропустити карусель назад"
+  "skipBackCarousel": "Пропустити карусель назад",
+  "errorMessage": "Помилка 404",
+  "notFound": "Сторінку не знайдено",
+  "goHomePage": "На головну"
 }

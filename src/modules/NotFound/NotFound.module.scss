@@ -1,3 +1,7 @@
+html:has(.not-found) {
+  overscroll-behavior: none;
+}
+
 .not-found {
   display: flex;
   flex-direction: column;
@@ -5,7 +9,10 @@
   justify-content: center;
 
   min-height: 100vh;
-  background-color: var(--bg-color-primary);
+  background-color: #fff;
+  color: #313237;
+
+  -webkit-font-smoothing: auto;
 
   &__heading {
     opacity: 0.7;
@@ -23,10 +30,9 @@
 
   &__link {
     padding: 16px 8px;
-    border: 1px solid var(--bd-color-icon);
+    border: 1px solid #b4bdc3;
     border-radius: 4px;
 
-    background-color: var(--bg-nav);
     outline-offset: -1px;
 
     transition: opacity 0.18s;

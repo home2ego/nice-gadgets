@@ -4,5 +4,8 @@
   "skipForwardSlider": "Ohita liukusäädin eteenpäin",
   "skipBackSlider": "Ohita liukusäädin taaksepäin",
   "skipForwardCarousel": "Ohita karuselli eteenpäin",
-  "skipBackCarousel": "Ohita karuselli taaksepäin"
+  "skipBackCarousel": "Ohita karuselli taaksepäin",
+  "errorMessage": "Virhe 404",
+  "notFound": "Sivua ei löytynyt",
+  "goHomePage": "Siirry etusivulle"
 }
