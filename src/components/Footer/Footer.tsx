@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
         <ul className={styles.footer__list} aria-label={t("linksAriaLabel")}>
           <li>
             <a
-              href="#"
+              href="https://github.com/home2ego/nice-gadgets"
               target="_blank"
               rel="noopener noreferrer"
               className="btn--footer text--uppercase"
@@ -50,7 +50,11 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
           </li>
         </ul>
 
-        <button className={styles.footer__back} onClick={handleBackToTop}>
+        <button
+          type="button"
+          className={styles.footer__back}
+          onClick={handleBackToTop}
+        >
           <span className={"text--sm"}>{t("backToTop")}</span>
 
           <span>

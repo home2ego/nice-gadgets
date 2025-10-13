@@ -4,7 +4,7 @@ import { SWIPE_THRESHOLD } from "./constants";
 export function useHorizontalSwipe(
   sliderRef: React.RefObject<HTMLDivElement | null>,
   onNext: () => void,
-  onPrev: () => void
+  onPrev: () => void,
 ) {
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
@@ -22,8 +22,11 @@ export function useHorizontalSwipe(
     touchStartY.current = e.touches[0].clientY;
   }, []);
 
+  // biome-ignore lint: correctness/useExhaustiveDependencies — sliderRef is a stable ref
   const handleTouchMove = useCallback((e: TouchEvent) => {
-    if (!sliderRef.current?.contains(e.target as Node)) {
+    const slider = sliderRef.current;
+
+    if (!slider?.contains(e.target as Node)) {
       return;
     }
 
@@ -48,6 +51,7 @@ export function useHorizontalSwipe(
     }
   }, []);
 
+  // biome-ignore lint: correctness/useExhaustiveDependencies — sliderRef is a stable ref
   useEffect(() => {
     const slider = sliderRef.current;
 

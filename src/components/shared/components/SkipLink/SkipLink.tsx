@@ -33,6 +33,7 @@ const SkipLink: React.FC<SkipProps> = ({
   };
 
   return (
+    // biome-ignore lint: a11y/useValidAnchor — this anchor is a skip link with dynamic targets
     <a
       href="#"
       className={clsx(styles[classAttr], "sr-skip-link", "text--uppercase")}

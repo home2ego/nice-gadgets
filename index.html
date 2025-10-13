@@ -8,6 +8,7 @@
       name="description"
       content="Nice Gadgets is a web application that offers users product browsing, and shopping cart management, all within a highly responsive and interactive user interface."
     />
+
     <script>
       const prefersLight = window.matchMedia(
         "(prefers-color-scheme: light)"
@@ -21,10 +22,13 @@
         document.documentElement.classList.add("light-theme");
       }
     </script>
+
     <link rel="icon" type="image/svg+xml" href="/img/icon.svg" />
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

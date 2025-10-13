@@ -14,10 +14,11 @@
   "headingAccessories": "Accessories",
   "countModels": "{{count}} models",
   "picturesSlider": "Product pictures",
-  "cardsCarousel": "Product cards",
-  "carouselInstructions": "Use Tab or Shift+Tab to move between product cards",
-  "priceAriaLabel": "{{price}} {{currency}}, discounted price",
-  "fullPriceAriaLabel": "{{fullPrice}} {{currency}}, previous price",
+  "productsCarousel": "Products carousel",
+  "carouselInstructions": "Use Tab or Shift+Tab to move between products",
+  "productDetailsAriaLabel": "View details for {{product}}",
+  "priceAriaLabel": "discounted price",
+  "fullPriceAriaLabel": "previous price",
   "cartButton": "Add to cart",
   "cartAriaLabel": "Add {{product}} to cart",
   "favoriteAriaLabel": "Add {{product}} to favorites",
@@ -30,5 +31,5 @@
   "navigationAriaLabel": "Slide navigation",
   "pictureOfTotal": "Picture {{current}} of {{total}}",
   "slideOfTotal": "Show slide {{current}} of {{total}}",
-  "productOfTotal": "Product card {{current}} of {{total}}"
+  "productOfTotal": "Product {{current}} of {{total}}"
 }

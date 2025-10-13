@@ -14,10 +14,11 @@
   "headingAccessories": "Akcesoria",
   "countModels": "{{count}} modele",
   "picturesSlider": "Zdjęcia produktu",
-  "cardsCarousel": "Karty produktów",
-  "carouselInstructions": "Użyj Tab lub Shift+Tab, aby przejść między kartami produktów",
-  "priceAriaLabel": "{{price}} {{currency}}, cena promocyjna",
-  "fullPriceAriaLabel": "{{fullPrice}} {{currency}}, poprzednia cena",
+  "productsCarousel": "Karuzela produktów",
+  "carouselInstructions": "Użyj Tab lub Shift+Tab, aby przechodzić między produktami",
+  "productDetailsAriaLabel": "Zobacz szczegóły produktu {{product}}",
+  "priceAriaLabel": "promocyjna cena",
+  "fullPriceAriaLabel": "poprzednia cena",
   "cartButton": "Do koszyka",
   "cartAriaLabel": "Dodaj {{product}} do koszyka",
   "favoriteAriaLabel": "Dodaj {{product}} do ulubionych",
@@ -30,5 +31,5 @@
   "navigationAriaLabel": "Nawigacja slajdów",
   "pictureOfTotal": "Zdjęcie {{current}} z {{total}}",
   "slideOfTotal": "Pokaż slajd {{current}} z {{total}}",
-  "productOfTotal": "Karta produktu {{current}} z {{total}}"
+  "productOfTotal": "Produkt {{current}} z {{total}}"
 }

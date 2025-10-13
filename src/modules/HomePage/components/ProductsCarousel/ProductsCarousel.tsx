@@ -1,17 +1,10 @@
-import { useEffect, useMemo, useRef, useState } from "react";
 import clsx from "clsx";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import SkipLink from "../../../../components/shared/components/SkipLink";
 import type { Product } from "../../types/product";
 import { formatPrice } from "./formatPrice";
 import styles from "./ProductsCarousel.module.scss";
-
-const currencyName: Record<string, string> = {
-  en: "pounds",
-  fi: "euros",
-  pl: "zł",
-  uk: "гривень",
-};
 
 interface SliderProps {
   products: Product[];
@@ -35,12 +28,14 @@ const ProductsCarousel: React.FC<SliderProps> = ({
   const lastVisibleCard = useRef<HTMLAnchorElement | null>(null);
   const firstVisibleCard = useRef<HTMLAnchorElement | null>(null);
 
+  const ariaId = useId();
+
   const { t, i18n } = useTranslation("homePage");
   const lang = i18n.language;
 
   useEffect(() => {
     const cards = Array.from(
-      containerRef.current?.querySelectorAll<HTMLAnchorElement>("a") ?? []
+      containerRef.current?.querySelectorAll<HTMLAnchorElement>("a") ?? [],
     );
 
     if (!cards.length) {
@@ -77,7 +72,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
     }
 
     return () => observer.disconnect();
-  }, [products]);
+  }, []);
 
   const handleNextClick = () => {
     firstVisibleCard.current?.nextElementSibling?.scrollIntoView({
@@ -97,123 +92,121 @@ const ProductsCarousel: React.FC<SliderProps> = ({
     e.currentTarget.scrollIntoView({ inline: "nearest", block: "nearest" });
   };
 
+  // biome-ignore lint: correctness/useExhaustiveDependencies — this useMemo re-computes only when the language changes
   const productCards = useMemo(() => {
     return products.map((product, index) => (
-      <a
-        href="#"
+      <article
         key={product.id}
-        className={styles.product}
-        role="group"
-        aria-roledescription="card"
         aria-label={t("productOfTotal", {
           current: index + 1,
           total: products.length,
         })}
-        onFocus={handleCardFocus}
       >
-        <img
-          src={product.image}
-          alt=""
-          width="208"
-          height="196"
-          loading="lazy"
-        />
+        <a
+          href="/"
+          aria-label={t("productDetailsAriaLabel", { product: product.name })}
+          className={styles.product}
+          onFocus={handleCardFocus}
+        >
+          <img
+            src={product.image}
+            alt=""
+            width="208"
+            height="196"
+            loading="lazy"
+          />
 
-        <h3 className="text--body">{product.name}</h3>
+          <h3 className="text--body">{product.name}</h3>
 
-        <div className={clsx(styles.product__prices, "title--sm")}>
-          {hasOnlyFullPrice ? (
-            <p>{formatPrice(product.fullPrice, lang)}</p>
-          ) : (
-            <>
-              <p
-                aria-label={t("priceAriaLabel", {
-                  price: product.price,
-                  currency: currencyName[lang],
-                })}
-              >
-                {formatPrice(product.price, lang)}
-              </p>
+          <div className={clsx(styles.product__prices, "title--sm")}>
+            {hasOnlyFullPrice ? (
+              <p>{formatPrice(product.fullPrice, lang)}</p>
+            ) : (
+              <>
+                <p>
+                  {formatPrice(product.price, lang)}
+                  <span className="sr-only">{t("priceAriaLabel")}</span>
+                </p>
 
-              <p
-                className={styles["product__full-price"]}
-                aria-label={t("fullPriceAriaLabel", {
-                  fullPrice: product.fullPrice,
-                  currency: currencyName[lang],
-                })}
-              >
-                {formatPrice(product.fullPrice, lang)}
-              </p>
-            </>
-          )}
-        </div>
+                <p className={styles["product__full-price"]}>
+                  {formatPrice(product.fullPrice, lang)}
+                  <span className="sr-only">{t("fullPriceAriaLabel")}</span>
+                </p>
+              </>
+            )}
+          </div>
 
-        <span className={styles.product__line} />
+          <span className={styles.product__line} />
 
-        <div className={clsx(styles.product__details, "text--sm")}>
-          <p className={styles.product__detail}>
-            <span className={styles.product__subname}>{t("screen")}</span>
-            {product.screen}
-          </p>
+          <div className={clsx(styles.product__details, "text--sm")}>
+            <p className={styles.product__detail}>
+              <span className={styles.product__subname}>{t("screen")}</span>
+              {product.screen}
+            </p>
 
-          <p className={styles.product__detail}>
-            <span className={styles.product__subname}>{t("capacity")}</span>
-            {product.capacity}
-          </p>
+            <p className={styles.product__detail}>
+              <span className={styles.product__subname}>{t("capacity")}</span>
+              {product.capacity}
+            </p>
 
-          <p className={styles.product__detail}>
-            <span className={styles.product__subname}>RAM</span>
-            {product.ram}
-          </p>
-        </div>
+            <p className={styles.product__detail}>
+              <span className={styles.product__subname}>RAM</span>
+              {product.ram}
+            </p>
+          </div>
 
-        <div className={styles.product__controls}>
-          <button
-            className="text--btn"
-            aria-label={t("cartAriaLabel", { product: product.name })}
-          >
-            {t("cartButton")}
-          </button>
-
-          <button
-            aria-label={t("favoriteAriaLabel", { product: product.name })}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
+          <div className={styles.product__controls}>
+            <button
+              type="button"
+              className={clsx(styles.product__cart, "text--btn")}
+              aria-label={t("cartAriaLabel", { product: product.name })}
             >
-              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-            </svg>
-          </button>
-        </div>
-      </a>
+              {t("cartButton")}
+            </button>
+
+            <button
+              type="button"
+              className={styles.product__favorite}
+              aria-label={t("favoriteAriaLabel", { product: product.name })}
+            >
+              <svg
+                className={styles.icon}
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="none"
+                stroke="var(--text-color-primary)"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+              </svg>
+            </button>
+          </div>
+        </a>
+      </article>
     ));
-  }, [products, t]);
+  }, [t]);
 
   return (
     <section
-      role="region"
       aria-roledescription="carousel"
-      aria-label={t("cardsCarousel")}
-      aria-describedby="carousel-instructions"
+      aria-label={t("productsCarousel")}
+      aria-describedby={ariaId}
     >
       <div className={styles["section-top"]}>
         {children}
 
-        <p id="carousel-instructions" className="sr-only">
+        <p id={ariaId} className="sr-only">
           {t("carouselInstructions")}
         </p>
 
         <div>
           <button
+            type="button"
             className={clsx(styles.prev, { [styles.disabled]: disabledPrev })}
             tabIndex={-1}
             aria-hidden="true"
@@ -236,6 +229,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
           </button>
 
           <button
+            type="button"
             className={clsx(styles.next, { [styles.disabled]: disabledNext })}
             tabIndex={-1}
             aria-hidden="true"

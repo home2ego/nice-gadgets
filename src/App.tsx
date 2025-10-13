@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 import SkipLink from "./components/shared/components/SkipLink";
 import "./App.scss";
 

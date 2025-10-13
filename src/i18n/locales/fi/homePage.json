@@ -14,10 +14,11 @@
   "headingAccessories": "Lisätarvikkeet",
   "countModels": "{{count}} mallia",
   "picturesSlider": "Tuotekuvat",
-  "cardsCarousel": "Tuotekortit",
-  "carouselInstructions": "Käytä Tab- tai Shift+Tab-näppäintä siirtyäksesi tuotekorttien välillä",
-  "priceAriaLabel": "{{price}} {{currency}}, alennettu hinta",
-  "fullPriceAriaLabel": "{{fullPrice}} {{currency}}, aiempi hinta",
+  "productsCarousel": "Tuotteiden karuselli",
+  "carouselInstructions": "Siirry tuotteiden välillä Tab- tai Shift+Tab-näppäimellä",
+  "productDetailsAriaLabel": "Näytä tiedot tuotteelle {{product}}",
+  "priceAriaLabel": "alennettu hinta",
+  "fullPriceAriaLabel": "aiempi hinta",
   "cartButton": "Lisää koriin",
   "cartAriaLabel": "Lisää {{product}} ostoskoriin",
   "favoriteAriaLabel": "Lisää {{product}} suosikkeihin",
@@ -30,5 +31,5 @@
   "navigationAriaLabel": "Dianavigointi",
   "pictureOfTotal": "Kuva {{current}} / {{total}}",
   "slideOfTotal": "Näytä dia {{current}} / {{total}}",
-  "productOfTotal": "Tuotekortti {{current}}/{{total}}"
+  "productOfTotal": "Tuote {{current}}/{{total}}"
 }

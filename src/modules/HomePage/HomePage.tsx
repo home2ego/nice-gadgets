@@ -1,13 +1,13 @@
-import { useRef } from "react";
 import clsx from "clsx";
-import { useOutletContext } from "react-router-dom";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useOutletContext } from "react-router-dom";
+import products from "../../api/products.json";
 import PicturesSlider from "./components/PicturesSlider";
 import ProductsCarousel from "./components/ProductsCarousel";
 import ShopByCategory from "./components/ShopByCategory/ShopByCategory";
-import type { Product } from "./types/product";
-import products from "../../api/products.json";
 import styles from "./HomePage.module.scss";
+import type { Product } from "./types/product";
 
 const { maxYear, maxModel } = products.reduce(
   (acc, product) => {
@@ -18,12 +18,12 @@ const { maxYear, maxModel } = products.reduce(
     }
 
     if (product.year === acc.maxYear && modelNumber > acc.maxModel) {
-      return { ...acc, maxModel: modelNumber };
+      return { maxYear: acc.maxYear, maxModel: modelNumber };
     }
 
     return acc;
   },
-  { maxYear: -Infinity, maxModel: -Infinity }
+  { maxYear: -Infinity, maxModel: -Infinity },
 );
 
 const newProducts: Product[] = products
@@ -57,28 +57,24 @@ const HomePage = () => {
 
   return (
     <>
+      <title>Nice Gadgets</title>
+      <h1 className="sr-only">{t("mainHeading")}</h1>
+      <h2
+        className={clsx(styles.typing, styles["heading-welcome"], "title--xl")}
+        style={
+          {
+            "--typing-steps": t("typingSteps"),
+            "--typing-width": t("typingWidth"),
+          } as React.CSSProperties
+        }
+      >
+        {t("welcomeMessage")}
+      </h2>
+
       <PicturesSlider
         skipForwardRef={headingNewModelsRef}
         skipBackRef={mainRef}
-      >
-        <title>Nice Gadgets</title>
-        <h1 className="sr-only">{t("mainHeading")}</h1>
-        <h2
-          className={clsx(
-            styles.typing,
-            styles["heading-welcome"],
-            "title--xl"
-          )}
-          style={
-            {
-              "--typing-steps": t("typingSteps"),
-              "--typing-width": t("typingWidth"),
-            } as React.CSSProperties
-          }
-        >
-          {t("welcomeMessage")}
-        </h2>
-      </PicturesSlider>
+      />
 
       <ProductsCarousel
         products={newProducts}

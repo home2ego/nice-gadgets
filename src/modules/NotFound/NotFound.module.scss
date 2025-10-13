@@ -9,14 +9,15 @@ html:has(.not-found) {
   justify-content: center;
 
   min-height: 100vh;
-  background-color: #fff;
-  color: #313237;
 
   -webkit-font-smoothing: auto;
+  color: #313237;
+
+  background-color: #fff;
 
   &__heading {
-    opacity: 0.7;
     margin-bottom: 24px;
+    opacity: 0.7;
   }
 
   img {

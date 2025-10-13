@@ -5,8 +5,11 @@ const Logo = () => {
   const { t } = useTranslation();
 
   return (
-    <a href="/" aria-label={t("homepageAriaLabel")} className={styles.logo}>
+    <a href="/" className={styles.logo}>
+      <span className="sr-only">{t("homepageAriaLabel")}</span>
+
       <svg
+        className={styles.logo__name}
         xmlns="http://www.w3.org/2000/svg"
         width="64"
         height="22"
@@ -21,6 +24,7 @@ const Logo = () => {
       </svg>
 
       <svg
+        className={styles.logo__ok}
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"

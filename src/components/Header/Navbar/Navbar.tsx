@@ -1,6 +1,6 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 
 interface NavbarProps {
@@ -14,7 +14,9 @@ const Navbar = ({ actionsRef }: NavbarProps) => {
   const menuWrapperRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
+  const navbarId = useId();
 
+  // biome-ignore lint: correctness/useExhaustiveDependencies — pathname triggers scroll on route change
   useLayoutEffect(() => {
     if (window.scrollY > 0) {
       window.scrollTo({ top: 0, behavior: "instant" });
@@ -39,6 +41,7 @@ const Navbar = ({ actionsRef }: NavbarProps) => {
     return () => observer.disconnect();
   }, []);
 
+  // biome-ignore lint: correctness/useExhaustiveDependencies — actionsRef is a stable ref
   useEffect(() => {
     const handlePreventScroll = (e: TouchEvent) => e.preventDefault();
     const handleEscapeKey = (e: KeyboardEvent) => {
@@ -85,10 +88,11 @@ const Navbar = ({ actionsRef }: NavbarProps) => {
   return (
     <div className={styles.navbar} ref={menuWrapperRef}>
       <button
+        type="button"
         aria-label={t("toggleAriaLabel")}
         aria-expanded={isExpanded}
-        aria-controls="navbar-menu"
-        id="navbar-toggle"
+        aria-controls={navbarId}
+        data-navbar-toggle="main"
         className={styles.navbar__toggle}
         onClick={() => setIsExpanded((prev) => !prev)}
         ref={btnRef}
@@ -96,7 +100,7 @@ const Navbar = ({ actionsRef }: NavbarProps) => {
         <span className={styles["navbar__toggle-icon"]} />
       </button>
 
-      <nav id="navbar-menu" className={styles.navbar__menu} ref={menuRef}>
+      <nav id={navbarId} className={styles.navbar__menu} ref={menuRef}>
         <ul className={styles["navbar__list-primary"]}>
           {["home", "phones", "tablets", "accessories"].map((item) => (
             <li key={item}>

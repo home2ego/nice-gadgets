@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { useAppDispatch, useAppSelector } from "../../../store/hooks";
-import { toggleTheme } from "../../../store/theme/themeSlice";
 import moon from "../../../assets/icons/moon.svg";
 import sun from "../../../assets/icons/sun.svg";
+import { useAppDispatch, useAppSelector } from "../../../store/hooks";
+import { toggleTheme } from "../../../store/theme/themeSlice";
 
 const ThemeButton = () => {
   const { t } = useTranslation("header");
@@ -11,6 +11,7 @@ const ThemeButton = () => {
 
   return (
     <button
+      type="button"
       role="switch"
       aria-label={t("themeAriaLabel")}
       aria-checked={mode === "light" ? "false" : "true"}

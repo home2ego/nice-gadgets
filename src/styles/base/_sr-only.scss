@@ -10,7 +10,6 @@
 
   white-space: nowrap;
 
-  clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
 }
 
@@ -28,6 +27,5 @@
 .sr-skip-link:focus-visible {
   width: auto;
   height: auto;
-  clip: auto;
   clip-path: none;
 }

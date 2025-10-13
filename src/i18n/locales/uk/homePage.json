@@ -14,10 +14,11 @@
   "headingAccessories": "Аксесуари",
   "countModels": "{{count}} моделей",
   "picturesSlider": "Зображення товару",
-  "cardsCarousel": "Картки продуктів",
-  "carouselInstructions": "Використовуйте Tab або Shift+Tab, щоб переходити між картками продуктів",
-  "priceAriaLabel": "{{price}} {{currency}}, акційна ціна",
-  "fullPriceAriaLabel": "{{fullPrice}} {{currency}}, попередня ціна",
+  "productsCarousel": "Карусель продуктів",
+  "carouselInstructions": "Використовуйте Tab або Shift+Tab, щоб переходити між продуктами",
+  "productDetailsAriaLabel": "Переглянути деталі продукту {{product}}",
+  "priceAriaLabel": "акційна ціна",
+  "fullPriceAriaLabel": "попередня ціна",
   "cartButton": "До кошика",
   "cartAriaLabel": "Додати {{product}} до кошика",
   "favoriteAriaLabel": "Додати {{product}} до обраного",
@@ -30,5 +31,5 @@
   "navigationAriaLabel": "Навігація слайдів",
   "pictureOfTotal": "Зображення {{current}} із {{total}}",
   "slideOfTotal": "Показати слайд {{current}} із {{total}}",
-  "productOfTotal": "Картка продукту {{current}} з {{total}}"
+  "productOfTotal": "Продукт {{current}} з {{total}}"
 }

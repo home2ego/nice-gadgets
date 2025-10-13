@@ -1,7 +1,7 @@
 @use "../utils/index.scss" as utils;
 
 :root {
-  --bg-nav: rgba(15, 17, 33, 0.5);
+  --bg-nav: rgb(15 17 33 / 50%);
   --bg-color-layout: #0f1121;
   --bg-color-primary: #323542;
   --bg-color-secondary: #161827;
@@ -14,14 +14,13 @@
   --accent-color: #8755ee;
 
   font-family: Mont, sans-serif;
+  -webkit-font-smoothing: antialiased;
   color: var(--text-color-primary);
   background-color: var(--bg-color-layout);
-
-  -webkit-font-smoothing: antialiased;
 }
 
 :root.light-theme {
-  --bg-nav: rgba(255, 255, 255, 0.5);
+  --bg-nav: rgb(255 255 255 / 50%);
   --bg-color-layout: #fff;
   --bg-color-primary: var(--bg-color-layout);
   --bg-color-secondary: var(--bg-color-layout);
@@ -49,7 +48,7 @@ body {
   margin: 0;
 }
 
-body:has(#navbar-toggle[aria-expanded="true"]) {
+body:has(button[data-navbar-toggle="main"][aria-expanded="true"]) {
   overflow-y: hidden;
 }
 
@@ -79,10 +78,18 @@ svg {
 
 button {
   all: unset;
-  outline: revert;
-  box-sizing: border-box;
+
   cursor: pointer;
+
+  box-sizing: border-box;
+
   font: inherit;
+
+  outline: revert;
+}
+
+fieldset {
+  all: unset;
 }
 
 main:focus,

@@ -67,6 +67,7 @@
   row-gap: 8px;
 
   width: clamp(210px, 40vw, 272px);
+  height: 100%;
   padding: 32px;
   border: 1px solid var(--bd-color-secondary);
 
@@ -126,38 +127,38 @@
     justify-content: space-between;
 
     button {
-      outline-offset: -1px;
+      outline-offset: 2px;
     }
+  }
 
-    button:nth-child(1) {
-      flex-grow: 1;
+  &__cart {
+    flex-grow: 1;
 
-      padding-block: 10px;
+    padding-block: 10px;
 
-      color: #fff;
-      text-align: center;
+    color: #fff;
+    text-align: center;
 
-      background-color: var(--accent-color);
+    background-color: var(--accent-color);
 
-      transition: opacity 0.18s;
+    transition: opacity 0.18s;
+
+    &:hover {
+      opacity: 0.8;
     }
+  }
 
-    button:nth-child(2) {
-      padding: 12px;
-      border: 1px solid var(--bd-color-icon);
-      background-color: var(--bg-color-primary);
-    }
+  &__favorite {
+    padding: 12px;
+    border: 1px solid var(--bd-color-icon);
+    background-color: var(--bg-color-primary);
 
-    button:nth-child(2) svg {
+    .icon {
       transform: translateZ(0);
       transition: opacity 0.18s, scale 0.28s;
     }
 
-    button:nth-child(1):hover {
-      opacity: 0.8;
-    }
-
-    button:nth-child(2):hover svg {
+    &:hover .icon {
       scale: 1.05;
       opacity: 0.8;
     }
