@@ -9,4 +9,13 @@ export default defineConfig({
     port: 5173,
     allowedHosts: true,
   },
+  build: {
+    rolldownOptions: {
+      output: {
+        advancedChunks: {
+          groups: [{ name: "react-vendor", test: /\/react(?:-dom)?/ }],
+        },
+      },
+    },
+  },
 });

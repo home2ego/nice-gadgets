@@ -26,7 +26,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: true, // off in production
+    // debug: true, // off in production
     resources: {
       en: {
         common: enCommon,

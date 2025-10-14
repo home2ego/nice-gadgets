@@ -1,13 +1,16 @@
 import clsx from "clsx";
-import { useRef } from "react";
+import { lazy, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "../../api/products.json";
 import PicturesSlider from "./components/PicturesSlider";
 import ProductsCarousel from "./components/ProductsCarousel";
-import ShopByCategory from "./components/ShopByCategory/ShopByCategory";
 import styles from "./HomePage.module.scss";
 import type { Product } from "./types/product";
+
+const ShopByCategory = lazy(
+  () => import("./components/ShopByCategory/ShopByCategory"),
+);
 
 const { maxYear, maxModel } = products.reduce(
   (acc, product) => {

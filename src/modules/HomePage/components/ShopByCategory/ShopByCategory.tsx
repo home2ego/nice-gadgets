@@ -71,9 +71,9 @@ const ShopByCategory: React.FC<CategoryProps> = ({ children }) => {
               />
             </div>
 
-            <h4 className={clsx(styles.category__heading, "title--sm")}>
+            <h3 className={clsx(styles.category__heading, "title--sm")}>
               {t(card.heading)}
-            </h4>
+            </h3>
 
             <p className={clsx(styles.category__models, "text--body")}>
               {t("countModels", { count: card.countModels })}

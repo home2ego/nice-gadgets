@@ -31,7 +31,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
   const ariaId = useId();
 
   const { t, i18n } = useTranslation("homePage");
-  const lang = i18n.language;
+  const normalizedLang = i18n.language?.split("-")[0];
 
   useEffect(() => {
     const cards = Array.from(
@@ -120,16 +120,16 @@ const ProductsCarousel: React.FC<SliderProps> = ({
 
           <div className={clsx(styles.product__prices, "title--sm")}>
             {hasOnlyFullPrice ? (
-              <p>{formatPrice(product.fullPrice, lang)}</p>
+              <p>{formatPrice(product.fullPrice, normalizedLang)}</p>
             ) : (
               <>
                 <p>
-                  {formatPrice(product.price, lang)}
+                  {formatPrice(product.price, normalizedLang)}
                   <span className="sr-only">{t("priceAriaLabel")}</span>
                 </p>
 
                 <p className={styles["product__full-price"]}>
-                  {formatPrice(product.fullPrice, lang)}
+                  {formatPrice(product.fullPrice, normalizedLang)}
                   <span className="sr-only">{t("fullPriceAriaLabel")}</span>
                 </p>
               </>
