@@ -25,8 +25,8 @@ const ProductsCarousel: React.FC<SliderProps> = ({
   const [disabledNext, setDisabledNext] = useState(false);
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const lastVisibleCard = useRef<HTMLAnchorElement | null>(null);
-  const firstVisibleCard = useRef<HTMLAnchorElement | null>(null);
+  const lastVisibleCard = useRef<HTMLElement | null>(null);
+  const firstVisibleCard = useRef<HTMLElement | null>(null);
 
   const ariaId = useId();
 
@@ -35,7 +35,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
 
   useEffect(() => {
     const cards = Array.from(
-      containerRef.current?.querySelectorAll<HTMLAnchorElement>("a") ?? [],
+      containerRef.current?.querySelectorAll<HTMLElement>("article") ?? [],
     );
 
     if (!cards.length) {

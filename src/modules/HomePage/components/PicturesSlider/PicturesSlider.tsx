@@ -9,17 +9,11 @@ import appleWatchImageMini from "../../../../assets/images/apple-watch-sm.webp";
 import iPhoneImage from "../../../../assets/images/iPhone-lg.webp";
 import iPhoneImageMini from "../../../../assets/images/iPhone-sm.webp";
 import SkipLink from "../../../../components/shared/components/SkipLink";
+import type { Slide } from "../../types/slide";
 import { AUTOPLAY_THRESHOLD } from "./constants";
 import styles from "./PicturesSlider.module.scss";
+import SlideImage from "./SlideImage";
 import { useHorizontalSwipe } from "./useHorizontalSwipe";
-
-interface Slide {
-  id: number;
-  src: string;
-  srcMini: string;
-  alt: string;
-  priority: "high" | "low";
-}
 
 const slides: Slide[] = [
   {
@@ -27,21 +21,18 @@ const slides: Slide[] = [
     src: iPhoneImage,
     srcMini: iPhoneImageMini,
     alt: "iPhoneAlt",
-    priority: "high",
   },
   {
     id: 2,
     src: appleDevicesImage,
     srcMini: appleDevicesImageMini,
     alt: "appleDevicesAlt",
-    priority: "low",
   },
   {
     id: 3,
     src: appleWatchImage,
     srcMini: appleWatchImageMini,
     alt: "appleWatchAlt",
-    priority: "low",
   },
 ];
 
@@ -323,16 +314,10 @@ const PicturesSlider: React.FC<SliderProps> = ({
           onTransitionEnd={handleTransitionEnd}
         >
           <div className={styles.slider__slide}>
-            <img
-              src={slides[slides.length - 1].src}
-              srcSet={`${slides[slides.length - 1].srcMini} 640w, ${
-                slides[slides.length - 1].src
-              } 1920w`}
-              sizes="(max-width: 591px) 100vw, 100%"
-              width="684"
-              height="400"
-              alt=""
-              fetchPriority="low"
+            <SlideImage
+              slide={slides[slides.length - 1]}
+              hasAlt={false}
+              isPriority={false}
             />
           </div>
 
@@ -349,28 +334,12 @@ const PicturesSlider: React.FC<SliderProps> = ({
               <h3 id={`slide-${slide.id}`} className="sr-only">
                 {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
               </h3>
-              <img
-                src={slide.src}
-                srcSet={`${slide.srcMini} 640w, ${slide.src} 1920w`}
-                sizes="(max-width: 591px) 100vw, 100%"
-                width="684"
-                height="400"
-                alt={t(slide.alt)}
-                fetchPriority={slide.priority}
-              />
+              <SlideImage slide={slide} hasAlt={true} isPriority={i === 0} />
             </div>
           ))}
 
           <div className={styles.slider__slide}>
-            <img
-              src={slides[0].src}
-              srcSet={`${slides[0].srcMini} 640w, ${slides[0].src} 1920w`}
-              sizes="(max-width: 591px) 100vw, 100%"
-              width="684"
-              height="400"
-              alt=""
-              fetchPriority="low"
-            />
+            <SlideImage slide={slides[0]} hasAlt={false} isPriority={false} />
           </div>
         </div>
       </div>

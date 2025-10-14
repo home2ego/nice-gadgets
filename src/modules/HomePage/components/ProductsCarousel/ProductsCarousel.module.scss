@@ -90,6 +90,7 @@
   }
 
   &__prices {
+    position: relative;
     display: flex;
     column-gap: 8px;
   }
