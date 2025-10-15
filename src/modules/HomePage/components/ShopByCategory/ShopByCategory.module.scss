@@ -1,45 +1,49 @@
 @use "../../../../styles/utils/index.scss" as utils;
 @use "sass:list";
 
-.categories {
-  display: grid;
-  column-gap: 16px;
-
-  @include utils.on-tablet {
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 @each $color in utils.$category-colors {
   $i: list.index(utils.$category-colors, $color);
 
-  .category:nth-child(#{$i}) img {
+  .category:nth-child(#{$i}) .category__wrapper {
     background-color: $color;
   }
 }
 
 .category {
-  &__img-wrapper {
-    position: relative;
+  &__wrapper {
     overflow: hidden;
+    aspect-ratio: 1 / 1;
     margin-bottom: 24px;
-    padding-bottom: 100%;
+  }
 
-    img {
-      position: absolute;
-      transform-origin: right;
+  &__image {
+    transform-origin: right;
 
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
 
-      object-fit: cover;
+    opacity: 0;
+    object-fit: cover;
 
-      transition: scale 0.28s;
+    transition: scale 0.28s, opacity 0.36s ease-in-out;
+
+    &--1 {
+      transform: translate(50px, 100px);
+    }
+    &--2 {
+      transform: translate(50px, 100px);
+    }
+    &--3 {
+      transform: translate(50px, 110px);
+      object-position: left;
+    }
+
+    &.loaded {
+      opacity: 1;
     }
   }
 
-  &:hover img {
+  &:hover &__image {
     scale: 1.025;
   }
 

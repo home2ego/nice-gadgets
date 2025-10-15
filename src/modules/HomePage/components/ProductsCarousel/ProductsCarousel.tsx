@@ -53,10 +53,12 @@ const ProductsCarousel: React.FC<SliderProps> = ({
         }
       }
 
-      const visibleCardsToArr = cards.filter((card) => visibleCards.has(card));
+      const visibleCardsArr = cards.filter((card) => visibleCards.has(card));
 
-      firstVisibleCard.current = visibleCardsToArr[0];
-      lastVisibleCard.current = visibleCardsToArr[visibleCardsToArr.length - 1];
+      if (visibleCardsArr.length > 0) {
+        firstVisibleCard.current = visibleCardsArr[0];
+        lastVisibleCard.current = visibleCardsArr[visibleCardsArr.length - 1];
+      }
 
       setDisabledPrev(firstVisibleCard.current === cards[0]);
       setDisabledNext(lastVisibleCard.current === cards[cards.length - 1]);
@@ -64,7 +66,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
 
     const observer = new IntersectionObserver(cbObserver, {
       root: containerRef.current,
-      threshold: 0.5,
+      threshold: 1,
     });
 
     for (const card of cards) {

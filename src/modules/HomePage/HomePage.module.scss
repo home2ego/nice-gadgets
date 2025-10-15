@@ -52,3 +52,15 @@
     margin-bottom: 24px;
   }
 }
+
+.categories {
+  display: grid;
+  grid-template-columns: minmax(0, 368px);
+  gap: 32px 16px;
+  justify-content: center;
+
+  @include utils.on-tablet {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: normal;
+  }
+}

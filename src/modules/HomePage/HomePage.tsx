@@ -1,8 +1,9 @@
 import clsx from "clsx";
-import { lazy, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "../../api/products.json";
+import CategorySkeleton from "./components/CategorySkeleton";
 import PicturesSlider from "./components/PicturesSlider";
 import ProductsCarousel from "./components/ProductsCarousel";
 import styles from "./HomePage.module.scss";
@@ -52,11 +53,33 @@ interface OutletContext {
 }
 
 const HomePage = () => {
+  const [isShowedCategory, setIsShowedCategory] = useState(false);
+  const categoriesWrapperRef = useRef<HTMLDivElement>(null);
+
   const { mainRef, footerRef } = useOutletContext<OutletContext>();
   const headingNewModelsRef = useRef<HTMLHeadingElement>(null);
   const headingCategoryRef = useRef<HTMLHeadingElement>(null);
   const headingHotPricesRef = useRef<HTMLHeadingElement>(null);
   const { t } = useTranslation("homePage");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsShowedCategory(true);
+        }
+      },
+      { rootMargin: "0px 0px 200px 0px" },
+    );
+
+    if (categoriesWrapperRef.current) {
+      observer.observe(categoriesWrapperRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <>
@@ -93,14 +116,24 @@ const HomePage = () => {
         </h2>
       </ProductsCarousel>
 
-      <ShopByCategory>
+      <section>
         <h2
           className={clsx(styles.heading, styles["heading--mb"], "title--lg")}
           ref={headingCategoryRef}
         >
           {t("categoryHeading")}
         </h2>
-      </ShopByCategory>
+
+        <div ref={categoriesWrapperRef} className={styles.categories}>
+          {isShowedCategory ? (
+            <Suspense fallback={<CategorySkeleton />}>
+              <ShopByCategory />
+            </Suspense>
+          ) : (
+            <CategorySkeleton />
+          )}
+        </div>
+      </section>
 
       <ProductsCarousel
         products={hotPricesProducts}
