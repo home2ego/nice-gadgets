@@ -1,11 +1,14 @@
-import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import moon from "../../../assets/icons/moon.svg";
 import sun from "../../../assets/icons/sun.svg";
 import { useAppDispatch, useAppSelector } from "../../../store/hooks";
 import { toggleTheme } from "../../../store/theme/themeSlice";
 
-const ThemeButton = () => {
-  const { t } = useTranslation("header");
+interface ThemeProps {
+  t: TFunction;
+}
+
+const ThemeButton: React.FC<ThemeProps> = ({ t }) => {
   const dispatch = useAppDispatch();
   const mode = useAppSelector((state) => state.theme.mode);
 
@@ -24,6 +27,7 @@ const ThemeButton = () => {
           alt=""
           width="16"
           height="16"
+          decoding="async"
         />
       </span>
     </button>

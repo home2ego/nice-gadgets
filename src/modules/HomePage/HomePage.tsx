@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "../../api/products.json";
@@ -50,70 +50,95 @@ const hotPricesProducts: Product[] = [...products]
 interface OutletContext {
   mainRef: React.RefObject<HTMLElement>;
   footerRef: React.RefObject<HTMLElement>;
+  normalizedLang: string;
 }
 
 const HomePage = () => {
-  const [isShowedCategory, setIsShowedCategory] = useState(false);
-  const categoriesWrapperRef = useRef<HTMLDivElement>(null);
+  const { mainRef, footerRef, normalizedLang } =
+    useOutletContext<OutletContext>();
 
-  const { mainRef, footerRef } = useOutletContext<OutletContext>();
+  const [loaded, setLoaded] = useState(false);
+  const categoriesRef = useRef<HTMLDivElement>(null);
   const headingNewModelsRef = useRef<HTMLHeadingElement>(null);
   const headingCategoryRef = useRef<HTMLHeadingElement>(null);
   const headingHotPricesRef = useRef<HTMLHeadingElement>(null);
+
   const { t } = useTranslation("homePage");
 
   useEffect(() => {
+    if (!categoriesRef.current) {
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsShowedCategory(true);
+          setLoaded(true);
         }
       },
-      { rootMargin: "0px 0px 200px 0px" },
+      { rootMargin: "200px" },
     );
 
-    if (categoriesWrapperRef.current) {
-      observer.observe(categoriesWrapperRef.current);
-    }
+    observer.observe(categoriesRef.current);
 
     return () => {
       observer.disconnect();
     };
   }, []);
 
+  const newModelsHeading = useMemo(() => {
+    return (
+      <h2
+        className={clsx(styles.heading, "title--lg")}
+        ref={headingNewModelsRef}
+      >
+        {t("newModelsHeading")}
+      </h2>
+    );
+  }, [t]);
+
+  const hotPricesHeading = useMemo(() => {
+    return (
+      <h2
+        className={clsx(styles.heading, "title--lg")}
+        ref={headingHotPricesRef}
+      >
+        {t("hotPricesHeading")}
+      </h2>
+    );
+  }, [t]);
+
   return (
     <>
       <title>Nice Gadgets</title>
       <h1 className="sr-only">{t("mainHeading")}</h1>
       <h2
-        className={clsx(styles.typing, styles["heading-welcome"], "title--xl")}
-        style={
-          {
-            "--typing-steps": t("typingSteps"),
-            "--typing-width": t("typingWidth"),
-          } as React.CSSProperties
-        }
+        className={clsx(
+          styles.typing,
+          styles[`typing--${normalizedLang}`],
+          styles["heading-welcome"],
+          "title--xl",
+        )}
       >
         {t("welcomeMessage")}
       </h2>
 
       <PicturesSlider
+        t={t}
         skipForwardRef={headingNewModelsRef}
         skipBackRef={mainRef}
       />
 
       <ProductsCarousel
+        t={t}
+        normalizedLang={normalizedLang}
         products={newProducts}
         skipForwardRef={headingCategoryRef}
         skipBackRef={headingNewModelsRef}
         hasOnlyFullPrice={true}
+        isLazy={false}
       >
-        <h2
-          className={clsx(styles.heading, "title--lg")}
-          ref={headingNewModelsRef}
-        >
-          {t("newModelsHeading")}
-        </h2>
+        {newModelsHeading}
       </ProductsCarousel>
 
       <section>
@@ -124,10 +149,10 @@ const HomePage = () => {
           {t("categoryHeading")}
         </h2>
 
-        <div ref={categoriesWrapperRef} className={styles.categories}>
-          {isShowedCategory ? (
+        <div ref={categoriesRef} className={styles.categories}>
+          {loaded ? (
             <Suspense fallback={<CategorySkeleton />}>
-              <ShopByCategory />
+              <ShopByCategory t={t} />
             </Suspense>
           ) : (
             <CategorySkeleton />
@@ -136,17 +161,15 @@ const HomePage = () => {
       </section>
 
       <ProductsCarousel
+        t={t}
+        normalizedLang={normalizedLang}
         products={hotPricesProducts}
         skipForwardRef={footerRef}
         skipBackRef={headingHotPricesRef}
         hasOnlyFullPrice={false}
+        isLazy={true}
       >
-        <h2
-          className={clsx(styles.heading, "title--lg")}
-          ref={headingHotPricesRef}
-        >
-          {t("hotPricesHeading")}
-        </h2>
+        {hotPricesHeading}
       </ProductsCarousel>
     </>
   );

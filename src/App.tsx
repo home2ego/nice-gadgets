@@ -30,7 +30,7 @@ const App = () => {
       <Header normalizedLang={normalizedLang} />
 
       <main ref={mainRef} className="container">
-        <Outlet context={{ mainRef, footerRef }} />
+        <Outlet context={{ mainRef, footerRef, normalizedLang }} />
       </main>
 
       <Footer mainRef={mainRef} footerRef={footerRef} />

@@ -1,7 +1,7 @@
 // PRELOAD ONE OF THE IMAGES IF ONE OF THEM IS LCP
 import clsx from "clsx";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
+import { memo, useEffect, useLayoutEffect, useRef, useState } from "react";
 import appleDevicesImage from "../../../../assets/images/apple-devices-lg.webp";
 import appleDevicesImageMini from "../../../../assets/images/apple-devices-sm.webp";
 import appleWatchImage from "../../../../assets/images/apple-watch-lg.webp";
@@ -39,11 +39,13 @@ const slides: Slide[] = [
 const TOTAL_SLIDES = slides.length;
 
 interface SliderProps {
+  t: TFunction;
   skipForwardRef: React.RefObject<HTMLElement | null>;
   skipBackRef: React.RefObject<HTMLElement | null>;
 }
 
 const PicturesSlider: React.FC<SliderProps> = ({
+  t,
   skipForwardRef,
   skipBackRef,
 }) => {
@@ -53,8 +55,6 @@ const PicturesSlider: React.FC<SliderProps> = ({
   const sliderRef = useRef<HTMLDivElement>(null);
   const isTransitioning = useRef(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const { t } = useTranslation("homePage");
 
   const normalizedIndex = (currentIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
 
@@ -334,7 +334,12 @@ const PicturesSlider: React.FC<SliderProps> = ({
               <h3 id={`slide-${slide.id}`} className="sr-only">
                 {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
               </h3>
-              <SlideImage slide={slide} hasAlt={true} isPriority={i === 0} />
+              <SlideImage
+                t={t}
+                slide={slide}
+                hasAlt={true}
+                isPriority={i === 0}
+              />
             </div>
           ))}
 
@@ -353,4 +358,4 @@ const PicturesSlider: React.FC<SliderProps> = ({
   );
 };
 
-export default PicturesSlider;
+export default memo(PicturesSlider);

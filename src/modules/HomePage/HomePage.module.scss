@@ -1,30 +1,42 @@
 @use "../../styles/utils/index.scss" as utils;
 
-.typing {
-  @include utils.on-tablet {
+@include utils.on-tablet {
+  .typing {
     overflow: hidden;
 
-    width: var(--typing-width);
     max-width: fit-content;
     padding-right: 8px;
     border-right: 3px solid;
 
     white-space: nowrap;
-
-    animation: typing 0.75s steps(var(--typing-steps)),
-      blink 1.5s step-start infinite;
   }
-}
 
-@keyframes typing {
-  from {
-    width: 0;
+  .typing--en,
+  .typing--pl {
+    width: 30ch;
+    animation: typing 0.75s steps(30), blink 1.5s step-start infinite;
   }
-}
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
+  .typing--fi {
+    width: 24ch;
+    animation: typing 0.75s steps(24), blink 1.5s step-start infinite;
+  }
+
+  .typing--uk {
+    width: 23ch;
+    animation: typing 0.75s steps(23), blink 1.5s step-start infinite;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
   }
 }
 

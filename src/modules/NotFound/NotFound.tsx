@@ -15,7 +15,7 @@ const NotFound = () => {
         {t("errorMessage")}
       </h1>
 
-      <img src={imgNotFound} alt="" width="250" height="240" />
+      <img src={imgNotFound} alt="" width="250" height="240" decoding="async" />
 
       <h2 className={clsx(styles["not-found__subheading"], "title--md")}>
         {t("notFound")}

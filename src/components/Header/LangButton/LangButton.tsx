@@ -1,6 +1,6 @@
 import clsx from "clsx";
+import type { i18n, TFunction } from "i18next";
 import { useEffect, useId, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import iconEN from "../../../assets/icons/en.svg";
 import iconFI from "../../../assets/icons/fi.svg";
 import iconPL from "../../../assets/icons/pl.svg";
@@ -16,10 +16,11 @@ const languages = [
 
 interface LangProps {
   normalizedLang: string;
+  t: TFunction;
+  i18n: i18n;
 }
 
-const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
-  const { t, i18n } = useTranslation("header");
+const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
@@ -125,7 +126,13 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang }) => {
               setIsExpanded(false);
             }}
           >
-            <img src={lang.icon} alt="" width="15" height="15" />
+            <img
+              src={lang.icon}
+              alt=""
+              width="15"
+              height="15"
+              decoding="async"
+            />
             {lang.label}
           </button>
         ))}

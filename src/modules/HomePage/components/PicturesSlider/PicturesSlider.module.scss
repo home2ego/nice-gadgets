@@ -1,8 +1,11 @@
 @use "../../../../styles/utils/index.scss" as utils;
 
+$picture-width: 700px;
+$margin-indent: 48px;
+
 .slider {
   position: relative;
-  max-width: 780px;
+  max-width: $picture-width + $margin-indent * 2;
   margin-inline: auto;
   padding-bottom: 40px;
 
@@ -13,7 +16,7 @@
 
     @include utils.on-tablet {
       width: initial;
-      margin-inline: 48px;
+      margin-inline: $margin-indent;
     }
   }
 
@@ -24,12 +27,12 @@
 
   &__slide {
     transform: translateZ(0);
-    aspect-ratio: 16 / 9;
     max-height: 400px;
 
     img {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }

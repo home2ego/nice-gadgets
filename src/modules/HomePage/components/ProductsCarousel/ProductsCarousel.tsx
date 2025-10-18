@@ -1,25 +1,31 @@
 import clsx from "clsx";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
+import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
 import SkipLink from "../../../../components/shared/components/SkipLink";
 import type { Product } from "../../types/product";
 import { formatPrice } from "./formatPrice";
 import styles from "./ProductsCarousel.module.scss";
 
 interface SliderProps {
+  t: TFunction;
+  normalizedLang: string;
   products: Product[];
   children: React.ReactNode;
   skipForwardRef: React.RefObject<HTMLElement | null>;
   skipBackRef: React.RefObject<HTMLElement | null>;
   hasOnlyFullPrice: boolean;
+  isLazy: boolean;
 }
 
 const ProductsCarousel: React.FC<SliderProps> = ({
+  t,
+  normalizedLang,
   products,
   children,
   skipForwardRef,
   skipBackRef,
   hasOnlyFullPrice,
+  isLazy,
 }) => {
   const [disabledPrev, setDisabledPrev] = useState(true);
   const [disabledNext, setDisabledNext] = useState(false);
@@ -29,9 +35,6 @@ const ProductsCarousel: React.FC<SliderProps> = ({
   const firstVisibleCard = useRef<HTMLElement | null>(null);
 
   const ariaId = useId();
-
-  const { t, i18n } = useTranslation("homePage");
-  const normalizedLang = i18n.language?.split("-")[0];
 
   useEffect(() => {
     const cards = Array.from(
@@ -45,6 +48,8 @@ const ProductsCarousel: React.FC<SliderProps> = ({
     const visibleCards = new Set();
 
     const cbObserver = (entries: IntersectionObserverEntry[]) => {
+      let changed = false;
+
       for (const entry of entries) {
         if (entry.isIntersecting) {
           visibleCards.add(entry.target);
@@ -54,19 +59,28 @@ const ProductsCarousel: React.FC<SliderProps> = ({
       }
 
       const visibleCardsArr = cards.filter((card) => visibleCards.has(card));
+      const newFirst = visibleCardsArr[0];
+      const newLast = visibleCardsArr[visibleCardsArr.length - 1];
 
-      if (visibleCardsArr.length > 0) {
-        firstVisibleCard.current = visibleCardsArr[0];
-        lastVisibleCard.current = visibleCardsArr[visibleCardsArr.length - 1];
+      if (firstVisibleCard.current !== newFirst && newFirst !== undefined) {
+        firstVisibleCard.current = newFirst;
+        changed = true;
       }
 
-      setDisabledPrev(firstVisibleCard.current === cards[0]);
-      setDisabledNext(lastVisibleCard.current === cards[cards.length - 1]);
+      if (lastVisibleCard.current !== newLast && newLast !== undefined) {
+        lastVisibleCard.current = newLast;
+        changed = true;
+      }
+
+      if (changed) {
+        setDisabledPrev(firstVisibleCard.current === cards[0]);
+        setDisabledNext(lastVisibleCard.current === cards[cards.length - 1]);
+      }
     };
 
     const observer = new IntersectionObserver(cbObserver, {
       root: containerRef.current,
-      threshold: 1,
+      threshold: 0.99,
     });
 
     for (const card of cards) {
@@ -115,7 +129,8 @@ const ProductsCarousel: React.FC<SliderProps> = ({
             alt=""
             width="208"
             height="196"
-            loading="lazy"
+            loading={isLazy ? "lazy" : "eager"}
+            decoding="async"
           />
 
           <h3 className="text--body">{product.name}</h3>
@@ -276,4 +291,4 @@ const ProductsCarousel: React.FC<SliderProps> = ({
   );
 };
 
-export default ProductsCarousel;
+export default memo(ProductsCarousel);

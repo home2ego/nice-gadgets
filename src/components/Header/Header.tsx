@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import Logo from "../shared/components/Logo";
 import styles from "./Header.module.scss";
 import LangButton from "./LangButton";
@@ -11,6 +12,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ normalizedLang }) => {
   const actionsRef = useRef<HTMLDivElement>(null);
+  const { t, i18n } = useTranslation("header");
 
   return (
     <header className={styles.header}>
@@ -19,11 +21,11 @@ const Header: React.FC<HeaderProps> = ({ normalizedLang }) => {
       </div>
 
       <div ref={actionsRef} className={styles.header__actions}>
-        <Navbar actionsRef={actionsRef} />
+        <Navbar actionsRef={actionsRef} t={t} />
 
-        <LangButton normalizedLang={normalizedLang} />
+        <LangButton normalizedLang={normalizedLang} t={t} i18n={i18n} />
 
-        <ThemeButton />
+        <ThemeButton t={t} />
       </div>
     </header>
   );

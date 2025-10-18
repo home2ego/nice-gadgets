@@ -1,26 +1,37 @@
-import { useTranslation } from "react-i18next";
+import type { TFunction } from "i18next";
 import type { Slide } from "../../../types/slide";
 
 interface ImageProps {
+  t?: TFunction;
   slide: Slide;
   hasAlt: boolean;
   isPriority: boolean;
 }
 
-const SlideImage: React.FC<ImageProps> = ({ slide, hasAlt, isPriority }) => {
-  const { t } = useTranslation("homePage");
+const SlideImage: React.FC<ImageProps> = ({ t, slide, hasAlt, isPriority }) => {
+  let altText = "";
+
+  if (hasAlt && t) {
+    altText = t(slide.alt);
+  }
 
   return (
-    <img
-      src={slide.src}
-      srcSet={`${slide.srcMini} 640w, ${slide.src} 1920w`}
-      sizes="(max-width: 591px) 100vw, 100%"
-      width="684"
-      height="400"
-      alt={hasAlt ? t(slide.alt) : ""}
-      loading={isPriority ? "eager" : "lazy"}
-      fetchPriority={isPriority ? "high" : "low"}
-    />
+    <picture>
+      <source
+        media="(max-width: 440px)"
+        type="image/webp"
+        srcSet={slide.srcMini}
+      />
+
+      <img
+        src={slide.src}
+        width="600"
+        height="400"
+        alt={altText}
+        fetchPriority={isPriority ? "high" : "low"}
+        decoding={isPriority ? "sync" : "async"}
+      />
+    </picture>
   );
 };
 

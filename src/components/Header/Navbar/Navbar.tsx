@@ -1,15 +1,15 @@
+import type { TFunction } from "i18next";
 import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 
 interface NavbarProps {
   actionsRef: React.RefObject<HTMLElement | null>;
+  t: TFunction;
 }
 
-const Navbar = ({ actionsRef }: NavbarProps) => {
+const Navbar: React.FC<NavbarProps> = ({ actionsRef, t }) => {
   const { pathname } = useLocation();
-  const { t } = useTranslation("header");
   const [isExpanded, setIsExpanded] = useState(false);
   const menuWrapperRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLElement>(null);

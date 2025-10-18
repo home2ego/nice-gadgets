@@ -77,8 +77,9 @@
   img {
     transform-origin: bottom;
 
-    max-width: 100%;
-    height: clamp(128px, 25vw, 196px);
+    aspect-ratio: 208 / 196;
+    width: 100%;
+    height: auto;
 
     object-fit: contain;
 
