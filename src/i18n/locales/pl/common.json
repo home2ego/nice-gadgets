@@ -7,5 +7,9 @@
   "skipBackCarousel": "Pomiń karuzelę do tyłu",
   "errorMessage": "Błąd 404",
   "notFound": "Nie znaleziono strony",
-  "goHomePage": "Strona główna"
+  "goHomePage": "Strona główna",
+  "phonesHeading": "Telefony komórkowe",
+  "phonesHeadingShort": "Telefony",
+  "tabletsHeading": "Tablety",
+  "accessoriesHeading": "Akcesoria"
 }

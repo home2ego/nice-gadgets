@@ -1,0 +1,30 @@
+@use "../../../styles/utils/index.scss" as utils;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-block: 16px;
+
+  @include utils.on-tablet {
+    margin-bottom: 32px;
+  }
+
+  a {
+    padding: 8px;
+  }
+
+  a svg {
+    transform: translateZ(0);
+    transition: scale 0.28s, opacity 0.18s;
+  }
+
+  a:hover svg {
+    scale: 1.05;
+    opacity: 0.7;
+  }
+
+  p {
+    margin-left: 8px;
+    color: var(--text-color-secondary);
+  }
+}

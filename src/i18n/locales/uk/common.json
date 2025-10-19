@@ -7,5 +7,9 @@
   "skipBackCarousel": "Пропустити карусель назад",
   "errorMessage": "Помилка 404",
   "notFound": "Сторінку не знайдено",
-  "goHomePage": "На головну"
+  "goHomePage": "На головну",
+  "phonesHeading": "Мобільні телефони",
+  "phonesHeadingShort": "Телефони",
+  "tabletsHeading": "Планшети",
+  "accessoriesHeading": "Аксесуари"
 }

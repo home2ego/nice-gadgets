@@ -25,7 +25,7 @@ const categoryCards: CategoryCards[] = [
     id: 1,
     path: "/phones",
     src: imgCategoryPhones,
-    heading: "headingPhones",
+    heading: "phonesHeading",
     countModels: phones.length,
     thumbhash: "5yiKDAI5P4CGaZZ3+GRmT1aFgFOIR5h1BQ",
   },
@@ -33,7 +33,7 @@ const categoryCards: CategoryCards[] = [
     id: 2,
     path: "/tablets",
     src: imgCategoryTablets,
-    heading: "headingTablets",
+    heading: "tabletsHeading",
     countModels: tablets.length,
     thumbhash: "oYmGJQoqLlDHeGGddUFvBZV3Bxd4d4CJGA",
   },
@@ -41,7 +41,7 @@ const categoryCards: CategoryCards[] = [
     id: 3,
     path: "/accessories",
     src: imgCategoryAccessories,
-    heading: "headingAccessories",
+    heading: "accessoriesHeading",
     countModels: accessories.length,
     thumbhash: "5ziKIoodwDWJh4g/ZfdsdggIgohyKCc",
   },
@@ -69,6 +69,7 @@ const ShopByCategory: React.FC<CategoryProps> = ({ t }) => {
                 alt=""
                 width="100%"
                 height="100%"
+                style={{ position: "absolute" }}
                 decoding="async"
               />
             )}
@@ -83,7 +84,7 @@ const ShopByCategory: React.FC<CategoryProps> = ({ t }) => {
               alt=""
               width="368"
               height="368"
-              decoding="async"
+              decoding="sync"
               onLoad={() => handleLoad(card.id)}
             />
           </div>
