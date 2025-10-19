@@ -8,8 +8,8 @@
   "errorMessage": "Virhe 404",
   "notFound": "Sivua ei löytynyt",
   "goHomePage": "Siirry etusivulle",
-  "phonesHeading": "Matkapuhelimet",
-  "phonesHeadingShort": "Puhelimet",
-  "tabletsHeading": "Tabletit",
-  "accessoriesHeading": "Lisätarvikkeet"
+  "phones": "Puhelimet",
+  "tablets": "Tabletit",
+  "accessories": "Lisävarusteet",
+  "countModels": "{{count}} mallia"
 }

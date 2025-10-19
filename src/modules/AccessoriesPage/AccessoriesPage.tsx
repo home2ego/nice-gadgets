@@ -1,5 +1,8 @@
 import { useTranslation } from "react-i18next";
-import BackToHome from "../shared/components";
+import accessories from "../../api/accessories.json";
+import TopHeader from "../shared/components";
+
+const countModels = accessories.length;
 
 const AccessoriesPage = () => {
   const { t } = useTranslation("accessoriesPage");
@@ -8,9 +11,7 @@ const AccessoriesPage = () => {
     <>
       <title>{t("title")}</title>
 
-      <BackToHome t={t} heading="accessoriesHeading" />
-
-      <h1 className="title--xl">{t("accessoriesHeading")}</h1>
+      <TopHeader t={t} heading="accessories" countModels={countModels} />
     </>
   );
 };

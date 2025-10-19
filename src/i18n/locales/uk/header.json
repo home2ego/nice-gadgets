@@ -1,8 +1,5 @@
 {
   "home": "Головна",
-  "phones": "Телефони",
-  "tablets": "Планшети",
-  "accessories": "Аксесуари",
   "toggleAriaLabel": "Перемкнути меню навігації",
   "favoriteAriaLabel": "Переглянути улюблені товари",
   "cartAriaLabel": "Переглянути кошик",

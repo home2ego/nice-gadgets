@@ -8,8 +8,8 @@
   "errorMessage": "Помилка 404",
   "notFound": "Сторінку не знайдено",
   "goHomePage": "На головну",
-  "phonesHeading": "Мобільні телефони",
-  "phonesHeadingShort": "Телефони",
-  "tabletsHeading": "Планшети",
-  "accessoriesHeading": "Аксесуари"
+  "phones": "Телефони",
+  "tablets": "Планшети",
+  "accessories": "Аксесуари",
+  "countModels": "{{count}} моделей"
 }

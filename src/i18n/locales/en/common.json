@@ -8,8 +8,8 @@
   "errorMessage": "Error 404",
   "notFound": "Page not found",
   "goHomePage": "Go to home page",
-  "phonesHeading": "Mobile phones",
-  "phonesHeadingShort": "Phones",
-  "tabletsHeading": "Tablets",
-  "accessoriesHeading": "Accessories"
+  "phones": "Phones",
+  "tablets": "Tablets",
+  "accessories": "Accessories",
+  "countModels": "{{count}} models"
 }

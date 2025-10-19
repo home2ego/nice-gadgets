@@ -8,8 +8,8 @@
   "errorMessage": "Błąd 404",
   "notFound": "Nie znaleziono strony",
   "goHomePage": "Strona główna",
-  "phonesHeading": "Telefony komórkowe",
-  "phonesHeadingShort": "Telefony",
-  "tabletsHeading": "Tablety",
-  "accessoriesHeading": "Akcesoria"
+  "phones": "Telefony",
+  "tablets": "Tablety",
+  "accessories": "Akcesoria",
+  "countModels": "{{count}} modele"
 }
