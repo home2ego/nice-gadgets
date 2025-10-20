@@ -68,7 +68,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     >
       <button
         type="button"
-        aria-label={t("langAriaLabel")}
+        aria-label={t("langLabel")}
         aria-expanded={isExpanded}
         aria-haspopup="menu"
         aria-controls={langId}

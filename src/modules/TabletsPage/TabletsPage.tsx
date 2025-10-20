@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import tablets from "../../api/tablets.json";
-import TopHeader from "../shared/components";
+import Breadcrumb from "../shared/components/Breadcrumb";
+import SectionContent from "../shared/components/SectionContent";
 
 const countModels = tablets.length;
 
@@ -11,7 +12,9 @@ const TabletsPage = () => {
     <>
       <title>{t("title")}</title>
 
-      <TopHeader t={t} heading="tablets" countModels={countModels} />
+      <Breadcrumb t={t} heading="tablets" />
+
+      <SectionContent t={t} heading="tablets" countModels={countModels} />
     </>
   );
 };

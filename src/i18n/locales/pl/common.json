@@ -1,5 +1,5 @@
 {
-  "homepageAriaLabel": "Strona główna Nice Gadgets",
+  "homePageLabel": "Strona główna Nice Gadgets",
   "skipToContent": "Przejdź do treści",
   "skipForwardSlider": "Pomiń suwak do przodu",
   "skipBackSlider": "Pomiń suwak do tyłu",
@@ -11,5 +11,6 @@
   "phones": "Telefony",
   "tablets": "Tablety",
   "accessories": "Akcesoria",
-  "countModels": "{{count}} modele"
+  "countModels": "{{count}} modele",
+  "breadcrumbLabel": "Ścieżka"
 }

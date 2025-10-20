@@ -89,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({ actionsRef, t }) => {
     <div className={styles.navbar} ref={menuWrapperRef}>
       <button
         type="button"
-        aria-label={t("toggleAriaLabel")}
+        aria-label={t("toggleLabel")}
         aria-expanded={isExpanded}
         aria-controls={navbarId}
         data-navbar-toggle="main"
@@ -100,7 +100,12 @@ const Navbar: React.FC<NavbarProps> = ({ actionsRef, t }) => {
         <span className={styles["navbar__toggle-icon"]} />
       </button>
 
-      <nav id={navbarId} className={styles.navbar__menu} ref={menuRef}>
+      <nav
+        id={navbarId}
+        className={styles.navbar__menu}
+        ref={menuRef}
+        aria-label={t("mainNavLabel")}
+      >
         <ul className={styles["navbar__list-primary"]}>
           {["home", "phones", "tablets", "accessories"].map((item) => (
             <li key={item}>
@@ -119,7 +124,7 @@ const Navbar: React.FC<NavbarProps> = ({ actionsRef, t }) => {
           <li>
             <NavLink
               to="/favorites"
-              aria-label={t("favoriteAriaLabel")}
+              aria-label={t("favoriteLabel")}
               className="btn--nav-right"
               onClick={handleLinkClick}
             >
@@ -143,7 +148,7 @@ const Navbar: React.FC<NavbarProps> = ({ actionsRef, t }) => {
           <li>
             <NavLink
               to="/cart"
-              aria-label={t("cartAriaLabel")}
+              aria-label={t("cartLabel")}
               className="btn--nav-right"
               onClick={handleLinkClick}
             >

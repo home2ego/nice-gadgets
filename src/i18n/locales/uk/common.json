@@ -1,5 +1,5 @@
 {
-  "homepageAriaLabel": "Головна сторінка Nice Gadgets",
+  "homePageLabel": "Головна сторінка Nice Gadgets",
   "skipToContent": "Перейти до змісту",
   "skipForwardSlider": "Пропустити слайдер уперед",
   "skipBackSlider": "Пропустити слайдер назад",
@@ -11,5 +11,6 @@
   "phones": "Телефони",
   "tablets": "Планшети",
   "accessories": "Аксесуари",
-  "countModels": "{{count}} моделей"
+  "countModels": "{{count}} моделей",
+  "breadcrumbLabel": "Шлях"
 }

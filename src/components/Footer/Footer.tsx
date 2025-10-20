@@ -27,7 +27,7 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
       <div className={clsx(styles.footer__wrapper, "container")}>
         <Logo />
 
-        <ul className={styles.footer__list} aria-label={t("linksAriaLabel")}>
+        <ul className={styles.footer__list} aria-label={t("linksLabel")}>
           <li>
             <a
               href="https://github.com/home2ego/nice-gadgets"

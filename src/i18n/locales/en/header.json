@@ -1,8 +1,9 @@
 {
   "home": "Home",
-  "toggleAriaLabel": "Toggle navigation menu",
-  "favoriteAriaLabel": "View favorite products",
-  "cartAriaLabel": "View shopping cart",
-  "themeAriaLabel": "Dark mode",
-  "langAriaLabel": "Change language"
+  "mainNavLabel": "Main",
+  "toggleLabel": "Toggle navigation menu",
+  "favoriteLabel": "View favorite products",
+  "cartLabel": "View shopping cart",
+  "themeLabel": "Dark mode",
+  "langLabel": "Change language"
 }

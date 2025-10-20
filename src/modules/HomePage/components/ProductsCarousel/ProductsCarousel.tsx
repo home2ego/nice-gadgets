@@ -120,7 +120,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
       >
         <a
           href="/"
-          aria-label={t("productDetailsAriaLabel", { product: product.name })}
+          aria-label={t("productDetailsLabel", { product: product.name })}
           className={styles.product}
           onFocus={handleCardFocus}
         >
@@ -142,12 +142,12 @@ const ProductsCarousel: React.FC<SliderProps> = ({
               <>
                 <p>
                   {formatPrice(product.price, normalizedLang)}
-                  <span className="sr-only">{t("priceAriaLabel")}</span>
+                  <span className="sr-only">{t("priceLabel")}</span>
                 </p>
 
                 <p className={styles["product__full-price"]}>
                   {formatPrice(product.fullPrice, normalizedLang)}
-                  <span className="sr-only">{t("fullPriceAriaLabel")}</span>
+                  <span className="sr-only">{t("fullPriceLabel")}</span>
                 </p>
               </>
             )}
@@ -176,7 +176,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
             <button
               type="button"
               className={clsx(styles.product__cart, "text--btn")}
-              aria-label={t("cartAriaLabel", { product: product.name })}
+              aria-label={t("cartLabel", { product: product.name })}
             >
               {t("cartButton")}
             </button>
@@ -184,7 +184,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
             <button
               type="button"
               className={styles.product__favorite}
-              aria-label={t("favoriteAriaLabel", { product: product.name })}
+              aria-label={t("favoriteLabel", { product: product.name })}
             >
               <svg
                 className={styles.icon}

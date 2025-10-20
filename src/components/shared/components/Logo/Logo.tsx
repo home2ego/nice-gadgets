@@ -6,7 +6,7 @@ const Logo = () => {
 
   return (
     <a href="/" className={styles.logo}>
-      <span className="sr-only">{t("homepageAriaLabel")}</span>
+      <span className="sr-only">{t("homePageLabel")}</span>
 
       <svg
         className={styles.logo__name}

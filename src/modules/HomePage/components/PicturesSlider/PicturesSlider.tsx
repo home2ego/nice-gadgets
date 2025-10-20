@@ -205,7 +205,7 @@ const PicturesSlider: React.FC<SliderProps> = ({
           className={styles.paused}
           onClick={() => updatePause(!isPausedRef.current)}
           aria-pressed={isPaused}
-          aria-label={isPaused ? t("resumeAriaLabel") : t("pauseAriaLabel")}
+          aria-label={isPaused ? t("resumeLabel") : t("pauseLabel")}
           data-pause-button=""
         >
           {isPaused ? (
@@ -243,7 +243,7 @@ const PicturesSlider: React.FC<SliderProps> = ({
         </button>
 
         <fieldset className={styles.dots}>
-          <legend className="sr-only">{t("navigationAriaLabel")}</legend>
+          <legend className="sr-only">{t("slideNavLabel")}</legend>
 
           {slides.map((slide: Slide, i) => (
             <button
@@ -268,7 +268,7 @@ const PicturesSlider: React.FC<SliderProps> = ({
           type="button"
           className={styles.prev}
           onClick={handlePrevSlideShow}
-          aria-label={t("prevAriaLabel")}
+          aria-label={t("prevLabel")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -290,7 +290,7 @@ const PicturesSlider: React.FC<SliderProps> = ({
           type="button"
           className={styles.next}
           onClick={handleNextSlideShow}
-          aria-label={t("nextAriaLabel")}
+          aria-label={t("nextLabel")}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

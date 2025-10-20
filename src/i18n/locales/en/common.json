@@ -1,5 +1,5 @@
 {
-  "homepageAriaLabel": "Nice Gadgets homepage",
+  "homePageLabel": "Nice Gadgets homepage",
   "skipToContent": "Skip to content",
   "skipForwardSlider": "Skip forward past slider",
   "skipBackSlider": "Skip back before slider",
@@ -11,5 +11,6 @@
   "phones": "Phones",
   "tablets": "Tablets",
   "accessories": "Accessories",
-  "countModels": "{{count}} models"
+  "countModels": "{{count}} models",
+  "breadcrumbLabel": "Breadcrumb"
 }

@@ -1,8 +1,9 @@
 {
   "home": "Etusivu",
-  "toggleAriaLabel": "Vaihda valikkonäkymää",
-  "favoriteAriaLabel": "Näytä suosikkituotteet",
-  "cartAriaLabel": "Näytä ostoskori",
-  "themeAriaLabel": "Tumma tila",
-  "langAriaLabel": "Vaihda kieli"
+  "mainNavLabel": "Pää",
+  "toggleLabel": "Vaihda valikkonäkymää",
+  "favoriteLabel": "Näytä suosikkituotteet",
+  "cartLabel": "Näytä ostoskori",
+  "themeLabel": "Tumma tila",
+  "langLabel": "Vaihda kieli"
 }

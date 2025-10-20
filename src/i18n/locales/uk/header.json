@@ -1,8 +1,9 @@
 {
   "home": "Головна",
-  "toggleAriaLabel": "Перемкнути меню навігації",
-  "favoriteAriaLabel": "Переглянути улюблені товари",
-  "cartAriaLabel": "Переглянути кошик",
-  "themeAriaLabel": "Темна тема",
-  "langAriaLabel": "Змінити мову"
+  "mainNavLabel": "Головна",
+  "toggleLabel": "Перемкнути меню навігації",
+  "favoriteLabel": "Переглянути улюблені товари",
+  "cartLabel": "Переглянути кошик",
+  "themeLabel": "Темна тема",
+  "langLabel": "Змінити мову"
 }

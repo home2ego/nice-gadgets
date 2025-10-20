@@ -16,7 +16,7 @@ const ThemeButton: React.FC<ThemeProps> = ({ t }) => {
     <button
       type="button"
       role="switch"
-      aria-label={t("themeAriaLabel")}
+      aria-label={t("themeLabel")}
       aria-checked={mode === "light" ? "false" : "true"}
       className="btn--theme"
       onClick={() => dispatch(toggleTheme())}

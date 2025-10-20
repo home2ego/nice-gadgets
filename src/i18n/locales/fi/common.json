@@ -1,5 +1,5 @@
 {
-  "homepageAriaLabel": "Nice Gadgets etusivu",
+  "homePageLabel": "Nice Gadgets etusivu",
   "skipToContent": "Siirry sisältöön",
   "skipForwardSlider": "Ohita liukusäädin eteenpäin",
   "skipBackSlider": "Ohita liukusäädin taaksepäin",
@@ -11,5 +11,6 @@
   "phones": "Puhelimet",
   "tablets": "Tabletit",
   "accessories": "Lisävarusteet",
-  "countModels": "{{count}} mallia"
+  "countModels": "{{count}} mallia",
+  "breadcrumbLabel": "Polku"
 }

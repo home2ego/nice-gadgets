@@ -1,8 +1,9 @@
 {
   "home": "Główna",
-  "toggleAriaLabel": "Przełącz menu nawigacyjne",
-  "favoriteAriaLabel": "Zobacz ulubione produkty",
-  "cartAriaLabel": "Zobacz koszyk",
-  "themeAriaLabel": "Tryb ciemny",
-  "langAriaLabel": "Zmień język"
+  "mainNavLabel": "Główna",
+  "toggleLabel": "Przełącz menu nawigacyjne",
+  "favoriteLabel": "Zobacz ulubione produkty",
+  "cartLabel": "Zobacz koszyk",
+  "themeLabel": "Tryb ciemny",
+  "langLabel": "Zmień język"
 }
