@@ -1,7 +1,8 @@
 {
   "home": "Główna",
-  "mainNavLabel": "Główna",
-  "toggleLabel": "Przełącz menu nawigacyjne",
+  "mainNavLabel": "Główne menu",
+  "openNavLabel": "Otwórz główne menu",
+  "closeNavLabel": "Zamknij główne menu",
   "favoriteLabel": "Zobacz ulubione produkty",
   "cartLabel": "Zobacz koszyk",
   "themeLabel": "Tryb ciemny",

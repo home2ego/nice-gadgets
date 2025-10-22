@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
-import SkipLink from "../../../../components/shared/components/SkipLink";
+import SkipLink from "../../../shared/components/SkipLink";
 import type { Product } from "../../types/product";
 import { formatPrice } from "./formatPrice";
 import styles from "./ProductsCarousel.module.scss";
 
-interface SliderProps {
+interface CarouselProps {
   t: TFunction;
   normalizedLang: string;
   products: Product[];
@@ -17,7 +17,7 @@ interface SliderProps {
   isLazy: boolean;
 }
 
-const ProductsCarousel: React.FC<SliderProps> = ({
+const ProductsCarousel: React.FC<CarouselProps> = ({
   t,
   normalizedLang,
   products,
@@ -108,7 +108,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
     e.currentTarget.scrollIntoView({ inline: "nearest", block: "nearest" });
   };
 
-  // biome-ignore lint: correctness/useExhaustiveDependencies — this useMemo re-computes only when the language changes
+  // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
   const productCards = useMemo(() => {
     return products.map((product, index) => (
       <article
@@ -209,11 +209,7 @@ const ProductsCarousel: React.FC<SliderProps> = ({
   }, [t]);
 
   return (
-    <section
-      aria-roledescription="carousel"
-      aria-label={t("productsCarousel")}
-      aria-describedby={ariaId}
-    >
+    <section aria-label={t("productsCarousel")} aria-describedby={ariaId}>
       <div className={styles["section-top"]}>
         {children}
 

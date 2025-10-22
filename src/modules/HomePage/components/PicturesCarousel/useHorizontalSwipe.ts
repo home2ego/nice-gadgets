@@ -22,7 +22,7 @@ export function useHorizontalSwipe(
     touchStartY.current = e.touches[0].clientY;
   }, []);
 
-  // biome-ignore lint: correctness/useExhaustiveDependencies — sliderRef is a stable ref
+  // biome-ignore lint/correctness/useExhaustiveDependencies: sliderRef is a stable ref
   const handleTouchMove = useCallback((e: TouchEvent) => {
     const slider = sliderRef.current;
 
@@ -51,7 +51,7 @@ export function useHorizontalSwipe(
     }
   }, []);
 
-  // biome-ignore lint: correctness/useExhaustiveDependencies — sliderRef is a stable ref
+  // biome-ignore lint/correctness/useExhaustiveDependencies: sliderRef is a stable ref
   useEffect(() => {
     const slider = sliderRef.current;
 

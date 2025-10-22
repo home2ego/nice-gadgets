@@ -7,7 +7,7 @@
   "iPhoneAlt": "Srebrny Apple iPhone stojący pionowo na białym tle",
   "appleDevicesAlt": "Apple iPad, iPhone, AirPods i Apple Pencil w czarnych i białych kolorach na stole",
   "appleWatchAlt": "Apple Watch z niebieskim paskiem na ciemnym tle",
-  "picturesSlider": "Zdjęcia produktu",
+  "picturesCarousel": "Karuzela zdjęć",
   "productsCarousel": "Karuzela produktów",
   "carouselInstructions": "Użyj Tab lub Shift+Tab, aby przechodzić między produktami",
   "productDetailsLabel": "Zobacz szczegóły produktu {{product}}",

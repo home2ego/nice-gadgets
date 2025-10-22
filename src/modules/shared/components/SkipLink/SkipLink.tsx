@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
-import { focusElement } from "../../utils/focusElement";
+import { focusElement } from "../../../../components/shared/utils/focusElement";
 import styles from "./SkipLink.module.scss";
 
 interface SkipProps {
@@ -33,7 +33,7 @@ const SkipLink: React.FC<SkipProps> = ({
   };
 
   return (
-    // biome-ignore lint: a11y/useValidAnchor — this anchor is a skip link with dynamic targets
+    // biome-ignore lint/a11y/useValidAnchor: skip link performs custom focus
     <a
       href="#"
       className={clsx(styles[classAttr], "sr-skip-link", "text--uppercase")}

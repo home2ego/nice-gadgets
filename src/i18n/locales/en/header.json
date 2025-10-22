@@ -1,7 +1,8 @@
 {
   "home": "Home",
-  "mainNavLabel": "Main",
-  "toggleLabel": "Toggle navigation menu",
+  "mainNavLabel": "Main menu",
+  "openNavLabel": "Open main menu",
+  "closeNavLabel": "Close main menu",
   "favoriteLabel": "View favorite products",
   "cartLabel": "View shopping cart",
   "themeLabel": "Dark mode",

@@ -1,15 +1,17 @@
+import clsx from "clsx";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import SkipLink from "./components/shared/components/SkipLink";
+import { focusElement } from "./components/shared/utils/focusElement";
 import "./App.scss";
 
 const App = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   const mainRef = useRef<HTMLElement>(null);
   const footerRef = useRef<HTMLElement>(null);
+  const skipRef = useRef<HTMLAnchorElement>(null);
 
   const normalizedLang = i18n.language?.split("-")[0];
 
@@ -19,15 +21,32 @@ const App = () => {
     }
   }, [normalizedLang]);
 
+  const handleSkipToContent = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    if (mainRef.current) {
+      focusElement(mainRef.current);
+    }
+  };
+
   return (
     <div className="App">
-      <SkipLink
-        mainRef={mainRef}
-        content="skipToContent"
-        classAttr="skip-content"
-      />
+      {/* biome-ignore lint/a11y/useValidAnchor: skip link performs custom focus */}
+      <a
+        href="#"
+        className={clsx("skip-content", "sr-skip-link", "text--uppercase")}
+        onClick={handleSkipToContent}
+        ref={skipRef}
+      >
+        {t("skipToContent")}
+      </a>
 
-      <Header normalizedLang={normalizedLang} />
+      <Header
+        normalizedLang={normalizedLang}
+        mainRef={mainRef}
+        footerRef={footerRef}
+        skipRef={skipRef}
+      />
 
       <main ref={mainRef} className="container">
         <Outlet context={{ mainRef, footerRef, normalizedLang }} />

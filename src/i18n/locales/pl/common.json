@@ -1,8 +1,6 @@
 {
   "homePageLabel": "Strona główna Nice Gadgets",
   "skipToContent": "Przejdź do treści",
-  "skipForwardSlider": "Pomiń suwak do przodu",
-  "skipBackSlider": "Pomiń suwak do tyłu",
   "skipForwardCarousel": "Pomiń karuzelę do przodu",
   "skipBackCarousel": "Pomiń karuzelę do tyłu",
   "errorMessage": "Błąd 404",

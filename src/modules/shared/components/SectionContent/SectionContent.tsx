@@ -12,14 +12,16 @@ const SectionContent: React.FC<SectionProps> = ({
   t,
   heading,
   countModels,
-}) => (
-  <section>
-    <h1 className={clsx(styles.heading, "title--xl")}>{t(heading)}</h1>
+}) => {
+  return (
+    <section>
+      <h1 className={clsx(styles.heading, "title--xl")}>{t(heading)}</h1>
 
-    <p className={clsx(styles.models, "text--body")}>
-      {t("countModels", { count: countModels })}
-    </p>
-  </section>
-);
+      <p className={clsx(styles.models, "text--body")}>
+        {t("countModels", { count: countModels })}
+      </p>
+    </section>
+  );
+};
 
 export default SectionContent;

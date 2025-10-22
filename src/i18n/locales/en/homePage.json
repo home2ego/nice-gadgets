@@ -7,7 +7,7 @@
   "iPhoneAlt": "Silver Apple iPhone standing upright on a white background",
   "appleDevicesAlt": "Apple iPad, iPhone, AirPods, and Apple Pencil in black and white colors on a table",
   "appleWatchAlt": "Apple Watch with a blue strap on a dark background",
-  "picturesSlider": "Product pictures",
+  "picturesCarousel": "Pictures carousel",
   "productsCarousel": "Products carousel",
   "carouselInstructions": "Use Tab or Shift+Tab to move between products",
   "productDetailsLabel": "View details for {{product}}",

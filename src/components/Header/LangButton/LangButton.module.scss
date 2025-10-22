@@ -30,30 +30,38 @@
     }
   }
 
-  &__menu {
+  &__list {
     position: absolute;
     z-index: 30;
     top: utils.$mobile-navbar-hight;
     left: 0;
 
+    min-width: 120px;
     padding-block: 12px;
     border: utils.$border-width solid var(--bd-color-primary);
 
-    visibility: hidden;
-    opacity: 0;
     background-color: var(--bg-color-primary);
-
-    transition: opacity 0.18s;
 
     @include utils.on-desktop {
       top: utils.$desktop-navbar-hight;
     }
   }
 
-  &__toggle[aria-expanded="true"] + &__menu {
+  &__toggle[aria-expanded="false"] + &__list {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.18s, visibility 0s 0.18s;
+  }
+
+  &__toggle[aria-expanded="true"] + &__list {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.18s;
+    transition: opacity 0.18s, visibility 0s;
+  }
+
+  &__item:nth-child(1) {
+    margin-bottom: 12px;
+    border-bottom: utils.$border-width solid var(--bd-color-primary);
   }
 
   &__action {
@@ -61,8 +69,7 @@
     column-gap: 4px;
 
     width: 100%;
-    padding-block: 12px;
-    padding-inline: 22px;
+    padding: 12px;
 
     outline-offset: -2px;
 
@@ -72,17 +79,16 @@
       border-radius: 50%;
     }
 
-    &:nth-child(1) {
-      margin-bottom: 12px;
-      border-bottom: utils.$border-width solid var(--bd-color-primary);
+    &[aria-current="true"] {
+      pointer-events: none;
+      color: var(--text-color-secondary);
     }
 
-    &[disabled] {
-      cursor: default;
+    &[aria-current="true"] img {
       opacity: 0.5;
     }
 
-    &:not([disabled]):hover {
+    &:not([aria-current="true"]):hover {
       color: utils.$accent-color;
     }
   }

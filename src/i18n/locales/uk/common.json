@@ -1,8 +1,6 @@
 {
   "homePageLabel": "Головна сторінка Nice Gadgets",
   "skipToContent": "Перейти до змісту",
-  "skipForwardSlider": "Пропустити слайдер уперед",
-  "skipBackSlider": "Пропустити слайдер назад",
   "skipForwardCarousel": "Пропустити карусель уперед",
   "skipBackCarousel": "Пропустити карусель назад",
   "errorMessage": "Помилка 404",

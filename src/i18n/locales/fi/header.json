@@ -1,7 +1,8 @@
 {
   "home": "Etusivu",
-  "mainNavLabel": "Pää",
-  "toggleLabel": "Vaihda valikkonäkymää",
+  "mainNavLabel": "Päävalikko",
+  "openNavLabel": "Avaa päävalikko",
+  "closeNavLabel": "Sulje päävalikko",
   "favoriteLabel": "Näytä suosikkituotteet",
   "cartLabel": "Näytä ostoskori",
   "themeLabel": "Tumma tila",

@@ -1,10 +1,18 @@
 import clsx from "clsx";
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import {
+  lazy,
+  Suspense,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "../../api/products.json";
 import CategorySkeleton from "./components/CategorySkeleton";
-import PicturesSlider from "./components/PicturesSlider";
+import PicturesCarousel from "./components/PicturesCarousel";
 import ProductsCarousel from "./components/ProductsCarousel";
 import styles from "./HomePage.module.scss";
 import type { Product } from "./types/product";
@@ -62,6 +70,7 @@ const HomePage = () => {
   const headingNewModelsRef = useRef<HTMLHeadingElement>(null);
   const headingCategoryRef = useRef<HTMLHeadingElement>(null);
   const headingHotPricesRef = useRef<HTMLHeadingElement>(null);
+  const categoriesId = useId();
 
   const { t } = useTranslation("homePage");
 
@@ -123,7 +132,7 @@ const HomePage = () => {
         {t("welcomeMessage")}
       </h2>
 
-      <PicturesSlider
+      <PicturesCarousel
         t={t}
         skipForwardRef={headingNewModelsRef}
         skipBackRef={mainRef}
@@ -141,8 +150,9 @@ const HomePage = () => {
         {newModelsHeading}
       </ProductsCarousel>
 
-      <section>
+      <section aria-labelledby={categoriesId}>
         <h2
+          id={categoriesId}
           className={clsx(styles.heading, styles["heading--mb"], "title--lg")}
           ref={headingCategoryRef}
         >

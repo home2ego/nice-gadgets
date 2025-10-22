@@ -7,7 +7,7 @@
   "iPhoneAlt": "Срібний Apple iPhone у вертикальному положенні на білому тлі",
   "appleDevicesAlt": "Apple iPad, iPhone, AirPods та Apple Pencil у чорних і білих кольорах на столі",
   "appleWatchAlt": "Apple Watch із синім ремінцем на темному тлі",
-  "picturesSlider": "Зображення товару",
+  "picturesCarousel": "Карусель зображень",
   "productsCarousel": "Карусель продуктів",
   "carouselInstructions": "Використовуйте Tab або Shift+Tab, щоб переходити між продуктами",
   "productDetailsLabel": "Переглянути деталі продукту {{product}}",

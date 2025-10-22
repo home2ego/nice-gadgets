@@ -1,7 +1,8 @@
 {
   "home": "Головна",
-  "mainNavLabel": "Головна",
-  "toggleLabel": "Перемкнути меню навігації",
+  "mainNavLabel": "Головне меню",
+  "openNavLabel": "Відкрити головне меню",
+  "closeNavLabel": "Закрити головне меню",
   "favoriteLabel": "Переглянути улюблені товари",
   "cartLabel": "Переглянути кошик",
   "themeLabel": "Темна тема",

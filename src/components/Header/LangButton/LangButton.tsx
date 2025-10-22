@@ -23,8 +23,11 @@ interface LangProps {
 const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
-  const langId = useId();
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const btnRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const openedByKeyboard = useRef(false);
+  const listId = useId();
+  const toggleId = useId();
 
   useEffect(() => {
     const handleOutsideClick = (e: PointerEvent) => {
@@ -45,43 +48,99 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
       document.removeEventListener("pointerdown", handleOutsideClick);
   }, [isExpanded]);
 
-  const sortedLanguages = [...languages].sort((a, b) =>
-    normalizedLang === a.code ? -1 : normalizedLang === b.code ? 1 : 0,
-  );
+  useEffect(() => {
+    if (!isExpanded || !openedByKeyboard.current) {
+      return;
+    }
+
+    const target = btnRefs.current.find(
+      (btn) => btn?.getAttribute("aria-current") === "true",
+    );
+
+    target?.focus();
+
+    openedByKeyboard.current = false;
+  }, [isExpanded]);
+
+  const sortedLanguages = [
+    // biome-ignore lint/style/noNonNullAssertion: .find() doesn't return undefined
+    languages.find((lang) => lang.code === normalizedLang)!,
+    ...languages.filter((lang) => lang.code !== normalizedLang),
+  ];
+
+  const handleMenuBlur = (e: React.FocusEvent<HTMLDivElement>) => {
+    const next = e.relatedTarget as HTMLElement | null;
+
+    if (!next) {
+      return;
+    }
+
+    if (!e.currentTarget.contains(next)) {
+      setIsExpanded(false);
+    }
+  };
+
+  const handleMenuKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (!isExpanded) {
+      return;
+    }
+
+    if (e.key === "Escape") {
+      e.stopPropagation();
+      setIsExpanded(false);
+      toggleRef.current?.focus();
+    }
+  };
+
+  const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+
+      if (!isExpanded) {
+        openedByKeyboard.current = true;
+      }
+
+      setIsExpanded((prev) => !prev);
+    }
+  };
+
+  const handleLangClick = (langCode: string) => {
+    if (normalizedLang === langCode) {
+      return;
+    }
+
+    i18n.changeLanguage(langCode);
+    setIsExpanded(false);
+    toggleRef.current?.focus();
+  };
 
   return (
-    // biome-ignore lint: a11y/noStaticElementInteractions — wrapper for interactive state
+    // biome-ignore lint/a11y/noStaticElementInteractions: wrapper for interactive state
     <div
       className={styles.lang}
-      onMouseEnter={() => setIsExpanded(true)}
-      onMouseLeave={() => setIsExpanded(false)}
-      onBlur={(e) =>
-        !e.currentTarget.contains(e.relatedTarget) && setIsExpanded(false)
-      }
-      onKeyUp={(e) => {
-        if (e.key === "Escape") {
-          setIsExpanded(false);
-          btnRef.current?.focus();
-        }
+      onPointerEnter={(e) => {
+        if (e.pointerType === "mouse") setIsExpanded(true);
       }}
+      onPointerLeave={(e) => {
+        if (e.pointerType === "mouse") setIsExpanded(false);
+      }}
+      onBlur={handleMenuBlur}
+      onKeyDown={handleMenuKey}
       ref={divRef}
     >
       <button
         type="button"
+        id={toggleId}
         aria-label={t("langLabel")}
-        aria-expanded={isExpanded}
-        aria-haspopup="menu"
-        aria-controls={langId}
+        aria-expanded={isExpanded ? "true" : "false"}
+        aria-haspopup="true"
+        aria-controls={listId}
         className={styles.lang__toggle}
         onPointerDown={(e) =>
           e.pointerType !== "mouse" && setIsExpanded((prev) => !prev)
         }
-        onKeyUp={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            setIsExpanded((prev) => !prev);
-          }
-        }}
-        ref={btnRef}
+        onKeyDown={handleToggleKey}
+        ref={toggleRef}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -113,30 +172,36 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         </svg>
       </button>
 
-      <div id={langId} className={styles.lang__menu}>
-        {sortedLanguages.map((lang) => (
-          <button
-            type="button"
-            key={lang.code}
-            className={clsx(styles.lang__action, "text--sm")}
-            disabled={normalizedLang === lang.code}
-            aria-disabled={normalizedLang === lang.code}
-            onClick={() => {
-              i18n.changeLanguage(lang.code);
-              setIsExpanded(false);
-            }}
-          >
-            <img
-              src={lang.icon}
-              alt=""
-              width="15"
-              height="15"
-              decoding="async"
-            />
-            {lang.label}
-          </button>
+      <ul
+        id={listId}
+        className={styles.lang__list}
+        aria-labelledby={toggleId}
+        aria-hidden={isExpanded ? undefined : "true"} // For safety despite visibility: hidden is already used for AT
+      >
+        {sortedLanguages.map((lang, idx) => (
+          <li key={lang.code} className={styles.lang__item}>
+            <button
+              className={clsx(styles.lang__action, "text--sm")}
+              type="button"
+              aria-current={normalizedLang === lang.code ? "true" : undefined}
+              onClick={() => handleLangClick(lang.code)}
+              ref={(el) => {
+                btnRefs.current[idx] = el;
+              }}
+            >
+              <img
+                src={lang.icon}
+                alt=""
+                width="15"
+                height="15"
+                decoding="async"
+              />
+
+              {lang.label}
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

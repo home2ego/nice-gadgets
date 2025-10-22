@@ -5,7 +5,7 @@ export const decodeThumbhash = (hash: string) => {
     let bytes: Uint8Array;
 
     if ("fromBase64" in Uint8Array) {
-      // biome-ignore lint: suspicious/noTsIgnore
+      // biome-ignore lint/suspicious/noTsIgnore: it's ok
       // @ts-ignore: using experimental Uint8Array.fromBase64 not in TS typings
       bytes = Uint8Array.fromBase64(hash);
     } else {

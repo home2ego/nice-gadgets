@@ -1,4 +1,5 @@
 @use "./styles/base/index";
+@use "./styles/utils/index.scss" as utils;
 
 .App {
   display: flex;
@@ -7,5 +8,18 @@
 
   main {
     flex-grow: 1;
+  }
+}
+
+.skip-content {
+  top: 7.5px;
+  left: 7.5px;
+  padding: 12px 6px;
+  border-radius: 4px;
+
+  @include utils.on-desktop {
+    top: 11.5px;
+    left: 11.5px;
+    padding: 16px 8px;
   }
 }

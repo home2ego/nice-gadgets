@@ -1,19 +1,6 @@
 @use "../../../../styles/utils/index.scss" as utils;
 
 .skip {
-  &-content {
-    top: 7.5px;
-    left: 7.5px;
-    padding: 12px 6px;
-    border-radius: 4px;
-
-    @include utils.on-desktop {
-      top: 11.5px;
-      left: 11.5px;
-      padding: 16px 8px;
-    }
-  }
-
   &-forward-slider,
   &-back-slider,
   &-forward-carousel,

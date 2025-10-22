@@ -8,9 +8,17 @@ import ThemeButton from "./ThemeButton";
 
 interface HeaderProps {
   normalizedLang: string;
+  mainRef: React.RefObject<HTMLElement | null>;
+  footerRef: React.RefObject<HTMLElement | null>;
+  skipRef: React.RefObject<HTMLAnchorElement | null>;
 }
 
-const Header: React.FC<HeaderProps> = ({ normalizedLang }) => {
+const Header: React.FC<HeaderProps> = ({
+  normalizedLang,
+  mainRef,
+  footerRef,
+  skipRef,
+}) => {
   const actionsRef = useRef<HTMLDivElement>(null);
   const { t, i18n } = useTranslation("header");
 
@@ -21,7 +29,13 @@ const Header: React.FC<HeaderProps> = ({ normalizedLang }) => {
       </div>
 
       <div ref={actionsRef} className={styles.header__actions}>
-        <Navbar actionsRef={actionsRef} t={t} />
+        <Navbar
+          actionsRef={actionsRef}
+          t={t}
+          mainRef={mainRef}
+          footerRef={footerRef}
+          skipRef={skipRef}
+        />
 
         <LangButton normalizedLang={normalizedLang} t={t} i18n={i18n} />
 

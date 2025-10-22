@@ -8,10 +8,10 @@ import appleWatchImage from "../../../../assets/images/apple-watch-lg.webp";
 import appleWatchImageMini from "../../../../assets/images/apple-watch-sm.webp";
 import iPhoneImage from "../../../../assets/images/iPhone-lg.webp";
 import iPhoneImageMini from "../../../../assets/images/iPhone-sm.webp";
-import SkipLink from "../../../../components/shared/components/SkipLink";
+import SkipLink from "../../../shared/components/SkipLink";
 import type { Slide } from "../../types/slide";
 import { AUTOPLAY_THRESHOLD } from "./constants";
-import styles from "./PicturesSlider.module.scss";
+import styles from "./PicturesCarousel.module.scss";
 import SlideImage from "./SlideImage";
 import { useHorizontalSwipe } from "./useHorizontalSwipe";
 
@@ -38,20 +38,21 @@ const slides: Slide[] = [
 
 const TOTAL_SLIDES = slides.length;
 
-interface SliderProps {
+interface CarouselProps {
   t: TFunction;
   skipForwardRef: React.RefObject<HTMLElement | null>;
   skipBackRef: React.RefObject<HTMLElement | null>;
 }
 
-const PicturesSlider: React.FC<SliderProps> = ({
+const PicturesCarousel: React.FC<CarouselProps> = ({
   t,
   skipForwardRef,
   skipBackRef,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const isPausedRef = useRef(false);
+  const [pausedState, setPausedState] = useState(false);
+  const isPaused = useRef(false);
+  const isManuallyPaused = useRef(false);
   const sliderRef = useRef<HTMLDivElement>(null);
   const isTransitioning = useRef(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -99,8 +100,8 @@ const PicturesSlider: React.FC<SliderProps> = ({
   };
 
   const updatePause = (paused: boolean) => {
-    isPausedRef.current = paused;
-    setIsPaused(paused);
+    isPaused.current = paused;
+    setPausedState(paused);
 
     if (paused) {
       stopAutoplay();
@@ -126,7 +127,8 @@ const PicturesSlider: React.FC<SliderProps> = ({
     setCurrentIndex(nextIndex);
     updateSliderTransform(nextIndex, true);
 
-    if (!isPausedRef.current) {
+    if (!isPaused.current) {
+      isManuallyPaused.current = true;
       updatePause(true);
     }
   };
@@ -157,20 +159,24 @@ const PicturesSlider: React.FC<SliderProps> = ({
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLDivElement>) => {
-    if (!isPausedRef.current && !e.target.matches("[data-pause-button]")) {
+    if (!isPaused.current && !e.target.matches("[data-pause-button]")) {
+      isManuallyPaused.current = true;
       updatePause(true);
     }
   };
 
-  // biome-ignore lint: correctness/useExhaustiveDependencies — this effect runs once on mount
+  // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs once on mount
   useEffect(() => {
     const handleVisibilityChange = () => {
-      if (!isPausedRef.current) {
-        return document.hidden ? stopAutoplay() : startAutoplay();
+      if (isPaused.current) {
+        return;
       }
+
+      return document.hidden ? stopAutoplay() : startAutoplay();
     };
 
     startAutoplay();
+
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
@@ -179,7 +185,30 @@ const PicturesSlider: React.FC<SliderProps> = ({
     };
   }, []);
 
-  // biome-ignore lint: correctness/useExhaustiveDependencies — this effect runs once on mount before painting the screen
+  // biome-ignore lint/correctness/useExhaustiveDependencies: this effect tracks global pause/resume events
+  useEffect(() => {
+    const pause = () => {
+      if (!isPaused.current) {
+        updatePause(true);
+      }
+    };
+
+    const resume = () => {
+      if (isPaused.current && !isManuallyPaused.current) {
+        updatePause(false);
+      }
+    };
+
+    window.addEventListener("pause-slider", pause);
+    window.addEventListener("resume-slider", resume);
+
+    return () => {
+      window.removeEventListener("pause-slider", pause);
+      window.removeEventListener("resume-slider", resume);
+    };
+  }, []);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs once on mount before painting the screen
   useLayoutEffect(() => {
     updateSliderTransform(currentIndex, false);
   }, []);
@@ -188,13 +217,12 @@ const PicturesSlider: React.FC<SliderProps> = ({
 
   return (
     <section
-      aria-roledescription="slider"
-      aria-label={t("picturesSlider")}
+      aria-label={t("picturesCarousel")}
       className={styles.slider}
       onFocus={handleFocus}
     >
       <SkipLink
-        content="skipForwardSlider"
+        content="skipForwardCarousel"
         classAttr="skip-forward-slider"
         elementRef={skipForwardRef}
       />
@@ -203,12 +231,16 @@ const PicturesSlider: React.FC<SliderProps> = ({
         <button
           type="button"
           className={styles.paused}
-          onClick={() => updatePause(!isPausedRef.current)}
-          aria-pressed={isPaused}
-          aria-label={isPaused ? t("resumeLabel") : t("pauseLabel")}
+          onClick={() => {
+            const paused = !isPaused.current;
+            isManuallyPaused.current = paused;
+            updatePause(paused);
+          }}
+          aria-pressed={pausedState ? "true" : "false"}
+          aria-label={pausedState ? t("resumeLabel") : t("pauseLabel")}
           data-pause-button=""
         >
-          {isPaused ? (
+          {pausedState ? (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -322,14 +354,13 @@ const PicturesSlider: React.FC<SliderProps> = ({
           </div>
 
           {slides.map((slide: Slide, i) => (
-            // biome-ignore lint: a11y/useSemanticElements — div used intentionally for slider
+            // biome-ignore lint/a11y/useSemanticElements: div used intentionally for slider
             <div
               key={slide.id}
               className={styles.slider__slide}
               role="group"
-              aria-roledescription="slide"
               aria-labelledby={`slide-${slide.id}`}
-              aria-hidden={normalizedIndex !== i}
+              aria-hidden={normalizedIndex !== i ? "true" : undefined}
             >
               <h3 id={`slide-${slide.id}`} className="sr-only">
                 {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
@@ -350,7 +381,7 @@ const PicturesSlider: React.FC<SliderProps> = ({
       </div>
 
       <SkipLink
-        content="skipBackSlider"
+        content="skipBackCarousel"
         classAttr="skip-back-slider"
         mainRef={skipBackRef}
       />
@@ -358,4 +389,4 @@ const PicturesSlider: React.FC<SliderProps> = ({
   );
 };
 
-export default memo(PicturesSlider);
+export default memo(PicturesCarousel);
