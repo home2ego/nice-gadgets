@@ -6,5 +6,6 @@
   "favoriteLabel": "View favorite products",
   "cartLabel": "View shopping cart",
   "themeLabel": "Dark mode",
-  "langLabel": "Change language"
+  "langNavLabel": "Language selection",
+  "langLabel": "Change language, current: {{lang}}"
 }

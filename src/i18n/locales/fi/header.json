@@ -6,5 +6,6 @@
   "favoriteLabel": "Näytä suosikkituotteet",
   "cartLabel": "Näytä ostoskori",
   "themeLabel": "Tumma tila",
-  "langLabel": "Vaihda kieli"
+  "langNavLabel": "Kielen valinta",
+  "langLabel": "Vaihda kieltä, nykyinen: {{lang}}"
 }

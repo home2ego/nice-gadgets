@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { i18n, TFunction } from "i18next";
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import iconEN from "../../../assets/icons/en.svg";
 import iconFI from "../../../assets/icons/fi.svg";
 import iconPL from "../../../assets/icons/pl.svg";
@@ -26,26 +26,24 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const btnRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const openedByKeyboard = useRef(false);
-  const listId = useId();
-  const toggleId = useId();
+
+  const currentLangLabel =
+    languages.find((lang) => lang.code === normalizedLang)?.label ?? "";
 
   useEffect(() => {
-    const handleOutsideClick = (e: PointerEvent) => {
-      if (!divRef.current) {
-        return;
-      }
+    if (!isExpanded) {
+      return;
+    }
 
-      if (!divRef.current.contains(e.target as Node)) {
+    const handleOutsideClick = (e: PointerEvent) => {
+      if (!divRef.current?.contains(e.target as Node)) {
         setIsExpanded(false);
       }
     };
 
-    if (isExpanded) {
-      document.addEventListener("pointerdown", handleOutsideClick);
-    }
-
-    return () =>
-      document.removeEventListener("pointerdown", handleOutsideClick);
+    document.addEventListener("pointerdown", handleOutsideClick, {
+      once: true,
+    });
   }, [isExpanded]);
 
   useEffect(() => {
@@ -115,8 +113,10 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   };
 
   return (
-    // biome-ignore lint/a11y/noStaticElementInteractions: wrapper for interactive state
+    // biome-ignore lint/a11y/useSemanticElements: not a form group
     <div
+      role="group"
+      aria-label={t("langNavLabel")}
       className={styles.lang}
       onPointerEnter={(e) => {
         if (e.pointerType === "mouse") setIsExpanded(true);
@@ -130,11 +130,9 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     >
       <button
         type="button"
-        id={toggleId}
-        aria-label={t("langLabel")}
+        aria-label={t("langLabel", { lang: currentLangLabel })}
         aria-expanded={isExpanded ? "true" : "false"}
         aria-haspopup="true"
-        aria-controls={listId}
         className={styles.lang__toggle}
         onPointerDown={(e) =>
           e.pointerType !== "mouse" && setIsExpanded((prev) => !prev)
@@ -172,36 +170,33 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         </svg>
       </button>
 
-      <ul
-        id={listId}
-        className={styles.lang__list}
-        aria-labelledby={toggleId}
+      <div
+        className={styles.lang__wrapper}
         aria-hidden={isExpanded ? undefined : "true"} // For safety despite visibility: hidden is already used for AT
       >
         {sortedLanguages.map((lang, idx) => (
-          <li key={lang.code} className={styles.lang__item}>
-            <button
-              className={clsx(styles.lang__action, "text--sm")}
-              type="button"
-              aria-current={normalizedLang === lang.code ? "true" : undefined}
-              onClick={() => handleLangClick(lang.code)}
-              ref={(el) => {
-                btnRefs.current[idx] = el;
-              }}
-            >
-              <img
-                src={lang.icon}
-                alt=""
-                width="15"
-                height="15"
-                decoding="async"
-              />
+          <button
+            key={lang.code}
+            className={clsx(styles.lang__action, "text--sm")}
+            type="button"
+            aria-current={normalizedLang === lang.code ? "true" : undefined}
+            onClick={() => handleLangClick(lang.code)}
+            ref={(el) => {
+              btnRefs.current[idx] = el;
+            }}
+          >
+            <img
+              src={lang.icon}
+              alt=""
+              width="15"
+              height="15"
+              decoding="async"
+            />
 
-              {lang.label}
-            </button>
-          </li>
+            <span lang={lang.code}>{lang.label}</span>
+          </button>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

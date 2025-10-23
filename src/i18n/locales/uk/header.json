@@ -6,5 +6,6 @@
   "favoriteLabel": "Переглянути улюблені товари",
   "cartLabel": "Переглянути кошик",
   "themeLabel": "Темна тема",
-  "langLabel": "Змінити мову"
+  "langNavLabel": "Вибір мови",
+  "langLabel": "Змінити мову, поточна: {{lang}}"
 }

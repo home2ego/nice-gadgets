@@ -6,5 +6,6 @@
   "favoriteLabel": "Zobacz ulubione produkty",
   "cartLabel": "Zobacz koszyk",
   "themeLabel": "Tryb ciemny",
-  "langLabel": "Zmień język"
+  "langNavLabel": "Wybór języka",
+  "langLabel": "Zmień język, obecny: {{lang}}"
 }
