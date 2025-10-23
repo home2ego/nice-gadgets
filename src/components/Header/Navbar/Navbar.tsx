@@ -1,5 +1,5 @@
 import type { TFunction } from "i18next";
-import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 
@@ -23,7 +23,6 @@ const Navbar: React.FC<NavbarProps> = ({
   const menuWrapperRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
-  const navbarId = useId();
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: pathname triggers scroll on route change
   useLayoutEffect(() => {
@@ -109,7 +108,6 @@ const Navbar: React.FC<NavbarProps> = ({
         type="button"
         aria-label={isExpanded ? t("closeNavLabel") : t("openNavLabel")}
         aria-expanded={isExpanded ? "true" : "false"}
-        aria-controls={navbarId}
         data-navbar-toggle="main"
         className={styles.navbar__toggle}
         onClick={() => setIsExpanded((prev) => !prev)}
@@ -119,7 +117,6 @@ const Navbar: React.FC<NavbarProps> = ({
       </button>
 
       <nav
-        id={navbarId}
         className={styles.navbar__menu}
         ref={menuRef}
         aria-label={t("mainNavLabel")}
