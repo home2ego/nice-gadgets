@@ -2,9 +2,9 @@ import clsx from "clsx";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import { focusElement } from "./components/shared/utils/focusElement";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header";
+import { focusElement } from "./layout/shared/utils/focus-element";
 import "./App.scss";
 
 const App = () => {

@@ -8,7 +8,7 @@ import tablets from "../../../../api/tablets.json";
 import imgCategoryAccessories from "../../../../assets/images/category-accessories.webp";
 import imgCategoryPhones from "../../../../assets/images/category-phones.webp";
 import imgCategoryTablets from "../../../../assets/images/category-tablets.webp";
-import { decodeThumbhash } from "../../../shared/utils/decodeThumbhash";
+import { decodeThumbhash } from "../../../shared/utils/decode-thumbhash";
 import styles from "./ShopByCategory.module.scss";
 
 interface CategoryCards {

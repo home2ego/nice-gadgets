@@ -1,0 +1,91 @@
+@use "../../styles/utils/index.scss" as utils;
+
+.dropdown {
+  position: relative;
+
+  &:nth-child(1) {
+    grid-column: span 1;
+
+    @include utils.on-tablet {
+      grid-column: span 4;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-color-secondary);
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 12px;
+    border: 1px solid var(--bd-color-icon);
+
+    background-color: var(--bg-color-primary);
+    outline-offset: -3px;
+
+    svg {
+      transform: translateZ(0);
+      opacity: 0.7;
+      transition: opacity 0.18s, scale 0.28s, rotate 0.18s ease-out;
+    }
+
+    &:hover svg,
+    &:focus-visible svg {
+      scale: 1.25;
+      opacity: 1;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    z-index: 30;
+    top: 100%;
+
+    width: 100%;
+    padding-block: 8px;
+    border: 1px solid var(--bd-color-primary);
+
+    background-color: var(--bg-color-layout);
+  }
+
+  &__option {
+    cursor: pointer;
+
+    padding: 6px 12px;
+
+    color: var(--text-color-secondary);
+
+    outline-offset: -3px;
+
+    transition: color 0.18s ease-out;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--text-color-primary);
+      background-color: var(--bg-color-option);
+    }
+  }
+
+  &__toggle[aria-expanded="false"] + &__menu {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.18s, visibility 0s 0.18s;
+  }
+
+  &__toggle[aria-expanded="true"] svg {
+    rotate: -180deg;
+  }
+
+  &__toggle[aria-expanded="true"] + &__menu {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.18s, visibility 0s;
+  }
+}

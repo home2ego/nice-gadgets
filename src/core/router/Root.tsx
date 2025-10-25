@@ -1,12 +1,12 @@
 // React.lazy() for large pages
 
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import App from "./App";
-import AccessoriesPage from "./modules/AccessoriesPage";
-import HomePage from "./modules/HomePage";
-import NotFound from "./modules/NotFound";
-import PhonesPage from "./modules/PhonesPage";
-import TabletsPage from "./modules/TabletsPage";
+import App from "../../App";
+import AccessoriesPage from "../../modules/AccessoriesPage";
+import HomePage from "../../modules/HomePage";
+import NotFound from "../../modules/NotFound";
+import PhonesPage from "../../modules/PhonesPage";
+import TabletsPage from "../../modules/TabletsPage";
 
 const Root = () => (
   <BrowserRouter>
