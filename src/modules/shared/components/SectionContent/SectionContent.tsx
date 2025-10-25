@@ -56,27 +56,57 @@ const SectionContent: React.FC<SectionProps> = ({
     target?.focus();
   }, [isExpanded]);
 
-  const handleEscapeKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (!isExpanded) {
-      return;
-    }
-
-    if (e.key === "Escape") {
-      e.stopPropagation();
-      setIsExpanded(false);
-      toggleRef.current?.focus();
+  const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "ArrowDown") {
+      setIsExpanded(true);
     }
   };
 
-  const handleOptionSelectKey = (
+  const handleOptionClick = (option: string) => {
+    if (selected !== option) {
+      setSelected(option);
+    }
+    setIsExpanded(false);
+  };
+
+  const handleOptionKey = (
     e: React.KeyboardEvent<HTMLDivElement>,
     option: string,
+    idx: number,
   ) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      setSelected(option);
-      setIsExpanded(false);
-      toggleRef.current?.focus();
+    const prev = optionRefs.current[idx - 1];
+    const next = optionRefs.current[idx + 1];
+
+    switch (e.key) {
+      case "Enter":
+      case " ":
+        e.preventDefault();
+
+        if (selected !== option) {
+          setSelected(option);
+        }
+
+        setIsExpanded(false);
+        toggleRef.current?.focus();
+        break;
+
+      case "ArrowDown":
+        next?.focus();
+        break;
+
+      case "ArrowUp":
+        prev?.focus();
+        break;
+
+      case "Escape":
+        e.stopPropagation();
+        setIsExpanded(false);
+        toggleRef.current?.focus();
+        break;
+
+      case "Tab":
+        setIsExpanded(false);
+        break;
     }
   };
 
@@ -89,14 +119,7 @@ const SectionContent: React.FC<SectionProps> = ({
       </p>
 
       <div className={styles.dropdowns}>
-        {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
-        <div
-          role="group"
-          className={styles.dropdown}
-          aria-labelledby={labelId}
-          onKeyDown={handleEscapeKey}
-          ref={dropdownRef}
-        >
+        <div className={styles.dropdown} ref={dropdownRef}>
           <span
             id={labelId}
             className={clsx(styles.dropdown__label, "text--sm")}
@@ -106,13 +129,15 @@ const SectionContent: React.FC<SectionProps> = ({
 
           <button
             type="button"
-            className={styles.dropdown__toggle}
-            aria-expanded={isExpanded ? "true" : "false"}
+            className={clsx(styles.dropdown__toggle, "text--btn")}
+            aria-labelledby={labelId}
+            aria-expanded={isExpanded}
             aria-haspopup="listbox"
             onClick={() => setIsExpanded((prev) => !prev)}
+            onKeyDown={handleToggleKey}
             ref={toggleRef}
           >
-            <span className="text--btn">{selected}</span>
+            {selected}
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -137,12 +162,9 @@ const SectionContent: React.FC<SectionProps> = ({
                 role="option"
                 className={clsx(styles.dropdown__option, "text--body")}
                 tabIndex={0}
-                aria-selected={selected === option ? "true" : "false"}
-                onClick={() => {
-                  setSelected(option);
-                  setIsExpanded(false);
-                }}
-                onKeyDown={(e) => handleOptionSelectKey(e, option)}
+                aria-selected={selected === option}
+                onClick={() => handleOptionClick(option)}
+                onKeyDown={(e) => handleOptionKey(e, option, idx)}
                 ref={(el) => {
                   optionRefs.current[idx] = el;
                 }}

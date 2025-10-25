@@ -128,7 +128,7 @@ const Navbar: React.FC<NavbarProps> = ({
       <button
         type="button"
         aria-label={isExpanded ? t("closeNavLabel") : t("openNavLabel")}
-        aria-expanded={isExpanded ? "true" : "false"}
+        aria-expanded={isExpanded}
         data-navbar-toggle="main"
         className={styles.navbar__toggle}
         onClick={() => setIsExpanded((prev) => !prev)}

@@ -17,13 +17,13 @@ const ThemeButton: React.FC<ThemeProps> = ({ t }) => {
       type="button"
       role="switch"
       aria-label={t("themeLabel")}
-      aria-checked={mode === "light" ? "false" : "true"}
+      aria-checked={mode !== "light"}
       className="btn--theme"
       onClick={() => dispatch(toggleTheme())}
     >
       <span>
         <img
-          src={mode === "light" ? moon : sun}
+          src={mode !== "light" ? sun : moon}
           alt=""
           width="16"
           height="16"

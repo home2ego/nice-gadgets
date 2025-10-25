@@ -83,18 +83,6 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     }
   };
 
-  const handleEscapeKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (!isExpanded) {
-      return;
-    }
-
-    if (e.key === "Escape") {
-      e.stopPropagation();
-      setIsExpanded(false);
-      toggleRef.current?.focus();
-    }
-  };
-
   const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -117,6 +105,14 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     toggleRef.current?.focus();
   };
 
+  const handleEscapeKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Escape") {
+      e.stopPropagation();
+      setIsExpanded(false);
+      toggleRef.current?.focus();
+    }
+  };
+
   return (
     // biome-ignore lint/a11y/useSemanticElements: not a form group
     <div
@@ -130,13 +126,12 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         if (e.pointerType === "mouse") setIsExpanded(false);
       }}
       onBlur={handleDropdownBlur}
-      onKeyDown={handleEscapeKey}
       ref={dropdownRef}
     >
       <button
         type="button"
         aria-label={t("langLabel", { lang: currentLangLabel })}
-        aria-expanded={isExpanded ? "true" : "false"}
+        aria-expanded={isExpanded}
         aria-haspopup="true"
         className={styles.dropdown__toggle}
         onPointerDown={(e) => {
@@ -183,6 +178,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
             type="button"
             aria-current={normalizedLang === lang.code ? "true" : undefined}
             onClick={() => handleLangClick(lang.code)}
+            onKeyDown={handleEscapeKey}
             ref={(el) => {
               langRefs.current[idx] = el;
             }}

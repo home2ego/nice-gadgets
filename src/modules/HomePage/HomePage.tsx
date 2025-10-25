@@ -17,9 +17,7 @@ import ProductsCarousel from "./components/ProductsCarousel";
 import styles from "./HomePage.module.scss";
 import type { Product } from "./types/product";
 
-const ShopByCategory = lazy(
-  () => import("./components/ShopByCategory/ShopByCategory"),
-);
+const ShopByCategory = lazy(() => import("./components/ShopByCategory"));
 
 const { maxYear, maxModel } = products.reduce(
   (acc, product) => {
