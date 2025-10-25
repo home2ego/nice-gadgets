@@ -5,6 +5,7 @@
   --bg-color-layout: #0f1121;
   --bg-color-primary: #323542;
   --bg-color-secondary: #161827;
+  --bg-color-option: var(--bg-color-primary);
   --text-color-primary: #f1f2f9;
   --text-color-secondary: #81828c;
   --bd-color-primary: #3b3e4a;
@@ -24,6 +25,7 @@
   --bg-color-layout: #fff;
   --bg-color-primary: var(--bg-color-layout);
   --bg-color-secondary: var(--bg-color-layout);
+  --bg-color-option: #fafbfc;
   --text-color-primary: #313237;
   --text-color-secondary: #6e767c;
   --bd-color-primary: #e2e6e9;
@@ -99,7 +101,8 @@ footer:focus {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+div[role="option"]:focus-visible {
   outline: 3px solid utils.$accent-color;
 }
 

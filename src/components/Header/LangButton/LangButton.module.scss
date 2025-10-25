@@ -1,6 +1,6 @@
 @use "../../../styles/utils/index.scss" as utils;
 
-.lang {
+.dropdown {
   position: relative;
 
   &__toggle {
@@ -30,10 +30,10 @@
     }
   }
 
-  &__wrapper {
+  &__menu {
     position: absolute;
     z-index: 30;
-    top: utils.$mobile-navbar-hight;
+    top: 100%;
     left: 0;
 
     min-width: 120px;
@@ -41,25 +41,21 @@
     border: utils.$border-width solid var(--bd-color-primary);
 
     background-color: var(--bg-color-primary);
-
-    @include utils.on-desktop {
-      top: utils.$desktop-navbar-hight;
-    }
   }
 
-  &__toggle[aria-expanded="false"] + &__wrapper {
+  &__toggle[aria-expanded="false"] + &__menu {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.18s, visibility 0s 0.18s;
   }
 
-  &__toggle[aria-expanded="true"] + &__wrapper {
+  &__toggle[aria-expanded="true"] + &__menu {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.18s, visibility 0s;
   }
 
-  &__action {
+  &__lang {
     display: flex;
     column-gap: 4px;
 
@@ -68,7 +64,7 @@
 
     outline-offset: -2px;
 
-    transition: color 0.28s;
+    transition: color 0.18s ease-out;
 
     img {
       border-radius: 50%;

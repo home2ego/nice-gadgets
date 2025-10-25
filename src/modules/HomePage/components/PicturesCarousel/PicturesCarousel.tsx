@@ -199,12 +199,12 @@ const PicturesCarousel: React.FC<CarouselProps> = ({
       }
     };
 
-    window.addEventListener("pause-slider", pause);
-    window.addEventListener("resume-slider", resume);
+    document.addEventListener("pause-slider", pause);
+    document.addEventListener("resume-slider", resume);
 
     return () => {
-      window.removeEventListener("pause-slider", pause);
-      window.removeEventListener("resume-slider", resume);
+      document.removeEventListener("pause-slider", pause);
+      document.removeEventListener("resume-slider", resume);
     };
   }, []);
 
@@ -216,18 +216,19 @@ const PicturesCarousel: React.FC<CarouselProps> = ({
   useHorizontalSwipe(sliderRef, handleNextSlideShow, handlePrevSlideShow);
 
   return (
-    <section
-      aria-label={t("picturesCarousel")}
-      className={styles.slider}
-      onFocus={handleFocus}
-    >
+    <section aria-label={t("picturesCarousel")} className={styles.slider}>
       <SkipLink
         content="skipForwardCarousel"
         classAttr="skip-forward-slider"
         elementRef={skipForwardRef}
       />
 
-      <div className={styles.slider__content}>
+      {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
+      <div
+        role="group"
+        className={styles.slider__content}
+        onFocus={handleFocus}
+      >
         <button
           type="button"
           className={styles.paused}
@@ -354,7 +355,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({
           </div>
 
           {slides.map((slide: Slide, i) => (
-            // biome-ignore lint/a11y/useSemanticElements: div used intentionally for slider
+            // biome-ignore lint/a11y/useSemanticElements: not a form group
             <div
               key={slide.id}
               className={styles.slider__slide}

@@ -22,28 +22,33 @@ interface LangProps {
 
 const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const divRef = useRef<HTMLDivElement>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
-  const btnRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const langRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const openedByKeyboard = useRef(false);
 
   const currentLangLabel =
     languages.find((lang) => lang.code === normalizedLang)?.label ?? "";
 
   useEffect(() => {
+    menuRef.current?.toggleAttribute("inert", !isExpanded); // Instant tab removal; visibility:hidden fades late.
+
     if (!isExpanded) {
       return;
     }
 
     const handleOutsideClick = (e: PointerEvent) => {
-      if (!divRef.current?.contains(e.target as Node)) {
+      if (!dropdownRef.current?.contains(e.target as Node)) {
         setIsExpanded(false);
       }
     };
 
-    document.addEventListener("pointerdown", handleOutsideClick, {
-      once: true,
-    });
+    document.addEventListener("pointerdown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("pointerdown", handleOutsideClick);
+    };
   }, [isExpanded]);
 
   useEffect(() => {
@@ -51,8 +56,8 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
       return;
     }
 
-    const target = btnRefs.current.find(
-      (btn) => btn?.getAttribute("aria-current") === "true",
+    const target = langRefs.current.find(
+      (lang) => lang?.getAttribute("aria-current") === "true",
     );
 
     target?.focus();
@@ -66,7 +71,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     ...languages.filter((lang) => lang.code !== normalizedLang),
   ];
 
-  const handleMenuBlur = (e: React.FocusEvent<HTMLDivElement>) => {
+  const handleDropdownBlur = (e: React.FocusEvent<HTMLDivElement>) => {
     const next = e.relatedTarget as HTMLElement | null;
 
     if (!next) {
@@ -78,7 +83,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     }
   };
 
-  const handleMenuKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
+  const handleEscapeKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (!isExpanded) {
       return;
     }
@@ -117,26 +122,26 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     <div
       role="group"
       aria-label={t("langNavLabel")}
-      className={styles.lang}
+      className={styles.dropdown}
       onPointerEnter={(e) => {
         if (e.pointerType === "mouse") setIsExpanded(true);
       }}
       onPointerLeave={(e) => {
         if (e.pointerType === "mouse") setIsExpanded(false);
       }}
-      onBlur={handleMenuBlur}
-      onKeyDown={handleMenuKey}
-      ref={divRef}
+      onBlur={handleDropdownBlur}
+      onKeyDown={handleEscapeKey}
+      ref={dropdownRef}
     >
       <button
         type="button"
         aria-label={t("langLabel", { lang: currentLangLabel })}
         aria-expanded={isExpanded ? "true" : "false"}
         aria-haspopup="true"
-        className={styles.lang__toggle}
-        onPointerDown={(e) =>
-          e.pointerType !== "mouse" && setIsExpanded((prev) => !prev)
-        }
+        className={styles.dropdown__toggle}
+        onPointerDown={(e) => {
+          if (e.pointerType !== "mouse") setIsExpanded((prev) => !prev);
+        }}
         onKeyDown={handleToggleKey}
         ref={toggleRef}
       >
@@ -170,19 +175,16 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         </svg>
       </button>
 
-      <div
-        className={styles.lang__wrapper}
-        aria-hidden={isExpanded ? undefined : "true"} // For safety despite visibility: hidden is already used for AT
-      >
+      <div className={styles.dropdown__menu} ref={menuRef}>
         {sortedLanguages.map((lang, idx) => (
           <button
             key={lang.code}
-            className={clsx(styles.lang__action, "text--sm")}
+            className={clsx(styles.dropdown__lang, "text--sm")}
             type="button"
             aria-current={normalizedLang === lang.code ? "true" : undefined}
             onClick={() => handleLangClick(lang.code)}
             ref={(el) => {
-              btnRefs.current[idx] = el;
+              langRefs.current[idx] = el;
             }}
           >
             <img

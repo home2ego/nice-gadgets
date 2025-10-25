@@ -20,9 +20,8 @@ const Navbar: React.FC<NavbarProps> = ({
 }) => {
   const { pathname } = useLocation();
   const [isExpanded, setIsExpanded] = useState(false);
-  const menuWrapperRef = useRef<HTMLDivElement>(null);
-  const menuRef = useRef<HTMLElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLElement>(null);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: pathname triggers scroll on route change
   useLayoutEffect(() => {
@@ -51,47 +50,69 @@ const Navbar: React.FC<NavbarProps> = ({
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: all refs are stable
   useEffect(() => {
+    if (!isExpanded) {
+      return;
+    }
+
     const handlePreventScroll = (e: TouchEvent) => e.preventDefault();
 
     const handleEscapeKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsExpanded(false);
 
-        if (menuWrapperRef.current?.contains(document.activeElement)) {
+        if (menuRef.current?.contains(document.activeElement)) {
           toggleRef.current?.focus();
         }
       }
     };
 
     const handleOutsideClick = (e: PointerEvent) => {
-      if (!actionsRef.current) {
-        return;
-      }
-
-      if (!actionsRef.current.contains(e.target as Node)) {
+      if (!actionsRef.current?.contains(e.target as Node)) {
         setIsExpanded(false);
       }
     };
 
-    mainRef.current?.toggleAttribute("inert", isExpanded);
-    footerRef.current?.toggleAttribute("inert", isExpanded);
-    skipRef.current?.toggleAttribute("inert", isExpanded);
-
-    if (isExpanded) {
-      document.addEventListener("touchmove", handlePreventScroll, {
-        passive: false,
-      });
-      document.addEventListener("keydown", handleEscapeKey);
-      document.addEventListener("pointerdown", handleOutsideClick);
-    }
-
-    const customEventName = isExpanded ? "pause-slider" : "resume-slider";
-    window.dispatchEvent(new CustomEvent(customEventName));
+    document.addEventListener("touchmove", handlePreventScroll, {
+      passive: false,
+    });
+    document.addEventListener("keydown", handleEscapeKey);
+    document.addEventListener("pointerdown", handleOutsideClick);
 
     return () => {
       document.removeEventListener("touchmove", handlePreventScroll);
       document.removeEventListener("keydown", handleEscapeKey);
       document.removeEventListener("pointerdown", handleOutsideClick);
+    };
+  }, [isExpanded]);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: all refs are stable
+  useEffect(() => {
+    const customEventName = isExpanded ? "pause-slider" : "resume-slider";
+    document.dispatchEvent(new CustomEvent(customEventName));
+
+    const mq = window.matchMedia("(min-width: 1136px)");
+
+    const handleChange = () => {
+      const isDesktop = mq.matches;
+
+      if (isDesktop) {
+        mainRef.current?.removeAttribute("inert");
+        footerRef.current?.removeAttribute("inert");
+        skipRef.current?.removeAttribute("inert");
+        menuRef.current?.removeAttribute("inert"); // Instant tab removal; visibility:hidden fades late.
+      } else {
+        mainRef.current?.toggleAttribute("inert", isExpanded);
+        footerRef.current?.toggleAttribute("inert", isExpanded);
+        skipRef.current?.toggleAttribute("inert", isExpanded);
+        menuRef.current?.toggleAttribute("inert", !isExpanded);
+      }
+    };
+
+    handleChange();
+    mq.addEventListener("change", handleChange);
+
+    return () => {
+      mq.removeEventListener("change", handleChange);
     };
   }, [isExpanded]);
 
@@ -103,7 +124,7 @@ const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <div className={styles.navbar} ref={menuWrapperRef}>
+    <div className={styles.navbar}>
       <button
         type="button"
         aria-label={isExpanded ? t("closeNavLabel") : t("openNavLabel")}
@@ -120,7 +141,6 @@ const Navbar: React.FC<NavbarProps> = ({
         className={styles.navbar__menu}
         ref={menuRef}
         aria-label={t("mainNavLabel")}
-        aria-hidden={isExpanded ? undefined : "true"} // For safety despite visibility: hidden is already used for AT
       >
         <ul className={styles["navbar__list-primary"]}>
           {["home", "phones", "tablets", "accessories"].map((item) => (
