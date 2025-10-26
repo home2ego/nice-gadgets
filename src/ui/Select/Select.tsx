@@ -1,12 +1,24 @@
 import clsx from "clsx";
+import type { TFunction } from "i18next";
 import { useEffect, useId, useRef, useState } from "react";
 import styles from "./Select.module.scss";
+import type { PageOption, SortOption } from "./select";
 
-const options = ["Newest", "Alphabetically", "Cheapest"];
+interface LabelProps {
+  t: TFunction;
+  label: string;
+  options: SortOption[] | PageOption[];
+  selectedOption: SortOption | PageOption;
+}
 
-const Select = () => {
+const Select: React.FC<LabelProps> = ({
+  t,
+  label,
+  options,
+  selectedOption,
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selected, setSelected] = useState(options[0]);
+  const [selected, setSelected] = useState(selectedOption);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -51,7 +63,7 @@ const Select = () => {
     }
   };
 
-  const handleOptionClick = (option: string) => {
+  const handleOptionClick = (option: SortOption | PageOption) => {
     if (selected !== option) {
       setSelected(option);
     }
@@ -60,7 +72,7 @@ const Select = () => {
 
   const handleOptionKey = (
     e: React.KeyboardEvent<HTMLDivElement>,
-    option: string,
+    option: SortOption | PageOption,
     idx: number,
   ) => {
     const prev = optionRefs.current[idx - 1];
@@ -102,7 +114,7 @@ const Select = () => {
   return (
     <div className={styles.dropdown} ref={dropdownRef}>
       <span id={labelId} className={clsx(styles.dropdown__label, "text--sm")}>
-        Sort by
+        {t(label)}
       </span>
 
       <button
@@ -115,7 +127,7 @@ const Select = () => {
         onKeyDown={handleToggleKey}
         ref={toggleRef}
       >
-        {selected}
+        {t(selected)}
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +159,7 @@ const Select = () => {
               optionRefs.current[idx] = el;
             }}
           >
-            {option}
+            {t(option)}
           </div>
         ))}
       </div>

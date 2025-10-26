@@ -10,5 +10,10 @@
   "tablets": "Tabletit",
   "accessories": "Lisävarusteet",
   "countModels": "{{count}} mallia",
-  "breadcrumbLabel": "Polku"
+  "breadcrumbLabel": "Polku",
+  "newest": "Uusin",
+  "alpha": "A-Ö",
+  "cheapest": "Halvin",
+  "sortLabel": "Järjestä",
+  "pageLabel": "Tuotteita sivulla"
 }

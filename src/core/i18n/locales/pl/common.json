@@ -10,5 +10,10 @@
   "tablets": "Tablety",
   "accessories": "Akcesoria",
   "countModels": "{{count}} modele",
-  "breadcrumbLabel": "Ścieżka"
+  "breadcrumbLabel": "Ścieżka",
+  "newest": "Najnowsze",
+  "alpha": "A-Z",
+  "cheapest": "Najtańsze",
+  "sortLabel": "Sortuj według",
+  "pageLabel": "Produkty na stronie"
 }

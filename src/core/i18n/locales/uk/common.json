@@ -10,5 +10,10 @@
   "tablets": "Планшети",
   "accessories": "Аксесуари",
   "countModels": "{{count}} моделей",
-  "breadcrumbLabel": "Шлях"
+  "breadcrumbLabel": "Шлях",
+  "newest": "Найновіші",
+  "alpha": "А-Я",
+  "cheapest": "Найдешевші",
+  "sortLabel": "Сортувати за",
+  "pageLabel": "Товарів на сторінці"
 }

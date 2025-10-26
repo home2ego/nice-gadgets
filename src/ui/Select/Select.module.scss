@@ -2,12 +2,15 @@
 
 .dropdown {
   position: relative;
+  grid-column: span 1;
 
-  &:nth-child(1) {
-    grid-column: span 1;
-
-    @include utils.on-tablet {
+  @include utils.on-tablet {
+    &:nth-child(1) {
       grid-column: span 4;
+    }
+
+    &:nth-child(2) {
+      grid-column: span 3;
     }
   }
 

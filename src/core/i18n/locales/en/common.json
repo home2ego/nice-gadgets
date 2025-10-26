@@ -10,5 +10,10 @@
   "tablets": "Tablets",
   "accessories": "Accessories",
   "countModels": "{{count}} models",
-  "breadcrumbLabel": "Breadcrumb"
+  "breadcrumbLabel": "Breadcrumb",
+  "newest": "Newest",
+  "alpha": "A-Z",
+  "cheapest": "Cheapest",
+  "sortLabel": "Sort by",
+  "pageLabel": "Items on page"
 }
