@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import phones from "../../api/phones.json";
-import Breadcrumb from "../shared/components/Breadcrumb";
-import SectionContent from "../shared/components/SectionContent";
+import phones from "@/api/phones.json";
+import Breadcrumb from "@/modules/shared/components/Breadcrumb";
+import SectionContent from "@/modules/shared/components/SectionContent";
 
 const countModels = phones.length;
 

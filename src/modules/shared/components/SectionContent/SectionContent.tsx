@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import Select from "../../../../ui/Select";
-import type { PageOption, SortOption } from "../../../../ui/Select/select";
+import type { PageOption, SortOption } from "@/core/types/select";
+import Select from "@/ui/Select";
 import styles from "./SectionContent.module.scss";
 
 const sortOptions: SortOption[] = ["newest", "alpha", "cheapest"];

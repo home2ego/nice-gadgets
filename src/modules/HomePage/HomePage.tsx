@@ -10,7 +10,7 @@ import {
 } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
-import products from "../../api/products.json";
+import products from "@/api/products.json";
 import CategorySkeleton from "./components/CategorySkeleton";
 import PicturesCarousel from "./components/PicturesCarousel";
 import ProductsCarousel from "./components/ProductsCarousel";

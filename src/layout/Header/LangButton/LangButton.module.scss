@@ -1,12 +1,10 @@
-@use "../../../styles/utils/index.scss" as utils;
-
 .dropdown {
   position: relative;
 
   &__toggle {
     display: inline-flex;
     padding: 16px;
-    border-left: utils.$border-width solid var(--bd-color-primary);
+    border-left: $border-width solid var(--bd-color-primary);
     outline-offset: -3px;
 
     svg {
@@ -25,7 +23,7 @@
       scale: 1.25;
     }
 
-    @include utils.on-desktop {
+    @include on-desktop {
       padding: 24px;
     }
   }
@@ -38,7 +36,7 @@
 
     min-width: 120px;
     padding-block: 12px;
-    border: utils.$border-width solid var(--bd-color-primary);
+    border: $border-width solid var(--bd-color-primary);
 
     background-color: var(--bg-color-primary);
   }
@@ -72,7 +70,7 @@
 
     &:nth-child(1) {
       margin-bottom: 12px;
-      border-bottom: utils.$border-width solid var(--bd-color-primary);
+      border-bottom: $border-width solid var(--bd-color-primary);
     }
 
     &[aria-current="true"] {
@@ -85,7 +83,7 @@
     }
 
     &:not([aria-current="true"]):hover {
-      color: utils.$accent-color;
+      color: $accent-color;
     }
   }
 }

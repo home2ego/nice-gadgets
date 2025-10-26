@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import Logo from "../shared/components/Logo";
+import Logo from "@/layout/shared/components/Logo";
 import styles from "./Header.module.scss";
 import LangButton from "./LangButton";
 import Navbar from "./Navbar";

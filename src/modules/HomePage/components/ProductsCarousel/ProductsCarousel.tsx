@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
-import SkipLink from "../../../shared/components/SkipLink";
+import SkipLink from "@/modules/shared/components/SkipLink";
 import type { Product } from "../../types/product";
 import { formatPrice } from "./format-price";
 import styles from "./ProductsCarousel.module.scss";

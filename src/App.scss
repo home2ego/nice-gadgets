@@ -1,5 +1,4 @@
-@use "./styles/base/index";
-@use "./styles/utils/index.scss" as utils;
+@use "./styles/base";
 
 .App {
   display: flex;
@@ -17,7 +16,7 @@
   padding: 12px 6px;
   border-radius: 4px;
 
-  @include utils.on-desktop {
+  @include on-desktop {
     top: 11.5px;
     left: 11.5px;
     padding: 16px 8px;

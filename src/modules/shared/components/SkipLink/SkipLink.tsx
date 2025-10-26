@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
-import { focusElement } from "../../../../layout/shared/utils/focus-element";
+import { focusElement } from "@/layout/shared/utils/focus-element";
 import styles from "./SkipLink.module.scss";
 
 interface SkipProps {

@@ -1,14 +1,12 @@
-@use "../../styles/utils/index.scss" as utils;
-
 .footer {
-  border-top: utils.$border-width solid var(--bd-color-primary);
+  border-top: $border-width solid var(--bd-color-primary);
 
   &__wrapper {
     display: grid;
     row-gap: 32px;
     padding-block: 32px;
 
-    @include utils.on-tablet {
+    @include on-tablet {
       grid-template-columns: 1fr 1fr 1fr;
       align-items: center;
     }
@@ -19,7 +17,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include utils.on-tablet {
+    @include on-tablet {
       flex-direction: row;
       column-gap: 13.5px;
     }
@@ -31,7 +29,7 @@
     align-items: center;
     justify-self: center;
 
-    @include utils.on-tablet {
+    @include on-tablet {
       justify-self: end;
     }
 
@@ -43,7 +41,7 @@
     span:last-child {
       display: inline-flex;
       padding: 7px;
-      border: utils.$border-width solid var(--bd-color-icon);
+      border: $border-width solid var(--bd-color-icon);
       background-color: var(--bg-color-primary);
     }
 

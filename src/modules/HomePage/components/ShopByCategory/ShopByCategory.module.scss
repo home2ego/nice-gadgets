@@ -1,8 +1,7 @@
-@use "../../../../styles/utils/index.scss" as utils;
 @use "sass:list";
 
-@each $color in utils.$category-colors {
-  $i: list.index(utils.$category-colors, $color);
+@each $color in $category-colors {
+  $i: list.index($category-colors, $color);
 
   .category:nth-child(#{$i}) .category__wrapper {
     background-color: $color;

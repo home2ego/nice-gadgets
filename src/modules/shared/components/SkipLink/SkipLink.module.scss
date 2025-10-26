@@ -1,5 +1,3 @@
-@use "../../../../styles/utils/index.scss" as utils;
-
 .skip {
   &-forward-slider,
   &-back-slider,
@@ -12,14 +10,14 @@
 
   &-forward-slider,
   &-back-slider {
-    @include utils.on-tablet {
+    @include on-tablet {
       left: 64px;
     }
   }
 
   &-forward-carousel,
   &-back-carousel {
-    @include utils.on-tablet {
+    @include on-tablet {
       left: 16px;
     }
   }

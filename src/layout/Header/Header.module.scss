@@ -1,5 +1,3 @@
-@use "../../styles/utils/index.scss" as utils;
-
 .header {
   position: sticky;
   z-index: 20;
@@ -10,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: utils.$border-width solid var(--bd-color-primary);
+  border-bottom: $border-width solid var(--bd-color-primary);
 
   background-color: var(--bg-nav);
   -webkit-backdrop-filter: blur(8px); /* Safari support 9-17.6 */
@@ -19,7 +17,7 @@
   &__logo {
     padding-inline: 16px;
 
-    @include utils.on-desktop {
+    @include on-desktop {
       padding-inline: 24px;
     }
   }
@@ -28,7 +26,7 @@
     display: flex;
     justify-content: flex-end;
 
-    @include utils.on-desktop {
+    @include on-desktop {
       flex-grow: 1;
     }
   }

@@ -1,8 +1,8 @@
 import type { TFunction } from "i18next";
-import moon from "../../../assets/icons/moon.svg";
-import sun from "../../../assets/icons/sun.svg";
-import { useAppDispatch, useAppSelector } from "../../../core/store/hooks";
-import { toggleTheme } from "../../../core/store/theme/theme-slice";
+import moon from "@/assets/icons/moon.svg";
+import sun from "@/assets/icons/sun.svg";
+import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
+import { toggleTheme } from "@/core/store/theme/theme-slice";
 
 interface ThemeProps {
   t: TFunction;

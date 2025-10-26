@@ -1,5 +1,3 @@
-@use "../../../../styles/utils/index.scss" as utils;
-
 $picture-width: 700px;
 $margin-indent: 48px;
 
@@ -14,7 +12,7 @@ $margin-indent: 48px;
     width: 100vw;
     margin-left: calc(50% - 50vw);
 
-    @include utils.on-tablet {
+    @include on-tablet {
       width: initial;
       margin-inline: $margin-indent;
     }
@@ -42,7 +40,7 @@ $margin-indent: 48px;
   display: none;
   outline-offset: -1px;
 
-  @include utils.on-tablet {
+  @include on-tablet {
     position: absolute;
     top: 0;
     bottom: 40px;
@@ -50,7 +48,7 @@ $margin-indent: 48px;
     display: initial;
 
     width: 30px;
-    border: 1px solid var(--bd-color-icon);
+    border: $border-width solid var(--bd-color-icon);
 
     background-color: var(--bg-color-primary);
 
@@ -96,7 +94,7 @@ $margin-indent: 48px;
 
   transition: opacity 0.18s;
 
-  @include utils.on-tablet {
+  @include on-tablet {
     right: 56px;
   }
 

@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useId, useRef, useState } from "react";
+import type { PageOption, SortOption } from "@/core/types/select";
 import styles from "./Select.module.scss";
-import type { PageOption, SortOption } from "./select";
 
 interface LabelProps {
   t: TFunction;

@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
-import Logo from "../shared/components/Logo";
-import { focusElement } from "../shared/utils/focus-element";
+import Logo from "@/layout/shared/components/Logo";
+import { focusElement } from "@/layout/shared/utils/focus-element";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {

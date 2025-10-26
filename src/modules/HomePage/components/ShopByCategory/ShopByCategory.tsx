@@ -2,13 +2,13 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import accessories from "../../../../api/accessories.json";
-import phones from "../../../../api/phones.json";
-import tablets from "../../../../api/tablets.json";
-import imgCategoryAccessories from "../../../../assets/images/category-accessories.webp";
-import imgCategoryPhones from "../../../../assets/images/category-phones.webp";
-import imgCategoryTablets from "../../../../assets/images/category-tablets.webp";
-import { decodeThumbhash } from "../../../shared/utils/decode-thumbhash";
+import accessories from "@/api/accessories.json";
+import phones from "@/api/phones.json";
+import tablets from "@/api/tablets.json";
+import imgCategoryAccessories from "@/assets/images/category-accessories.webp";
+import imgCategoryPhones from "@/assets/images/category-phones.webp";
+import imgCategoryTablets from "@/assets/images/category-tablets.webp";
+import { decodeThumbhash } from "@/modules/shared/utils/decode-thumbhash";
 import styles from "./ShopByCategory.module.scss";
 
 interface CategoryCards {

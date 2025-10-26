@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import imgNotFound from "../../assets/icons/page-not-found.svg";
+import imgNotFound from "@/assets/icons/page-not-found.svg";
 import styles from "./NotFound.module.scss";
 
 const NotFound = () => {

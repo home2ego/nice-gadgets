@@ -31,7 +31,7 @@ html:has(.not-found) {
 
   &__link {
     padding: 16px 8px;
-    border: 1px solid #b4bdc3;
+    border: $border-width solid #b4bdc3;
     border-radius: 4px;
 
     outline-offset: -1px;

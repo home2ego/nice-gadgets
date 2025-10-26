@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import type { i18n, TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
-import iconEN from "../../../assets/icons/en.svg";
-import iconFI from "../../../assets/icons/fi.svg";
-import iconPL from "../../../assets/icons/pl.svg";
-import iconUK from "../../../assets/icons/uk.svg";
+import iconEN from "@/assets/icons/en.svg";
+import iconFI from "@/assets/icons/fi.svg";
+import iconPL from "@/assets/icons/pl.svg";
+import iconUK from "@/assets/icons/uk.svg";
 import styles from "./LangButton.module.scss";
 
 const languages = [
