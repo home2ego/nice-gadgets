@@ -24,6 +24,7 @@ const Select: React.FC<LabelProps> = ({
   const menuRef = useRef<HTMLDivElement>(null);
   const optionRefs = useRef<Array<HTMLDivElement | null>>([]);
   const labelId = useId();
+  const valueId = useId();
 
   useEffect(() => {
     menuRef.current?.toggleAttribute("inert", !isExpanded); // Instant tab removal; visibility:hidden fades late.
@@ -58,7 +59,7 @@ const Select: React.FC<LabelProps> = ({
   }, [isExpanded]);
 
   const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (e.key === "ArrowDown") {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
       setIsExpanded(true);
     }
   };
@@ -119,15 +120,17 @@ const Select: React.FC<LabelProps> = ({
 
       <button
         type="button"
-        className={clsx(styles.dropdown__toggle, "text--btn")}
-        aria-labelledby={labelId}
+        className={styles.dropdown__toggle}
+        aria-labelledby={`${labelId} ${valueId}`}
         aria-expanded={isExpanded}
         aria-haspopup="listbox"
         onClick={() => setIsExpanded((prev) => !prev)}
         onKeyDown={handleToggleKey}
         ref={toggleRef}
       >
-        {t(selected)}
+        <span id={valueId} className="text--btn">
+          {t(selected)}
+        </span>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
