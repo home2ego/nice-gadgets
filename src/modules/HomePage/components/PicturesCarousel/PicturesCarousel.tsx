@@ -1,14 +1,13 @@
 // PRELOAD ONE OF THE IMAGES IF ONE OF THEM IS LCP
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { memo, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import appleDevicesImage from "@/assets/images/apple-devices-lg.webp";
 import appleDevicesImageMini from "@/assets/images/apple-devices-sm.webp";
 import appleWatchImage from "@/assets/images/apple-watch-lg.webp";
 import appleWatchImageMini from "@/assets/images/apple-watch-sm.webp";
 import iPhoneImage from "@/assets/images/iPhone-lg.webp";
 import iPhoneImageMini from "@/assets/images/iPhone-sm.webp";
-import SkipLink from "@/modules/shared/components/SkipLink";
 import type { Slide } from "../../types/slide";
 import { AUTOPLAY_THRESHOLD } from "./constants";
 import styles from "./PicturesCarousel.module.scss";
@@ -40,15 +39,9 @@ const TOTAL_SLIDES = slides.length;
 
 interface CarouselProps {
   t: TFunction;
-  skipForwardRef: React.RefObject<HTMLElement | null>;
-  skipBackRef: React.RefObject<HTMLElement | null>;
 }
 
-const PicturesCarousel: React.FC<CarouselProps> = ({
-  t,
-  skipForwardRef,
-  skipBackRef,
-}) => {
+const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [pausedState, setPausedState] = useState(false);
   const isPaused = useRef(false);
@@ -216,178 +209,159 @@ const PicturesCarousel: React.FC<CarouselProps> = ({
   useHorizontalSwipe(sliderRef, handleNextSlideShow, handlePrevSlideShow);
 
   return (
-    <section aria-label={t("picturesCarousel")} className={styles.slider}>
-      <SkipLink
-        content="skipForwardCarousel"
-        classAttr="skip-forward-slider"
-        elementRef={skipForwardRef}
-      />
+    // biome-ignore lint/a11y/noStaticElementInteractions: this element handles focus intentionally
+    <div className={styles.carousel} onFocus={handleFocus}>
+      <button
+        type="button"
+        className={styles.carousel__paused}
+        onClick={() => {
+          const paused = !isPaused.current;
+          isManuallyPaused.current = paused;
+          updatePause(paused);
+        }}
+        aria-pressed={pausedState ? "true" : "false"}
+        aria-label={pausedState ? t("resumeLabel") : t("pauseLabel")}
+        data-pause-button=""
+      >
+        {pausedState ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="#f1f2f9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="#f1f2f9"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <rect width="5" height="18" x="14" y="3" rx="1" />
+            <rect width="5" height="18" x="5" y="3" rx="1" />
+          </svg>
+        )}
+      </button>
 
       {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
-      <div
-        role="group"
-        className={styles.slider__content}
-        onFocus={handleFocus}
-      >
-        <button
-          type="button"
-          className={styles.paused}
-          onClick={() => {
-            const paused = !isPaused.current;
-            isManuallyPaused.current = paused;
-            updatePause(paused);
-          }}
-          aria-pressed={pausedState ? "true" : "false"}
-          aria-label={pausedState ? t("resumeLabel") : t("pauseLabel")}
-          data-pause-button=""
-        >
-          {pausedState ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="#f1f2f9"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="none"
-              stroke="#f1f2f9"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <rect width="5" height="18" x="14" y="3" rx="1" />
-              <rect width="5" height="18" x="5" y="3" rx="1" />
-            </svg>
-          )}
-        </button>
-
-        <fieldset className={styles.dots}>
-          <legend className="sr-only">{t("slideNavLabel")}</legend>
-
-          {slides.map((slide: Slide, i) => (
-            <button
-              type="button"
-              key={slide.id}
-              className={clsx(styles.dots__dot, {
-                [styles.active]: normalizedIndex === i,
-              })}
-              onClick={() => handleSelectedSlideShow(i)}
-              aria-label={t("slideOfTotal", {
-                current: i + 1,
-                total: TOTAL_SLIDES,
-              })}
-              aria-current={normalizedIndex === i ? "true" : undefined}
-            >
-              <span />
-            </button>
-          ))}
-        </fieldset>
-
-        <button
-          type="button"
-          className={styles.prev}
-          onClick={handlePrevSlideShow}
-          aria-label={t("prevLabel")}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="none"
-            stroke="var(--text-color-primary)"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
+      <div role="group" aria-label={t("slideNavLabel")} className={styles.dots}>
+        {slides.map((slide: Slide, i) => (
+          <button
+            type="button"
+            key={slide.id}
+            className={clsx(styles.dots__dot, {
+              [styles.active]: normalizedIndex === i,
+            })}
+            onClick={() => handleSelectedSlideShow(i)}
+            aria-label={t("slideOfTotal", {
+              current: i + 1,
+              total: TOTAL_SLIDES,
+            })}
+            aria-current={normalizedIndex === i ? "true" : undefined}
           >
-            <path d="m15 18-6-6 6-6" />
-          </svg>
-        </button>
-
-        <button
-          type="button"
-          className={styles.next}
-          onClick={handleNextSlideShow}
-          aria-label={t("nextLabel")}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="none"
-            stroke="var(--text-color-primary)"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
-        </button>
-
-        <div
-          className={styles["slider__slide-wrapper"]}
-          ref={sliderRef}
-          onTransitionEnd={handleTransitionEnd}
-        >
-          <div className={styles.slider__slide}>
-            <SlideImage
-              slide={slides[slides.length - 1]}
-              hasAlt={false}
-              isPriority={false}
-            />
-          </div>
-
-          {slides.map((slide: Slide, i) => (
-            // biome-ignore lint/a11y/useSemanticElements: not a form group
-            <div
-              key={slide.id}
-              className={styles.slider__slide}
-              role="group"
-              aria-labelledby={`slide-${slide.id}`}
-              aria-hidden={normalizedIndex !== i ? "true" : undefined}
-            >
-              <h3 id={`slide-${slide.id}`} className="sr-only">
-                {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
-              </h3>
-              <SlideImage
-                t={t}
-                slide={slide}
-                hasAlt={true}
-                isPriority={i === 0}
-              />
-            </div>
-          ))}
-
-          <div className={styles.slider__slide}>
-            <SlideImage slide={slides[0]} hasAlt={false} isPriority={false} />
-          </div>
-        </div>
+            <span className={styles.line} />
+          </button>
+        ))}
       </div>
 
-      <SkipLink
-        content="skipBackCarousel"
-        classAttr="skip-back-slider"
-        mainRef={skipBackRef}
-      />
-    </section>
+      <button
+        type="button"
+        className={styles.carousel__prev}
+        onClick={handlePrevSlideShow}
+        aria-label={t("prevLabel")}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="none"
+          stroke="var(--text-color-primary)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        className={styles.carousel__next}
+        onClick={handleNextSlideShow}
+        aria-label={t("nextLabel")}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="none"
+          stroke="var(--text-color-primary)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="m9 18 6-6-6-6" />
+        </svg>
+      </button>
+
+      <div
+        className={styles.carousel__wrapper}
+        ref={sliderRef}
+        onTransitionEnd={handleTransitionEnd}
+      >
+        <div className={styles.carousel__slide}>
+          <SlideImage
+            slide={slides[slides.length - 1]}
+            hasAlt={false}
+            isPriority={false}
+          />
+        </div>
+
+        {slides.map((slide: Slide, i) => (
+          // biome-ignore lint/a11y/useSemanticElements: not a form group
+          <div
+            key={slide.id}
+            className={styles.carousel__slide}
+            role="group"
+            aria-labelledby={`slide-${slide.id}`}
+            aria-hidden={normalizedIndex !== i ? "true" : undefined}
+          >
+            <h3 id={`slide-${slide.id}`} className="sr-only">
+              {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
+            </h3>
+            <SlideImage
+              t={t}
+              slide={slide}
+              hasAlt={true}
+              isPriority={i === 0}
+            />
+          </div>
+        ))}
+
+        <div className={styles.carousel__slide}>
+          <SlideImage slide={slides[0]} hasAlt={false} isPriority={false} />
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default memo(PicturesCarousel);
+export default PicturesCarousel;

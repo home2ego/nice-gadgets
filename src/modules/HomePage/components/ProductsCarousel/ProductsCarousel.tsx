@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { memo, useEffect, useId, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import SkipLink from "@/modules/shared/components/SkipLink";
 import type { Product } from "../../types/product";
 import { formatPrice } from "./format-price";
@@ -10,22 +10,26 @@ interface CarouselProps {
   t: TFunction;
   normalizedLang: string;
   products: Product[];
-  children: React.ReactNode;
   skipForwardRef: React.RefObject<HTMLElement | null>;
   skipBackRef: React.RefObject<HTMLElement | null>;
   hasOnlyFullPrice: boolean;
   isLazy: boolean;
+  headingId: string;
+  headingContent: string;
+  descId: string;
 }
 
 const ProductsCarousel: React.FC<CarouselProps> = ({
   t,
   normalizedLang,
   products,
-  children,
   skipForwardRef,
   skipBackRef,
   hasOnlyFullPrice,
   isLazy,
+  headingId,
+  headingContent,
+  descId,
 }) => {
   const [disabledPrev, setDisabledPrev] = useState(true);
   const [disabledNext, setDisabledNext] = useState(false);
@@ -34,7 +38,8 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   const lastVisibleCard = useRef<HTMLElement | null>(null);
   const firstVisibleCard = useRef<HTMLElement | null>(null);
 
-  const ariaId = useId();
+  const focusTarget = useRef<"next" | "prev" | null>(null);
+  const focusKey = useRef<"tab" | "shiftTab" | null>(null);
 
   useEffect(() => {
     const cards = Array.from(
@@ -90,22 +95,67 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (disabledNext && focusTarget.current === "next") {
+      firstVisibleCard.current?.querySelector("a")?.focus();
+      focusTarget.current = null;
+    }
+
+    if (disabledPrev && focusTarget.current === "prev") {
+      lastVisibleCard.current?.querySelector("a")?.focus();
+      focusTarget.current = null;
+    }
+  }, [disabledNext, disabledPrev]);
+
   const handleNextClick = () => {
-    firstVisibleCard.current?.nextElementSibling?.scrollIntoView({
-      inline: "start",
-      block: "nearest",
-    });
+    const next = lastVisibleCard.current?.nextElementSibling;
+    next?.scrollIntoView({ inline: "start", block: "nearest" });
   };
 
   const handlePrevClick = () => {
-    lastVisibleCard.current?.previousElementSibling?.scrollIntoView({
-      inline: "end",
-      block: "nearest",
-    });
+    const prev = firstVisibleCard.current?.previousElementSibling;
+    prev?.scrollIntoView({ inline: "end", block: "nearest" });
   };
 
   const handleCardFocus = (e: React.FocusEvent<HTMLAnchorElement>) => {
-    e.currentTarget.scrollIntoView({ inline: "nearest", block: "nearest" });
+    switch (focusTarget.current) {
+      case "next":
+        firstVisibleCard.current?.querySelector("a")?.focus();
+        focusTarget.current = null;
+        break;
+
+      case "prev":
+        lastVisibleCard.current?.querySelector("a")?.focus();
+        focusTarget.current = null;
+        break;
+    }
+
+    const next =
+      lastVisibleCard.current?.nextElementSibling?.querySelector("a");
+    const prev =
+      firstVisibleCard.current?.previousElementSibling?.querySelector("a");
+
+    if (e.currentTarget === next && focusKey.current === "tab") {
+      requestAnimationFrame(() => {
+        next?.scrollIntoView({ inline: "start", block: "nearest" });
+      });
+    }
+
+    if (e.currentTarget === prev && focusKey.current === "shiftTab") {
+      requestAnimationFrame(() => {
+        prev?.scrollIntoView({ inline: "end", block: "nearest" });
+      });
+    }
+  };
+
+  const handleCardKey = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+    if (e.shiftKey && e.key === "Tab") {
+      focusKey.current = "shiftTab";
+    }
+
+    if (!e.shiftKey && e.key === "Tab") {
+      focusKey.current = "tab";
+    }
   };
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
@@ -123,6 +173,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
           aria-label={t("productDetailsLabel", { product: product.name })}
           className={styles.product}
           onFocus={handleCardFocus}
+          onKeyDown={handleCardKey}
         >
           <img
             src={product.image}
@@ -209,82 +260,90 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   }, [t]);
 
   return (
-    <section aria-label={t("productsCarousel")} aria-describedby={ariaId}>
-      <div className={styles["section-top"]}>
-        {children}
+    <>
+      <SkipLink
+        content="skipForwardCarousel"
+        classAttr="skip-forward-products"
+        elementRef={skipForwardRef}
+      />
 
-        <p id={ariaId} className="sr-only">
+      <div className={styles.top}>
+        <h2 id={headingId} className={clsx(styles.top__heading, "title--lg")}>
+          {t(headingContent)}
+        </h2>
+
+        <p id={descId} className="sr-only">
           {t("carouselInstructions")}
         </p>
 
-        <div>
-          <button
-            type="button"
-            className={clsx(styles.prev, { [styles.disabled]: disabledPrev })}
-            tabIndex={-1}
+        <button
+          type="button"
+          className={styles.top__prev}
+          aria-label={t("prevProductsLabel")}
+          disabled={disabledPrev}
+          onClick={handlePrevClick}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              focusTarget.current = "prev";
+            }
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="var(--text-color-primary)"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
             aria-hidden="true"
-            onClick={handlePrevClick}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-          </button>
+            <path d="m15 18-6-6 6-6" />
+          </svg>
+        </button>
 
-          <button
-            type="button"
-            className={clsx(styles.next, { [styles.disabled]: disabledNext })}
-            tabIndex={-1}
+        <button
+          type="button"
+          className={styles.top__next}
+          aria-label={t("nextProductsLabel")}
+          disabled={disabledNext}
+          onClick={handleNextClick}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              focusTarget.current = "next";
+            }
+          }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="var(--text-color-primary)"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
             aria-hidden="true"
-            onClick={handleNextClick}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="m9 18 6-6-6-6" />
-            </svg>
-          </button>
-        </div>
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </button>
       </div>
 
-      <div className={styles["products-wrapper"]}>
-        <SkipLink
-          content="skipForwardCarousel"
-          classAttr="skip-forward-carousel"
-          elementRef={skipForwardRef}
-        />
-
-        <div className={styles.products} ref={containerRef}>
-          {productCards}
-        </div>
-
-        <SkipLink
-          content="skipBackCarousel"
-          classAttr="skip-back-carousel"
-          elementRef={skipBackRef}
-        />
+      <div className={styles.products} tabIndex={-1} ref={containerRef}>
+        {productCards}
       </div>
-    </section>
+
+      <SkipLink
+        content="skipBackCarousel"
+        classAttr="skip-back-products"
+        elementRef={skipBackRef}
+      />
+    </>
   );
 };
 
-export default memo(ProductsCarousel);
+export default ProductsCarousel;

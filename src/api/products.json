@@ -25,7 +25,7 @@
     "color": "black",
     "ram": "3GB",
     "year": 2016,
-    "image": "img/phones/apple-iphone-7-plus/black/00.webp"
+    "image": "img/phones/apple-iphone-7/black/00.webp"
   },
   {
     "id": 3,
@@ -137,7 +137,7 @@
     "color": "spacegray",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/spacegray/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/spacegray/00.webp"
   },
   {
     "id": 11,
@@ -151,7 +151,7 @@
     "color": "gold",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/gold/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/gold/00.webp"
   },
   {
     "id": 12,
@@ -165,7 +165,7 @@
     "color": "spacegray",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/spacegray/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/spacegray/00.webp"
   },
   {
     "id": 13,
@@ -221,7 +221,7 @@
     "color": "gold",
     "ram": "4GB",
     "year": 2018,
-    "image": "img/phones/apple-iphone-xs-max/gold/00.webp"
+    "image": "img/phones/apple-iphone-xs/gold/00.webp"
   },
   {
     "id": 17,
@@ -235,7 +235,7 @@
     "color": "silver",
     "ram": "4GB",
     "year": 2018,
-    "image": "img/phones/apple-iphone-xs-max/silver/00.webp"
+    "image": "img/phones/apple-iphone-xs/silver/00.webp"
   },
   {
     "id": 18,
@@ -263,7 +263,7 @@
     "color": "silver",
     "ram": "3GB",
     "year": 2016,
-    "image": "img/phones/apple-iphone-7-plus/silver/00.webp"
+    "image": "img/phones/apple-iphone-7/silver/00.webp"
   },
   {
     "id": 20,
@@ -361,7 +361,7 @@
     "color": "silver",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/silver/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/silver/00.webp"
   },
   {
     "id": 27,
@@ -375,7 +375,7 @@
     "color": "midnightgreen",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/midnightgreen/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/midnightgreen/00.webp"
   },
   {
     "id": 28,
@@ -389,7 +389,7 @@
     "color": "silver",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/silver/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/silver/00.webp"
   },
   {
     "id": 29,
@@ -459,7 +459,7 @@
     "color": "silver",
     "ram": "4GB",
     "year": 2018,
-    "image": "img/phones/apple-iphone-xs-max/silver/00.webp"
+    "image": "img/phones/apple-iphone-xs/silver/00.webp"
   },
   {
     "id": 34,
@@ -473,7 +473,7 @@
     "color": "gold",
     "ram": "4GB",
     "year": 2018,
-    "image": "img/phones/apple-iphone-xs-max/gold/00.webp"
+    "image": "img/phones/apple-iphone-xs/gold/00.webp"
   },
   {
     "id": 35,
@@ -599,7 +599,7 @@
     "color": "midnightgreen",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/midnightgreen/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/midnightgreen/00.webp"
   },
   {
     "id": 44,
@@ -613,7 +613,7 @@
     "color": "spacegray",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/spacegray/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/spacegray/00.webp"
   },
   {
     "id": 45,
@@ -669,7 +669,7 @@
     "color": "spacegray",
     "ram": "4GB",
     "year": 2018,
-    "image": "img/phones/apple-iphone-xs-max/spacegray/00.webp"
+    "image": "img/phones/apple-iphone-xs/spacegray/00.webp"
   },
   {
     "id": 49,
@@ -683,7 +683,7 @@
     "color": "rosegold",
     "ram": "3GB",
     "year": 2016,
-    "image": "img/phones/apple-iphone-7-plus/rosegold/00.webp"
+    "image": "img/phones/apple-iphone-7/rosegold/00.webp"
   },
   {
     "id": 50,
@@ -795,7 +795,7 @@
     "color": "gold",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/gold/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/gold/00.webp"
   },
   {
     "id": 58,
@@ -809,7 +809,7 @@
     "color": "silver",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/silver/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/silver/00.webp"
   },
   {
     "id": 59,
@@ -823,7 +823,7 @@
     "color": "midnightgreen",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/midnightgreen/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/midnightgreen/00.webp"
   },
   {
     "id": 60,
@@ -879,7 +879,7 @@
     "color": "gold",
     "ram": "4GB",
     "year": 2019,
-    "image": "img/phones/apple-iphone-11-pro-max/gold/00.webp"
+    "image": "img/phones/apple-iphone-11-pro/gold/00.webp"
   },
   {
     "id": 64,
@@ -949,7 +949,7 @@
     "color": "spacegray",
     "ram": "4GB",
     "year": 2018,
-    "image": "img/phones/apple-iphone-xs-max/spacegray/00.webp"
+    "image": "img/phones/apple-iphone-xs/spacegray/00.webp"
   },
   {
     "id": 69,
@@ -963,7 +963,7 @@
     "color": "gold",
     "ram": "3GB",
     "year": 2016,
-    "image": "img/phones/apple-iphone-7-plus/gold/00.webp"
+    "image": "img/phones/apple-iphone-7/gold/00.webp"
   },
   {
     "id": 70,

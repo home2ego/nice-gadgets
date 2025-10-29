@@ -1,37 +1,39 @@
 .skip {
-  &-forward-slider,
-  &-back-slider,
-  &-forward-carousel,
-  &-back-carousel {
-    left: 0;
+  &-forward-pictures,
+  &-back-pictures,
+  &-forward-products,
+  &-back-products {
     padding: 18px 6px;
     border-radius: 4px;
   }
 
-  &-forward-slider,
-  &-back-slider {
+  &-forward-pictures,
+  &-back-pictures {
+    left: 0;
+
     @include on-tablet {
       left: 64px;
     }
   }
 
-  &-forward-carousel,
-  &-back-carousel {
-    @include on-tablet {
-      left: 16px;
-    }
+  &-forward-products,
+  &-back-products {
+    left: 16px;
   }
 
-  &-forward-slider,
-  &-forward-carousel {
+  &-forward-pictures {
     top: 16px;
   }
 
-  &-back-slider {
+  &-forward-products {
+    top: 88px;
+  }
+
+  &-back-pictures {
     bottom: 56px;
   }
 
-  &-back-carousel {
+  &-back-products {
     bottom: 32px;
   }
 }

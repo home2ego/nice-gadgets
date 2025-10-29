@@ -1430,9 +1430,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "gold",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/gold/00.webp",
-      "img/phones/apple-iphone-11-pro-max/gold/01.webp",
-      "img/phones/apple-iphone-11-pro-max/gold/02.webp"
+      "img/phones/apple-iphone-11-pro/gold/00.webp",
+      "img/phones/apple-iphone-11-pro/gold/01.webp",
+      "img/phones/apple-iphone-11-pro/gold/02.webp"
     ],
     "description": [
       {
@@ -1476,9 +1476,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "midnightgreen",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/00.webp",
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/01.webp",
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/02.webp"
+      "img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
+      "img/phones/apple-iphone-11-pro/midnightgreen/01.webp",
+      "img/phones/apple-iphone-11-pro/midnightgreen/02.webp"
     ],
     "description": [
       {
@@ -1522,9 +1522,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "silver",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/silver/00.webp",
-      "img/phones/apple-iphone-11-pro-max/silver/01.webp",
-      "img/phones/apple-iphone-11-pro-max/silver/02.webp"
+      "img/phones/apple-iphone-11-pro/silver/00.webp",
+      "img/phones/apple-iphone-11-pro/silver/01.webp",
+      "img/phones/apple-iphone-11-pro/silver/02.webp"
     ],
     "description": [
       {
@@ -1568,9 +1568,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "spacegray",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/spacegray/00.webp",
-      "img/phones/apple-iphone-11-pro-max/spacegray/01.webp",
-      "img/phones/apple-iphone-11-pro-max/spacegray/02.webp"
+      "img/phones/apple-iphone-11-pro/spacegray/00.webp",
+      "img/phones/apple-iphone-11-pro/spacegray/01.webp",
+      "img/phones/apple-iphone-11-pro/spacegray/02.webp"
     ],
     "description": [
       {
@@ -1614,9 +1614,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "gold",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/gold/00.webp",
-      "img/phones/apple-iphone-11-pro-max/gold/01.webp",
-      "img/phones/apple-iphone-11-pro-max/gold/02.webp"
+      "img/phones/apple-iphone-11-pro/gold/00.webp",
+      "img/phones/apple-iphone-11-pro/gold/01.webp",
+      "img/phones/apple-iphone-11-pro/gold/02.webp"
     ],
     "description": [
       {
@@ -1660,9 +1660,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "midnightgreen",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/00.webp",
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/01.webp",
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/02.webp"
+      "img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
+      "img/phones/apple-iphone-11-pro/midnightgreen/01.webp",
+      "img/phones/apple-iphone-11-pro/midnightgreen/02.webp"
     ],
     "description": [
       {
@@ -1706,9 +1706,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "silver",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/silver/00.webp",
-      "img/phones/apple-iphone-11-pro-max/silver/01.webp",
-      "img/phones/apple-iphone-11-pro-max/silver/02.webp"
+      "img/phones/apple-iphone-11-pro/silver/00.webp",
+      "img/phones/apple-iphone-11-pro/silver/01.webp",
+      "img/phones/apple-iphone-11-pro/silver/02.webp"
     ],
     "description": [
       {
@@ -1752,9 +1752,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "spacegray",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/spacegray/00.webp",
-      "img/phones/apple-iphone-11-pro-max/spacegray/01.webp",
-      "img/phones/apple-iphone-11-pro-max/spacegray/02.webp"
+      "img/phones/apple-iphone-11-pro/spacegray/00.webp",
+      "img/phones/apple-iphone-11-pro/spacegray/01.webp",
+      "img/phones/apple-iphone-11-pro/spacegray/02.webp"
     ],
     "description": [
       {
@@ -1798,9 +1798,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "gold",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/gold/00.webp",
-      "img/phones/apple-iphone-11-pro-max/gold/01.webp",
-      "img/phones/apple-iphone-11-pro-max/gold/02.webp"
+      "img/phones/apple-iphone-11-pro/gold/00.webp",
+      "img/phones/apple-iphone-11-pro/gold/01.webp",
+      "img/phones/apple-iphone-11-pro/gold/02.webp"
     ],
     "description": [
       {
@@ -1844,9 +1844,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "midnightgreen",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/00.webp",
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/01.webp",
-      "img/phones/apple-iphone-11-pro-max/midnightgreen/02.webp"
+      "img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
+      "img/phones/apple-iphone-11-pro/midnightgreen/01.webp",
+      "img/phones/apple-iphone-11-pro/midnightgreen/02.webp"
     ],
     "description": [
       {
@@ -1890,9 +1890,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "silver",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/silver/00.webp",
-      "img/phones/apple-iphone-11-pro-max/silver/01.webp",
-      "img/phones/apple-iphone-11-pro-max/silver/02.webp"
+      "img/phones/apple-iphone-11-pro/silver/00.webp",
+      "img/phones/apple-iphone-11-pro/silver/01.webp",
+      "img/phones/apple-iphone-11-pro/silver/02.webp"
     ],
     "description": [
       {
@@ -1936,9 +1936,9 @@
     "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
     "color": "spacegray",
     "images": [
-      "img/phones/apple-iphone-11-pro-max/spacegray/00.webp",
-      "img/phones/apple-iphone-11-pro-max/spacegray/01.webp",
-      "img/phones/apple-iphone-11-pro-max/spacegray/02.webp"
+      "img/phones/apple-iphone-11-pro/spacegray/00.webp",
+      "img/phones/apple-iphone-11-pro/spacegray/01.webp",
+      "img/phones/apple-iphone-11-pro/spacegray/02.webp"
     ],
     "description": [
       {
@@ -2174,11 +2174,11 @@
     "colorsAvailable": ["black", "rosegold", "gold", "silver"],
     "color": "black",
     "images": [
-      "img/phones/apple-iphone-7-plus/black/00.webp",
-      "img/phones/apple-iphone-7-plus/black/01.webp",
-      "img/phones/apple-iphone-7-plus/black/02.webp",
-      "img/phones/apple-iphone-7-plus/black/03.webp",
-      "img/phones/apple-iphone-7-plus/black/04.webp"
+      "img/phones/apple-iphone-7/black/00.webp",
+      "img/phones/apple-iphone-7/black/01.webp",
+      "img/phones/apple-iphone-7/black/02.webp",
+      "img/phones/apple-iphone-7/black/03.webp",
+      "img/phones/apple-iphone-7/black/04.webp"
     ],
     "description": [
       {
@@ -2222,11 +2222,11 @@
     "colorsAvailable": ["black", "rosegold", "gold", "silver"],
     "color": "gold",
     "images": [
-      "img/phones/apple-iphone-7-plus/gold/00.webp",
-      "img/phones/apple-iphone-7-plus/gold/01.webp",
-      "img/phones/apple-iphone-7-plus/gold/02.webp",
-      "img/phones/apple-iphone-7-plus/gold/03.webp",
-      "img/phones/apple-iphone-7-plus/gold/04.webp"
+      "img/phones/apple-iphone-7/gold/00.webp",
+      "img/phones/apple-iphone-7/gold/01.webp",
+      "img/phones/apple-iphone-7/gold/02.webp",
+      "img/phones/apple-iphone-7/gold/03.webp",
+      "img/phones/apple-iphone-7/gold/04.webp"
     ],
     "description": [
       {
@@ -2270,11 +2270,11 @@
     "colorsAvailable": ["black", "rosegold", "gold", "silver"],
     "color": "rosegold",
     "images": [
-      "img/phones/apple-iphone-7-plus/rosegold/00.webp",
-      "img/phones/apple-iphone-7-plus/rosegold/01.webp",
-      "img/phones/apple-iphone-7-plus/rosegold/02.webp",
-      "img/phones/apple-iphone-7-plus/rosegold/03.webp",
-      "img/phones/apple-iphone-7-plus/rosegold/04.webp"
+      "img/phones/apple-iphone-7/rosegold/00.webp",
+      "img/phones/apple-iphone-7/rosegold/01.webp",
+      "img/phones/apple-iphone-7/rosegold/02.webp",
+      "img/phones/apple-iphone-7/rosegold/03.webp",
+      "img/phones/apple-iphone-7/rosegold/04.webp"
     ],
     "description": [
       {
@@ -2318,11 +2318,11 @@
     "colorsAvailable": ["black", "rosegold", "gold", "silver"],
     "color": "silver",
     "images": [
-      "img/phones/apple-iphone-7-plus/silver/00.webp",
-      "img/phones/apple-iphone-7-plus/silver/01.webp",
-      "img/phones/apple-iphone-7-plus/silver/02.webp",
-      "img/phones/apple-iphone-7-plus/silver/03.webp",
-      "img/phones/apple-iphone-7-plus/silver/04.webp"
+      "img/phones/apple-iphone-7/silver/00.webp",
+      "img/phones/apple-iphone-7/silver/01.webp",
+      "img/phones/apple-iphone-7/silver/02.webp",
+      "img/phones/apple-iphone-7/silver/03.webp",
+      "img/phones/apple-iphone-7/silver/04.webp"
     ],
     "description": [
       {
@@ -3081,11 +3081,11 @@
     "colorsAvailable": ["spacegray", "gold", "silver"],
     "color": "gold",
     "images": [
-      "img/phones/apple-iphone-xs-max/gold/00.webp",
-      "img/phones/apple-iphone-xs-max/gold/01.webp",
-      "img/phones/apple-iphone-xs-max/gold/02.webp",
-      "img/phones/apple-iphone-xs-max/gold/03.webp",
-      "img/phones/apple-iphone-xs-max/gold/04.webp"
+      "img/phones/apple-iphone-xs/gold/00.webp",
+      "img/phones/apple-iphone-xs/gold/01.webp",
+      "img/phones/apple-iphone-xs/gold/02.webp",
+      "img/phones/apple-iphone-xs/gold/03.webp",
+      "img/phones/apple-iphone-xs/gold/04.webp"
     ],
     "description": [
       {
@@ -3129,11 +3129,11 @@
     "colorsAvailable": ["spacegray", "gold", "silver"],
     "color": "silver",
     "images": [
-      "img/phones/apple-iphone-xs-max/silver/00.webp",
-      "img/phones/apple-iphone-xs-max/silver/01.webp",
-      "img/phones/apple-iphone-xs-max/silver/02.webp",
-      "img/phones/apple-iphone-xs-max/silver/03.webp",
-      "img/phones/apple-iphone-xs-max/silver/04.webp"
+      "img/phones/apple-iphone-xs/silver/00.webp",
+      "img/phones/apple-iphone-xs/silver/01.webp",
+      "img/phones/apple-iphone-xs/silver/02.webp",
+      "img/phones/apple-iphone-xs/silver/03.webp",
+      "img/phones/apple-iphone-xs/silver/04.webp"
     ],
     "description": [
       {
@@ -3177,11 +3177,11 @@
     "colorsAvailable": ["spacegray", "gold", "silver"],
     "color": "spacegray",
     "images": [
-      "img/phones/apple-iphone-xs-max/spacegray/00.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/01.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/02.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/03.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/04.webp"
+      "img/phones/apple-iphone-xs/spacegray/00.webp",
+      "img/phones/apple-iphone-xs/spacegray/01.webp",
+      "img/phones/apple-iphone-xs/spacegray/02.webp",
+      "img/phones/apple-iphone-xs/spacegray/03.webp",
+      "img/phones/apple-iphone-xs/spacegray/04.webp"
     ],
     "description": [
       {
@@ -3225,11 +3225,11 @@
     "colorsAvailable": ["spacegray", "gold", "silver"],
     "color": "gold",
     "images": [
-      "img/phones/apple-iphone-xs-max/gold/00.webp",
-      "img/phones/apple-iphone-xs-max/gold/01.webp",
-      "img/phones/apple-iphone-xs-max/gold/02.webp",
-      "img/phones/apple-iphone-xs-max/gold/03.webp",
-      "img/phones/apple-iphone-xs-max/gold/04.webp"
+      "img/phones/apple-iphone-xs/gold/00.webp",
+      "img/phones/apple-iphone-xs/gold/01.webp",
+      "img/phones/apple-iphone-xs/gold/02.webp",
+      "img/phones/apple-iphone-xs/gold/03.webp",
+      "img/phones/apple-iphone-xs/gold/04.webp"
     ],
     "description": [
       {
@@ -3273,11 +3273,11 @@
     "colorsAvailable": ["spacegray", "gold", "silver"],
     "color": "silver",
     "images": [
-      "img/phones/apple-iphone-xs-max/silver/00.webp",
-      "img/phones/apple-iphone-xs-max/silver/01.webp",
-      "img/phones/apple-iphone-xs-max/silver/02.webp",
-      "img/phones/apple-iphone-xs-max/silver/03.webp",
-      "img/phones/apple-iphone-xs-max/silver/04.webp"
+      "img/phones/apple-iphone-xs/silver/00.webp",
+      "img/phones/apple-iphone-xs/silver/01.webp",
+      "img/phones/apple-iphone-xs/silver/02.webp",
+      "img/phones/apple-iphone-xs/silver/03.webp",
+      "img/phones/apple-iphone-xs/silver/04.webp"
     ],
     "description": [
       {
@@ -3321,11 +3321,11 @@
     "colorsAvailable": ["spacegray", "gold", "silver"],
     "color": "spacegray",
     "images": [
-      "img/phones/apple-iphone-xs-max/spacegray/00.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/01.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/02.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/03.webp",
-      "img/phones/apple-iphone-xs-max/spacegray/04.webp"
+      "img/phones/apple-iphone-xs/spacegray/00.webp",
+      "img/phones/apple-iphone-xs/spacegray/01.webp",
+      "img/phones/apple-iphone-xs/spacegray/02.webp",
+      "img/phones/apple-iphone-xs/spacegray/03.webp",
+      "img/phones/apple-iphone-xs/spacegray/04.webp"
     ],
     "description": [
       {

@@ -1,4 +1,4 @@
-@use "../utils/index.scss" as utils;
+@use "../utils" as *;
 
 :root {
   --bg-nav: rgb(15 17 33 / 50%);
@@ -91,23 +91,26 @@ button {
   outline: revert;
 }
 
-fieldset {
-  all: unset;
+section {
+  scroll-margin-top: $mobile-navbar-hight + 24px;
+
+  @include section-offset;
+
+  @include on-desktop {
+    scroll-margin-top: $desktop-navbar-hight + 24px;
+  }
 }
 
 main:focus,
-footer:focus {
+footer:focus,
+section:focus {
   outline: none;
 }
 
 a:focus-visible,
 button:focus-visible,
 div[role="option"]:focus-visible {
-  outline: 3px solid utils.$accent-color;
-}
-
-section {
-  @include utils.section-offset;
+  outline: 3px solid $accent-color;
 }
 
 @media (prefers-reduced-motion: reduce) {

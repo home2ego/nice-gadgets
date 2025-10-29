@@ -1,16 +1,9 @@
 import clsx from "clsx";
-import {
-  lazy,
-  Suspense,
-  useEffect,
-  useId,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "@/api/products.json";
+import SkipLink from "@/modules/shared/components/SkipLink";
 import CategorySkeleton from "./components/CategorySkeleton";
 import PicturesCarousel from "./components/PicturesCarousel";
 import ProductsCarousel from "./components/ProductsCarousel";
@@ -42,16 +35,27 @@ const newProducts: Product[] = products
 
     return product.year === maxYear && modelNumber === maxModel;
   })
-  .sort((a, b) => b.fullPrice - a.fullPrice)
-  .slice(0, 6);
+  .reduce((acc: Product[], current) => {
+    const alreadyExists = acc.some((product) => {
+      return product.color === current.color;
+    });
 
-const getAbsoluteDiscount = (product: Product) => {
-  return product.fullPrice - product.price;
-};
+    if (!alreadyExists) {
+      acc.push(current);
+    }
+
+    return acc;
+  }, [])
+  .sort((a, b) => b.fullPrice - a.fullPrice);
 
 const hotPricesProducts: Product[] = [...products]
-  .sort((a, b) => getAbsoluteDiscount(b) - getAbsoluteDiscount(a))
-  .slice(0, 8);
+  .sort((a, b) => {
+    const discountA = (a.fullPrice - a.price) / a.fullPrice;
+    const discountB = (b.fullPrice - b.price) / b.fullPrice;
+
+    return discountB - discountA;
+  })
+  .slice(0, 10);
 
 interface OutletContext {
   mainRef: React.RefObject<HTMLElement>;
@@ -64,16 +68,16 @@ const HomePage = () => {
     useOutletContext<OutletContext>();
 
   const [loaded, setLoaded] = useState(false);
-  const categoriesRef = useRef<HTMLDivElement>(null);
-  const headingNewModelsRef = useRef<HTMLHeadingElement>(null);
-  const headingCategoryRef = useRef<HTMLHeadingElement>(null);
-  const headingHotPricesRef = useRef<HTMLHeadingElement>(null);
-  const categoriesId = useId();
+  const newModelsRef = useRef<HTMLElement>(null);
+  const categoriesRef = useRef<HTMLElement>(null);
+  const hotPricesRef = useRef<HTMLHeadingElement>(null);
+  const categoriesObserverRef = useRef<HTMLDivElement>(null);
 
   const { t } = useTranslation("homePage");
 
+  // If IntersectionObserver is not removed, wrap Pictures Carousel and Product Carousel in .memo()
   useEffect(() => {
-    if (!categoriesRef.current) {
+    if (!categoriesObserverRef.current) {
       return;
     }
 
@@ -86,34 +90,12 @@ const HomePage = () => {
       { rootMargin: "200px" },
     );
 
-    observer.observe(categoriesRef.current);
+    observer.observe(categoriesObserverRef.current);
 
     return () => {
       observer.disconnect();
     };
   }, []);
-
-  const newModelsHeading = useMemo(() => {
-    return (
-      <h2
-        className={clsx(styles.heading, "title--lg")}
-        ref={headingNewModelsRef}
-      >
-        {t("newModelsHeading")}
-      </h2>
-    );
-  }, [t]);
-
-  const hotPricesHeading = useMemo(() => {
-    return (
-      <h2
-        className={clsx(styles.heading, "title--lg")}
-        ref={headingHotPricesRef}
-      >
-        {t("hotPricesHeading")}
-      </h2>
-    );
-  }, [t]);
 
   return (
     <>
@@ -123,41 +105,65 @@ const HomePage = () => {
         className={clsx(
           styles.typing,
           styles[`typing--${normalizedLang}`],
-          styles["heading-welcome"],
+          styles["welcome-message"],
           "title--xl",
         )}
       >
         {t("welcomeMessage")}
       </h2>
 
-      <PicturesCarousel
-        t={t}
-        skipForwardRef={headingNewModelsRef}
-        skipBackRef={mainRef}
-      />
-
-      <ProductsCarousel
-        t={t}
-        normalizedLang={normalizedLang}
-        products={newProducts}
-        skipForwardRef={headingCategoryRef}
-        skipBackRef={headingNewModelsRef}
-        hasOnlyFullPrice={true}
-        isLazy={false}
+      <section
+        aria-label={t("picturesCarousel")}
+        className={clsx(
+          styles["carousel-wrapper"],
+          styles["carousel-wrapper--pictures"],
+        )}
       >
-        {newModelsHeading}
-      </ProductsCarousel>
+        <SkipLink
+          content="skipForwardCarousel"
+          classAttr="skip-forward-pictures"
+          elementRef={newModelsRef}
+        />
 
-      <section aria-labelledby={categoriesId}>
+        <PicturesCarousel t={t} />
+
+        <SkipLink
+          content="skipBackCarousel"
+          classAttr="skip-back-pictures"
+          mainRef={mainRef}
+        />
+      </section>
+
+      <section
+        aria-labelledby="new-models-heading"
+        aria-describedby="new-models-desc"
+        className={styles["carousel-wrapper"]}
+        ref={newModelsRef}
+      >
+        <ProductsCarousel
+          t={t}
+          normalizedLang={normalizedLang}
+          products={newProducts}
+          skipForwardRef={categoriesRef}
+          skipBackRef={newModelsRef}
+          hasOnlyFullPrice={true}
+          isLazy={false}
+          headingId="new-models-heading"
+          headingContent="newModelsHeading"
+          descId="new-models-desc"
+        />
+      </section>
+
+      <section aria-labelledby="categories-heading" ref={categoriesRef}>
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h2
-          id={categoriesId}
-          className={clsx(styles.heading, styles["heading--mb"], "title--lg")}
-          ref={headingCategoryRef}
+          id="categories-heading"
+          className={clsx(styles["categories-heading"], "title--lg")}
         >
           {t("categoryHeading")}
         </h2>
 
-        <div ref={categoriesRef} className={styles.categories}>
+        <div ref={categoriesObserverRef} className={styles.categories}>
           {loaded ? (
             <Suspense fallback={<CategorySkeleton />}>
               <ShopByCategory t={t} />
@@ -168,17 +174,25 @@ const HomePage = () => {
         </div>
       </section>
 
-      <ProductsCarousel
-        t={t}
-        normalizedLang={normalizedLang}
-        products={hotPricesProducts}
-        skipForwardRef={footerRef}
-        skipBackRef={headingHotPricesRef}
-        hasOnlyFullPrice={false}
-        isLazy={true}
+      <section
+        aria-labelledby="hot-prices-heading"
+        aria-describedby="hot-prices-desc"
+        className={styles["carousel-wrapper"]}
+        ref={hotPricesRef}
       >
-        {hotPricesHeading}
-      </ProductsCarousel>
+        <ProductsCarousel
+          t={t}
+          normalizedLang={normalizedLang}
+          products={hotPricesProducts}
+          skipForwardRef={footerRef}
+          skipBackRef={hotPricesRef}
+          hasOnlyFullPrice={false}
+          isLazy={true}
+          headingId="hot-prices-heading"
+          headingContent="hotPricesHeading"
+          descId="hot-prices-desc"
+        />
+      </section>
     </>
   );
 };

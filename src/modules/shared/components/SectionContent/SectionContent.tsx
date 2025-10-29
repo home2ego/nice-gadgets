@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
+import phones from "@/api/phones.json";
 import type { PageOption, SortOption } from "@/core/types/select";
 import Select from "@/ui/Select";
 import styles from "./SectionContent.module.scss";

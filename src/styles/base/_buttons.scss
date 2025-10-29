@@ -1,4 +1,4 @@
-@use "../utils/index.scss" as utils;
+@use "../utils" as *;
 
 .btn--nav-left,
 .btn--nav-right {
@@ -41,7 +41,7 @@
     opacity: 1;
   }
 
-  @include utils.on-desktop {
+  @include on-desktop {
     padding-block: 26.5px;
   }
 }
@@ -55,7 +55,7 @@
 
   outline-offset: -2px;
 
-  @include utils.on-desktop {
+  @include on-desktop {
     outline-offset: -3px;
   }
 
@@ -80,7 +80,7 @@
   align-items: center;
 
   padding-inline: 16px;
-  border-left: utils.$border-width solid var(--bd-color-primary);
+  border-left: $border-width solid var(--bd-color-primary);
 
   outline-offset: -3px;
 
@@ -90,7 +90,7 @@
 
     width: 40px;
     height: 20px;
-    border: utils.$border-width solid transparent;
+    border: $border-width solid transparent;
     border-radius: 12px;
 
     background-color: var(--bd-color-primary);
@@ -99,10 +99,10 @@
   }
 
   &:hover span {
-    border-color: utils.$accent-color;
+    border-color: $accent-color;
   }
 
-  @include utils.on-desktop {
+  @include on-desktop {
     padding-inline: 24px;
   }
 }
