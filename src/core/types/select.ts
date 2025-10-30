@@ -1,2 +1,2 @@
 export type SortOption = "newest" | "alpha" | "cheapest";
-export type PageOption = "3" | "5" | "10" | "16";
+export type PageOption = "all" | "4" | "8" | "16";

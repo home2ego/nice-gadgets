@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import phones from "@/api/phones.json";
+// import phones from "@/api/phones.json";
 import type { PageOption, SortOption } from "@/core/types/select";
 import Select from "@/ui/Select";
 import styles from "./SectionContent.module.scss";
 
 const sortOptions: SortOption[] = ["newest", "alpha", "cheapest"];
-const pageOptions: PageOption[] = ["3", "5", "10", "16"];
+const pageOptions: PageOption[] = ["all", "4", "8", "16"];
 
 interface SectionProps {
   t: TFunction;
@@ -32,13 +32,15 @@ const SectionContent: React.FC<SectionProps> = ({
         label="sortLabel"
         options={sortOptions}
         selectedOption={sortOptions[0]}
+        paramKey="sort"
       />
 
       <Select
         t={t}
         label="pageLabel"
         options={pageOptions}
-        selectedOption={pageOptions[2]}
+        selectedOption={pageOptions[0]}
+        paramKey="perPage"
       />
     </div>
   </section>

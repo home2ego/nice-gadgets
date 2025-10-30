@@ -8,6 +8,7 @@
   "appleDevicesAlt": "Apple iPad, iPhone, AirPods та Apple Pencil у чорних і білих кольорах на столі",
   "appleWatchAlt": "Apple Watch із синім ремінцем на темному тлі",
   "picturesCarousel": "Карусель зображень",
+  "productsCarousel": "Карусель товарів",
   "carouselInstructions": "Використовуйте клавішу Tab або Shift + Tab, щоб переміщатися між видимими товарами, або кнопки Попередній і Наступний, щоб прокручувати їх",
   "productLabel": "Переглянути {{product}}, товар {{current}} із {{total}}",
   "priceLabel": "акційна ціна",

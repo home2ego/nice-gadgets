@@ -8,6 +8,7 @@
   "appleDevicesAlt": "Apple iPad, iPhone, AirPods i Apple Pencil w czarnych i białych kolorach na stole",
   "appleWatchAlt": "Apple Watch z niebieskim paskiem na ciemnym tle",
   "picturesCarousel": "Karuzela zdjęć",
+  "productsCarousel": "Karuzela produktów",
   "carouselInstructions": "Użyj klawisza Tab lub Shift + Tab, aby przechodzić między widocznymi produktami, albo przycisków Poprzedni i Następny, aby przewijać je dalej",
   "productLabel": "Zobacz {{product}}, produkt {{current}} z {{total}}",
   "priceLabel": "promocyjna cena",

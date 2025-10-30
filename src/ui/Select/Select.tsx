@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useId, useRef, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import type { PageOption, SortOption } from "@/core/types/select";
 import styles from "./Select.module.scss";
 
@@ -9,6 +10,7 @@ interface LabelProps {
   label: string;
   options: SortOption[] | PageOption[];
   selectedOption: SortOption | PageOption;
+  paramKey: "sort" | "perPage";
 }
 
 const Select: React.FC<LabelProps> = ({
@@ -16,6 +18,7 @@ const Select: React.FC<LabelProps> = ({
   label,
   options,
   selectedOption,
+  paramKey,
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selected, setSelected] = useState(selectedOption);
@@ -25,6 +28,8 @@ const Select: React.FC<LabelProps> = ({
   const optionRefs = useRef<Array<HTMLDivElement | null>>([]);
   const labelId = useId();
   const valueId = useId();
+
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     menuRef.current?.toggleAttribute("inert", !isExpanded); // Instant tab removal; visibility:hidden fades late.
@@ -67,7 +72,12 @@ const Select: React.FC<LabelProps> = ({
   const handleOptionClick = (option: SortOption | PageOption) => {
     if (selected !== option) {
       setSelected(option);
+
+      const params = new URLSearchParams(searchParams);
+      params.set(paramKey, option);
+      setSearchParams(params);
     }
+
     setIsExpanded(false);
   };
 
@@ -86,6 +96,10 @@ const Select: React.FC<LabelProps> = ({
 
         if (selected !== option) {
           setSelected(option);
+
+          const params = new URLSearchParams(searchParams);
+          params.set(paramKey, option);
+          setSearchParams(params);
         }
 
         setIsExpanded(false);

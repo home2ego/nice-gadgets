@@ -8,6 +8,7 @@
   "appleDevicesAlt": "Apple iPad, iPhone, AirPods ja Apple Pencil mustina ja valkoisina pöydällä",
   "appleWatchAlt": "Apple Watch sinisellä rannekkeella tummalla taustalla",
   "picturesCarousel": "Kuvakaruselli",
+  "productsCarousel": "Tuotekaruselli",
   "carouselInstructions": "Käytä sarkainnäppäintä tai Shift + sarkainnäppäintä siirtyäksesi näkyvien tuotteiden välillä, tai käytä Edellinen- ja Seuraava-painikkeita selataksesi niitä",
   "productLabel": "Näytä {{product}}, tuote {{current}} / {{total}}",
   "priceLabel": "alennettu hinta",
