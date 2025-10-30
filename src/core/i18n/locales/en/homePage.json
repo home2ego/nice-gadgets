@@ -9,7 +9,7 @@
   "appleWatchAlt": "Apple Watch with a blue strap on a dark background",
   "picturesCarousel": "Pictures carousel",
   "carouselInstructions": "Use Tab or Shift+Tab to move between visible products, or use the Previous and Next buttons to scroll through them",
-  "productDetailsLabel": "View details for {{product}}",
+  "productLabel": "View {{product}}, product {{current}} of {{total}}",
   "priceLabel": "discounted price",
   "fullPriceLabel": "previous price",
   "cartButton": "Add to cart",
@@ -26,5 +26,5 @@
   "slideNavLabel": "Slide navigation",
   "pictureOfTotal": "Picture {{current}} of {{total}}",
   "slideOfTotal": "Show slide {{current}} of {{total}}",
-  "productOfTotal": "Product {{current}} of {{total}}"
+  "viewCategoryLabel": "View {{category}} category, {{count}} models"
 }

@@ -71,7 +71,7 @@ const HomePage = () => {
   const newModelsRef = useRef<HTMLElement>(null);
   const categoriesRef = useRef<HTMLElement>(null);
   const hotPricesRef = useRef<HTMLHeadingElement>(null);
-  const categoriesObserverRef = useRef<HTMLDivElement>(null);
+  const categoriesObserverRef = useRef<HTMLUListElement>(null);
 
   const { t } = useTranslation("homePage");
 
@@ -163,7 +163,7 @@ const HomePage = () => {
           {t("categoryHeading")}
         </h2>
 
-        <div ref={categoriesObserverRef} className={styles.categories}>
+        <ul ref={categoriesObserverRef} className={styles.categories}>
           {loaded ? (
             <Suspense fallback={<CategorySkeleton />}>
               <ShopByCategory t={t} />
@@ -171,7 +171,7 @@ const HomePage = () => {
           ) : (
             <CategorySkeleton />
           )}
-        </div>
+        </ul>
       </section>
 
       <section

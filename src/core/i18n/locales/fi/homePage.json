@@ -9,7 +9,7 @@
   "appleWatchAlt": "Apple Watch sinisellä rannekkeella tummalla taustalla",
   "picturesCarousel": "Kuvakaruselli",
   "carouselInstructions": "Käytä sarkainnäppäintä tai Shift + sarkainnäppäintä siirtyäksesi näkyvien tuotteiden välillä, tai käytä Edellinen- ja Seuraava-painikkeita selataksesi niitä",
-  "productDetailsLabel": "Näytä tiedot tuotteelle {{product}}",
+  "productLabel": "Näytä {{product}}, tuote {{current}} / {{total}}",
   "priceLabel": "alennettu hinta",
   "fullPriceLabel": "aiempi hinta",
   "cartButton": "Lisää koriin",
@@ -26,5 +26,5 @@
   "slideNavLabel": "Dianavigointi",
   "pictureOfTotal": "Kuva {{current}} / {{total}}",
   "slideOfTotal": "Näytä dia {{current}} / {{total}}",
-  "productOfTotal": "Tuote {{current}}/{{total}}"
+  "viewCategoryLabel": "Näytä {{category}}-kategoria, {{count}} mallia"
 }

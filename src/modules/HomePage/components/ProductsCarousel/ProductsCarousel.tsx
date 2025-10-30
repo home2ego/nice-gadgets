@@ -161,16 +161,14 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
   const productCards = useMemo(() => {
     return products.map((product, index) => (
-      <article
-        key={product.id}
-        aria-label={t("productOfTotal", {
-          current: index + 1,
-          total: products.length,
-        })}
-      >
+      <article key={product.id}>
         <a
           href="/"
-          aria-label={t("productDetailsLabel", { product: product.name })}
+          aria-label={t("productLabel", {
+            product: product.name,
+            current: index + 1,
+            total: products.length,
+          })}
           className={styles.product}
           onFocus={handleCardFocus}
           onKeyDown={handleCardKey}

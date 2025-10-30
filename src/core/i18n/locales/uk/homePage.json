@@ -9,7 +9,7 @@
   "appleWatchAlt": "Apple Watch із синім ремінцем на темному тлі",
   "picturesCarousel": "Карусель зображень",
   "carouselInstructions": "Використовуйте клавішу Tab або Shift + Tab, щоб переміщатися між видимими товарами, або кнопки Попередній і Наступний, щоб прокручувати їх",
-  "productDetailsLabel": "Переглянути деталі продукту {{product}}",
+  "productLabel": "Переглянути {{product}}, товар {{current}} із {{total}}",
   "priceLabel": "акційна ціна",
   "fullPriceLabel": "попередня ціна",
   "cartButton": "До кошика",
@@ -26,5 +26,5 @@
   "slideNavLabel": "Навігація слайдів",
   "pictureOfTotal": "Зображення {{current}} із {{total}}",
   "slideOfTotal": "Показати слайд {{current}} із {{total}}",
-  "productOfTotal": "Продукт {{current}} з {{total}}"
+  "viewCategoryLabel": "Переглянути категорію {{category}}, {{count}} моделей"
 }

@@ -9,7 +9,7 @@
   "appleWatchAlt": "Apple Watch z niebieskim paskiem na ciemnym tle",
   "picturesCarousel": "Karuzela zdjęć",
   "carouselInstructions": "Użyj klawisza Tab lub Shift + Tab, aby przechodzić między widocznymi produktami, albo przycisków Poprzedni i Następny, aby przewijać je dalej",
-  "productDetailsLabel": "Zobacz szczegóły produktu {{product}}",
+  "productLabel": "Zobacz {{product}}, produkt {{current}} z {{total}}",
   "priceLabel": "promocyjna cena",
   "fullPriceLabel": "poprzednia cena",
   "cartButton": "Do koszyka",
@@ -26,5 +26,5 @@
   "slideNavLabel": "Nawigacja slajdów",
   "pictureOfTotal": "Zdjęcie {{current}} z {{total}}",
   "slideOfTotal": "Pokaż slajd {{current}} z {{total}}",
-  "productOfTotal": "Produkt {{current}} z {{total}}"
+  "viewCategoryLabel": "Zobacz kategorię {{category}}, {{count}} modeli"
 }
