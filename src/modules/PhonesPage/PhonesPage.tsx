@@ -14,7 +14,12 @@ const PhonesPage = () => {
 
       <Breadcrumb t={t} heading="phones" />
 
-      <SectionContent t={t} heading="phones" countModels={countModels} />
+      <SectionContent
+        t={t}
+        heading="phones"
+        countModels={countModels}
+        items={phones}
+      />
     </>
   );
 };

@@ -10,9 +10,12 @@
 
   &__prev,
   &__next {
-    padding: 7px;
+    @extend %flex-center;
+
     border-style: solid;
     border-width: $border-width;
+
+    @include square-size(32px);
   }
 
   &__prev {
@@ -43,8 +46,10 @@
   }
 
   &__prev:not(:disabled):hover svg,
-  &__next:not(:disabled):hover svg {
-    scale: 1.25;
+  &__next:not(:disabled):hover svg,
+  &__prev:not(:disabled):focus-visible svg,
+  &__next:not(:disabled):focus-visible svg {
+    scale: 1.125;
     opacity: 1;
   }
 }
@@ -134,8 +139,6 @@
   &__cart {
     flex-grow: 1;
 
-    padding-block: 10px;
-
     color: #fff;
     text-align: center;
 
@@ -149,9 +152,12 @@
   }
 
   &__favorite {
-    padding: 12px;
+    @extend %flex-center;
+
     border: $border-width solid var(--bd-color-icon);
     background-color: var(--bg-color-primary);
+
+    @include square-size(42px);
 
     .icon {
       transform: translateZ(0);

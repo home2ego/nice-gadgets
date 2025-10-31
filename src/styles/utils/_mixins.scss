@@ -28,14 +28,7 @@
   }
 }
 
-@mixin section-offset {
-  margin-bottom: 56px;
-
-  @include on-tablet {
-    margin-bottom: 64px;
-  }
-
-  @include on-desktop {
-    margin-bottom: 80px;
-  }
+@mixin square-size($size) {
+  width: $size;
+  height: $size;
 }

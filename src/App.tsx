@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Outlet } from "react-router-dom";
 import Footer from "@/layout/Footer";
 import Header from "@/layout/Header";
-import { focusElement } from "@/layout/shared/utils/focus-element";
+import { focusElement } from "@/layout/shared/utils/focusElement";
 import "./App.scss";
 
 const App = () => {

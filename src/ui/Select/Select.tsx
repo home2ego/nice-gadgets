@@ -22,6 +22,7 @@ const Select: React.FC<LabelProps> = ({
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [selected, setSelected] = useState(selectedOption);
+
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
@@ -63,6 +64,18 @@ const Select: React.FC<LabelProps> = ({
     target?.focus();
   }, [isExpanded]);
 
+  const handleSearchParamsChange = (paramVal: SortOption | PageOption) => {
+    const params = new URLSearchParams(searchParams);
+
+    if (paramVal === "all") {
+      params.delete(paramKey);
+    } else {
+      params.set(paramKey, paramVal);
+    }
+
+    setSearchParams(params);
+  };
+
   const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     if (e.key === "ArrowDown" || e.key === "ArrowUp") {
       setIsExpanded(true);
@@ -72,10 +85,7 @@ const Select: React.FC<LabelProps> = ({
   const handleOptionClick = (option: SortOption | PageOption) => {
     if (selected !== option) {
       setSelected(option);
-
-      const params = new URLSearchParams(searchParams);
-      params.set(paramKey, option);
-      setSearchParams(params);
+      handleSearchParamsChange(option);
     }
 
     setIsExpanded(false);
@@ -96,10 +106,7 @@ const Select: React.FC<LabelProps> = ({
 
         if (selected !== option) {
           setSelected(option);
-
-          const params = new URLSearchParams(searchParams);
-          params.set(paramKey, option);
-          setSearchParams(params);
+          handleSearchParamsChange(option);
         }
 
         setIsExpanded(false);

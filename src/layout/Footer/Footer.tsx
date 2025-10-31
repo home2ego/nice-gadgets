@@ -2,7 +2,7 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import Logo from "@/layout/shared/components/Logo";
-import { focusElement } from "@/layout/shared/utils/focus-element";
+import { focusElement } from "@/layout/shared/utils/focusElement";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {
@@ -55,9 +55,11 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
           className={styles.footer__back}
           onClick={handleBackToTop}
         >
-          <span className={"text--sm"}>{t("backToTop")}</span>
+          <span className={clsx("text--sm", styles["footer__back--text"])}>
+            {t("backToTop")}
+          </span>
 
-          <span>
+          <span className={styles["footer__back--icon"]}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

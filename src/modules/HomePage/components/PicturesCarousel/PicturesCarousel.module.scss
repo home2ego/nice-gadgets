@@ -9,17 +9,15 @@
   }
 
   &__paused {
+    @extend %flex-center;
+
     position: absolute;
     z-index: 10;
     right: 0;
     bottom: 48px;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include square-size(48px);
 
-    width: 48px;
-    height: 48px;
     border-radius: 50%;
 
     background-color: #313237;
@@ -102,9 +100,11 @@
   text-align: center;
 
   &__dot {
-    display: inline-flex;
-    padding: 14px 9px;
+    @extend %flex-center;
+
     outline-offset: -1px;
+
+    @include square-size(32px);
 
     .line {
       width: 14px;

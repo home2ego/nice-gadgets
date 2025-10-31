@@ -3,7 +3,7 @@ import type { TFunction } from "i18next";
 import { useEffect, useMemo, useRef, useState } from "react";
 import SkipLink from "@/modules/shared/components/SkipLink";
 import type { Product } from "../../types/product";
-import { formatPrice } from "./format-price";
+import { formatPrice } from "./formatPrice";
 import styles from "./ProductsCarousel.module.scss";
 
 interface CarouselProps {

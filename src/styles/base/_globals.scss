@@ -93,11 +93,15 @@ button {
 
 section {
   scroll-margin-top: $mobile-navbar-hight + 24px;
+  margin-bottom: 56px;
 
-  @include section-offset;
+  @include on-tablet {
+    margin-bottom: 64px;
+  }
 
   @include on-desktop {
     scroll-margin-top: $desktop-navbar-hight + 24px;
+    margin-bottom: 80px;
   }
 }
 
