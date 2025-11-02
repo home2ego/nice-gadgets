@@ -117,7 +117,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     prev?.scrollIntoView({ inline: "end", block: "nearest" });
   };
 
-  const handleCardFocus = (e: React.FocusEvent<HTMLAnchorElement>) => {
+  const handleCardFocus = () => {
     switch (focusTarget.current) {
       case "next":
         firstVisibleCard.current?.querySelector("a")?.focus();
@@ -129,39 +129,35 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
         focusTarget.current = null;
         break;
     }
+  };
 
-    const next =
-      lastVisibleCard.current?.nextElementSibling?.querySelector("a");
-    const prev =
-      firstVisibleCard.current?.previousElementSibling?.querySelector("a");
+  const handleTabFocus = (e: React.FocusEvent<HTMLButtonElement>) => {
+    const prevCard = firstVisibleCard.current?.previousElementSibling;
+    const prevFocusable = prevCard?.querySelector("button:last-of-type");
 
-    if (e.currentTarget === next && focusKey.current === "tab") {
+    if (e.currentTarget === prevFocusable && focusKey.current === "shiftTab") {
       requestAnimationFrame(() => {
-        next?.scrollIntoView({ inline: "start", block: "nearest" });
-      });
-    }
-
-    if (e.currentTarget === prev && focusKey.current === "shiftTab") {
-      requestAnimationFrame(() => {
-        prev?.scrollIntoView({ inline: "end", block: "nearest" });
+        prevCard?.scrollIntoView({ inline: "end", block: "nearest" });
       });
     }
   };
 
-  const handleCardKey = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
-    if (e.shiftKey && e.key === "Tab") {
-      focusKey.current = "shiftTab";
-    }
+  const handleShiftTabFocus = (e: React.FocusEvent<HTMLAnchorElement>) => {
+    const nextCard = lastVisibleCard.current?.nextElementSibling;
+    const nextFocusable = nextCard?.querySelector("a");
 
-    if (!e.shiftKey && e.key === "Tab") {
-      focusKey.current = "tab";
+    if (e.currentTarget === nextFocusable && focusKey.current === "tab") {
+      requestAnimationFrame(() => {
+        nextCard?.scrollIntoView({ inline: "start", block: "nearest" });
+      });
     }
   };
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
   const productCards = useMemo(() => {
     return products.map((product, index) => (
-      <article key={product.id}>
+      <article key={product.id} className={styles.product}>
+        {/* biome-ignore lint/a11y/useAnchorContent: overlay link with aria-label provides accessible name */}
         <a
           href="/"
           aria-label={t("productLabel", {
@@ -169,90 +165,106 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
             current: index + 1,
             total: products.length,
           })}
-          className={styles.product}
-          onFocus={handleCardFocus}
-          onKeyDown={handleCardKey}
-        >
-          <img
-            src={product.image}
-            alt=""
-            width="208"
-            height="196"
-            loading={isLazy ? "lazy" : "eager"}
-            decoding="async"
-          />
+          className={styles.product__link}
+          onFocus={(e) => {
+            if (focusTarget.current) {
+              handleCardFocus();
+            } else {
+              handleShiftTabFocus(e);
+            }
+          }}
+          onKeyDown={(e) => {
+            if (e.shiftKey && e.key === "Tab") {
+              focusKey.current = "shiftTab";
+            }
+          }}
+        />
 
-          <h3 className="text--body">{product.name}</h3>
+        <img
+          src={product.image}
+          alt=""
+          width="208"
+          height="196"
+          loading={isLazy ? "lazy" : "eager"}
+          decoding="async"
+        />
 
-          <div className={clsx(styles.product__prices, "title--sm")}>
-            {hasOnlyFullPrice ? (
-              <p>{formatPrice(product.fullPrice, normalizedLang)}</p>
-            ) : (
-              <>
-                <p>
-                  {formatPrice(product.price, normalizedLang)}
-                  <span className="sr-only">{t("priceLabel")}</span>
-                </p>
+        <h3 className="text--body">{product.name}</h3>
 
-                <p className={styles["product__full-price"]}>
-                  {formatPrice(product.fullPrice, normalizedLang)}
-                  <span className="sr-only">{t("fullPriceLabel")}</span>
-                </p>
-              </>
-            )}
-          </div>
+        <div className={clsx(styles.product__prices, "title--sm")}>
+          {hasOnlyFullPrice ? (
+            <p>{formatPrice(product.fullPrice, normalizedLang)}</p>
+          ) : (
+            <>
+              <p>
+                {formatPrice(product.price, normalizedLang)}
+                <span className="sr-only">{t("priceLabel")}</span>
+              </p>
 
-          <span className={styles.product__line} />
+              <p className={styles["product__full-price"]}>
+                {formatPrice(product.fullPrice, normalizedLang)}
+                <span className="sr-only">{t("fullPriceLabel")}</span>
+              </p>
+            </>
+          )}
+        </div>
 
-          <div className={clsx(styles.product__details, "text--sm")}>
-            <p className={styles.product__detail}>
-              <span className={styles.product__subname}>{t("screen")}</span>
-              {product.screen}
-            </p>
+        <span className={styles.product__line} />
 
-            <p className={styles.product__detail}>
-              <span className={styles.product__subname}>{t("capacity")}</span>
-              {product.capacity}
-            </p>
+        <div className={clsx(styles.product__details, "text--sm")}>
+          <p className={styles.product__detail}>
+            <span className={styles.product__subname}>{t("screen")}</span>
+            {product.screen}
+          </p>
 
-            <p className={styles.product__detail}>
-              <span className={styles.product__subname}>RAM</span>
-              {product.ram}
-            </p>
-          </div>
+          <p className={styles.product__detail}>
+            <span className={styles.product__subname}>{t("capacity")}</span>
+            {product.capacity}
+          </p>
 
-          <div className={styles.product__controls}>
-            <button
-              type="button"
-              className={clsx(styles.product__cart, "text--btn")}
-              aria-label={t("cartLabel", { product: product.name })}
+          <p className={styles.product__detail}>
+            <span className={styles.product__subname}>RAM</span>
+            {product.ram}
+          </p>
+        </div>
+
+        <div className={styles.product__controls}>
+          <button
+            type="button"
+            className={clsx(styles.product__cart, "text--btn")}
+            aria-label={t("cartLabel", { product: product.name })}
+          >
+            {t("cartButton")}
+          </button>
+
+          <button
+            type="button"
+            className={styles.product__favorite}
+            aria-label={t("favoriteLabel", { product: product.name })}
+            onFocus={handleTabFocus}
+            onKeyDown={(e) => {
+              if (!e.shiftKey && e.key === "Tab") {
+                focusKey.current = "tab";
+              }
+            }}
+          >
+            <svg
+              className={styles.icon}
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="var(--text-color-primary)"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
             >
-              {t("cartButton")}
-            </button>
-
-            <button
-              type="button"
-              className={styles.product__favorite}
-              aria-label={t("favoriteLabel", { product: product.name })}
-            >
-              <svg
-                className={styles.icon}
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="none"
-                stroke="var(--text-color-primary)"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-              </svg>
-            </button>
-          </div>
-        </a>
+              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+            </svg>
+          </button>
+        </div>
       </article>
     ));
   }, [t]);
