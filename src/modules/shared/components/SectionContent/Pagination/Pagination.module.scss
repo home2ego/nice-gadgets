@@ -28,8 +28,8 @@
     }
   }
 
-  &__prev.disabled,
-  &__next.disabled {
+  &__prev[aria-disabled="true"],
+  &__next[aria-disabled="true"] {
     pointer-events: none;
     border-color: var(--bd-color-primary);
     background-color: transparent;
@@ -39,8 +39,8 @@
     }
   }
 
-  &__prev:not(.disabled),
-  &__next:not(.disabled) {
+  &__prev[aria-disabled="false"],
+  &__next[aria-disabled="false"] {
     border-color: var(--bd-color-icon);
     background-color: var(--bg-color-primary);
 
@@ -51,10 +51,10 @@
     }
   }
 
-  &__prev:not(.disabled):hover svg,
-  &__next:not(.disabled):hover svg,
-  &__prev:not(.disabled):focus-visible svg,
-  &__next:not(.disabled):focus-visible svg {
+  &__prev[aria-disabled="false"]:hover svg,
+  &__next[aria-disabled="false"]:hover svg,
+  &__prev[aria-disabled="false"]:focus-visible svg,
+  &__next[aria-disabled="false"]:focus-visible svg {
     scale: 1.125;
     opacity: 1;
   }

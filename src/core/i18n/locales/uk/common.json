@@ -11,10 +11,14 @@
   "accessories": "Аксесуари",
   "countModels": "{{count}} моделей",
   "breadcrumbLabel": "Шлях",
+  "paginationLabel": "Пагінація: {{product}}",
   "newest": "Найновіші",
   "alpha": "А-Я",
   "cheapest": "Найдешевші",
   "all": "Усі",
   "sortLabel": "Сортувати за",
-  "pageLabel": "Товарів на сторінці"
+  "pageLabel": "Товарів на сторінці",
+  "prevPageLabel": "Попередня сторінка",
+  "nextPageLabel": "Наступна сторінка",
+  "linkPageLabel": "Сторінка"
 }

@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
+import { useId } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { PageOption, SortOption } from "@/core/types/select";
 import Select from "@/ui/Select";
@@ -13,14 +14,14 @@ const pageOptions: PageOption[] = ["all", "4", "8", "16"];
 
 interface SectionProps {
   t: TFunction;
-  heading: string;
+  sectionHeading: string;
   countModels: number;
   items: Device[];
 }
 
 const SectionContent: React.FC<SectionProps> = ({
   t,
-  heading,
+  sectionHeading,
   countModels,
   items,
 }) => {
@@ -28,14 +29,19 @@ const SectionContent: React.FC<SectionProps> = ({
 
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
   const perPage = +(searchParams.get("perPage") || countModels);
+  const totalPages = Math.ceil(countModels / perPage);
 
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
   const currentPageItems = items.slice(startIndex, endIndex);
 
+  const regionId = useId();
+
   return (
-    <section>
-      <h1 className={clsx(styles.heading, "title--xl")}>{t(heading)}</h1>
+    <section aria-labelledby={regionId}>
+      <h1 id={regionId} className={clsx(styles.heading, "title--xl")}>
+        {t(sectionHeading)}
+      </h1>
 
       <p className={clsx(styles.models, "text--body")}>
         {t("countModels", { count: countModels })}
@@ -46,16 +52,16 @@ const SectionContent: React.FC<SectionProps> = ({
           t={t}
           label="sortLabel"
           options={sortOptions}
-          selectedOption={INITIAL_SORT}
           paramKey="sort"
+          initialParamVal={INITIAL_SORT}
         />
 
         <Select
           t={t}
           label="pageLabel"
           options={pageOptions}
-          selectedOption={INITIAL_PER_PAGE}
           paramKey="perPage"
+          initialParamVal={INITIAL_PER_PAGE}
         />
       </div>
 
@@ -65,11 +71,12 @@ const SectionContent: React.FC<SectionProps> = ({
         ))}
       </ul>
 
-      {perPage !== countModels && (
+      {totalPages > 1 && (
         <Pagination
+          t={t}
+          sectionHeading={sectionHeading}
           currentPage={currentPage}
-          perPage={perPage}
-          totalProducts={countModels}
+          totalPages={totalPages}
         />
       )}
     </section>

@@ -9,19 +9,25 @@ interface LabelProps {
   t: TFunction;
   label: string;
   options: SortOption[] | PageOption[];
-  selectedOption: SortOption | PageOption;
   paramKey: "sort" | "perPage";
+  initialParamVal: SortOption | PageOption;
 }
 
 const Select: React.FC<LabelProps> = ({
   t,
   label,
   options,
-  selectedOption,
   paramKey,
+  initialParamVal,
 }) => {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const [isExpanded, setIsExpanded] = useState(false);
-  const [selected, setSelected] = useState(selectedOption);
+  const [selected, setSelected] = useState(() => {
+    const val = searchParams.get(paramKey) as SortOption | PageOption | null;
+
+    return val || initialParamVal;
+  });
 
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
@@ -29,8 +35,6 @@ const Select: React.FC<LabelProps> = ({
   const optionRefs = useRef<Array<HTMLDivElement | null>>([]);
   const labelId = useId();
   const valueId = useId();
-
-  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     menuRef.current?.toggleAttribute("inert", !isExpanded); // Instant tab removal; visibility:hidden fades late.
@@ -68,9 +72,14 @@ const Select: React.FC<LabelProps> = ({
     const params = new URLSearchParams(searchParams);
 
     if (paramVal === "all") {
-      params.delete(paramKey);
+      params.delete("perPage");
+      params.delete("page");
     } else {
       params.set(paramKey, paramVal);
+
+      if (paramKey === "perPage" || params.has("page")) {
+        params.set("page", "1");
+      }
     }
 
     setSearchParams(params);
@@ -78,6 +87,7 @@ const Select: React.FC<LabelProps> = ({
 
   const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
       setIsExpanded(true);
     }
   };
@@ -114,10 +124,12 @@ const Select: React.FC<LabelProps> = ({
         break;
 
       case "ArrowDown":
+        e.preventDefault();
         next?.focus();
         break;
 
       case "ArrowUp":
+        e.preventDefault();
         prev?.focus();
         break;
 
@@ -175,7 +187,7 @@ const Select: React.FC<LabelProps> = ({
             key={option}
             role="option"
             className={clsx(styles.dropdown__option, "text--body")}
-            tabIndex={0}
+            tabIndex={selected === option ? 0 : -1}
             aria-selected={selected === option}
             onClick={() => handleOptionClick(option)}
             onKeyDown={(e) => handleOptionKey(e, option, idx)}

@@ -11,10 +11,14 @@
   "accessories": "Lisävarusteet",
   "countModels": "{{count}} mallia",
   "breadcrumbLabel": "Polku",
+  "paginationLabel": "Sivutus: {{product}}",
   "newest": "Uusin",
   "alpha": "A-Ö",
   "cheapest": "Halvin",
   "all": "Kaikki",
   "sortLabel": "Järjestä",
-  "pageLabel": "Tuotteita sivulla"
+  "pageLabel": "Tuotteita sivulla",
+  "prevPageLabel": "Edellinen sivu",
+  "nextPageLabel": "Seuraava sivu",
+  "linkPageLabel": "Sivu"
 }

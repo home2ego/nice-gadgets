@@ -11,10 +11,14 @@
   "accessories": "Akcesoria",
   "countModels": "{{count}} modele",
   "breadcrumbLabel": "Ścieżka",
+  "paginationLabel": "Paginacja: {{product}}",
   "newest": "Najnowsze",
   "alpha": "A-Z",
   "cheapest": "Najtańsze",
   "all": "Wszystkie",
   "sortLabel": "Sortuj według",
-  "pageLabel": "Produkty na stronie"
+  "pageLabel": "Produkty na stronie",
+  "prevPageLabel": "Poprzednia strona",
+  "nextPageLabel": "Następna strona",
+  "linkPageLabel": "Strona"
 }

@@ -16,7 +16,7 @@ const AccessoriesPage = () => {
 
       <SectionContent
         t={t}
-        heading="accessories"
+        sectionHeading="accessories"
         countModels={countModels}
         items={accessories}
       />

@@ -1,30 +1,51 @@
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import type { TFunction } from "i18next";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
+import { INITIAL_PAGE } from "../constants";
 import { generatePages } from "./generatePages";
 import styles from "./Pagination.module.scss";
 import type { PageItem } from "./pageItem";
 
 interface PaginationProps {
+  t: TFunction;
+  sectionHeading: string;
   currentPage: number;
-  perPage: number;
-  totalProducts: number;
+  totalPages: number;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
+  t,
+  sectionHeading,
   currentPage,
-  perPage,
-  totalProducts,
+  totalPages,
 }) => {
-  const totalPages = Math.ceil(totalProducts / perPage);
+  const [searchParams] = useSearchParams();
+  const { search } = useLocation();
+
   const visiblePageNumbers = generatePages(currentPage, totalPages);
 
+  const isFirstPage = currentPage === INITIAL_PAGE;
+  const isLastPage = currentPage === totalPages;
+
+  const getSearchPage = (val: number) => {
+    const params = new URLSearchParams(searchParams);
+
+    params.set("page", val.toString());
+
+    return { search: params.toString() };
+  };
+
   return (
-    <nav className={styles.pagination}>
+    <nav
+      aria-label={t("paginationLabel", { product: t(sectionHeading) })}
+      className={styles.pagination}
+    >
       <Link
-        to="/"
-        className={clsx(styles.pagination__prev, styles.disabled)}
-        aria-hidden="true"
-        tabIndex={-1}
+        to={isFirstPage ? { search: search } : getSearchPage(currentPage - 1)}
+        className={styles.pagination__prev}
+        aria-label={t("prevPageLabel")}
+        aria-disabled={isFirstPage}
+        tabIndex={isFirstPage ? -1 : undefined}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,24 +68,35 @@ const Pagination: React.FC<PaginationProps> = ({
           typeof page.value === "number" ? (
             <li key={page.id}>
               <Link
-                to="/"
+                to={getSearchPage(page.value)}
                 className={clsx(styles.pagination__item, {
                   [styles.active]: page.value === currentPage,
                 })}
                 aria-current={page.value === currentPage ? "page" : undefined}
               >
+                <span className="sr-only">{t("linkPageLabel")}</span>
                 <span className={styles.hovered}>{page.value}</span>
               </Link>
             </li>
           ) : (
-            <li key={page.id} className={styles.pagination__ellipsis}>
+            <li
+              key={page.id}
+              className={styles.pagination__ellipsis}
+              aria-hidden="true"
+            >
               {page.value}
             </li>
           ),
         )}
       </ol>
 
-      <Link to="/" className={styles.pagination__next}>
+      <Link
+        to={isLastPage ? { search: search } : getSearchPage(currentPage + 1)}
+        className={styles.pagination__next}
+        aria-label={t("nextPageLabel")}
+        aria-disabled={isLastPage}
+        tabIndex={isLastPage ? -1 : undefined}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
