@@ -1,8 +1,12 @@
 import { useTranslation } from "react-i18next";
-import phones from "@/api/phones.json";
+import products from "@/api/products.json";
 import Breadcrumb from "@/modules/shared/components/Breadcrumb";
 import SectionContent from "@/modules/shared/components/SectionContent";
+import type { Category } from "../shared/types/category";
 
+const phones = products.filter((product) => {
+  return (product.category as Category) === "phones";
+});
 const countModels = phones.length;
 
 const PhonesPage = () => {
@@ -18,7 +22,7 @@ const PhonesPage = () => {
         t={t}
         sectionHeading="phones"
         countModels={countModels}
-        items={phones}
+        products={phones}
       />
     </>
   );

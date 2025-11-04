@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "@/api/products.json";
 import SkipLink from "@/modules/shared/components/SkipLink";
+import type { Product } from "../shared/types/product";
 import CategorySkeleton from "./components/CategorySkeleton";
 import PicturesCarousel from "./components/PicturesCarousel";
 import ProductsCarousel from "./components/ProductsCarousel";
 import styles from "./HomePage.module.scss";
-import type { Product } from "./types/product";
 
 const ShopByCategory = lazy(() => import("./components/ShopByCategory"));
 

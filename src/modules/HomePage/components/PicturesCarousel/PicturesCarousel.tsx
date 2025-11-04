@@ -8,7 +8,7 @@ import appleWatchImage from "@/assets/images/apple-watch-lg.webp";
 import appleWatchImageMini from "@/assets/images/apple-watch-sm.webp";
 import iPhoneImage from "@/assets/images/iPhone-lg.webp";
 import iPhoneImageMini from "@/assets/images/iPhone-sm.webp";
-import type { Slide } from "../../types/slide";
+import type { Slide } from "../../slide";
 import { AUTOPLAY_THRESHOLD } from "./constants";
 import styles from "./PicturesCarousel.module.scss";
 import SlideImage from "./SlideImage";

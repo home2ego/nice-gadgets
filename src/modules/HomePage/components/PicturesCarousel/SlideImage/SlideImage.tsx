@@ -1,5 +1,5 @@
 import type { TFunction } from "i18next";
-import type { Slide } from "../../../types/slide";
+import type { Slide } from "@/modules/HomePage/slide";
 
 interface ImageProps {
   t?: TFunction;

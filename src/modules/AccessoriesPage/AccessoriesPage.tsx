@@ -1,8 +1,12 @@
 import { useTranslation } from "react-i18next";
-import accessories from "@/api/accessories.json";
+import products from "@/api/products.json";
 import Breadcrumb from "@/modules/shared/components/Breadcrumb";
 import SectionContent from "@/modules/shared/components/SectionContent";
+import type { Category } from "../shared/types/category";
 
+const accessories = products.filter((product) => {
+  return (product.category as Category) === "accessories";
+});
 const countModels = accessories.length;
 
 const AccessoriesPage = () => {
@@ -18,7 +22,7 @@ const AccessoriesPage = () => {
         t={t}
         sectionHeading="accessories"
         countModels={countModels}
-        items={accessories}
+        products={accessories}
       />
     </>
   );

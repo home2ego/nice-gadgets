@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useId } from "react";
+import { useId, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { PageOption, SortOption } from "@/core/types/select";
 import Select from "@/ui/Select";
+import type { Product } from "../../types/product";
 import { INITIAL_PAGE, INITIAL_PER_PAGE, INITIAL_SORT } from "./constants";
-import type { Device } from "./device";
+import { getSortedProducts } from "./getSortedProducts";
 import Pagination from "./Pagination";
 import styles from "./SectionContent.module.scss";
 
@@ -16,24 +17,31 @@ interface SectionProps {
   t: TFunction;
   sectionHeading: string;
   countModels: number;
-  items: Device[];
+  products: Product[];
 }
 
 const SectionContent: React.FC<SectionProps> = ({
   t,
   sectionHeading,
   countModels,
-  items,
+  products,
 }) => {
   const [searchParams] = useSearchParams();
 
+  const currentSort = searchParams.get("sort") || INITIAL_SORT;
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
-  const perPage = +(searchParams.get("perPage") || countModels);
+  const currentPerPage = searchParams.get("perPage") || INITIAL_PER_PAGE;
+  const perPage = currentPerPage === "all" ? countModels : +currentPerPage;
   const totalPages = Math.ceil(countModels / perPage);
+
+  const sortedProducts = useMemo(
+    () => getSortedProducts(products, currentSort as SortOption),
+    [products, currentSort],
+  );
 
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
-  const currentPageItems = items.slice(startIndex, endIndex);
+  const currentPageProducts = sortedProducts.slice(startIndex, endIndex);
 
   const regionId = useId();
 
@@ -66,12 +74,12 @@ const SectionContent: React.FC<SectionProps> = ({
       </div>
 
       <ul>
-        {currentPageItems.map((item) => (
-          <li key={item.id}>{item.name}</li>
+        {currentPageProducts.map((product) => (
+          <li key={product.id}>{product.name}</li>
         ))}
       </ul>
 
-      {totalPages > 1 && (
+      {currentPerPage !== "all" && (
         <Pagination
           t={t}
           sectionHeading={sectionHeading}

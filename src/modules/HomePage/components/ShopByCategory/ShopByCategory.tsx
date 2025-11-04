@@ -11,6 +11,8 @@ import imgCategoryTablets from "@/assets/images/category-tablets.webp";
 import { decodeThumbhash } from "@/modules/shared/utils/decodeThumbhash";
 import styles from "./ShopByCategory.module.scss";
 
+// IMPORT PRODUCTS AND SPLIT THEM INTO PHONES/TABLETS ETC..
+
 interface CategoryCards {
   id: number;
   path: string;
