@@ -2,16 +2,23 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import accessories from "@/api/accessories.json";
-import phones from "@/api/phones.json";
-import tablets from "@/api/tablets.json";
+import products from "@/api/products.json";
 import imgCategoryAccessories from "@/assets/images/category-accessories.webp";
 import imgCategoryPhones from "@/assets/images/category-phones.webp";
 import imgCategoryTablets from "@/assets/images/category-tablets.webp";
+import type { Category } from "@/modules/shared/types/category";
 import { decodeThumbhash } from "@/modules/shared/utils/decodeThumbhash";
 import styles from "./ShopByCategory.module.scss";
 
-// IMPORT PRODUCTS AND SPLIT THEM INTO PHONES/TABLETS ETC..
+const countPhones = products.filter((product) => {
+  return (product.category as Category) === "phones";
+}).length;
+const countTablets = products.filter((product) => {
+  return (product.category as Category) === "tablets";
+}).length;
+const countAccessories = products.filter((product) => {
+  return (product.category as Category) === "accessories";
+}).length;
 
 interface CategoryCards {
   id: number;
@@ -28,7 +35,7 @@ const categoryCards: CategoryCards[] = [
     path: "/phones",
     src: imgCategoryPhones,
     heading: "phones",
-    countModels: phones.length,
+    countModels: countPhones,
     thumbhash: "5yiKDAI5P4CGaZZ3+GRmT1aFgFOIR5h1BQ",
   },
   {
@@ -36,7 +43,7 @@ const categoryCards: CategoryCards[] = [
     path: "/tablets",
     src: imgCategoryTablets,
     heading: "tablets",
-    countModels: tablets.length,
+    countModels: countTablets,
     thumbhash: "oYmGJQoqLlDHeGGddUFvBZV3Bxd4d4CJGA",
   },
   {
@@ -44,7 +51,7 @@ const categoryCards: CategoryCards[] = [
     path: "/accessories",
     src: imgCategoryAccessories,
     heading: "accessories",
-    countModels: accessories.length,
+    countModels: countAccessories,
     thumbhash: "5ziKIoodwDWJh4g/ZfdsdggIgohyKCc",
   },
 ];
