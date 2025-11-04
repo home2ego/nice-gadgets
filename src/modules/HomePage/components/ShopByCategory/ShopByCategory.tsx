@@ -2,23 +2,16 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import products from "@/api/products.json";
 import imgCategoryAccessories from "@/assets/images/category-accessories.webp";
 import imgCategoryPhones from "@/assets/images/category-phones.webp";
 import imgCategoryTablets from "@/assets/images/category-tablets.webp";
-import type { Category } from "@/modules/shared/types/category";
 import { decodeThumbhash } from "@/modules/shared/utils/decodeThumbhash";
+import { getProductsByCategory } from "@/modules/shared/utils/getProductsByCategory";
 import styles from "./ShopByCategory.module.scss";
 
-const countPhones = products.filter((product) => {
-  return (product.category as Category) === "phones";
-}).length;
-const countTablets = products.filter((product) => {
-  return (product.category as Category) === "tablets";
-}).length;
-const countAccessories = products.filter((product) => {
-  return (product.category as Category) === "accessories";
-}).length;
+const countPhones = getProductsByCategory("phones").length;
+const countTablets = getProductsByCategory("tablets").length;
+const countAccessories = getProductsByCategory("accessories").length;
 
 interface CategoryCards {
   id: number;

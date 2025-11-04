@@ -1,13 +1,10 @@
 import { useTranslation } from "react-i18next";
-import products from "@/api/products.json";
 import Breadcrumb from "../shared/components/Breadcrumb";
 import SectionContent from "../shared/components/SectionContent";
-import type { Category } from "../shared/types/category";
+import { getProductsByCategory } from "../shared/utils/getProductsByCategory";
 
-const tablets = products.filter((product) => {
-  return (product.category as Category) === "tablets";
-});
-const countModels = tablets.length;
+const tablets = getProductsByCategory("tablets");
+const countTablets = tablets.length;
 
 const TabletsPage = () => {
   const { t } = useTranslation("tabletsPage");
@@ -21,7 +18,7 @@ const TabletsPage = () => {
       <SectionContent
         t={t}
         sectionHeading="tablets"
-        countModels={countModels}
+        countModels={countTablets}
         products={tablets}
       />
     </>
