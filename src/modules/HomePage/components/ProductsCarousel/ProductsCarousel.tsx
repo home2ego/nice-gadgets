@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useMemo, useRef, useState } from "react";
+import ProductCard from "@/modules/shared/components/ProductCard";
 import SkipLink from "@/modules/shared/components/SkipLink";
 import type { Product } from "@/modules/shared/types/product";
-import { formatPrice } from "./formatPrice";
 import styles from "./ProductsCarousel.module.scss";
 
 interface CarouselProps {
@@ -118,16 +118,35 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   };
 
   const handleCardFocus = () => {
-    switch (focusTarget.current) {
-      case "next":
-        firstVisibleCard.current?.querySelector("a")?.focus();
-        focusTarget.current = null;
-        break;
+    if (focusTarget.current === "next") {
+      firstVisibleCard.current?.querySelector("a")?.focus();
+      focusTarget.current = null;
+    }
 
-      case "prev":
-        lastVisibleCard.current?.querySelector("a")?.focus();
-        focusTarget.current = null;
-        break;
+    if (focusTarget.current === "prev") {
+      lastVisibleCard.current?.querySelector("a")?.focus();
+      focusTarget.current = null;
+    }
+  };
+
+  const handleShiftTabFocus = (e: React.FocusEvent<HTMLAnchorElement>) => {
+    if (focusTarget.current) {
+      handleCardFocus();
+    } else {
+      const nextCard = lastVisibleCard.current?.nextElementSibling;
+      const nextFocusable = nextCard?.querySelector("a");
+
+      if (e.currentTarget === nextFocusable && focusKey.current === "tab") {
+        requestAnimationFrame(() => {
+          nextCard?.scrollIntoView({ inline: "start", block: "nearest" });
+        });
+      }
+    }
+  };
+
+  const handleShiftTabKey = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
+    if (e.shiftKey && e.key === "Tab") {
+      focusKey.current = "shiftTab";
     }
   };
 
@@ -142,130 +161,29 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     }
   };
 
-  const handleShiftTabFocus = (e: React.FocusEvent<HTMLAnchorElement>) => {
-    const nextCard = lastVisibleCard.current?.nextElementSibling;
-    const nextFocusable = nextCard?.querySelector("a");
-
-    if (e.currentTarget === nextFocusable && focusKey.current === "tab") {
-      requestAnimationFrame(() => {
-        nextCard?.scrollIntoView({ inline: "start", block: "nearest" });
-      });
+  const handleTabKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (!e.shiftKey && e.key === "Tab") {
+      focusKey.current = "tab";
     }
   };
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
   const productCards = useMemo(() => {
-    return products.map((product, index) => (
-      <article key={product.id} className={styles.product}>
-        {/* biome-ignore lint/a11y/useAnchorContent: overlay link with aria-label provides accessible name */}
-        <a
-          href="/"
-          aria-label={t("productLabel", {
-            product: product.name,
-            current: index + 1,
-            total: products.length,
-          })}
-          className={styles.product__link}
-          onFocus={(e) => {
-            if (focusTarget.current) {
-              handleCardFocus();
-            } else {
-              handleShiftTabFocus(e);
-            }
-          }}
-          onKeyDown={(e) => {
-            if (e.shiftKey && e.key === "Tab") {
-              focusKey.current = "shiftTab";
-            }
-          }}
-        />
-
-        <img
-          src={product.image}
-          alt=""
-          width="208"
-          height="196"
-          loading={isLazy ? "lazy" : "eager"}
-          decoding="async"
-        />
-
-        <h3 className="text--body">{product.name}</h3>
-
-        <div className={clsx(styles.product__prices, "title--sm")}>
-          {hasOnlyFullPrice ? (
-            <p>{formatPrice(product.fullPrice, normalizedLang)}</p>
-          ) : (
-            <>
-              <p>
-                {formatPrice(product.price, normalizedLang)}
-                <span className="sr-only">{t("priceLabel")}</span>
-              </p>
-
-              <p className={styles["product__full-price"]}>
-                {formatPrice(product.fullPrice, normalizedLang)}
-                <span className="sr-only">{t("fullPriceLabel")}</span>
-              </p>
-            </>
-          )}
-        </div>
-
-        <span className={styles.product__line} />
-
-        <div className={clsx(styles.product__details, "text--sm")}>
-          <p className={styles.product__detail}>
-            <span className={styles.product__subname}>{t("screen")}</span>
-            {product.screen}
-          </p>
-
-          <p className={styles.product__detail}>
-            <span className={styles.product__subname}>{t("capacity")}</span>
-            {product.capacity}
-          </p>
-
-          <p className={styles.product__detail}>
-            <span className={styles.product__subname}>RAM</span>
-            {product.ram}
-          </p>
-        </div>
-
-        <div className={styles.product__controls}>
-          <button
-            type="button"
-            className={clsx(styles.product__cart, "text--btn")}
-            aria-label={t("cartLabel", { product: product.name })}
-          >
-            {t("cartButton")}
-          </button>
-
-          <button
-            type="button"
-            className={styles.product__favorite}
-            aria-label={t("favoriteLabel", { product: product.name })}
-            onFocus={handleTabFocus}
-            onKeyDown={(e) => {
-              if (!e.shiftKey && e.key === "Tab") {
-                focusKey.current = "tab";
-              }
-            }}
-          >
-            <svg
-              className={styles.icon}
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-            </svg>
-          </button>
-        </div>
-      </article>
+    return products.map((product, idx) => (
+      <ProductCard
+        key={product.id}
+        t={t}
+        product={product}
+        totalProducts={products.length}
+        productIdx={idx}
+        isLazy={isLazy}
+        hasOnlyFullPrice={hasOnlyFullPrice}
+        normalizedLang={normalizedLang}
+        onShiftTabFocus={handleShiftTabFocus}
+        onShiftTabKey={handleShiftTabKey}
+        onTabFocus={handleTabFocus}
+        onTabKey={handleTabKey}
+      />
     ));
   }, [t]);
 

@@ -20,5 +20,13 @@
   "pageLabel": "Items on page",
   "prevPageLabel": "Previous page",
   "nextPageLabel": "Next page",
-  "linkPageLabel": "Page"
+  "linkPageLabel": "Page",
+  "productLabel": "View {{product}}, product {{current}} of {{total}}",
+  "priceLabel": "discounted price",
+  "fullPriceLabel": "previous price",
+  "cartButton": "Add to cart",
+  "cartLabel": "Add {{product}} to cart",
+  "favoriteLabel": "Add {{product}} to favorites",
+  "capacity": "Capacity",
+  "screen": "Screen"
 }

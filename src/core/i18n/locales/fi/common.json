@@ -20,5 +20,13 @@
   "pageLabel": "Tuotteita sivulla",
   "prevPageLabel": "Edellinen sivu",
   "nextPageLabel": "Seuraava sivu",
-  "linkPageLabel": "Sivu"
+  "linkPageLabel": "Sivu",
+  "productLabel": "Näytä {{product}}, tuote {{current}} / {{total}}",
+  "priceLabel": "alennettu hinta",
+  "fullPriceLabel": "aiempi hinta",
+  "cartButton": "Lisää koriin",
+  "cartLabel": "Lisää {{product}} ostoskoriin",
+  "favoriteLabel": "Lisää {{product}} suosikkeihin",
+  "capacity": "Kapasiteetti",
+  "screen": "Näyttö"
 }

@@ -12,5 +12,20 @@
 }
 
 .dropdowns {
+  margin-bottom: 24px;
+
   @include page-grid;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $card-width);
+  gap: 40px 16px;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  @include on-tablet {
+    margin-bottom: 40px;
+  }
 }

@@ -1,10 +1,12 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useId, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { useSearchParams } from "react-router-dom";
 import type { PageOption, SortOption } from "@/core/types/select";
 import Select from "@/ui/Select";
 import type { Product } from "../../types/product";
+import ProductCard from "../ProductCard";
 import { INITIAL_PAGE, INITIAL_PER_PAGE, INITIAL_SORT } from "./constants";
 import { getSortedProducts } from "./getSortedProducts";
 import Pagination from "./Pagination";
@@ -27,6 +29,7 @@ const SectionContent: React.FC<SectionProps> = ({
   products,
 }) => {
   const [searchParams] = useSearchParams();
+  const { i18n } = useTranslation();
 
   const currentSort = searchParams.get("sort") || INITIAL_SORT;
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
@@ -44,6 +47,8 @@ const SectionContent: React.FC<SectionProps> = ({
   const currentPageProducts = sortedProducts.slice(startIndex, endIndex);
 
   const regionId = useId();
+
+  const normalizedLang = i18n.language?.split("-")[0];
 
   return (
     <section aria-labelledby={regionId}>
@@ -73,9 +78,19 @@ const SectionContent: React.FC<SectionProps> = ({
         />
       </div>
 
-      <ul>
-        {currentPageProducts.map((product) => (
-          <li key={product.id}>{product.name}</li>
+      <ul className={styles.products}>
+        {currentPageProducts.map((product, idx) => (
+          <li key={product.id}>
+            <ProductCard
+              t={t}
+              product={product}
+              totalProducts={products.length}
+              productIdx={idx}
+              isLazy={true}
+              hasOnlyFullPrice={false}
+              normalizedLang={normalizedLang}
+            />
+          </li>
         ))}
       </ul>
 

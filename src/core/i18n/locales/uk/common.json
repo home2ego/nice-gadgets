@@ -20,5 +20,13 @@
   "pageLabel": "Товарів на сторінці",
   "prevPageLabel": "Попередня сторінка",
   "nextPageLabel": "Наступна сторінка",
-  "linkPageLabel": "Сторінка"
+  "linkPageLabel": "Сторінка",
+  "productLabel": "Переглянути {{product}}, товар {{current}} із {{total}}",
+  "priceLabel": "акційна ціна",
+  "fullPriceLabel": "попередня ціна",
+  "cartButton": "До кошика",
+  "cartLabel": "Додати {{product}} до кошика",
+  "favoriteLabel": "Додати {{product}} до обраного",
+  "capacity": "Ємність",
+  "screen": "Екран"
 }
