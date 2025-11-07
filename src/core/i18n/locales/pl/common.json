@@ -1,8 +1,10 @@
 {
   "homePageLabel": "Strona główna Nice Gadgets",
   "skipToContent": "Przejdź do treści",
-  "skipForwardCarousel": "Pomiń karuzelę do przodu",
-  "skipBackCarousel": "Pomiń karuzelę do tyłu",
+  "skipForwardCarousel": "Pomiń karuzelę",
+  "skipBackCarousel": "Wróć nad karuzelę",
+  "skipForwardProducts": "Pomiń produkty",
+  "skipBackProducts": "Wróć nad produkty",
   "errorMessage": "Błąd 404",
   "notFound": "Nie znaleziono strony",
   "goHomePage": "Strona główna",

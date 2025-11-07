@@ -1,14 +1,16 @@
 .skip {
-  &-forward-pictures,
-  &-back-pictures,
+  &-forward-slider,
+  &-back-slider,
+  &-forward-carousel,
+  &-back-carousel,
   &-forward-products,
   &-back-products {
     padding: 18px 6px;
     border-radius: 4px;
   }
 
-  &-forward-pictures,
-  &-back-pictures {
+  &-forward-slider,
+  &-back-slider {
     left: 0;
 
     @include on-tablet {
@@ -16,23 +18,27 @@
     }
   }
 
+  &-forward-carousel,
+  &-back-carousel,
   &-forward-products,
   &-back-products {
     left: 16px;
   }
 
-  &-forward-pictures {
+  &-forward-slider,
+  &-forward-products {
     top: 16px;
   }
 
-  &-forward-products {
+  &-forward-carousel {
     top: 88px;
   }
 
-  &-back-pictures {
+  &-back-slider {
     bottom: 56px;
   }
 
+  &-back-carousel,
   &-back-products {
     bottom: 32px;
   }

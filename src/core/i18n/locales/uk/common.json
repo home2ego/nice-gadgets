@@ -1,8 +1,10 @@
 {
   "homePageLabel": "Головна сторінка Nice Gadgets",
   "skipToContent": "Перейти до змісту",
-  "skipForwardCarousel": "Пропустити карусель уперед",
-  "skipBackCarousel": "Пропустити карусель назад",
+  "skipForwardCarousel": "Пропустити карусель",
+  "skipBackCarousel": "Повернутися над каруселлю",
+  "skipForwardProducts": "Пропустити товари",
+  "skipBackProducts": "Повернутися над товарами",
   "errorMessage": "Помилка 404",
   "notFound": "Сторінку не знайдено",
   "goHomePage": "На головну",

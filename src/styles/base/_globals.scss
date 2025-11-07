@@ -107,7 +107,9 @@ section {
 
 main:focus,
 footer:focus,
-section:focus {
+section:focus,
+nav:focus,
+div:focus {
   outline: none;
 }
 

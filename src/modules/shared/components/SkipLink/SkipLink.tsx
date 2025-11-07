@@ -4,14 +4,14 @@ import { focusElement } from "@/layout/shared/utils/focusElement";
 import styles from "./SkipLink.module.scss";
 
 interface SkipProps {
-  mainRef?: React.RefObject<HTMLElement | null>;
+  topElementRef?: React.RefObject<HTMLElement | null>;
   elementRef?: React.RefObject<HTMLElement | null>;
   content: string;
   classAttr: string;
 }
 
 const SkipLink: React.FC<SkipProps> = ({
-  mainRef,
+  topElementRef,
   elementRef,
   content,
   classAttr,
@@ -21,8 +21,8 @@ const SkipLink: React.FC<SkipProps> = ({
   const handleSkipToContent = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
-    if (mainRef?.current) {
-      focusElement(mainRef.current);
+    if (topElementRef?.current) {
+      focusElement(topElementRef.current);
       window.scrollTo({ top: 0 });
     }
 

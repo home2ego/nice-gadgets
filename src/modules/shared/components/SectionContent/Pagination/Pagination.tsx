@@ -7,6 +7,7 @@ import styles from "./Pagination.module.scss";
 import type { PageItem } from "./pageItem";
 
 interface PaginationProps {
+  paginationRef: React.RefObject<HTMLElement | null>;
   t: TFunction;
   sectionHeading: string;
   currentPage: number;
@@ -14,6 +15,7 @@ interface PaginationProps {
 }
 
 const Pagination: React.FC<PaginationProps> = ({
+  paginationRef,
   t,
   sectionHeading,
   currentPage,
@@ -39,6 +41,7 @@ const Pagination: React.FC<PaginationProps> = ({
     <nav
       aria-label={t("paginationLabel", { product: t(sectionHeading) })}
       className={styles.pagination}
+      ref={paginationRef}
     >
       <Link
         to={isFirstPage ? { search: search } : getSearchPage(currentPage - 1)}

@@ -1,8 +1,10 @@
 {
   "homePageLabel": "Nice Gadgets etusivu",
   "skipToContent": "Siirry sisältöön",
-  "skipForwardCarousel": "Ohita karuselli eteenpäin",
-  "skipBackCarousel": "Ohita karuselli taaksepäin",
+  "skipForwardCarousel": "Ohita karuselli",
+  "skipBackCarousel": "Palaa karusellin yläpuolelle",
+  "skipForwardProducts": "Ohita tuotteet",
+  "skipBackProducts": "Palaa tuotteiden yläpuolelle",
   "errorMessage": "Virhe 404",
   "notFound": "Sivua ei löytynyt",
   "goHomePage": "Siirry etusivulle",

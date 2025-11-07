@@ -191,7 +191,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     <>
       <SkipLink
         content="skipForwardCarousel"
-        classAttr="skip-forward-products"
+        classAttr="skip-forward-carousel"
         elementRef={skipForwardRef}
       />
 
@@ -274,7 +274,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
 
       <SkipLink
         content="skipBackCarousel"
-        classAttr="skip-back-products"
+        classAttr="skip-back-carousel"
         elementRef={skipBackRef}
       />
     </>

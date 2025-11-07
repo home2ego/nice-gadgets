@@ -1,8 +1,10 @@
 {
   "homePageLabel": "Nice Gadgets homepage",
   "skipToContent": "Skip to content",
-  "skipForwardCarousel": "Skip forward past carousel",
-  "skipBackCarousel": "Skip back before carousel",
+  "skipForwardCarousel": "Skip over carousel",
+  "skipBackCarousel": "Skip back over carousel",
+  "skipForwardProducts": "Skip over products",
+  "skipBackProducts": "Skip back over products",
   "errorMessage": "Error 404",
   "notFound": "Page not found",
   "goHomePage": "Go to home page",

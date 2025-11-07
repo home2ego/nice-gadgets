@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "@/api/products.json";
 import SkipLink from "@/modules/shared/components/SkipLink";
+import type { OutletContext } from "../shared/types/outletContext";
 import type { Product } from "../shared/types/product";
 import CategorySkeleton from "./components/CategorySkeleton";
 import PicturesCarousel from "./components/PicturesCarousel";
@@ -56,12 +57,6 @@ const hotPricesProducts: Product[] = [...products]
     return discountB - discountA;
   })
   .slice(0, 10);
-
-interface OutletContext {
-  mainRef: React.RefObject<HTMLElement>;
-  footerRef: React.RefObject<HTMLElement>;
-  normalizedLang: string;
-}
 
 const HomePage = () => {
   const { mainRef, footerRef, normalizedLang } =
@@ -121,7 +116,7 @@ const HomePage = () => {
       >
         <SkipLink
           content="skipForwardCarousel"
-          classAttr="skip-forward-pictures"
+          classAttr="skip-forward-slider"
           elementRef={newModelsRef}
         />
 
@@ -129,8 +124,8 @@ const HomePage = () => {
 
         <SkipLink
           content="skipBackCarousel"
-          classAttr="skip-back-pictures"
-          mainRef={mainRef}
+          classAttr="skip-back-slider"
+          topElementRef={mainRef}
         />
       </section>
 
