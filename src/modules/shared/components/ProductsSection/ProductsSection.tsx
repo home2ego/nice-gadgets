@@ -58,8 +58,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const perPage = hasPagination ? +currentPerPage : visibleCount;
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
-  const visibleProducts: Product[] =
-    sortedProducts.slice(startIndex, endIndex) && [];
+  const visibleProducts: Product[] = sortedProducts.slice(startIndex, endIndex);
 
   return (
     <section aria-labelledby={regionId}>
