@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { Product } from "../../types/product";
 import type { PageOption, SortOption } from "../../types/select";
@@ -49,6 +49,13 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
   const currentPerPage = searchParams.get("perPage") || INITIAL_PER_PAGE;
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: currentSort intentionally included
+  useEffect(() => {
+    if (currentPerPage === "all") {
+      setVisibleCount(LOAD_STEP);
+    }
+  }, [currentPerPage, currentSort]);
+
   const sortedProducts = useMemo(
     () => getSortedProducts(products, currentSort as SortOption),
     [products, currentSort],
@@ -85,7 +92,6 @@ const ProductsSection: React.FC<ProductsProps> = ({
           options={pageOptions}
           paramKey="perPage"
           initialParamVal={INITIAL_PER_PAGE}
-          setVisibleCount={() => setVisibleCount(LOAD_STEP)}
         />
       </div>
 
