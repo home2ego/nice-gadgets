@@ -2,10 +2,10 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useId, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import type { PageOption, SortOption } from "@/core/types/select";
+import type { PageOption, SortOption } from "@/modules/shared/types/select";
 import styles from "./Select.module.scss";
 
-interface LabelProps {
+interface SelectProps {
   t: TFunction;
   label: string;
   options: SortOption[] | PageOption[];
@@ -13,7 +13,7 @@ interface LabelProps {
   initialParamVal: SortOption | PageOption;
 }
 
-const Select: React.FC<LabelProps> = ({
+const Select: React.FC<SelectProps> = ({
   t,
   label,
   options,

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import Breadcrumb from "@/modules/shared/components/Breadcrumb";
-import SectionContent from "@/modules/shared/components/SectionContent";
+import ProductsSection from "../shared/components/ProductsSection";
 import type { OutletContext } from "../shared/types/outletContext";
 import { getProductsByCategory } from "../shared/utils/getProductsByCategory";
 
@@ -18,9 +18,10 @@ const PhonesPage = () => {
 
       <Breadcrumb t={t} heading="phones" />
 
-      <SectionContent
+      <ProductsSection
         t={t}
         sectionHeading="phones"
+        noProducts="noPhones"
         countModels={countPhones}
         products={phones}
         footerRef={footerRef}

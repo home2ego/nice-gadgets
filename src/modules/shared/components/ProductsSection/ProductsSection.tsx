@@ -2,31 +2,33 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useId, useMemo, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import type { PageOption, SortOption } from "@/core/types/select";
-import Select from "@/ui/Select";
 import type { Product } from "../../types/product";
+import type { PageOption, SortOption } from "../../types/select";
 import ProductCard from "../ProductCard";
 import SkipLink from "../SkipLink";
 import { INITIAL_PAGE, INITIAL_PER_PAGE, INITIAL_SORT } from "./constants";
 import { getSortedProducts } from "./getSortedProducts";
 import Pagination from "./Pagination";
-import styles from "./SectionContent.module.scss";
+import styles from "./ProductsSection.module.scss";
+import Select from "./Select";
 
 const sortOptions: SortOption[] = ["newest", "alpha", "cheapest"];
 const pageOptions: PageOption[] = ["all", "4", "8", "16"];
 
-interface SectionProps {
+interface ProductsProps {
   t: TFunction;
   sectionHeading: string;
+  noProducts: string;
   countModels: number;
   products: Product[];
   footerRef: React.RefObject<HTMLElement | null>;
   normalizedLang: string;
 }
 
-const SectionContent: React.FC<SectionProps> = ({
+const ProductsSection: React.FC<ProductsProps> = ({
   t,
   sectionHeading,
+  noProducts,
   countModels,
   products,
   footerRef,
@@ -50,7 +52,7 @@ const SectionContent: React.FC<SectionProps> = ({
 
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
-  const currentPageProducts = sortedProducts.slice(startIndex, endIndex);
+  const visibleProducts: Product[] = sortedProducts.slice(startIndex, endIndex);
 
   const regionId = useId();
 
@@ -82,37 +84,43 @@ const SectionContent: React.FC<SectionProps> = ({
         />
       </div>
 
-      <div style={{ position: "relative" }} ref={productsRef}>
-        <SkipLink
-          content="skipForwardProducts"
-          classAttr="skip-forward-products"
-          elementRef={hasPagination ? paginationRef : footerRef}
-        />
+      {visibleProducts.length === 0 && (
+        <h2 className="title--lg">{t(noProducts)}</h2>
+      )}
 
-        <ul className={styles.products}>
-          {currentPageProducts.map((product, idx) => (
-            <li key={product.id}>
-              <ProductCard
-                t={t}
-                product={product}
-                totalProducts={products.length}
-                productIdx={idx}
-                isLazy={true}
-                hasOnlyFullPrice={false}
-                normalizedLang={normalizedLang}
-              />
-            </li>
-          ))}
-        </ul>
+      {visibleProducts.length > 0 && (
+        <div style={{ position: "relative" }} ref={productsRef}>
+          <SkipLink
+            content="skipForwardProducts"
+            classAttr="skip-forward-products"
+            elementRef={hasPagination ? paginationRef : footerRef}
+          />
 
-        <SkipLink
-          content="skipBackProducts"
-          classAttr="skip-back-products"
-          topElementRef={productsRef}
-        />
-      </div>
+          <ul className={styles.products}>
+            {visibleProducts.map((product, idx) => (
+              <li key={product.id}>
+                <ProductCard
+                  t={t}
+                  product={product}
+                  totalProducts={products.length}
+                  productIdx={idx}
+                  isLazy={true}
+                  hasOnlyFullPrice={false}
+                  normalizedLang={normalizedLang}
+                />
+              </li>
+            ))}
+          </ul>
 
-      {hasPagination && (
+          <SkipLink
+            content="skipBackProducts"
+            classAttr="skip-back-products"
+            topElementRef={productsRef}
+          />
+        </div>
+      )}
+
+      {hasPagination && visibleProducts.length > 0 && (
         <Pagination
           paginationRef={paginationRef}
           t={t}
@@ -125,4 +133,4 @@ const SectionContent: React.FC<SectionProps> = ({
   );
 };
 
-export default SectionContent;
+export default ProductsSection;

@@ -6,12 +6,12 @@ import products from "@/api/products.json";
 import SkipLink from "@/modules/shared/components/SkipLink";
 import type { OutletContext } from "../shared/types/outletContext";
 import type { Product } from "../shared/types/product";
-import CategorySkeleton from "./components/CategorySkeleton";
-import PicturesCarousel from "./components/PicturesCarousel";
-import ProductsCarousel from "./components/ProductsCarousel";
+import CategorySkeleton from "./CategorySkeleton";
 import styles from "./HomePage.module.scss";
+import PicturesCarousel from "./PicturesCarousel";
+import ProductsCarousel from "./ProductsCarousel";
 
-const ShopByCategory = lazy(() => import("./components/ShopByCategory"));
+const ShopByCategory = lazy(() => import("./ShopByCategory"));
 
 const { maxYear, maxModel } = products.reduce(
   (acc, product) => {
