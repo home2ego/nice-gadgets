@@ -11,6 +11,7 @@ interface SelectProps {
   options: SortOption[] | PageOption[];
   paramKey: "sort" | "perPage";
   initialParamVal: SortOption | PageOption;
+  setVisibleCount?: () => void;
 }
 
 const Select: React.FC<SelectProps> = ({
@@ -19,6 +20,7 @@ const Select: React.FC<SelectProps> = ({
   options,
   paramKey,
   initialParamVal,
+  setVisibleCount,
 }) => {
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -74,6 +76,7 @@ const Select: React.FC<SelectProps> = ({
     if (paramVal === "all") {
       params.delete("perPage");
       params.delete("page");
+      setVisibleCount?.();
     } else {
       params.set(paramKey, paramVal);
 

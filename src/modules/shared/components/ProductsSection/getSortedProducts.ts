@@ -1,5 +1,5 @@
-import type { SortOption } from "@/core/types/select";
 import type { Product } from "@/modules/shared/types/product";
+import type { SortOption } from "../../types/select";
 
 export const getSortedProducts = (products: Product[], option: SortOption) => {
   const newProducts = [...products];

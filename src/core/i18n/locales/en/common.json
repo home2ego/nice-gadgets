@@ -33,5 +33,7 @@
   "cartLabel": "Add {{product}} to cart",
   "favoriteLabel": "Add {{product}} to favorites",
   "capacity": "Capacity",
-  "screen": "Screen"
+  "screen": "Screen",
+  "loadMore": "Load more",
+  "seenModels": "You've seen {{visibleCount}} of {{totalCount}} models"
 }

@@ -33,5 +33,7 @@
   "cartLabel": "Dodaj {{product}} do koszyka",
   "favoriteLabel": "Dodaj {{product}} do ulubionych",
   "capacity": "Pojemność",
-  "screen": "Ekran"
+  "screen": "Ekran",
+  "loadMore": "Pokaż więcej",
+  "seenModels": "Zobaczyłeś {{visibleCount}} z {{totalCount}} modeli"
 }

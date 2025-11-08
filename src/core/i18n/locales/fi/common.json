@@ -33,5 +33,7 @@
   "cartLabel": "Lisää {{product}} ostoskoriin",
   "favoriteLabel": "Lisää {{product}} suosikkeihin",
   "capacity": "Kapasiteetti",
-  "screen": "Näyttö"
+  "screen": "Näyttö",
+  "loadMore": "Näytä lisää",
+  "seenModels": "Olet nähnyt {{visibleCount}} / {{totalCount}} mallia"
 }

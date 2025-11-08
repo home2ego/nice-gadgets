@@ -1,12 +1,17 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useId, useMemo, useRef } from "react";
+import { useId, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import type { Product } from "../../types/product";
 import type { PageOption, SortOption } from "../../types/select";
 import ProductCard from "../ProductCard";
 import SkipLink from "../SkipLink";
-import { INITIAL_PAGE, INITIAL_PER_PAGE, INITIAL_SORT } from "./constants";
+import {
+  INITIAL_PAGE,
+  INITIAL_PER_PAGE,
+  INITIAL_SORT,
+  LOAD_STEP,
+} from "./constants";
 import { getSortedProducts } from "./getSortedProducts";
 import Pagination from "./Pagination";
 import styles from "./ProductsSection.module.scss";
@@ -34,27 +39,27 @@ const ProductsSection: React.FC<ProductsProps> = ({
   footerRef,
   normalizedLang,
 }) => {
+  const [visibleCount, setVisibleCount] = useState(LOAD_STEP);
   const [searchParams] = useSearchParams();
   const productsRef = useRef<HTMLDivElement>(null);
   const paginationRef = useRef<HTMLElement>(null);
+  const regionId = useId();
 
   const currentSort = searchParams.get("sort") || INITIAL_SORT;
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
   const currentPerPage = searchParams.get("perPage") || INITIAL_PER_PAGE;
-  const perPage = currentPerPage === "all" ? countModels : +currentPerPage;
-  const hasPagination = currentPerPage !== "all";
-  const totalPages = Math.ceil(countModels / perPage);
 
   const sortedProducts = useMemo(
     () => getSortedProducts(products, currentSort as SortOption),
     [products, currentSort],
   );
 
+  const hasPagination = currentPerPage !== "all";
+  const perPage = hasPagination ? +currentPerPage : visibleCount;
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
-  const visibleProducts: Product[] = sortedProducts.slice(startIndex, endIndex);
-
-  const regionId = useId();
+  const visibleProducts: Product[] =
+    sortedProducts.slice(startIndex, endIndex) && [];
 
   return (
     <section aria-labelledby={regionId}>
@@ -81,11 +86,12 @@ const ProductsSection: React.FC<ProductsProps> = ({
           options={pageOptions}
           paramKey="perPage"
           initialParamVal={INITIAL_PER_PAGE}
+          setVisibleCount={() => setVisibleCount(LOAD_STEP)}
         />
       </div>
 
       {visibleProducts.length === 0 && (
-        <h2 className="title--lg">{t(noProducts)}</h2>
+        <h2 className="title--md">{t(noProducts)}</h2>
       )}
 
       {visibleProducts.length > 0 && (
@@ -120,13 +126,37 @@ const ProductsSection: React.FC<ProductsProps> = ({
         </div>
       )}
 
+      {!hasPagination &&
+        visibleProducts.length > 0 &&
+        visibleProducts.length < countModels && (
+          <>
+            <p className={clsx(styles["progress-info"], "text--body")}>
+              {t("seenModels", {
+                visibleCount: visibleCount,
+                totalCount: countModels,
+              })}
+            </p>
+            <button
+              type="button"
+              className={clsx(styles["load-more"], "text--uppercase")}
+              onClick={() =>
+                setVisibleCount((prev) =>
+                  Math.min(prev + LOAD_STEP, countModels),
+                )
+              }
+            >
+              {t("loadMore")}
+            </button>
+          </>
+        )}
+
       {hasPagination && visibleProducts.length > 0 && (
         <Pagination
           paginationRef={paginationRef}
           t={t}
           sectionHeading={sectionHeading}
           currentPage={currentPage}
-          totalPages={totalPages}
+          totalPages={Math.ceil(countModels / perPage)}
         />
       )}
     </section>

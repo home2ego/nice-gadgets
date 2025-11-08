@@ -33,5 +33,7 @@
   "cartLabel": "Додати {{product}} до кошика",
   "favoriteLabel": "Додати {{product}} до обраного",
   "capacity": "Ємність",
-  "screen": "Екран"
+  "screen": "Екран",
+  "loadMore": "Показати більше",
+  "seenModels": "Ви переглянули {{visibleCount}} із {{totalCount}} моделей"
 }
