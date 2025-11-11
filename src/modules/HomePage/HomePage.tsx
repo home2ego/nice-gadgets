@@ -47,10 +47,10 @@ const newProducts: Product[] = products
 
     return acc;
   }, [])
-  .sort((a, b) => b.fullPrice - a.fullPrice);
+  .toSorted((a, b) => b.fullPrice - a.fullPrice);
 
-const hotPricesProducts: Product[] = [...products]
-  .sort((a, b) => {
+const hotPricesProducts: Product[] = products
+  .toSorted((a, b) => {
     const discountA = (a.fullPrice - a.price) / a.fullPrice;
     const discountB = (b.fullPrice - b.price) / b.fullPrice;
 
