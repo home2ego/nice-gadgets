@@ -9,7 +9,7 @@ interface ProductCardProps {
   product: Product;
   totalProducts: number;
   productIdx: number;
-  isLazy: boolean;
+  loading: "eager" | "lazy";
   hasOnlyFullPrice: boolean;
   normalizedLang: string;
   onShiftTabFocus?: React.FocusEventHandler<HTMLAnchorElement>;
@@ -23,7 +23,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   product,
   totalProducts,
   productIdx,
-  isLazy,
+  loading,
   hasOnlyFullPrice,
   normalizedLang,
   onShiftTabFocus,
@@ -46,11 +46,12 @@ const ProductCard: React.FC<ProductCardProps> = ({
     />
 
     <img
+      className={styles.product__image}
       src={product.image}
       alt=""
       width="206"
       height="194"
-      loading={isLazy ? "lazy" : "eager"}
+      loading={loading}
       decoding="async"
     />
 

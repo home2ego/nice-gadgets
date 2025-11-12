@@ -167,6 +167,14 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     }
   };
 
+  const getLazy = (idx: number): "lazy" | "eager" => {
+    if (isLazy) {
+      return "lazy";
+    }
+
+    return idx < 4 ? "eager" : "lazy";
+  };
+
   // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
   const productCards = useMemo(() => {
     return products.map((product, idx) => (
@@ -176,7 +184,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
         product={product}
         totalProducts={products.length}
         productIdx={idx}
-        isLazy={isLazy}
+        loading={getLazy(idx)}
         hasOnlyFullPrice={hasOnlyFullPrice}
         normalizedLang={normalizedLang}
         onShiftTabFocus={handleShiftTabFocus}

@@ -94,7 +94,7 @@ const ShopByCategory: React.FC<CategoryProps> = ({ t }) => {
                 alt=""
                 width="368"
                 height="368"
-                decoding="sync"
+                decoding="async"
                 onLoad={() => handleLoad(card.id)}
               />
             </div>

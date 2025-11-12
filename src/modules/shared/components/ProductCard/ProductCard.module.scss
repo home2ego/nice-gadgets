@@ -18,19 +18,18 @@
     outline-offset: -3px;
   }
 
-  img {
+  &__image {
     transform-origin: bottom;
 
-    aspect-ratio: 208 / 196;
     width: 100%;
-    height: auto;
+    max-width: 206px;
 
     object-fit: contain;
 
     transition: scale 0.28s;
   }
 
-  &:hover img {
+  &:hover &__image {
     scale: 1.05;
   }
 

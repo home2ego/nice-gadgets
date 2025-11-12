@@ -115,7 +115,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
                   product={product}
                   totalProducts={products.length}
                   productIdx={idx}
-                  isLazy={true}
+                  loading={idx < 12 ? "eager" : "lazy"}
                   hasOnlyFullPrice={false}
                   normalizedLang={normalizedLang}
                 />
