@@ -2,6 +2,7 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import { focusElement } from "@/layout/shared/utils/focusElement";
 import type { Product } from "../../types/product";
 import type { PageOption, SortOption } from "../../types/select";
 import ProductCard from "../ProductCard";
@@ -39,22 +40,47 @@ const ProductsSection: React.FC<ProductsProps> = ({
   footerRef,
   normalizedLang,
 }) => {
-  const [visibleCount, setVisibleCount] = useState(LOAD_STEP);
   const [searchParams] = useSearchParams();
+  const [visibleCount, setVisibleCount] = useState(LOAD_STEP);
+  const prevVisibleCount = useRef<number | null>(null);
   const productsRef = useRef<HTMLDivElement>(null);
   const paginationRef = useRef<HTMLElement>(null);
+  const loadBtnRef = useRef<HTMLButtonElement>(null);
   const regionId = useId();
 
   const currentSort = searchParams.get("sort") || INITIAL_SORT;
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
   const currentPerPage = searchParams.get("perPage") || INITIAL_PER_PAGE;
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: currentPage intentionally included
+  useEffect(() => {
+    if (!productsRef.current || !searchParams.get("page")) return;
+
+    focusElement(productsRef.current);
+    window.scrollTo({ top: 0 });
+  }, [currentPage]);
+
   // biome-ignore lint/correctness/useExhaustiveDependencies: currentSort intentionally included
   useEffect(() => {
     if (currentPerPage === "all") {
+      prevVisibleCount.current = null;
       setVisibleCount(LOAD_STEP);
     }
   }, [currentPerPage, currentSort]);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: visibleCount intentionally included
+  useEffect(() => {
+    if (!prevVisibleCount.current) return;
+
+    const links =
+      productsRef.current?.querySelectorAll<HTMLAnchorElement>("article a");
+
+    if (!links || links.length === 0) return;
+
+    const nextLink = links[prevVisibleCount.current];
+    nextLink.focus({ preventScroll: true });
+    nextLink.scrollIntoView({ block: "nearest" });
+  }, [visibleCount]);
 
   const sortedProducts = useMemo(
     () => getSortedProducts(products, currentSort as SortOption),
@@ -66,6 +92,24 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const startIndex = (currentPage - 1) * perPage;
   const endIndex = startIndex + perPage;
   const visibleProducts: Product[] = sortedProducts.slice(startIndex, endIndex);
+  const hasLoadMore = visibleProducts.length < countModels;
+
+  const handleLoadMoreClick = () => {
+    prevVisibleCount.current = visibleCount;
+    setVisibleCount((prev) => Math.min(prev + LOAD_STEP, countModels));
+  };
+
+  const getTargetRef = () => {
+    if (hasPagination) {
+      return paginationRef;
+    }
+
+    if (hasLoadMore) {
+      return loadBtnRef;
+    }
+
+    return footerRef;
+  };
 
   return (
     <section aria-labelledby={regionId}>
@@ -104,7 +148,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
           <SkipLink
             content="skipForwardProducts"
             classAttr="skip-forward-products"
-            elementRef={hasPagination ? paginationRef : footerRef}
+            elementRef={getTargetRef()}
           />
 
           <ul className={styles.products}>
@@ -131,29 +175,24 @@ const ProductsSection: React.FC<ProductsProps> = ({
         </div>
       )}
 
-      {!hasPagination &&
-        visibleProducts.length > 0 &&
-        visibleProducts.length < countModels && (
-          <>
-            <p className={clsx(styles["progress-info"], "text--body")}>
-              {t("seenModels", {
-                visibleCount: visibleCount,
-                totalCount: countModels,
-              })}
-            </p>
-            <button
-              type="button"
-              className={clsx(styles["load-more"], "text--uppercase")}
-              onClick={() =>
-                setVisibleCount((prev) =>
-                  Math.min(prev + LOAD_STEP, countModels),
-                )
-              }
-            >
-              {t("loadMore")}
-            </button>
-          </>
-        )}
+      {!hasPagination && hasLoadMore && visibleProducts.length > 0 && (
+        <>
+          <p className={clsx(styles["progress-info"], "text--body")}>
+            {t("seenModels", {
+              visibleCount: visibleCount,
+              totalCount: countModels,
+            })}
+          </p>
+          <button
+            type="button"
+            className={clsx(styles["load-more"], "text--uppercase")}
+            onClick={handleLoadMoreClick}
+            ref={loadBtnRef}
+          >
+            {t("loadMore")}
+          </button>
+        </>
+      )}
 
       {hasPagination && visibleProducts.length > 0 && (
         <Pagination
