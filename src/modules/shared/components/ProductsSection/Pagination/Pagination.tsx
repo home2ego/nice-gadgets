@@ -12,7 +12,7 @@ interface PaginationProps {
   sectionHeading: string;
   currentPage: number;
   totalPages: number;
-  focusPagination: React.RefObject<boolean>;
+  lastInputType: React.RefObject<"pointer" | "keyboard" | null>;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -21,7 +21,7 @@ const Pagination: React.FC<PaginationProps> = ({
   sectionHeading,
   currentPage,
   totalPages,
-  focusPagination,
+  lastInputType,
 }) => {
   const [searchParams] = useSearchParams();
   const { search } = useLocation();
@@ -39,8 +39,8 @@ const Pagination: React.FC<PaginationProps> = ({
     return { search: params.toString() };
   };
 
-  const handleKeyDown = () => {
-    focusPagination.current = true;
+  const handleInputType = (type: "pointer" | "keyboard") => {
+    lastInputType.current = type;
   };
 
   return (
@@ -55,7 +55,8 @@ const Pagination: React.FC<PaginationProps> = ({
         aria-label={t("prevPageLabel")}
         aria-disabled={isFirstPage}
         tabIndex={isFirstPage ? -1 : undefined}
-        onKeyDown={handleKeyDown}
+        onPointerDown={() => handleInputType("pointer")}
+        onKeyDown={() => handleInputType("keyboard")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +84,16 @@ const Pagination: React.FC<PaginationProps> = ({
                   [styles.active]: page.value === currentPage,
                 })}
                 aria-current={page.value === currentPage ? "page" : undefined}
-                onKeyDown={() => page.value !== currentPage && handleKeyDown()}
+                onPointerDown={() => {
+                  if (page.value !== currentPage) {
+                    handleInputType("pointer");
+                  }
+                }}
+                onKeyDown={() => {
+                  if (page.value !== currentPage) {
+                    handleInputType("keyboard");
+                  }
+                }}
               >
                 <span className="sr-only">{t("linkPageLabel")}</span>
                 <span className={styles.hovered}>{page.value}</span>
@@ -107,7 +117,8 @@ const Pagination: React.FC<PaginationProps> = ({
         aria-label={t("nextPageLabel")}
         aria-disabled={isLastPage}
         tabIndex={isLastPage ? -1 : undefined}
-        onKeyDown={handleKeyDown}
+        onPointerDown={() => handleInputType("pointer")}
+        onKeyDown={() => handleInputType("keyboard")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -1,6 +1,13 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useEffect, useId, useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useId,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useSearchParams } from "react-router-dom";
 import { focusElement } from "@/layout/shared/utils/focusElement";
 import type { Product } from "../../types/product";
@@ -48,7 +55,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const paginationRef = useRef<HTMLElement>(null);
   const loadBtnRef = useRef<HTMLButtonElement>(null);
   const focusLoadMore = useRef(false);
-  const focusPagination = useRef(false);
+  const lastInputType = useRef<"pointer" | "keyboard">(null);
   const regionId = useId();
 
   const currentSort = searchParams.get("sort") || INITIAL_SORT;
@@ -56,18 +63,26 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const currentPerPage = searchParams.get("perPage") || INITIAL_PER_PAGE;
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: currentPage intentionally included
-  useEffect(() => {
-    if (
-      !productsRef.current ||
-      !dropdownsRef.current ||
-      !focusPagination.current
-    ) {
-      return;
+  useLayoutEffect(() => {
+    if (lastInputType.current === "pointer") {
+      lastInputType.current = null;
+      dropdownsRef.current?.scrollIntoView({
+        block: "start",
+        behavior: "instant",
+      });
     }
+  }, [currentPage]);
 
-    focusElement(productsRef.current);
-    dropdownsRef.current.scrollIntoView({ block: "start" });
-    focusPagination.current = false;
+  // biome-ignore lint/correctness/useExhaustiveDependencies: currentPage intentionally included
+  useEffect(() => {
+    if (lastInputType.current === "keyboard") {
+      lastInputType.current = null;
+      dropdownsRef.current?.scrollIntoView({ block: "start" });
+
+      if (productsRef.current) {
+        focusElement(productsRef.current);
+      }
+    }
   }, [currentPage]);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: currentSort intentionally included
@@ -224,7 +239,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
           sectionHeading={sectionHeading}
           currentPage={currentPage}
           totalPages={Math.ceil(countModels / perPage)}
-          focusPagination={focusPagination}
+          lastInputType={lastInputType}
         />
       )}
     </section>
