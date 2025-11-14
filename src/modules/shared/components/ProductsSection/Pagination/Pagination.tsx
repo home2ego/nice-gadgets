@@ -12,6 +12,7 @@ interface PaginationProps {
   sectionHeading: string;
   currentPage: number;
   totalPages: number;
+  focusPagination: React.RefObject<boolean>;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
@@ -20,6 +21,7 @@ const Pagination: React.FC<PaginationProps> = ({
   sectionHeading,
   currentPage,
   totalPages,
+  focusPagination,
 }) => {
   const [searchParams] = useSearchParams();
   const { search } = useLocation();
@@ -37,6 +39,10 @@ const Pagination: React.FC<PaginationProps> = ({
     return { search: params.toString() };
   };
 
+  const handleKeyDown = () => {
+    focusPagination.current = true;
+  };
+
   return (
     <nav
       aria-label={t("paginationLabel", { product: t(sectionHeading) })}
@@ -49,6 +55,7 @@ const Pagination: React.FC<PaginationProps> = ({
         aria-label={t("prevPageLabel")}
         aria-disabled={isFirstPage}
         tabIndex={isFirstPage ? -1 : undefined}
+        onKeyDown={handleKeyDown}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +83,7 @@ const Pagination: React.FC<PaginationProps> = ({
                   [styles.active]: page.value === currentPage,
                 })}
                 aria-current={page.value === currentPage ? "page" : undefined}
+                onKeyDown={() => page.value !== currentPage && handleKeyDown()}
               >
                 <span className="sr-only">{t("linkPageLabel")}</span>
                 <span className={styles.hovered}>{page.value}</span>
@@ -99,6 +107,7 @@ const Pagination: React.FC<PaginationProps> = ({
         aria-label={t("nextPageLabel")}
         aria-disabled={isLastPage}
         tabIndex={isLastPage ? -1 : undefined}
+        onKeyDown={handleKeyDown}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

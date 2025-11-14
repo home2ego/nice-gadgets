@@ -44,8 +44,11 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const [visibleCount, setVisibleCount] = useState(LOAD_STEP);
   const prevVisibleCount = useRef<number | null>(null);
   const productsRef = useRef<HTMLDivElement>(null);
+  const dropdownsRef = useRef<HTMLDivElement>(null);
   const paginationRef = useRef<HTMLElement>(null);
   const loadBtnRef = useRef<HTMLButtonElement>(null);
+  const focusLoadMore = useRef(false);
+  const focusPagination = useRef(false);
   const regionId = useId();
 
   const currentSort = searchParams.get("sort") || INITIAL_SORT;
@@ -54,10 +57,17 @@ const ProductsSection: React.FC<ProductsProps> = ({
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: currentPage intentionally included
   useEffect(() => {
-    if (!productsRef.current || !searchParams.get("page")) return;
+    if (
+      !productsRef.current ||
+      !dropdownsRef.current ||
+      !focusPagination.current
+    ) {
+      return;
+    }
 
     focusElement(productsRef.current);
-    window.scrollTo({ top: 0 });
+    dropdownsRef.current.scrollIntoView({ block: "start" });
+    focusPagination.current = false;
   }, [currentPage]);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: currentSort intentionally included
@@ -70,7 +80,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: visibleCount intentionally included
   useEffect(() => {
-    if (!prevVisibleCount.current) return;
+    if (!prevVisibleCount.current || !focusLoadMore.current) return;
 
     const links =
       productsRef.current?.querySelectorAll<HTMLAnchorElement>("article a");
@@ -78,8 +88,10 @@ const ProductsSection: React.FC<ProductsProps> = ({
     if (!links || links.length === 0) return;
 
     const nextLink = links[prevVisibleCount.current];
+
     nextLink.focus({ preventScroll: true });
-    nextLink.scrollIntoView({ block: "nearest" });
+    nextLink.scrollIntoView({ block: "start" });
+    focusLoadMore.current = false;
   }, [visibleCount]);
 
   const sortedProducts = useMemo(
@@ -94,9 +106,18 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const visibleProducts: Product[] = sortedProducts.slice(startIndex, endIndex);
   const hasLoadMore = visibleProducts.length < countModels;
 
-  const handleLoadMoreClick = () => {
+  const handleLoadMorePointer = () => {
     prevVisibleCount.current = visibleCount;
     setVisibleCount((prev) => Math.min(prev + LOAD_STEP, countModels));
+  };
+
+  const handleLoadMoreKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+
+      focusLoadMore.current = true;
+      handleLoadMorePointer();
+    }
   };
 
   const getTargetRef = () => {
@@ -121,7 +142,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
         {t("countModels", { count: countModels })}
       </p>
 
-      <div className={styles.dropdowns}>
+      <div className={styles.dropdowns} ref={dropdownsRef}>
         <Select
           t={t}
           label="sortLabel"
@@ -183,10 +204,12 @@ const ProductsSection: React.FC<ProductsProps> = ({
               totalCount: countModels,
             })}
           </p>
+
           <button
             type="button"
             className={clsx(styles["load-more"], "text--uppercase")}
-            onClick={handleLoadMoreClick}
+            onPointerDown={handleLoadMorePointer}
+            onKeyDown={handleLoadMoreKey}
             ref={loadBtnRef}
           >
             {t("loadMore")}
@@ -201,6 +224,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
           sectionHeading={sectionHeading}
           currentPage={currentPage}
           totalPages={Math.ceil(countModels / perPage)}
+          focusPagination={focusPagination}
         />
       )}
     </section>

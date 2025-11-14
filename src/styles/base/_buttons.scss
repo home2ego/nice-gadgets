@@ -51,7 +51,7 @@
   justify-content: center;
 
   width: 100%;
-  padding: 24px;
+  padding: 12px;
 
   outline-offset: -2px;
 
@@ -69,8 +69,8 @@
     opacity: 1;
   }
 
-  &:not(.active):hover > svg,
-  &:not(.active):focus-visible > svg {
+  &:not(.active):hover svg,
+  &:not(.active):focus-visible svg {
     opacity: 1;
   }
 }

@@ -1,0 +1,20 @@
+.count {
+  @extend %flex-center;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 21px;
+  height: 21px;
+  border: 2px solid var(--bg-color-primary);
+  border-radius: 50%;
+
+  color: $white-color;
+
+  background-color: $count-color;
+
+  @include on-desktop {
+    border-color: var(--bg-color-layout);
+  }
+}

@@ -12,6 +12,8 @@
   background-color: var(--bg-color-secondary);
 
   &__link {
+    @extend %scroll-margin;
+
     position: absolute;
     z-index: 10;
     inset: 0;
@@ -81,7 +83,7 @@
   &__cart {
     flex-grow: 1;
 
-    color: #f1f2f9;
+    color: $white-color;
     text-align: center;
 
     background-color: var(--accent-color);
@@ -90,6 +92,12 @@
 
     &:hover {
       opacity: 0.8;
+    }
+
+    &.added {
+      border: $border-width solid var(--bd-color-icon);
+      color: var(--text-color-primary);
+      background-color: var(--bg-color-primary);
     }
   }
 

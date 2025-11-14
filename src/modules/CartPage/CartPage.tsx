@@ -1,0 +1,65 @@
+import clsx from "clsx";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "@/core/store/hooks";
+import styles from "./CartPage.module.scss";
+import CartProduct from "./CartProduct";
+
+const CartPage = () => {
+  const { t } = useTranslation("cartPage");
+  const cartProducts = useAppSelector((state) => state.cart);
+  const navigate = useNavigate();
+
+  return (
+    <>
+      <title>{t("title")}</title>
+
+      <button
+        type="button"
+        className={styles.back}
+        onClick={() => navigate(-1)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="none"
+          stroke="var(--text-color-primary)"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+        <span className="text--sm">{t("back")}</span>
+      </button>
+
+      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+      <h1 id="cart-heading" className={clsx(styles.heading, "title--xl")}>
+        {t("cart")}
+      </h1>
+
+      <section className={styles.cart} aria-labelledby="cart-heading">
+        {cartProducts.length > 0 && (
+          <>
+            <ul className={styles.cart__products}>
+              {cartProducts.map((product) => (
+                <CartProduct key={product.id} product={product} />
+              ))}
+            </ul>
+
+            <div className={styles.cart__summary}>
+              <h2>$2657</h2>
+              <p>{t("totalForItems", { count: cartProducts.length })}</p>
+              <button type="button">{t("checkout")}</button>
+            </div>
+          </>
+        )}
+      </section>
+    </>
+  );
+};
+
+export default CartPage;

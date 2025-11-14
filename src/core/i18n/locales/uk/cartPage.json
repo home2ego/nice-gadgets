@@ -1,0 +1,8 @@
+{
+  "title": "Кошик | Nice Gadgets",
+  "back": "Назад",
+  "totalForItems_one": "Разом за {{count}} товар",
+  "totalForItems_few": "Разом за {{count}} товари",
+  "totalForItems_many": "Разом за {{count}} товарів",
+  "checkout": "Оформити замовлення"
+}

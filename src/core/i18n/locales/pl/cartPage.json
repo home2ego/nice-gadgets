@@ -1,0 +1,8 @@
+{
+  "title": "Koszyk | Nice Gadgets",
+  "back": "Wstecz",
+  "totalForItems_one": "Suma za {{count}} produkt",
+  "totalForItems_few": "Suma za {{count}} produkty",
+  "totalForItems_many": "Suma za {{count}} produktów",
+  "checkout": "Do kasy"
+}

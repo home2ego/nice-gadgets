@@ -1,0 +1,7 @@
+{
+  "title": "Shopping cart | Nice Gadgets",
+  "back": "Back",
+  "totalForItems_one": "Total for {{count}} product",
+  "totalForItems_other": "Total for {{count}} products",
+  "checkout": "Checkout"
+}

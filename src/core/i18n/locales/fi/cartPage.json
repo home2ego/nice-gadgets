@@ -1,0 +1,7 @@
+{
+  "title": "Ostoskori | Nice Gadgets",
+  "back": "Takaisin",
+  "totalForItems_one": "Yhteensä {{count}} tuote",
+  "totalForItems_other": "Yhteensä {{count}} tuotetta",
+  "checkout": "Kassa"
+}

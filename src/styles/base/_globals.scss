@@ -70,7 +70,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+dl {
   margin: 0;
 }
 
@@ -91,8 +92,13 @@ button {
   outline: revert;
 }
 
+dd {
+  margin-inline: 0;
+}
+
 section {
-  scroll-margin-top: $mobile-navbar-hight + 24px;
+  @extend %scroll-margin;
+
   margin-bottom: 56px;
 
   @include on-tablet {
@@ -100,7 +106,6 @@ section {
   }
 
   @include on-desktop {
-    scroll-margin-top: $desktop-navbar-hight + 24px;
     margin-bottom: 80px;
   }
 }

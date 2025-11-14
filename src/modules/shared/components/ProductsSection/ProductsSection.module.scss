@@ -12,6 +12,8 @@
 }
 
 .dropdowns {
+  @extend %scroll-margin;
+
   margin-bottom: 24px;
 
   @include page-grid;
