@@ -63,50 +63,50 @@ const ShopByCategory: React.FC<CategoryProps> = ({ t }) => {
   return (
     <>
       {categoryCards.map((card) => (
-        <li key={card.id}>
+        <li key={card.id} className={styles.category}>
           <Link
             to={card.path}
-            className={styles.category}
             aria-label={t("viewCategoryLabel", {
               category: t(card.heading),
               count: card.countModels,
             })}
-          >
-            <div className={styles.category__wrapper}>
-              {!loadedMap[card.id] && (
-                <img
-                  src={decodeThumbhash(card.thumbhash)}
-                  alt=""
-                  width="100%"
-                  height="100%"
-                  style={{ position: "absolute" }}
-                  decoding="async"
-                />
-              )}
+            className={styles.category__link}
+          />
 
+          <div className={styles.category__wrapper}>
+            {!loadedMap[card.id] && (
               <img
-                className={clsx(
-                  styles.category__image,
-                  styles[`category__image--${card.id}`],
-                  loadedMap[card.id] && styles.loaded,
-                )}
-                src={card.src}
+                src={decodeThumbhash(card.thumbhash)}
                 alt=""
-                width="368"
-                height="368"
+                width="100%"
+                height="100%"
+                style={{ position: "absolute" }}
                 decoding="async"
-                onLoad={() => handleLoad(card.id)}
               />
-            </div>
+            )}
 
-            <h3 className={clsx(styles.category__heading, "title--sm")}>
-              {t(card.heading)}
-            </h3>
+            <img
+              className={clsx(
+                styles.category__image,
+                styles[`category__image--${card.id}`],
+                loadedMap[card.id] && styles.loaded,
+              )}
+              src={card.src}
+              alt=""
+              width="368"
+              height="368"
+              decoding="async"
+              onLoad={() => handleLoad(card.id)}
+            />
+          </div>
 
-            <p className={clsx(styles.category__models, "text--body")}>
-              {t("countModels", { count: card.countModels })}
-            </p>
-          </Link>
+          <h3 className={clsx(styles.category__heading, "title--sm")}>
+            {t(card.heading)}
+          </h3>
+
+          <p className={clsx(styles.category__models, "text--body")}>
+            {t("countModels", { count: card.countModels })}
+          </p>
         </li>
       ))}
     </>
