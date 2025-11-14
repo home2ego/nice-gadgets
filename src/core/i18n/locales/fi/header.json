@@ -4,7 +4,9 @@
   "openNavLabel": "Avaa päävalikko",
   "closeNavLabel": "Sulje päävalikko",
   "favoriteLabel": "Näytä suosikkituotteet",
-  "cartLabel": "Näytä ostoskori",
+  "cartLabelEmpty": "Näytä ostoskori, tyhjä",
+  "cartLabelWithCount_one": "Näytä ostoskori, {{count}} tuote",
+  "cartLabelWithCount_other": "Näytä ostoskori, {{count}} tuotetta",
   "themeLabel": "Tumma tila",
   "langNavLabel": "Kielen valinta",
   "langLabel": "Vaihda kieltä, nykyinen: {{lang}}"

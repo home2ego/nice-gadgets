@@ -5,4 +5,46 @@
     width: 80px;
     height: 80px;
   }
+
+  &__controls {
+    display: flex;
+  }
+
+  &__count,
+  &__increment,
+  &__decrement {
+    @extend %flex-center;
+
+    @include square-size(32px);
+  }
+
+  &__increment,
+  &__decrement {
+    border-style: solid;
+    border-width: $border-width;
+  }
+
+  &__increment:disabled,
+  &__decrement:disabled {
+    pointer-events: none;
+    border-color: var(--bd-color-primary);
+    background-color: transparent;
+
+    svg {
+      stroke: var(--icon-color);
+    }
+  }
+
+  &__increment:not(:disabled),
+  &__decrement:not(:disabled) {
+    transform: translateZ(0);
+    border-color: var(--bd-color-icon);
+    background-color: var(--bg-color-primary);
+    transition: opacity 0.18s;
+  }
+
+  &__increment:not(:disabled):hover,
+  &__decrement:not(:disabled):hover {
+    opacity: 0.7;
+  }
 }

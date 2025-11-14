@@ -4,5 +4,7 @@
   "totalForItems_one": "Разом за {{count}} товар",
   "totalForItems_few": "Разом за {{count}} товари",
   "totalForItems_many": "Разом за {{count}} товарів",
-  "checkout": "Оформити замовлення"
+  "checkout": "Оформити замовлення",
+  "decreaseQuantity": "Зменшити кількість",
+  "increaseQuantity": "Збільшити кількість"
 }

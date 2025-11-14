@@ -110,7 +110,6 @@
     @include square-size(42px);
 
     .icon {
-      transform: translateZ(0);
       transition: opacity 0.18s, scale 0.28s;
     }
 

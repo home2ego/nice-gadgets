@@ -3,5 +3,7 @@
   "back": "Takaisin",
   "totalForItems_one": "Yhteensä {{count}} tuote",
   "totalForItems_other": "Yhteensä {{count}} tuotetta",
-  "checkout": "Kassa"
+  "checkout": "Kassa",
+  "decreaseQuantity": "Vähennä määrää",
+  "increaseQuantity": "Lisää määrää"
 }

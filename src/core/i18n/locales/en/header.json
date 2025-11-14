@@ -4,7 +4,9 @@
   "openNavLabel": "Open main menu",
   "closeNavLabel": "Close main menu",
   "favoriteLabel": "View favorite products",
-  "cartLabel": "View shopping cart",
+  "cartLabelEmpty": "View shopping cart, empty",
+  "cartLabelWithCount_one": "View shopping cart, {{count}} product",
+  "cartLabelWithCount_other": "View shopping cart, {{count}} products",
   "themeLabel": "Dark mode",
   "langNavLabel": "Language selection",
   "langLabel": "Change language, current: {{lang}}"
