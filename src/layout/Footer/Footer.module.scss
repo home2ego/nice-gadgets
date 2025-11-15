@@ -43,6 +43,7 @@
   &__icon {
     @extend %flex-center;
 
+    transform: translateZ(0);
     border: $border-width solid var(--bd-color-icon);
     background-color: var(--bg-color-primary);
 
