@@ -1,5 +1,5 @@
-@use "./variables" as vars;
-@use "./mixins" as mixins;
+@use "./variables" as *;
+@use "./mixins" as *;
 
 %flex-center {
   display: inline-flex;
@@ -8,9 +8,9 @@
 }
 
 %scroll-margin {
-  scroll-margin-top: vars.$mobile-navbar-hight + 24px;
+  scroll-margin-top: $mobile-navbar-hight + 24px;
 
-  @include mixins.on-desktop {
-    scroll-margin-top: vars.$desktop-navbar-hight + 24px;
+  @include on-desktop {
+    scroll-margin-top: $desktop-navbar-hight + 24px;
   }
 }

@@ -12,9 +12,6 @@
   &__next {
     @extend %flex-center;
 
-    border-style: solid;
-    border-width: $border-width;
-
     @include square-size(32px);
   }
 
@@ -24,33 +21,14 @@
 
   &__prev:disabled,
   &__next:disabled {
-    pointer-events: none;
-    border-color: var(--bd-color-primary);
-    background-color: transparent;
-
-    svg {
-      stroke: var(--icon-color);
-    }
+    @include primary-button-disabled;
   }
 
   &__prev:not(:disabled),
   &__next:not(:disabled) {
-    border-color: var(--bd-color-icon);
-    background-color: var(--bg-color-primary);
+    transform: translateZ(0);
 
-    svg {
-      transform: translateZ(0);
-      opacity: 0.7;
-      transition: scale 0.28s, opacity 0.18s;
-    }
-  }
-
-  &__prev:not(:disabled):hover svg,
-  &__next:not(:disabled):hover svg,
-  &__prev:not(:disabled):focus-visible svg,
-  &__next:not(:disabled):focus-visible svg {
-    scale: 1.125;
-    opacity: 1;
+    @include primary-button;
   }
 }
 

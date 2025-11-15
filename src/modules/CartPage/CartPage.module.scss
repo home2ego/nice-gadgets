@@ -20,3 +20,47 @@
 .heading {
   margin-bottom: 32px;
 }
+
+.cart {
+  @include page-grid;
+
+  .products {
+    grid-column: 1 / -1;
+
+    @include on-desktop {
+      grid-column: 1 / 17;
+    }
+  }
+
+  .summary {
+    grid-column: 1 / -1;
+    padding: 24px;
+    text-align: center;
+
+    @include on-desktop {
+      grid-column: 17 / -1;
+    }
+
+    &__total {
+      color: var(--text-color-secondary);
+    }
+
+    &__line {
+      display: block;
+      height: 1px;
+      margin-block: 16px;
+      background-color: var(--bd-color-primary);
+
+      @include on-desktop {
+        margin-block: 24px;
+      }
+    }
+
+    &__checkout {
+      width: 100%;
+      padding-block: 14px;
+
+      @include accent-button;
+    }
+  }
+}

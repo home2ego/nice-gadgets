@@ -43,15 +43,9 @@
 
   margin-inline: auto;
   padding: 16px 64px;
-  border: $border-width solid var(--bd-color-icon);
   border-radius: 4px;
 
-  background-color: var(--bg-color-primary);
   outline-offset: -1px;
 
-  transition: opacity 0.18s;
-
-  &:hover {
-    opacity: 0.7;
-  }
+  @include primary-button;
 }

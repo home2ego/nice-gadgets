@@ -20,7 +20,7 @@
 
     border-radius: 50%;
 
-    background-color: #313237;
+    background-color: $dark-color;
     outline-offset: -1px;
 
     transition: opacity 0.18s;
@@ -47,20 +47,11 @@
       display: initial;
 
       width: 30px;
-      border: $border-width solid var(--bd-color-icon);
 
-      background-color: var(--bg-color-primary);
+      @include primary-button;
 
       svg {
         width: 100%;
-        opacity: 0.7;
-        transition: scale 0.28s, opacity 0.18s;
-      }
-
-      &:hover svg,
-      &:focus-visible svg {
-        scale: 1.25;
-        opacity: 1;
       }
     }
   }
@@ -116,11 +107,13 @@
     background-color: var(--text-color-primary);
   }
 
-  &__dot:not(.active) .line {
-    transition: opacity 0.18s;
-  }
+  &__dot:not(.active) {
+    .line {
+      transition: opacity 0.18s;
+    }
 
-  &__dot:not(.active):hover .line {
-    opacity: 0.7;
+    &:hover .line {
+      opacity: 0.7;
+    }
   }
 }

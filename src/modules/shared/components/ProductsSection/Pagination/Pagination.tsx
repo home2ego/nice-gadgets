@@ -96,7 +96,7 @@ const Pagination: React.FC<PaginationProps> = ({
                 }}
               >
                 <span className="sr-only">{t("linkPageLabel")}</span>
-                <span className={styles.hovered}>{page.value}</span>
+                {page.value}
               </Link>
             </li>
           ) : (

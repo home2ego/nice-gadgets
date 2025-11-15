@@ -44,16 +44,27 @@ const CartPage = () => {
       <section className={styles.cart} aria-labelledby="cart-heading">
         {cartProducts.length > 0 && (
           <>
-            <ul className={styles.cart__products}>
+            <ul className={styles.products}>
               {cartProducts.map((product) => (
                 <CartProduct key={product.id} t={t} product={product} />
               ))}
             </ul>
 
-            <div className={styles.cart__summary}>
-              <h2>$2657</h2>
-              <p>{t("totalForItems", { count: cartProducts.length })}</p>
-              <button type="button">{t("checkout")}</button>
+            <div className={styles.summary}>
+              <h2 className="title--lg">$2657</h2>
+
+              <p className={clsx(styles.summary__total, "text--body")}>
+                {t("totalForItems", { count: cartProducts.length })}
+              </p>
+
+              <span className={styles.summary__line} />
+
+              <button
+                type="button"
+                className={clsx(styles.summary__checkout, "text--btn")}
+              >
+                {t("checkout")}
+              </button>
             </div>
           </>
         )}

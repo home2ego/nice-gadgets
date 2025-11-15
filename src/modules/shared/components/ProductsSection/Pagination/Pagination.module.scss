@@ -10,16 +10,9 @@
     column-gap: 16px;
   }
 
-  a {
-    outline-offset: 2px;
-  }
-
   &__prev,
   &__next {
     @extend %flex-center;
-
-    border-style: solid;
-    border-width: $border-width;
 
     @include square-size(26px);
 
@@ -30,32 +23,12 @@
 
   &__prev[aria-disabled="true"],
   &__next[aria-disabled="true"] {
-    pointer-events: none;
-    border-color: var(--bd-color-primary);
-    background-color: transparent;
-
-    svg {
-      stroke: var(--icon-color);
-    }
+    @include primary-button-disabled;
   }
 
   &__prev[aria-disabled="false"],
   &__next[aria-disabled="false"] {
-    border-color: var(--bd-color-icon);
-    background-color: var(--bg-color-primary);
-
-    svg {
-      opacity: 0.7;
-      transition: scale 0.28s, opacity 0.18s;
-    }
-  }
-
-  &__prev[aria-disabled="false"]:hover svg,
-  &__next[aria-disabled="false"]:hover svg,
-  &__prev[aria-disabled="false"]:focus-visible svg,
-  &__next[aria-disabled="false"]:focus-visible svg {
-    scale: 1.125;
-    opacity: 1;
+    @include primary-button;
   }
 
   &__list {
@@ -79,23 +52,13 @@
   }
 
   &__item:not(.active) {
-    border: $border-width solid var(--bd-color-icon);
-    background-color: var(--bg-color-secondary);
+    transform: translateZ(0);
 
-    .hovered {
-      transform: translateZ(0);
-      opacity: 0.7;
-      transition: opacity 0.18s;
-    }
-
-    &:hover .hovered,
-    &:focus-visible .hovered {
-      opacity: 1;
-    }
+    @include primary-button(var(--bg-color-secondary));
   }
 
   &__item.active {
-    color: $white-color;
+    color: $light-color;
     background-color: var(--accent-color);
   }
 

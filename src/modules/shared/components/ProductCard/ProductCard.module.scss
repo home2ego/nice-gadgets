@@ -82,40 +82,21 @@
 
   &__cart {
     flex-grow: 1;
-
-    color: $white-color;
     text-align: center;
 
-    background-color: var(--accent-color);
-
-    transition: opacity 0.18s;
-
-    &:hover {
-      opacity: 0.8;
-    }
+    @include accent-button;
 
     &.added {
-      border: $border-width solid var(--bd-color-icon);
       color: var(--text-color-primary);
-      background-color: var(--bg-color-primary);
+
+      @include primary-button;
     }
   }
 
   &__favorite {
     @extend %flex-center;
 
-    border: $border-width solid var(--bd-color-icon);
-    background-color: var(--bg-color-primary);
-
+    @include primary-button;
     @include square-size(42px);
-
-    .icon {
-      transition: opacity 0.18s, scale 0.28s;
-    }
-
-    &:hover .icon {
-      scale: 1.05;
-      opacity: 0.8;
-    }
   }
 }

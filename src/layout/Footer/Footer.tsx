@@ -55,11 +55,9 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
           className={styles.footer__back}
           onClick={handleBackToTop}
         >
-          <span className={clsx("text--sm", styles["footer__back--text"])}>
-            {t("backToTop")}
-          </span>
+          <span className={"text--sm"}>{t("backToTop")}</span>
 
-          <span className={styles["footer__back--icon"]}>
+          <span className={styles.footer__icon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"

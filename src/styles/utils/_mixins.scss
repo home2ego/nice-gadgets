@@ -1,13 +1,13 @@
-@use "./variables" as vars;
+@use "./variables" as *;
 
 @mixin on-tablet {
-  @media (min-width: vars.$tablet-min-width) {
+  @media (min-width: $tablet-min-width) {
     @content;
   }
 }
 
 @mixin on-desktop {
-  @media (min-width: vars.$desktop-min-width) {
+  @media (min-width: $desktop-min-width) {
     @content;
   }
 }
@@ -31,4 +31,37 @@
 @mixin square-size($size) {
   width: $size;
   height: $size;
+}
+
+@mixin accent-button {
+  color: $light-color;
+  background-color: var(--accent-color);
+  transition: opacity 0.18s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin primary-button(
+  $bg-color: var(--bg-color-primary),
+  $bd-color: var(--bd-color-icon)
+) {
+  border: $border-width solid $bd-color;
+  background-color: $bg-color;
+  transition: opacity 0.18s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@mixin primary-button-disabled {
+  pointer-events: none;
+  border: $border-width solid var(--bd-color-primary);
+  background-color: transparent;
+
+  svg {
+    stroke: var(--icon-color);
+  }
 }
