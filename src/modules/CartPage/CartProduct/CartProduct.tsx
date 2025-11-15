@@ -3,6 +3,8 @@ import { useState } from "react";
 import type { Product } from "@/modules/shared/types/product";
 import styles from "./CartProduct.module.scss";
 import { MAX_COUNT, MIN_COUNT } from "./constants";
+import { useAppDispatch } from "@/core/store/hooks";
+import { removeFromCart } from "@/core/store/cart/cartSlice";
 
 interface ProductProps {
   t: TFunction;
@@ -11,10 +13,15 @@ interface ProductProps {
 
 const CartProduct: React.FC<ProductProps> = ({ t, product }) => {
   const [count, setCount] = useState(MIN_COUNT);
+  const dispatch = useAppDispatch();
 
   return (
     <li className={styles.product}>
-      <button type="button">
+      <button
+        type="button"
+        className={styles.product__remove}
+        onClick={() => dispatch(removeFromCart(product))}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="16"
