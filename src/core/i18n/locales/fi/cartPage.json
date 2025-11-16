@@ -8,5 +8,6 @@
   "increaseQuantity": "Lisää määrää",
   "removeCartLabel": "Poista {{product}} ostoskorista",
   "quantityFor": "Säädä määrä tuotteelle {{product}}",
-  "productUpdate": "Määrä: {{quantity}}. Kokonaishinta: {{price}}"
+  "productUpdate": "Määrä: {{quantity}}. Kokonaishinta: {{price}}",
+  "orderTotal": "Tilaussumma"
 }

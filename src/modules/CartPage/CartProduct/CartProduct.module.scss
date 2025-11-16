@@ -49,6 +49,10 @@
     }
   }
 
+  img {
+    object-fit: contain;
+  }
+
   &__controls {
     display: flex;
   }
@@ -74,7 +78,7 @@
   }
 
   &__price {
-    min-width: 80px;
+    min-width: 110px;
     text-align: right;
   }
 }

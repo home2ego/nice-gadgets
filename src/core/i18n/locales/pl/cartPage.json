@@ -9,5 +9,6 @@
   "increaseQuantity": "Zwiększ ilość",
   "removeCartLabel": "Usuń {{product}} z koszyka",
   "quantityFor": "Dostosuj ilość dla {{product}}",
-  "productUpdate": "Ilość: {{quantity}}. Cena całkowita: {{price}}"
+  "productUpdate": "Ilość: {{quantity}}. Cena całkowita: {{price}}",
+  "orderTotal": "Suma zamówienia"
 }

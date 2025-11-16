@@ -8,5 +8,6 @@
   "increaseQuantity": "Increase quantity",
   "removeCartLabel": "Remove {{product}} from cart",
   "quantityFor": "Adjust quantity for {{product}}",
-  "productUpdate": "Quantity: {{quantity}}. Total price: {{price}}"
+  "productUpdate": "Quantity: {{quantity}}. Total price: {{price}}",
+  "orderTotal": "Order total"
 }

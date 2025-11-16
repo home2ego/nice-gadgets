@@ -9,6 +9,13 @@ const store = configureStore({
   },
 });
 
+store.subscribe(() => {
+  localStorage.setItem(
+    "niceGadgetsCart",
+    JSON.stringify(store.getState().cart),
+  );
+});
+
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
 

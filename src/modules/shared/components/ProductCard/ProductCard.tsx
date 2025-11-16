@@ -3,7 +3,7 @@ import type { TFunction } from "i18next";
 import { addToCart, removeFromCart } from "@/core/store/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import type { Product } from "../../types/product";
-import { formatPrice } from "./formatPrice";
+import { formatPrice } from "../../utils/formatPrice";
 import styles from "./ProductCard.module.scss";
 
 interface ProductProps {
@@ -33,10 +33,22 @@ const ProductCard: React.FC<ProductProps> = ({
   onTabFocus,
   onTabKey,
 }) => {
+  const {
+    name,
+    image,
+    id: productId,
+    price,
+    fullPrice,
+    screen,
+    capacity,
+    ram,
+  } = product;
   const dispatch = useAppDispatch();
   const cartProducts = useAppSelector((state) => state.cart);
 
-  const isInCart = cartProducts.some((item) => item.id === product.id);
+  const isInCart = cartProducts.some((cartProduct) => {
+    return cartProduct.id === productId;
+  });
 
   const handleCartClick = () => {
     if (!isInCart) {
@@ -64,7 +76,7 @@ const ProductCard: React.FC<ProductProps> = ({
 
       <img
         className={styles.product__image}
-        src={product.image}
+        src={image}
         alt=""
         width="206"
         height="194"
@@ -72,20 +84,20 @@ const ProductCard: React.FC<ProductProps> = ({
         decoding="async"
       />
 
-      <h3 className="text--body">{product.name}</h3>
+      <h3 className="text--body">{name}</h3>
 
       <div className={clsx(styles.product__prices, "title--sm")}>
         {hasOnlyFullPrice ? (
-          <p>{formatPrice(product.fullPrice, normalizedLang)}</p>
+          <p>{formatPrice(fullPrice, normalizedLang)}</p>
         ) : (
           <>
             <p>
-              {formatPrice(product.price, normalizedLang)}
+              {formatPrice(price, normalizedLang)}
               <span className="sr-only">{t("priceLabel")}</span>
             </p>
 
             <p className={styles["product__full-price"]}>
-              {formatPrice(product.fullPrice, normalizedLang)}
+              {formatPrice(fullPrice, normalizedLang)}
               <span className="sr-only">{t("fullPriceLabel")}</span>
             </p>
           </>
@@ -97,17 +109,17 @@ const ProductCard: React.FC<ProductProps> = ({
       <dl className={clsx(styles.product__details, "text--sm")}>
         <div className={styles.product__detail}>
           <dt className={styles.product__subname}>{t("screen")}</dt>
-          <dd>{product.screen}</dd>
+          <dd>{screen}</dd>
         </div>
 
         <div className={styles.product__detail}>
           <dt className={styles.product__subname}>{t("capacity")}</dt>
-          <dd>{product.capacity}</dd>
+          <dd>{capacity}</dd>
         </div>
 
         <div className={styles.product__detail}>
           <dt className={styles.product__subname}>RAM</dt>
-          <dd>{product.ram}</dd>
+          <dd>{ram}</dd>
         </div>
       </dl>
 
@@ -117,7 +129,7 @@ const ProductCard: React.FC<ProductProps> = ({
           className={clsx(styles.product__cart, "text--btn", {
             [styles.added]: isInCart,
           })}
-          aria-label={t("cartLabel", { product: product.name })}
+          aria-label={t("cartLabel", { product: name })}
           onClick={handleCartClick}
         >
           {isInCart ? t("addedButton") : t("cartButton")}
@@ -126,7 +138,7 @@ const ProductCard: React.FC<ProductProps> = ({
         <button
           type="button"
           className={styles.product__favorite}
-          aria-label={t("favoriteLabel", { product: product.name })}
+          aria-label={t("favoriteLabel", { product: name })}
           onFocus={onTabFocus}
           onKeyDown={onTabKey}
         >

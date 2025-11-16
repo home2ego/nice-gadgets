@@ -9,5 +9,6 @@
   "increaseQuantity": "Збільшити кількість",
   "removeCartLabel": "Видалити {{product}} з кошика",
   "quantityFor": "Змінити кількість для {{product}}",
-  "productUpdate": "Кількість: {{quantity}}. Загальна ціна: {{price}}"
+  "productUpdate": "Кількість: {{quantity}}. Загальна ціна: {{price}}",
+  "orderTotal": "Загальна сума замовлення"
 }
