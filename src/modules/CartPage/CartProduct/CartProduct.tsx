@@ -53,7 +53,7 @@ const CartProduct: React.FC<ProductProps> = ({
           </svg>
         </button>
 
-        <img src={image} alt="" width="80" height="80" />
+        <img src={image} alt="" width="80" height="80" decoding="async" />
 
         <h3 className="text--body">{name}</h3>
       </div>

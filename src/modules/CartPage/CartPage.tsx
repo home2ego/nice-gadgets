@@ -4,6 +4,7 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import type { OutletContext } from "../shared/types/outletContext";
 import { formatPrice } from "../shared/utils/formatPrice";
+import CartEmpty from "./CartEmpty";
 import styles from "./CartPage.module.scss";
 import CartProduct from "./CartProduct";
 import { MIN_COUNT } from "./constants";
@@ -49,42 +50,42 @@ const CartPage = () => {
         {t("cart")}
       </h1>
 
-      <section className={styles.cart} aria-labelledby="cart-heading">
-        {cartProducts.length > 0 && (
-          <>
-            <ul className={styles.products}>
-              {cartProducts.map((product) => (
-                <CartProduct
-                  key={product.id}
-                  t={t}
-                  product={product}
-                  normalizedLang={normalizedLang}
-                />
-              ))}
-            </ul>
+      {cartProducts.length === 0 && <CartEmpty />}
 
-            <div className={styles.summary}>
-              <h2 className="title--lg">
-                <span className="sr-only">{t("orderTotal")}</span>
-                {formatPrice(totalSum, normalizedLang)}
-              </h2>
+      {cartProducts.length > 0 && (
+        <section className={styles.cart} aria-labelledby="cart-heading">
+          <ul className={styles.products}>
+            {cartProducts.map((product) => (
+              <CartProduct
+                key={product.id}
+                t={t}
+                product={product}
+                normalizedLang={normalizedLang}
+              />
+            ))}
+          </ul>
 
-              <p className={clsx(styles.summary__total, "text--body")}>
-                {t("totalForItems", { count: cartProducts.length })}
-              </p>
+          <div className={styles.summary}>
+            <h2 className="title--lg">
+              <span className="sr-only">{t("orderTotal")}</span>
+              {formatPrice(totalSum, normalizedLang)}
+            </h2>
 
-              <span className={styles.summary__line} />
+            <p className={clsx(styles.summary__total, "text--body")}>
+              {t("totalForItems", { count: cartProducts.length })}
+            </p>
 
-              <button
-                type="button"
-                className={clsx(styles.summary__checkout, "text--btn")}
-              >
-                {t("checkout")}
-              </button>
-            </div>
-          </>
-        )}
-      </section>
+            <span className={styles.summary__line} />
+
+            <button
+              type="button"
+              className={clsx(styles.summary__checkout, "text--btn")}
+            >
+              {t("checkout")}
+            </button>
+          </div>
+        </section>
+      )}
     </>
   );
 };
