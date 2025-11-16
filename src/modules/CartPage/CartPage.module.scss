@@ -59,6 +59,7 @@
     &__checkout {
       width: 100%;
       padding-block: 14px;
+      outline-offset: 2px;
 
       @include accent-button;
     }

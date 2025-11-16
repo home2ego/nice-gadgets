@@ -27,7 +27,7 @@
   "prevPageLabel": "Previous page",
   "nextPageLabel": "Next page",
   "linkPageLabel": "Page",
-  "productLabel": "View {{product}}, product {{current}} of {{total}}",
+  "productLabel": "View details, product {{current}} of {{total}}",
   "priceLabel": "discounted price",
   "fullPriceLabel": "previous price",
   "cartButton": "Add to cart",

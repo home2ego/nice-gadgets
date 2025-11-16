@@ -5,5 +5,8 @@
   "totalForItems_other": "Yhteensä {{count}} tuotetta",
   "checkout": "Kassa",
   "decreaseQuantity": "Vähennä määrää",
-  "increaseQuantity": "Lisää määrää"
+  "increaseQuantity": "Lisää määrää",
+  "removeCartLabel": "Poista {{product}} ostoskorista",
+  "quantityFor": "Säädä määrä tuotteelle {{product}}",
+  "productUpdate": "Määrä: {{quantity}}. Kokonaishinta: {{price}}"
 }

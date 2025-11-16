@@ -6,5 +6,8 @@
   "totalForItems_many": "Suma za {{count}} produktów",
   "checkout": "Do kasy",
   "decreaseQuantity": "Zmniejsz ilość",
-  "increaseQuantity": "Zwiększ ilość"
+  "increaseQuantity": "Zwiększ ilość",
+  "removeCartLabel": "Usuń {{product}} z koszyka",
+  "quantityFor": "Dostosuj ilość dla {{product}}",
+  "productUpdate": "Ilość: {{quantity}}. Cena całkowita: {{price}}"
 }

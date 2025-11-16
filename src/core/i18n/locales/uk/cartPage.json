@@ -6,5 +6,8 @@
   "totalForItems_many": "Разом за {{count}} товарів",
   "checkout": "Оформити замовлення",
   "decreaseQuantity": "Зменшити кількість",
-  "increaseQuantity": "Збільшити кількість"
+  "increaseQuantity": "Збільшити кількість",
+  "removeCartLabel": "Видалити {{product}} з кошика",
+  "quantityFor": "Змінити кількість для {{product}}",
+  "productUpdate": "Кількість: {{quantity}}. Загальна ціна: {{price}}"
 }

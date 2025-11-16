@@ -27,7 +27,7 @@
   "prevPageLabel": "Edellinen sivu",
   "nextPageLabel": "Seuraava sivu",
   "linkPageLabel": "Sivu",
-  "productLabel": "Näytä {{product}}, tuote {{current}} / {{total}}",
+  "productLabel": "Näytä tiedot, tuote {{current}} / {{total}}",
   "priceLabel": "alennettu hinta",
   "fullPriceLabel": "aiempi hinta",
   "cartButton": "Lisää koriin",

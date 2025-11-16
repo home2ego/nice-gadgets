@@ -27,7 +27,7 @@
   "prevPageLabel": "Попередня сторінка",
   "nextPageLabel": "Наступна сторінка",
   "linkPageLabel": "Сторінка",
-  "productLabel": "Переглянути {{product}}, товар {{current}} із {{total}}",
+  "productLabel": "Переглянути деталі, товар {{current}} із {{total}}",
   "priceLabel": "акційна ціна",
   "fullPriceLabel": "попередня ціна",
   "cartButton": "До кошика",

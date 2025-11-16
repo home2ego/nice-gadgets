@@ -54,7 +54,6 @@ const ProductCard: React.FC<ProductProps> = ({
       <a
         href="/"
         aria-label={t("productLabel", {
-          product: product.name,
           current: productIdx + 1,
           total: totalProducts,
         })}

@@ -5,5 +5,8 @@
   "totalForItems_other": "Total for {{count}} products",
   "checkout": "Checkout",
   "decreaseQuantity": "Decrease quantity",
-  "increaseQuantity": "Increase quantity"
+  "increaseQuantity": "Increase quantity",
+  "removeCartLabel": "Remove {{product}} from cart",
+  "quantityFor": "Adjust quantity for {{product}}",
+  "productUpdate": "Quantity: {{quantity}}. Total price: {{price}}"
 }

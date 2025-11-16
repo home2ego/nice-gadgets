@@ -27,7 +27,7 @@
   "prevPageLabel": "Poprzednia strona",
   "nextPageLabel": "Następna strona",
   "linkPageLabel": "Strona",
-  "productLabel": "Zobacz {{product}}, produkt {{current}} z {{total}}",
+  "productLabel": "Zobacz szczegóły, produkt {{current}} z {{total}}",
   "priceLabel": "promocyjna cena",
   "fullPriceLabel": "poprzednia cena",
   "cartButton": "Do koszyka",
