@@ -73,12 +73,22 @@
 
   color: var(--text-color-primary);
 
+  opacity: 0;
   background-color: var(--dialog-bg);
 
   &::backdrop {
+    opacity: 0;
     background-color: var(--dialog-backdrop-bg);
     -webkit-backdrop-filter: blur(4px); /* Safari support 9-17.6 */
     backdrop-filter: blur(4px);
+  }
+
+  &[open] {
+    animation: dialog-fade-in 0.18s ease-out forwards;
+  }
+
+  &[open]::backdrop {
+    animation: backdrop-fade-in 0.18s ease-out forwards;
   }
 
   & > *:nth-child(-n + 2) {
@@ -96,5 +106,26 @@
     outline-offset: 2px;
 
     @include accent-button;
+  }
+}
+
+@keyframes dialog-fade-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes backdrop-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
