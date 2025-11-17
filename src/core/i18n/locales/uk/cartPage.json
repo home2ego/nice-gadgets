@@ -10,5 +10,7 @@
   "removeCartLabel": "Видалити {{product}} з кошика",
   "quantityFor": "Змінити кількість для {{product}}",
   "productUpdate": "Кількість: {{quantity}}. Загальна ціна: {{price}}",
-  "orderTotal": "Загальна сума замовлення"
+  "orderTotal": "Загальна сума замовлення",
+  "notAvailableTitle": "Ще недоступно",
+  "notAvailableMessage": "Функція оформлення замовлення наразі в розробці.\nДякуємо за ваше терпіння!"
 }

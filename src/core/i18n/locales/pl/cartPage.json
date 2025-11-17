@@ -10,5 +10,7 @@
   "removeCartLabel": "Usuń {{product}} z koszyka",
   "quantityFor": "Dostosuj ilość dla {{product}}",
   "productUpdate": "Ilość: {{quantity}}. Cena całkowita: {{price}}",
-  "orderTotal": "Suma zamówienia"
+  "orderTotal": "Suma zamówienia",
+  "notAvailableTitle": "Jeszcze niedostępne",
+  "notAvailableMessage": "Funkcja płatności jest w trakcie tworzenia.\nDziękujemy za cierpliwość!"
 }

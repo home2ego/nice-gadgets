@@ -9,5 +9,7 @@
   "removeCartLabel": "Poista {{product}} ostoskorista",
   "quantityFor": "Säädä määrä tuotteelle {{product}}",
   "productUpdate": "Määrä: {{quantity}}. Kokonaishinta: {{price}}",
-  "orderTotal": "Tilaussumma"
+  "orderTotal": "Tilaussumma",
+  "notAvailableTitle": "Ei vielä saatavilla",
+  "notAvailableMessage": "Kassaominaisuus on vielä kehitteillä.\nKiitos kärsivällisyydestäsi!"
 }

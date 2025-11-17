@@ -1,5 +1,6 @@
 .product {
   padding: 16px;
+  border: $border-width solid var(--bd-color-secondary);
   background-color: var(--bg-color-secondary);
 
   @include on-tablet {

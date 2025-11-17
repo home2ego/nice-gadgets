@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
@@ -14,6 +15,7 @@ const CartPage = () => {
   const { t } = useTranslation("cartPage");
   const cartProducts = useAppSelector((state) => state.cart);
   const navigate = useNavigate();
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const totalSum = cartProducts.reduce((acc, { price, count = MIN_COUNT }) => {
     return acc + price * count;
@@ -80,12 +82,42 @@ const CartPage = () => {
             <button
               type="button"
               className={clsx(styles.summary__checkout, "text--btn")}
+              onClick={() => dialogRef.current?.showModal()}
             >
               {t("checkout")}
             </button>
           </div>
         </section>
       )}
+
+      <dialog
+        ref={dialogRef}
+        closedby="any"
+        className={styles.dialog}
+        aria-labelledby="not-available-title"
+        aria-describedby="not-available-desc"
+      >
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+        <h2 id="not-available-title" className="title--lg">
+          {t("notAvailableTitle")}
+        </h2>
+
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+        <p
+          id="not-available-desc"
+          className={clsx(styles.dialog__message, "text--body")}
+        >
+          {t("notAvailableMessage")}
+        </p>
+
+        <button
+          type="button"
+          className={clsx(styles.dialog__ok, "text--btn")}
+          onClick={() => dialogRef.current?.close()}
+        >
+          OK
+        </button>
+      </dialog>
     </>
   );
 };

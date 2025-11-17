@@ -14,6 +14,10 @@
   --icon-color: #4a4d58;
   --accent-color: #7852db;
 
+  --dialog-bg: #1a1d1f;
+  --dialog-bd: #262a2d;
+  --dialog-backdrop-bg: rgb(33 37 41 / 20%);
+
   font-family: Mont, system-ui;
   -webkit-font-smoothing: antialiased;
   color: var(--text-color-primary);
@@ -33,6 +37,10 @@
   --bd-color-icon: #b4bdc3;
   --icon-color: var(--bd-color-icon);
   --accent-color: var(--text-color-primary);
+
+  --dialog-bg: var(--bg-color-layout);
+  --dialog-bd: var(--bd-color-primary);
+  --dialog-backdrop-bg: rgb(255 255 255 / 20%);
 
   -webkit-font-smoothing: auto;
 }
