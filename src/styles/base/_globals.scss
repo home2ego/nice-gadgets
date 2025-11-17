@@ -1,13 +1,13 @@
 @use "../utils" as *;
 
 :root {
-  --bg-nav: rgb(15 17 33 / 50%);
-  --bg-color-layout: #0f1121;
-  --bg-color-primary: #323542;
-  --bg-color-secondary: #161827;
+  --bg-nav: rgb(33 37 41 / 50%);
+  --bg-color-layout: #212529;
+  --bg-color-primary: #30353c;
+  --bg-color-secondary: #1c2023;
   --bg-color-option: var(--bg-color-primary);
   --text-color-primary: #f1f2f9;
-  --text-color-secondary: #81828c;
+  --text-color-secondary: #848e95;
   --bd-color-primary: #3b3e4a;
   --bd-color-secondary: transparent;
   --bd-color-icon: transparent;
