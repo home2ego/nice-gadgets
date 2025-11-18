@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import styles from "./FavouritesPage.module.scss";
+import Breadcrumb from "../shared/components/Breadcrumb";
 
 const FavouritesPage = () => {
   const { t } = useTranslation("favouritesPage");
@@ -8,7 +8,7 @@ const FavouritesPage = () => {
     <>
       <title>{t("title")}</title>
 
-      <h1 className={styles.heading}>{t("favourites")}</h1>
+      <Breadcrumb t={t} heading="favourites" />
     </>
   );
 };
