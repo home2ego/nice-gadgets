@@ -1,5 +1,6 @@
 {
   "title": "Koszyk | Nice Gadgets",
+  "cart": "Koszyk",
   "back": "Wstecz",
   "totalForItems_one": "Suma za {{count}} produkt",
   "totalForItems_few": "Suma za {{count}} produkty",
@@ -12,5 +13,6 @@
   "productUpdate": "Ilość: {{quantity}}. Cena całkowita: {{price}}",
   "orderTotal": "Suma zamówienia",
   "notAvailableTitle": "Jeszcze niedostępne",
-  "notAvailableMessage": "Funkcja płatności jest w trakcie tworzenia.\nDziękujemy za cierpliwość!"
+  "notAvailableMessage": "Funkcja płatności jest w trakcie tworzenia.\nDziękujemy za cierpliwość!",
+  "cartEmpty": "Twój koszyk jest pusty"
 }

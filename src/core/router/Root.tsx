@@ -4,6 +4,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import App from "@/App";
 import AccessoriesPage from "@/modules/AccessoriesPage";
 import CartPage from "@/modules/CartPage";
+import FavouritesPage from "@/modules/FavouritesPage";
 import HomePage from "@/modules/HomePage";
 import NotFound from "@/modules/NotFound";
 import PhonesPage from "@/modules/PhonesPage";
@@ -20,7 +21,7 @@ const Root = () => (
         <Route path="tablets" element={<TabletsPage />} />
         <Route path="accessories" element={<AccessoriesPage />} />
 
-        <Route path="favorites" element={<div>Favorites Page</div>} />
+        <Route path="favorites" element={<FavouritesPage />} />
         <Route path="cart" element={<CartPage />} />
 
         <Route path="contacts" element={<div>Contacts Page</div>} />

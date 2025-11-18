@@ -1,5 +1,6 @@
 {
   "title": "Shopping cart | Nice Gadgets",
+  "cart": "Cart",
   "back": "Back",
   "totalForItems_one": "Total for {{count}} product",
   "totalForItems_other": "Total for {{count}} products",
@@ -11,5 +12,6 @@
   "productUpdate": "Quantity: {{quantity}}. Total price: {{price}}",
   "orderTotal": "Order total",
   "notAvailableTitle": "Not Available Yet",
-  "notAvailableMessage": "Checkout is currently in development.\nThanks for your patience!"
+  "notAvailableMessage": "Checkout is currently in development.\nThanks for your patience!",
+  "cartEmpty": "Your cart is empty"
 }

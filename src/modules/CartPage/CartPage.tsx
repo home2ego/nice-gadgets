@@ -52,7 +52,7 @@ const CartPage = () => {
         {t("cart")}
       </h1>
 
-      {cartProducts.length === 0 && <CartEmpty />}
+      {cartProducts.length === 0 && <CartEmpty t={t} />}
 
       {cartProducts.length > 0 && (
         <section className={styles.cart} aria-labelledby="cart-heading">
