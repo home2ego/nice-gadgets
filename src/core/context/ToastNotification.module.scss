@@ -1,0 +1,41 @@
+.toast {
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 50;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__message {
+    transform: translateY(-10px) scale(0.95);
+
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+
+    padding: 16px 20px;
+    border-radius: 8px;
+
+    -webkit-font-smoothing: auto;
+    color: $dark-color;
+
+    opacity: 0;
+    background-color: rgba(168 230 207 / 80%);
+    -webkit-backdrop-filter: blur(8px); /* Safari support 9-17.6 */
+    backdrop-filter: blur(8px);
+
+    animation: fadeIn 0.28s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

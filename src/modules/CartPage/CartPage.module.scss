@@ -67,6 +67,8 @@
 }
 
 .dialog {
+  transform: scale(0.95);
+
   padding: 28px;
   border: $border-width solid var(--dialog-bd);
   border-radius: 8px;
@@ -110,11 +112,6 @@
 }
 
 @keyframes dialog-fade-in {
-  from {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-
   to {
     transform: scale(1);
     opacity: 1;
@@ -122,9 +119,6 @@
 }
 
 @keyframes backdrop-fade-in {
-  from {
-    opacity: 0;
-  }
   to {
     opacity: 1;
   }

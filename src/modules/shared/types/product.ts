@@ -3,6 +3,7 @@ export interface Product {
   category: string;
   itemId: string;
   name: string;
+  shortName: string;
   fullPrice: number;
   price: number;
   screen: string;

@@ -22,7 +22,7 @@ const CartProduct: React.FC<ProductProps> = ({
   product,
   normalizedLang,
 }) => {
-  const { count = MIN_COUNT, price, name, image } = product;
+  const { count = MIN_COUNT, price, name, shortName, image } = product;
   const dispatch = useAppDispatch();
 
   const formattedPrice = formatPrice(price * count, normalizedLang);
@@ -33,7 +33,7 @@ const CartProduct: React.FC<ProductProps> = ({
         <button
           type="button"
           className={styles.product__remove}
-          aria-label={t("removeCartLabel", { product: name })}
+          aria-label={t("removeCartLabel", { product: shortName })}
           onClick={() => dispatch(removeFromCart(product))}
         >
           <svg
@@ -62,7 +62,7 @@ const CartProduct: React.FC<ProductProps> = ({
         {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
         <div
           role="group"
-          aria-label={t("quantityFor", { product: name })}
+          aria-label={t("quantityFor", { product: shortName })}
           className={styles.product__controls}
         >
           <button

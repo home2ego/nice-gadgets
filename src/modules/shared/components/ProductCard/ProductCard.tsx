@@ -1,5 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
+import { useContext } from "react";
+import { ToastContext } from "@/core/context/ToastProvider";
 import { addToCart, removeFromCart } from "@/core/store/cart/cartSlice";
 import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import type { Product } from "../../types/product";
@@ -35,6 +37,7 @@ const ProductCard: React.FC<ProductProps> = ({
 }) => {
   const {
     name,
+    shortName,
     image,
     id: productId,
     price,
@@ -45,6 +48,7 @@ const ProductCard: React.FC<ProductProps> = ({
   } = product;
   const dispatch = useAppDispatch();
   const cartProducts = useAppSelector((state) => state.cart);
+  const { showToast } = useContext(ToastContext);
 
   const isInCart = cartProducts.some((cartProduct) => {
     return cartProduct.id === productId;
@@ -53,6 +57,7 @@ const ProductCard: React.FC<ProductProps> = ({
   const handleCartClick = () => {
     if (!isInCart) {
       dispatch(addToCart(product));
+      showToast(`Added to cart — ${shortName}`);
     }
 
     if (isInCart) {
@@ -129,7 +134,7 @@ const ProductCard: React.FC<ProductProps> = ({
           className={clsx(styles.product__cart, "text--btn", {
             [styles.added]: isInCart,
           })}
-          aria-label={t("cartLabel", { product: name })}
+          aria-label={t("cartLabel", { product: shortName })}
           onClick={handleCartClick}
         >
           {isInCart ? t("addedButton") : t("cartButton")}
@@ -138,7 +143,7 @@ const ProductCard: React.FC<ProductProps> = ({
         <button
           type="button"
           className={styles.product__favorite}
-          aria-label={t("favoriteLabel", { product: name })}
+          aria-label={t("favoriteLabel", { product: shortName })}
           onFocus={onTabFocus}
           onKeyDown={onTabKey}
         >
