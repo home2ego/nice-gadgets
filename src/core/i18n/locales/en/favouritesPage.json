@@ -1,4 +1,6 @@
 {
   "title": "Favourites | Nice Gadgets",
-  "favourites": "Favourites"
+  "favourites": "Favourites",
+  "countItems_one": "{{count}} item",
+  "countItems_other": "{{count}} items"
 }

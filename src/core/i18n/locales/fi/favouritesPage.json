@@ -1,4 +1,6 @@
 {
   "title": "Suosikit | Nice Gadgets",
-  "favourites": "Suosikit"
+  "favourites": "Suosikit",
+  "countItems_one": "{{count}} tuote",
+  "countItems_other": "{{count}} tuotetta"
 }

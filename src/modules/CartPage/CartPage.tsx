@@ -17,9 +17,13 @@ const CartPage = () => {
   const navigate = useNavigate();
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  const totalSum = cartProducts.reduce((acc, { price, count = MIN_COUNT }) => {
-    return acc + price * count;
-  }, 0);
+  let totalSum = 0;
+  let totalCount = 0;
+
+  cartProducts.forEach(({ price, count = MIN_COUNT }) => {
+    totalSum += price * count;
+    totalCount += count;
+  });
 
   return (
     <>
@@ -74,7 +78,7 @@ const CartPage = () => {
             </h2>
 
             <p className={clsx(styles.summary__total, "text--body")}>
-              {t("totalForItems", { count: cartProducts.length })}
+              {t("totalForItems", { count: totalCount })}
             </p>
 
             <span className={styles.summary__line} />

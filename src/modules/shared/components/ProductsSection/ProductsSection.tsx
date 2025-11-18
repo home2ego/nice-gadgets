@@ -176,7 +176,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
       </div>
 
       {visibleProducts.length === 0 && (
-        <h2 className="title--md">{t(noProducts)}</h2>
+        <h2 className={clsx("title--md", styles.empty)}>{t(noProducts)}</h2>
       )}
 
       {visibleProducts.length > 0 && (

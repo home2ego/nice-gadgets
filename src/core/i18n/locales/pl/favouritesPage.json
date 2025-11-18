@@ -1,4 +1,7 @@
 {
   "title": "Ulubione | Nice Gadgets",
-  "favourites": "Ulubione"
+  "favourites": "Ulubione",
+  "countItems_one": "{{count}} produkt",
+  "countItems_few": "{{count}} produkty",
+  "countItems_many": "{{count}} produktów"
 }

@@ -1,4 +1,7 @@
 {
   "title": "Улюблене | Nice Gadgets",
-  "favourites": "Улюблене"
+  "favourites": "Улюблене",
+  "countItems_one": "{{count}} товар",
+  "countItems_few": "{{count}} товари",
+  "countItems_many": "{{count}} товарів"
 }

@@ -67,8 +67,6 @@
 }
 
 .dialog {
-  transform: scale(0.95);
-
   padding: 28px;
   border: $border-width solid var(--dialog-bd);
   border-radius: 8px;
@@ -86,11 +84,11 @@
   }
 
   &[open] {
-    animation: dialog-fade-in 0.18s ease-out forwards;
+    animation: dialog-fade-in 0.28s ease-out forwards;
   }
 
   &[open]::backdrop {
-    animation: backdrop-fade-in 0.18s ease-out forwards;
+    animation: backdrop-fade-in 0.28s ease-out forwards;
   }
 
   & > *:nth-child(-n + 2) {
@@ -113,7 +111,6 @@
 
 @keyframes dialog-fade-in {
   to {
-    transform: scale(1);
     opacity: 1;
   }
 }
