@@ -25,7 +25,7 @@
     color: $dark-color;
 
     opacity: 0;
-    background-color: rgba(168 230 207 / 80%);
+    background-color: $bg-color-toast;
     -webkit-backdrop-filter: blur(8px); /* Safari support 9-17.6 */
     backdrop-filter: blur(8px);
 

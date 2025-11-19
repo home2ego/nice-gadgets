@@ -10,3 +10,7 @@
     margin-bottom: 40px;
   }
 }
+
+.products {
+  @include products-grid;
+}

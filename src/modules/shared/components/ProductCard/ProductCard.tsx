@@ -3,6 +3,10 @@ import type { TFunction } from "i18next";
 import { useContext } from "react";
 import { ToastContext } from "@/core/context/ToastProvider";
 import { addToCart, removeFromCart } from "@/core/store/cart/cartSlice";
+import {
+  addToFavourites,
+  removeFromFavourites,
+} from "@/core/store/favourites/favouritesSlice";
 import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import type { Product } from "../../types/product";
 import { formatPrice } from "../../utils/formatPrice";
@@ -48,10 +52,15 @@ const ProductCard: React.FC<ProductProps> = ({
   } = product;
   const dispatch = useAppDispatch();
   const cartProducts = useAppSelector((state) => state.cart);
+  const favouritesProducts = useAppSelector((state) => state.favourites);
   const { showToast } = useContext(ToastContext);
 
   const isInCart = cartProducts.some((cartProduct) => {
     return cartProduct.id === productId;
+  });
+
+  const isInFavourites = favouritesProducts.some((favouritesProduct) => {
+    return favouritesProduct.id === productId;
   });
 
   const handleCartClick = () => {
@@ -62,6 +71,16 @@ const ProductCard: React.FC<ProductProps> = ({
 
     if (isInCart) {
       dispatch(removeFromCart(product));
+    }
+  };
+
+  const handleFavouritesClick = () => {
+    if (!isInFavourites) {
+      dispatch(addToFavourites(product));
+    }
+
+    if (isInFavourites) {
+      dispatch(removeFromFavourites(product));
     }
   };
 
@@ -146,14 +165,19 @@ const ProductCard: React.FC<ProductProps> = ({
           aria-label={t("favoriteLabel", { product: shortName })}
           onFocus={onTabFocus}
           onKeyDown={onTabKey}
+          onClick={handleFavouritesClick}
         >
           <svg
             className={styles.icon}
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill="none"
-            stroke="var(--text-color-primary)"
+            fill={isInFavourites ? "var(--active-color)" : "none"}
+            stroke={
+              isInFavourites
+                ? "var(--active-color)"
+                : "var(--text-color-primary)"
+            }
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"

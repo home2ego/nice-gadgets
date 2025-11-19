@@ -1,15 +1,11 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
 import type { Product } from "@/modules/shared/types/product";
-
-const storedCartProducts = (): Product[] => {
-  const saved = localStorage.getItem("niceGadgetsCart");
-  return saved ? JSON.parse(saved) : [];
-};
+import { getStoredProducts } from "../getStoredProducts";
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: storedCartProducts(),
+  initialState: getStoredProducts("niceGadgetsCart"),
   reducers: {
     addToCart: (state, action: PayloadAction<Product>) => {
       state.push({ ...action.payload, count: 1 });

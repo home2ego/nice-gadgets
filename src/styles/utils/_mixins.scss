@@ -28,6 +28,19 @@
   }
 }
 
+@mixin products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $card-width);
+  gap: 40px 16px;
+  justify-content: start;
+
+  margin-bottom: 24px;
+
+  @include on-tablet {
+    margin-bottom: 40px;
+  }
+}
+
 @mixin square-size($size) {
   width: $size;
   height: $size;
