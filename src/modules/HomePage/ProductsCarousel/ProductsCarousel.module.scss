@@ -38,7 +38,7 @@
 
   overflow-x: auto;
   display: grid;
-  grid-auto-columns: $card-width;
+  grid-auto-columns: $tablet-card-width;
   grid-auto-flow: column;
   column-gap: 16px;
 }

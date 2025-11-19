@@ -30,13 +30,14 @@
 
 @mixin products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, $card-width);
+  grid-template-columns: repeat(auto-fit, $mobile-card-width);
   gap: 40px 16px;
-  justify-content: start;
+  justify-content: center;
 
   margin-bottom: 24px;
 
   @include on-tablet {
+    grid-template-columns: repeat(auto-fill, $tablet-card-width);
     margin-bottom: 40px;
   }
 }

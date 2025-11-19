@@ -22,12 +22,8 @@
 
   &__image {
     transform-origin: bottom;
-
     width: 100%;
-    max-width: 206px;
-
     object-fit: contain;
-
     transition: scale 0.28s;
   }
 
