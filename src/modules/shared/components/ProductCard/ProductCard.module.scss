@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .product {
   position: relative;
 
@@ -132,7 +134,7 @@
       @for $num from 1 through 6 {
         &:nth-child(#{$num}) {
           transform: translate(-50%, -50%)
-            rotate(#{360deg / 6 * $num})
+            rotate(#{math.div(360deg, 6) * $num})
             translateX(20px);
         }
       }
