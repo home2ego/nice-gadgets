@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ToastContext } from "@/core/context/ToastProvider";
 import { addToCart, removeFromCart } from "@/core/store/cart/cartSlice";
 import {
@@ -10,6 +10,7 @@ import {
 import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import type { Product } from "../../types/product";
 import { formatPrice } from "../../utils/formatPrice";
+import { PARTICLE_KEYS } from "./constants";
 import styles from "./ProductCard.module.scss";
 
 interface ProductProps {
@@ -54,6 +55,7 @@ const ProductCard: React.FC<ProductProps> = ({
   const cartProducts = useAppSelector((state) => state.cart);
   const favouritesProducts = useAppSelector((state) => state.favourites);
   const { showToast } = useContext(ToastContext);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const isInCart = cartProducts.some((cartProduct) => {
     return cartProduct.id === productId;
@@ -67,9 +69,7 @@ const ProductCard: React.FC<ProductProps> = ({
     if (!isInCart) {
       dispatch(addToCart(product));
       showToast(`Added to cart — ${shortName}`);
-    }
-
-    if (isInCart) {
+    } else {
       dispatch(removeFromCart(product));
     }
   };
@@ -77,9 +77,13 @@ const ProductCard: React.FC<ProductProps> = ({
   const handleFavouritesClick = () => {
     if (!isInFavourites) {
       dispatch(addToFavourites(product));
-    }
 
-    if (isInFavourites) {
+      setIsAnimating(false);
+
+      requestAnimationFrame(() => {
+        setIsAnimating(true);
+      });
+    } else {
       dispatch(removeFromFavourites(product));
     }
   };
@@ -154,6 +158,7 @@ const ProductCard: React.FC<ProductProps> = ({
             [styles.added]: isInCart,
           })}
           aria-label={t("cartLabel", { product: shortName })}
+          aria-pressed={isInCart}
           onClick={handleCartClick}
         >
           {isInCart ? t("addedButton") : t("cartButton")}
@@ -161,8 +166,12 @@ const ProductCard: React.FC<ProductProps> = ({
 
         <button
           type="button"
-          className={styles.product__favorite}
+          className={clsx(styles.product__favorite, {
+            [styles.active]: isInFavourites,
+            [styles.animating]: isAnimating,
+          })}
           aria-label={t("favoriteLabel", { product: shortName })}
+          aria-pressed={isInFavourites}
           onFocus={onTabFocus}
           onKeyDown={onTabKey}
           onClick={handleFavouritesClick}
@@ -172,12 +181,8 @@ const ProductCard: React.FC<ProductProps> = ({
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
-            fill={isInFavourites ? "var(--active-color)" : "none"}
-            stroke={
-              isInFavourites
-                ? "var(--active-color)"
-                : "var(--text-color-primary)"
-            }
+            fill="none"
+            stroke="var(--text-color-primary)"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -186,6 +191,16 @@ const ProductCard: React.FC<ProductProps> = ({
           >
             <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
           </svg>
+
+          <div className={styles.effect}>
+            <div className={styles.circle} />
+
+            <div>
+              {PARTICLE_KEYS.map((key) => (
+                <div key={key} className={styles.particle} />
+              ))}
+            </div>
+          </div>
         </button>
       </div>
     </article>

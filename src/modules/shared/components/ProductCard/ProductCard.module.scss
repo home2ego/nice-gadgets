@@ -92,7 +92,98 @@
   &__favorite {
     @extend %flex-center;
 
+    position: relative;
+
     @include primary-button;
     @include square-size(42px);
+
+    &.active .icon {
+      fill: var(--active-color);
+      stroke: var(--active-color);
+    }
+
+    .effect {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+    }
+
+    .circle {
+      position: absolute;
+      transform: scale(0);
+      border: 20px solid $color-pink-dark;
+      border-radius: 50%;
+
+      @include square-size(38px);
+    }
+
+    .particle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      border-radius: 50%;
+
+      background-color: $color-particle;
+
+      @include square-size(0);
+
+      @for $num from 1 through 6 {
+        &:nth-child(#{$num}) {
+          transform: translate(-50%, -50%)
+            rotate(#{360deg / 6 * $num})
+            translateX(20px);
+        }
+      }
+    }
+
+    &.animating {
+      .circle {
+        animation: circle-effect 0.5s ease-out forwards;
+      }
+
+      .particle {
+        animation: particle-effect 1s ease-out forwards;
+      }
+    }
+  }
+}
+
+@keyframes circle-effect {
+  0% {
+    transform: scale(0);
+    border-color: $color-pink-dark;
+  }
+
+  50% {
+    border-color: $color-pink-light;
+    border-width: 20px;
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+    border-width: 0;
+  }
+}
+
+@keyframes particle-effect {
+  0%,
+  25% {
+    transform: rotate(0deg) translate(-50%, -50%);
+
+    @include square-size(0);
+  }
+
+  60% {
+    @include square-size(4px);
+  }
+
+  100% {
+    @include square-size(0);
   }
 }
