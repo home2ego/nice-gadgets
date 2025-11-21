@@ -2,7 +2,7 @@ import type { TFunction } from "i18next";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import CartLink from "./CartLink";
-import FavoriteLink from "./FavoriteLink";
+import FavouritesLink from "./FavouritesLink";
 import styles from "./Navbar.module.scss";
 
 interface NavbarProps {
@@ -159,9 +159,8 @@ const Navbar: React.FC<NavbarProps> = ({
         </ul>
 
         <ul className={styles["navbar__list-utility"]}>
-          {/* UNITE FavoriteLink & CartLink later */}
           <li>
-            <FavoriteLink t={t} onLinkClick={handleLinkClick} />
+            <FavouritesLink t={t} onLinkClick={handleLinkClick} />
           </li>
 
           <li>
