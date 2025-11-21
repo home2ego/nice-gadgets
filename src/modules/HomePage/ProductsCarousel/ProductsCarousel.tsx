@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useMemo, useRef, useState } from "react";
+import Icon from "@/layout/shared/components/Icon";
 import ProductCard from "@/modules/shared/components/ProductCard";
 import SkipLink from "@/modules/shared/components/SkipLink";
 import type { Product } from "@/modules/shared/types/product";
@@ -224,20 +225,9 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
             }
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="none"
-            stroke="var(--text-color-primary)"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <Icon>
             <path d="m15 18-6-6 6-6" />
-          </svg>
+          </Icon>
         </button>
 
         <button
@@ -252,20 +242,9 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
             }
           }}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="none"
-            stroke="var(--text-color-primary)"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <Icon>
             <path d="m9 18 6-6-6-6" />
-          </svg>
+          </Icon>
         </button>
       </div>
 

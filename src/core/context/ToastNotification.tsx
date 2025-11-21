@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import Icon from "@/layout/shared/components/Icon";
 import styles from "./ToastNotification.module.scss";
 import type { Toast } from "./toast";
 
@@ -16,20 +17,9 @@ const ToastNotification: React.FC<ToastProps> = ({ toasts }) => (
   >
     {toasts.map((toast) => (
       <div key={toast.id} className={clsx(styles.toast__message, "text--sm")}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          aria-hidden="true"
-        >
+        <Icon stroke="currentColor" width="24" height="24">
           <path d="M20 6 9 17l-5-5" />
-        </svg>
+        </Icon>
 
         <span>{toast.message}</span>
       </div>

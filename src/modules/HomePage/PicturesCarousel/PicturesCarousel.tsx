@@ -8,6 +8,7 @@ import appleWatchImage from "@/assets/images/apple-watch-lg.webp";
 import appleWatchImageMini from "@/assets/images/apple-watch-sm.webp";
 import iPhoneImage from "@/assets/images/iPhone-lg.webp";
 import iPhoneImageMini from "@/assets/images/iPhone-sm.webp";
+import Icon from "@/layout/shared/components/Icon";
 import type { Slide } from "../slide";
 import { AUTOPLAY_THRESHOLD } from "./constants";
 import styles from "./PicturesCarousel.module.scss";
@@ -224,36 +225,14 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         data-pause-button=""
       >
         {pausedState ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="#f1f2f9"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <Icon stroke="#f1f2f9" width="24" height="24">
             <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" />
-          </svg>
+          </Icon>
         ) : (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            fill="none"
-            stroke="#f1f2f9"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
+          <Icon stroke="#f1f2f9" width="24" height="24">
             <rect width="5" height="18" x="14" y="3" rx="1" />
             <rect width="5" height="18" x="5" y="3" rx="1" />
-          </svg>
+          </Icon>
         )}
       </button>
 
@@ -284,20 +263,9 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         onClick={handlePrevSlideShow}
         aria-label={t("prevLabel")}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m15 18-6-6 6-6" />
-        </svg>
+        </Icon>
       </button>
 
       <button
@@ -306,20 +274,9 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         onClick={handleNextSlideShow}
         aria-label={t("nextLabel")}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m9 18 6-6-6-6" />
-        </svg>
+        </Icon>
       </button>
 
       <div

@@ -2,6 +2,7 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useId, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import Icon from "@/layout/shared/components/Icon";
 import type { PageOption, SortOption } from "@/modules/shared/types/select";
 import styles from "./Select.module.scss";
 
@@ -165,20 +166,9 @@ const Select: React.FC<SelectProps> = ({
           {t(selected)}
         </span>
 
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m6 9 6 6 6-6" />
-        </svg>
+        </Icon>
       </button>
 
       <div role="listbox" className={styles.dropdown__menu} ref={menuRef}>

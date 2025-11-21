@@ -97,7 +97,7 @@
     @include primary-button;
     @include square-size(42px);
 
-    &.active .icon {
+    &.active svg {
       fill: var(--active-color);
       stroke: var(--active-color);
     }

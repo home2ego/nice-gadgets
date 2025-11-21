@@ -5,6 +5,7 @@ import iconEN from "@/assets/icons/en.svg";
 import iconFI from "@/assets/icons/fi.svg";
 import iconPL from "@/assets/icons/pl.svg";
 import iconUK from "@/assets/icons/uk.svg";
+import Icon from "@/layout/shared/components/Icon";
 import styles from "./LangButton.module.scss";
 
 const languages = [
@@ -140,34 +141,12 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         onKeyDown={handleToggleKey}
         ref={toggleRef}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6" />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        </Icon>
+        <Icon>
           <path d="m6 9 6 6 6-6" />
-        </svg>
+        </Icon>
       </button>
 
       <div className={styles.dropdown__menu} ref={menuRef}>

@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
+import Icon from "@/layout/shared/components/Icon";
 import type { OutletContext } from "../shared/types/outletContext";
 import { formatPrice } from "../shared/utils/formatPrice";
 import CartEmpty from "./CartEmpty";
@@ -34,20 +35,9 @@ const CartPage = () => {
         className={styles.back}
         onClick={() => navigate(-1)}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m15 18-6-6 6-6" />
-        </svg>
+        </Icon>
         <span className="text--sm">{t("back")}</span>
       </button>
 

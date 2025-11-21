@@ -6,6 +6,7 @@ import {
   removeFromCart,
 } from "@/core/store/cart/cartSlice";
 import { useAppDispatch } from "@/core/store/hooks";
+import Icon from "@/layout/shared/components/Icon";
 import type { Product } from "@/modules/shared/types/product";
 import { formatPrice } from "@/modules/shared/utils/formatPrice";
 import { MAX_COUNT, MIN_COUNT } from "../constants";
@@ -36,21 +37,10 @@ const CartProduct: React.FC<ProductProps> = ({
           aria-label={t("removeCartLabel", { product: shortName })}
           onClick={() => dispatch(removeFromCart(product))}
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="var(--text-color-primary)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
+          <Icon>
             <path d="M18 6 6 18" />
             <path d="m6 6 12 12" />
-          </svg>
+          </Icon>
         </button>
 
         <img src={image} alt="" width="80" height="80" decoding="async" />
@@ -72,20 +62,9 @@ const CartProduct: React.FC<ProductProps> = ({
             disabled={count === MIN_COUNT}
             aria-label={t("decreaseQuantity")}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
+            <Icon>
               <path d="M5 12h14" />
-            </svg>
+            </Icon>
           </button>
 
           <p
@@ -102,21 +81,10 @@ const CartProduct: React.FC<ProductProps> = ({
             disabled={count === MAX_COUNT}
             aria-label={t("increaseQuantity")}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
+            <Icon>
               <path d="M5 12h14" />
               <path d="M12 5v14" />
-            </svg>
+            </Icon>
           </button>
         </div>
 

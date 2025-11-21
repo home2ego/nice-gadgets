@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
+import Icon from "@/layout/shared/components/Icon";
 import { INITIAL_PAGE } from "../constants";
 import { generatePages } from "./generatePages";
 import styles from "./Pagination.module.scss";
@@ -58,20 +59,9 @@ const Pagination: React.FC<PaginationProps> = ({
         onPointerDown={() => handleInputType("pointer")}
         onKeyDown={() => handleInputType("keyboard")}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m15 18-6-6 6-6" />
-        </svg>
+        </Icon>
       </Link>
 
       <ol className={styles.pagination__list}>
@@ -120,20 +110,9 @@ const Pagination: React.FC<PaginationProps> = ({
         onPointerDown={() => handleInputType("pointer")}
         onKeyDown={() => handleInputType("keyboard")}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="var(--text-color-primary)"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
+        <Icon>
           <path d="m9 18 6-6-6-6" />
-        </svg>
+        </Icon>
       </Link>
     </nav>
   );

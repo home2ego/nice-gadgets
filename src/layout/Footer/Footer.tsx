@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import Logo from "@/layout/shared/components/Logo";
 import { focusElement } from "@/layout/shared/utils/focusElement";
+import Icon from "../shared/components/Icon";
 import styles from "./Footer.module.scss";
 
 interface FooterProps {
@@ -58,20 +59,9 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
           <span className={"text--sm"}>{t("backToTop")}</span>
 
           <span className={styles.footer__icon}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="none"
-              stroke="var(--text-color-primary)"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
+            <Icon>
               <path d="m18 15-6-6-6 6" />
-            </svg>
+            </Icon>
           </span>
         </button>
       </div>
