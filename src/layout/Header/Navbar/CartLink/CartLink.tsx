@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
@@ -5,7 +6,7 @@ import Count from "../Count";
 import type { LinkProps } from "../linkProps";
 import styles from "./CartLink.module.scss";
 
-const CartLink: React.FC<LinkProps> = ({ t, onLinkClick }) => {
+const CartLink: React.FC<LinkProps> = memo(({ t, onLinkClick }) => {
   const cartProducts = useAppSelector((state) => state.cart);
   const cartCount = cartProducts.length;
 
@@ -30,6 +31,6 @@ const CartLink: React.FC<LinkProps> = ({ t, onLinkClick }) => {
       </div>
     </NavLink>
   );
-};
+});
 
 export default CartLink;

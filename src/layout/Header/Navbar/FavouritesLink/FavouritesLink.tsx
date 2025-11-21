@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
@@ -5,7 +6,7 @@ import Count from "../Count";
 import type { LinkProps } from "../linkProps";
 import styles from "./FavouritesLink.module.scss";
 
-const FavouritesLink: React.FC<LinkProps> = ({ t, onLinkClick }) => {
+const FavouritesLink: React.FC<LinkProps> = memo(({ t, onLinkClick }) => {
   const favouritesProducts = useAppSelector((state) => state.favourites);
   const favouritesCount = favouritesProducts.length;
 
@@ -29,6 +30,6 @@ const FavouritesLink: React.FC<LinkProps> = ({ t, onLinkClick }) => {
       </div>
     </NavLink>
   );
-};
+});
 
 export default FavouritesLink;
