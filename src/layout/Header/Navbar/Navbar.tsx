@@ -1,11 +1,5 @@
 import type { TFunction } from "i18next";
-import {
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import CartLink from "./CartLink";
 import FavouritesLink from "./FavouritesLink";
@@ -124,15 +118,12 @@ const Navbar: React.FC<NavbarProps> = ({
     };
   }, [isExpanded]);
 
-  const handleLinkClick = useCallback(
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
-      if (!e.currentTarget.classList.contains("active")) {
-        setIsExpanded(false);
-        toggleRef.current?.focus();
-      }
-    },
-    [],
-  );
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!e.currentTarget.classList.contains("active")) {
+      setIsExpanded(false);
+      toggleRef.current?.focus();
+    }
+  };
 
   return (
     <div className={styles.navbar}>
