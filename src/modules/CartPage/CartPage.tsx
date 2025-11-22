@@ -83,13 +83,15 @@ const CartPage = () => {
 
       <dialog
         ref={dialogRef}
-        closedby="any"
         className={styles.dialog}
         aria-labelledby="not-available-title"
         aria-describedby="not-available-desc"
       >
         {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-        <h2 id="not-available-title" className="title--lg">
+        <h2
+          id="not-available-title"
+          className={clsx(styles.dialog__heading, "title--lg")}
+        >
           {t("notAvailableTitle")}
         </h2>
 
