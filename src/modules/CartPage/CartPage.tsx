@@ -5,11 +5,11 @@ import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
 import type { OutletContext } from "../shared/types/outletContext";
-import { formatPrice } from "../shared/utils/formatPrice";
+import { formatPrice } from "../shared/utils/priceUtils";
 import CartEmpty from "./CartEmpty";
 import styles from "./CartPage.module.scss";
 import CartProduct from "./CartProduct";
-import { MIN_COUNT } from "./constants";
+import { calculateCartTotals } from "./calculateCartTotals";
 
 const CartPage = () => {
   const { normalizedLang } = useOutletContext<OutletContext>();
@@ -18,13 +18,10 @@ const CartPage = () => {
   const navigate = useNavigate();
   const dialogRef = useRef<HTMLDialogElement>(null);
 
-  let totalSum = 0;
-  let totalCount = 0;
-
-  cartProducts.forEach(({ price, count = MIN_COUNT }) => {
-    totalSum += price * count;
-    totalCount += count;
-  });
+  const { totalSum, totalCount } = calculateCartTotals(
+    cartProducts,
+    normalizedLang,
+  );
 
   return (
     <>

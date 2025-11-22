@@ -1,4 +1,4 @@
-const exchangeRates: Record<string, number> = {
+export const exchangeRates: Record<string, number> = {
   en: 0.75,
   fi: 1,
   pl: 4,
@@ -12,11 +12,8 @@ const currencyCodes: Record<string, string> = {
   uk: "UAH",
 };
 
-export const formatPrice = (priceUSD: number, lang: string) => {
-  const rate = exchangeRates[lang];
+export const formatPrice = (localPrice: number, lang: string) => {
   const currency = currencyCodes[lang];
-
-  const localPrice = priceUSD * rate;
 
   const formatted = new Intl.NumberFormat(lang, {
     style: "currency",
@@ -26,4 +23,10 @@ export const formatPrice = (priceUSD: number, lang: string) => {
   }).format(localPrice);
 
   return formatted;
+};
+
+export const formatWithRate = (price: number, lang: string) => {
+  const rate = exchangeRates[lang];
+
+  return formatPrice(price * rate, lang);
 };

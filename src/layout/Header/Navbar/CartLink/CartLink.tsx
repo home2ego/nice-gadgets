@@ -2,6 +2,7 @@ import { memo } from "react";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
+import { MIN_COUNT } from "@/modules/CartPage/constants";
 import Count from "../Count";
 import type { LinkProps } from "../linkProps";
 import styles from "./CartLink.module.scss";
@@ -10,7 +11,10 @@ const PATH = "/cart";
 
 const CartLink: React.FC<LinkProps> = memo(({ t, onLinkClick }) => {
   const cartProducts = useAppSelector((state) => state.cart);
-  const cartCount = cartProducts.length;
+  const cartCount = cartProducts.reduce(
+    (acc, { count = MIN_COUNT }) => acc + count,
+    0,
+  );
 
   return (
     <NavLink

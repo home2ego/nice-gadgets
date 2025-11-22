@@ -8,7 +8,7 @@ import {
 import { useAppDispatch } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
 import type { Product } from "@/modules/shared/types/product";
-import { formatPrice } from "@/modules/shared/utils/formatPrice";
+import { formatWithRate } from "@/modules/shared/utils/priceUtils";
 import { MAX_COUNT, MIN_COUNT } from "../constants";
 import styles from "./CartProduct.module.scss";
 
@@ -25,8 +25,6 @@ const CartProduct: React.FC<ProductProps> = ({
 }) => {
   const { count = MIN_COUNT, price, name, shortName, image } = product;
   const dispatch = useAppDispatch();
-
-  const formattedPrice = formatPrice(price * count, normalizedLang);
 
   return (
     <li className={styles.product}>
@@ -92,13 +90,13 @@ const CartProduct: React.FC<ProductProps> = ({
           className={clsx(styles.product__price, "title--md")}
           aria-hidden="true"
         >
-          {formattedPrice}
+          {formatWithRate(price * count, normalizedLang)}
         </p>
 
         <span aria-live="polite" aria-atomic="true" className="sr-only">
           {t("productUpdate", {
             quantity: count,
-            price: formattedPrice,
+            price: formatWithRate(price * count, normalizedLang),
           })}
         </span>
       </div>
