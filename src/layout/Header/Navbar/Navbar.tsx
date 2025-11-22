@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({
   footerRef,
   skipRef,
 }) => {
-  const { pathname } = useLocation();
+  const pathname = useLocation().pathname;
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLElement>(null);
@@ -157,7 +157,7 @@ const Navbar: React.FC<NavbarProps> = ({
           {["home", "phones", "tablets", "accessories"].map((item) => (
             <li key={item}>
               <NavLink
-                to={item === "home" ? "/" : item}
+                to={item === "home" ? "/" : `/${item}`}
                 className="btn--nav-left text--uppercase"
                 onClick={handleLinkClick}
               >

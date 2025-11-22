@@ -6,13 +6,15 @@ import Count from "../Count";
 import type { LinkProps } from "../linkProps";
 import styles from "./CartLink.module.scss";
 
+const PATH = "/cart";
+
 const CartLink: React.FC<LinkProps> = memo(({ t, onLinkClick }) => {
   const cartProducts = useAppSelector((state) => state.cart);
   const cartCount = cartProducts.length;
 
   return (
     <NavLink
-      to="/cart"
+      to={PATH}
       aria-label={
         cartCount > 0
           ? t("cartLabelWithCount", { count: cartCount })

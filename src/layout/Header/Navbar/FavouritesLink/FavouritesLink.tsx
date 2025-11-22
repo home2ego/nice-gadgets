@@ -6,13 +6,15 @@ import Count from "../Count";
 import type { LinkProps } from "../linkProps";
 import styles from "./FavouritesLink.module.scss";
 
+const PATH = "/favourites";
+
 const FavouritesLink: React.FC<LinkProps> = memo(({ t, onLinkClick }) => {
   const favouritesProducts = useAppSelector((state) => state.favourites);
   const favouritesCount = favouritesProducts.length;
 
   return (
     <NavLink
-      to="/favorites"
+      to={PATH}
       aria-label={
         favouritesCount > 0
           ? t("favouritesLabelWithCount", { count: favouritesCount })
