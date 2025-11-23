@@ -180,7 +180,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
       )}
 
       {visibleProducts.length > 0 && (
-        <div style={{ position: "relative" }} ref={productsRef}>
+        <div className={styles["products-wrapper"]} ref={productsRef}>
           <SkipLink
             content="skipForwardProducts"
             classAttr="skip-forward-products"

@@ -4,12 +4,14 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
+import { focusElement } from "@/layout/shared/utils/focusElement";
 import type { OutletContext } from "../shared/types/outletContext";
 import { formatPrice } from "../shared/utils/priceUtils";
 import CartEmpty from "./CartEmpty";
 import styles from "./CartPage.module.scss";
 import CartProduct from "./CartProduct";
 import { calculateCartTotals } from "./calculateCartTotals";
+import Dialog from "./Dialog";
 
 const CartPage = () => {
   const { normalizedLang } = useOutletContext<OutletContext>();
@@ -22,6 +24,17 @@ const CartPage = () => {
     cartProducts,
     normalizedLang,
   );
+
+  const handleOpenCheckout = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    dialog.showModal();
+
+    if (e.detail !== 0) {
+      focusElement(dialog);
+    }
+  };
 
   return (
     <>
@@ -73,7 +86,7 @@ const CartPage = () => {
             <button
               type="button"
               className={clsx(styles.summary__checkout, "text--btn")}
-              onClick={() => dialogRef.current?.showModal()}
+              onClick={handleOpenCheckout}
             >
               {t("checkout")}
             </button>
@@ -81,36 +94,7 @@ const CartPage = () => {
         </section>
       )}
 
-      <dialog
-        ref={dialogRef}
-        className={styles.dialog}
-        aria-labelledby="not-available-title"
-        aria-describedby="not-available-desc"
-      >
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-        <h2
-          id="not-available-title"
-          className={clsx(styles.dialog__heading, "title--lg")}
-        >
-          {t("notAvailableTitle")}
-        </h2>
-
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-        <p
-          id="not-available-desc"
-          className={clsx(styles.dialog__message, "text--body")}
-        >
-          {t("notAvailableMessage")}
-        </p>
-
-        <button
-          type="button"
-          className={clsx(styles.dialog__ok, "text--btn")}
-          onClick={() => dialogRef.current?.close()}
-        >
-          OK
-        </button>
-      </dialog>
+      <Dialog t={t} dialogRef={dialogRef} />
     </>
   );
 };

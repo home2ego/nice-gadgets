@@ -10,6 +10,10 @@
     column-gap: 16px;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &__prev,
   &__next {
     @extend %flex-center;

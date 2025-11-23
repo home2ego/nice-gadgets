@@ -59,6 +59,7 @@ body {
   margin: 0;
 }
 
+body:has(dialog[open]),
 body:has(button[data-navbar-toggle="main"][aria-expanded="true"]) {
   overflow-y: hidden;
 }
@@ -121,9 +122,7 @@ section {
 
 main:focus,
 footer:focus,
-section:focus,
-nav:focus,
-div:focus {
+section:focus {
   outline: none;
 }
 

@@ -24,6 +24,14 @@
   text-align: center;
 }
 
+.products-wrapper {
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .products {
   @include products-grid;
 }
