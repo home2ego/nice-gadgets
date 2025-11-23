@@ -56,8 +56,6 @@ const Navbar: React.FC<NavbarProps> = ({
       return;
     }
 
-    const handlePreventScroll = (e: TouchEvent) => e.preventDefault();
-
     const handleEscapeKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsExpanded(false);
@@ -74,14 +72,10 @@ const Navbar: React.FC<NavbarProps> = ({
       }
     };
 
-    document.addEventListener("touchmove", handlePreventScroll, {
-      passive: false,
-    });
     document.addEventListener("keydown", handleEscapeKey);
     document.addEventListener("pointerdown", handleOutsideClick);
 
     return () => {
-      document.removeEventListener("touchmove", handlePreventScroll);
       document.removeEventListener("keydown", handleEscapeKey);
       document.removeEventListener("pointerdown", handleOutsideClick);
     };
