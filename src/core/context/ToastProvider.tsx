@@ -1,4 +1,4 @@
-import { createContext, useCallback, useState } from "react";
+import { createContext, useState } from "react";
 import ToastNotification from "./ToastNotification";
 import type { Toast } from "./toast";
 
@@ -17,21 +17,20 @@ export const ToastContext = createContext<ToastContextValue>({
 export const ToastProvider: React.FC<ProviderProps> = ({ children }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
 
-  const showToast = useCallback((message: string) => {
+  const showToast = (message: string) => {
     const id = Date.now();
-
     setToasts((prev) => [...prev, { id, message }]);
+  };
 
-    setTimeout(() => {
-      setToasts((prev) => prev.filter((toast) => toast.id !== id));
-    }, 3000);
-  }, []);
+  const removeToast = (id: number) => {
+    setToasts((prev) => prev.filter((toast) => toast.id !== id));
+  };
 
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}
 
-      <ToastNotification toasts={toasts} />
+      <ToastNotification toasts={toasts} onRemove={removeToast} />
     </ToastContext.Provider>
   );
 };

@@ -69,7 +69,7 @@ const ProductCard: React.FC<ProductProps> = ({
   const handleCartClick = () => {
     if (!isInCart) {
       dispatch(addToCart(product));
-      showToast(`Added to cart — ${shortName}`);
+      showToast(t("cartSuccessMessage", { name: shortName }));
     } else {
       dispatch(removeFromCart(product));
     }

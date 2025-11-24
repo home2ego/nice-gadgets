@@ -38,5 +38,7 @@
   "capacity": "Ємність",
   "screen": "Екран",
   "loadMore": "Показати більше",
-  "seenModels": "Ви переглянули {{visibleCount}} із {{totalCount}} моделей"
+  "seenModels": "Ви переглянули {{visibleCount}} із {{totalCount}} моделей",
+  "cartSuccessMessage": "Додано до кошика — {{name}}",
+  "dismissNotificationLabel": "Закрити сповіщення"
 }

@@ -1,0 +1,54 @@
+.message {
+  transform: translateY(0) scale(1);
+
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+
+  width: fit-content;
+  min-width: 300px;
+  max-width: 450px;
+  padding-block: 18px;
+  padding-inline: 12px 32px;
+  border-radius: 8px;
+
+  -webkit-font-smoothing: auto;
+  color: $dark-color;
+
+  opacity: 1;
+  background-color: $bg-color-toast;
+  -webkit-backdrop-filter: blur(8px); /* Safari support 9-17.6 */
+  backdrop-filter: blur(8px);
+
+  transition: opacity 0.18s, transform 0.28s ease-out,
+    display 0.28s allow-discrete;
+
+  @starting-style {
+    transform: translateY(-10px) scale(0.95);
+    opacity: 0;
+  }
+
+  &.closing {
+    transform: scale(0.95);
+    display: none;
+    opacity: 0;
+  }
+}
+
+.cross {
+  pointer-events: initial;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 8px;
+
+  opacity: 1;
+
+  transition: opacity 0.18s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

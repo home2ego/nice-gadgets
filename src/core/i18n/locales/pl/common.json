@@ -38,5 +38,7 @@
   "capacity": "Pojemność",
   "screen": "Ekran",
   "loadMore": "Pokaż więcej",
-  "seenModels": "Zobaczyłeś {{visibleCount}} z {{totalCount}} modeli"
+  "seenModels": "Zobaczyłeś {{visibleCount}} z {{totalCount}} modeli",
+  "cartSuccessMessage": "Dodano do koszyka — {{name}}",
+  "dismissNotificationLabel": "Odrzuć powiadomienie"
 }

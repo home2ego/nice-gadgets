@@ -37,5 +37,7 @@
   "capacity": "Kapasiteetti",
   "screen": "Näyttö",
   "loadMore": "Näytä lisää",
-  "seenModels": "Olet nähnyt {{visibleCount}} / {{totalCount}} mallia"
+  "seenModels": "Olet nähnyt {{visibleCount}} / {{totalCount}} mallia",
+  "cartSuccessMessage": "Lisätty ostoskoriin — {{name}}",
+  "dismissNotificationLabel": "Hylkää ilmoitus"
 }
