@@ -26,7 +26,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const langRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const openedByKeyboard = useRef(false); // e.detail ???
+  const openedByKeyboard = useRef(false);
 
   const currentLangLabel =
     languages.find((lang) => lang.code === normalizedLang)?.label ?? "";
