@@ -28,6 +28,7 @@ const SlideImage: React.FC<ImageProps> = ({ t, slide, hasAlt, isPriority }) => {
         width="600"
         height="400"
         alt={altText}
+        loading={isPriority ? "eager" : "lazy"}
         fetchPriority={isPriority ? "high" : "low"}
         decoding={isPriority ? "sync" : "async"}
       />

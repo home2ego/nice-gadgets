@@ -2,9 +2,6 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import imgCategoryAccessories from "@/assets/images/category-accessories.webp";
-import imgCategoryPhones from "@/assets/images/category-phones.webp";
-import imgCategoryTablets from "@/assets/images/category-tablets.webp";
 import { decodeThumbhash } from "@/modules/shared/utils/decodeThumbhash";
 import { getProductsByCategory } from "@/modules/shared/utils/getProductsByCategory";
 import styles from "./ShopByCategory.module.scss";
@@ -26,7 +23,7 @@ const categoryCards: CategoryCards[] = [
   {
     id: 1,
     path: "/phones",
-    src: imgCategoryPhones,
+    src: "/img/category-phones.webp",
     heading: "phones",
     countModels: countPhones,
     thumbhash: "5yiKDAI5P4CGaZZ3+GRmT1aFgFOIR5h1BQ",
@@ -34,7 +31,7 @@ const categoryCards: CategoryCards[] = [
   {
     id: 2,
     path: "/tablets",
-    src: imgCategoryTablets,
+    src: "/img/category-tablets.webp",
     heading: "tablets",
     countModels: countTablets,
     thumbhash: "oYmGJQoqLlDHeGGddUFvBZV3Bxd4d4CJGA",
@@ -42,7 +39,7 @@ const categoryCards: CategoryCards[] = [
   {
     id: 3,
     path: "/accessories",
-    src: imgCategoryAccessories,
+    src: "/img/category-accessories.webp",
     heading: "accessories",
     countModels: countAccessories,
     thumbhash: "5ziKIoodwDWJh4g/ZfdsdggIgohyKCc",

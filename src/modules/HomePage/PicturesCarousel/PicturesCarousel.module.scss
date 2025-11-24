@@ -65,6 +65,7 @@
   }
 
   &__wrapper {
+    transform: translateX(-100%);
     display: grid;
     grid-template-columns: repeat(5, 100%);
   }

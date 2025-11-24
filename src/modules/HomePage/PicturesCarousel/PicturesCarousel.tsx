@@ -1,13 +1,7 @@
 // PRELOAD ONE OF THE IMAGES IF ONE OF THEM IS LCP
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import appleDevicesImage from "@/assets/images/apple-devices-lg.webp";
-import appleDevicesImageMini from "@/assets/images/apple-devices-sm.webp";
-import appleWatchImage from "@/assets/images/apple-watch-lg.webp";
-import appleWatchImageMini from "@/assets/images/apple-watch-sm.webp";
-import iPhoneImage from "@/assets/images/iPhone-lg.webp";
-import iPhoneImageMini from "@/assets/images/iPhone-sm.webp";
+import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
 import type { Slide } from "../slide";
 import { AUTOPLAY_THRESHOLD } from "./constants";
@@ -18,20 +12,20 @@ import { useHorizontalSwipe } from "./useHorizontalSwipe";
 const slides: Slide[] = [
   {
     id: 1,
-    src: iPhoneImage,
-    srcMini: iPhoneImageMini,
+    src: "/img/iPhone-lg.webp",
+    srcMini: "/img/iPhone-sm.webp",
     alt: "iPhoneAlt",
   },
   {
     id: 2,
-    src: appleDevicesImage,
-    srcMini: appleDevicesImageMini,
+    src: "/img/apple-devices-lg.webp",
+    srcMini: "/img/apple-devices-sm.webp",
     alt: "appleDevicesAlt",
   },
   {
     id: 3,
-    src: appleWatchImage,
-    srcMini: appleWatchImageMini,
+    src: "/img/apple-watch-lg.webp",
+    srcMini: "/img/apple-watch-sm.webp",
     alt: "appleWatchAlt",
   },
 ];
@@ -61,14 +55,11 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     }
 
     requestAnimationFrame(() => {
-      const transitionValue = transition
+      slider.style.transition = transition
         ? "transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95)"
         : "none";
 
-      slider.style.cssText = `
-        transition: ${transitionValue};
-        transform: translateX(-${(index + 1) * 100}%);
-      `;
+      slider.style.transform = `translateX(-${(index + 1) * 100}%)`;
     });
   };
 
@@ -200,11 +191,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       document.removeEventListener("pause-slider", pause);
       document.removeEventListener("resume-slider", resume);
     };
-  }, []);
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs once on mount before painting the screen
-  useLayoutEffect(() => {
-    updateSliderTransform(currentIndex, false);
   }, []);
 
   useHorizontalSwipe(sliderRef, handleNextSlideShow, handlePrevSlideShow);

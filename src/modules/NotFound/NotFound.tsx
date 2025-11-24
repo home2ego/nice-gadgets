@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import imgNotFound from "@/assets/icons/page-not-found.svg";
 import styles from "./NotFound.module.scss";
 
 const NotFound = () => {
@@ -15,7 +14,13 @@ const NotFound = () => {
         {t("errorMessage")}
       </h1>
 
-      <img src={imgNotFound} alt="" width="250" height="240" decoding="async" />
+      <img
+        src="/img/page-not-found.svg"
+        alt=""
+        width="250"
+        height="240"
+        decoding="async"
+      />
 
       <h2 className={clsx(styles["not-found__subheading"], "title--md")}>
         {t("notFound")}
