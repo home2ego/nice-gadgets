@@ -34,6 +34,8 @@
     top: 100%;
     left: 0;
 
+    display: block;
+
     min-width: 120px;
     padding-block: 12px;
     border: $border-width solid var(--bd-color-primary);
@@ -42,15 +44,18 @@
   }
 
   &__toggle[aria-expanded="false"] + &__menu {
-    visibility: hidden;
+    display: none;
     opacity: 0;
-    transition: opacity 0.18s, visibility 0s 0.18s;
+    transition: opacity 0.18s, display 0.18s allow-discrete;
   }
 
   &__toggle[aria-expanded="true"] + &__menu {
-    visibility: visible;
     opacity: 1;
-    transition: opacity 0.18s, visibility 0s;
+    transition: opacity 0.18s;
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 
   &__lang {

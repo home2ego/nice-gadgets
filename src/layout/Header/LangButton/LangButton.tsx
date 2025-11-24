@@ -25,16 +25,13 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
-  const menuRef = useRef<HTMLDivElement>(null);
   const langRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const openedByKeyboard = useRef(false);
+  const openedByKeyboard = useRef(false); // e.detail ???
 
   const currentLangLabel =
     languages.find((lang) => lang.code === normalizedLang)?.label ?? "";
 
   useEffect(() => {
-    menuRef.current?.toggleAttribute("inert", !isExpanded); // Instant tab removal; visibility:hidden fades late.
-
     if (!isExpanded) {
       return;
     }
@@ -149,7 +146,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         </Icon>
       </button>
 
-      <div className={styles.dropdown__menu} ref={menuRef}>
+      <div className={styles.dropdown__menu}>
         {sortedLanguages.map((lang, idx) => (
           <button
             key={lang.code}
