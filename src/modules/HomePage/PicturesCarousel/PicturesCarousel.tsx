@@ -47,20 +47,20 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const normalizedIndex = (currentIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
 
-  const updateSliderTransform = (index: number, transition: boolean) => {
+  const updateSliderTransform = (index: number, withTransition: boolean) => {
     const slider = sliderRef.current;
 
     if (!slider) {
       return;
     }
 
-    requestAnimationFrame(() => {
-      slider.style.transition = transition
-        ? "transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95)"
-        : "none";
+    if (withTransition) {
+      slider.classList.remove(styles["carousel__wrapper--no-transition"]);
+    } else {
+      slider.classList.add(styles["carousel__wrapper--no-transition"]);
+    }
 
-      slider.style.transform = `translateX(-${(index + 1) * 100}%)`;
-    });
+    slider.style.transform = `translateX(-${(index + 1) * 100}%)`;
   };
 
   const stopAutoplay = () => {
