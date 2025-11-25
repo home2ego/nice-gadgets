@@ -80,6 +80,7 @@
   }
 
   &__slide {
+    transform: translateZ(0);
     max-height: 400px;
 
     img {
