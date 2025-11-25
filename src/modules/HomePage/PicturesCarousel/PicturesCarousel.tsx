@@ -47,7 +47,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const normalizedIndex = (currentIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
 
-  const updateSliderTransform = (index: number, withTransition: boolean) => {
+  const moveSlide = (index: number, withTransition: boolean) => {
     const slider = sliderRef.current;
 
     if (!slider) {
@@ -76,9 +76,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     intervalRef.current = setInterval(() => {
       setCurrentIndex((prev) => {
         const nextIndex = prev + 1;
-
-        updateSliderTransform(nextIndex, true);
-
+        moveSlide(nextIndex, true);
         return nextIndex;
       });
     }, AUTOPLAY_THRESHOLD);
@@ -110,7 +108,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
     isTransitioning.current = true;
     setCurrentIndex(nextIndex);
-    updateSliderTransform(nextIndex, true);
+    moveSlide(nextIndex, true);
 
     if (!isPaused.current) {
       isManuallyPaused.current = true;
@@ -122,25 +120,23 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const handlePrevSlideShow = () => handleSelectedSlideShow((prev) => prev - 1);
 
   const handleTransitionEnd = () => {
-    let newIndex: number;
-
     if (currentIndex < 0) {
-      newIndex = TOTAL_SLIDES - 1;
-      requestAnimationFrame(() => {
-        setCurrentIndex(newIndex);
-        updateSliderTransform(newIndex, false);
-      });
+      const newIndex = TOTAL_SLIDES - 1;
+
+      setCurrentIndex(newIndex);
+      moveSlide(newIndex, false);
     }
 
     if (currentIndex >= TOTAL_SLIDES) {
-      newIndex = 0;
-      requestAnimationFrame(() => {
-        setCurrentIndex(newIndex);
-        updateSliderTransform(newIndex, false);
-      });
+      const newIndex = 0;
+
+      setCurrentIndex(newIndex);
+      moveSlide(newIndex, false);
     }
 
-    isTransitioning.current = false;
+    setTimeout(() => {
+      isTransitioning.current = false;
+    }, 0);
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLDivElement>) => {
