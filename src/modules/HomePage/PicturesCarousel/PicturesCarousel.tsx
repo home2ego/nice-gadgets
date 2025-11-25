@@ -1,4 +1,3 @@
-// PRELOAD ONE OF THE IMAGES IF ONE OF THEM IS LCP
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
@@ -39,10 +38,12 @@ interface CarouselProps {
 const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [pausedState, setPausedState] = useState(false);
+
+  const sliderRef = useRef<HTMLDivElement>(null);
   const isPaused = useRef(false);
   const isManuallyPaused = useRef(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
   const isTransitioning = useRef(false);
+  const isSnapping = useRef(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const normalizedIndex = (currentIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
@@ -74,11 +75,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     stopAutoplay();
 
     intervalRef.current = setInterval(() => {
-      setCurrentIndex((prev) => {
-        const nextIndex = prev + 1;
-        moveSlide(nextIndex, true);
-        return nextIndex;
-      });
+      setCurrentIndex((prev) => prev + 1);
     }, AUTOPLAY_THRESHOLD);
   };
 
@@ -108,7 +105,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
     isTransitioning.current = true;
     setCurrentIndex(nextIndex);
-    moveSlide(nextIndex, true);
 
     if (!isPaused.current) {
       isManuallyPaused.current = true;
@@ -122,21 +118,19 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const handleTransitionEnd = () => {
     if (currentIndex < 0) {
       const newIndex = TOTAL_SLIDES - 1;
-
+      isSnapping.current = true;
       setCurrentIndex(newIndex);
-      moveSlide(newIndex, false);
+      return;
     }
 
     if (currentIndex >= TOTAL_SLIDES) {
       const newIndex = 0;
-
+      isSnapping.current = true;
       setCurrentIndex(newIndex);
-      moveSlide(newIndex, false);
+      return;
     }
 
-    setTimeout(() => {
-      isTransitioning.current = false;
-    }, 0);
+    isTransitioning.current = false;
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLDivElement>) => {
@@ -145,6 +139,17 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       updatePause(true);
     }
   };
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs moveSlide on currentIndex change
+  useEffect(() => {
+    const withTransition = !isSnapping.current;
+    moveSlide(currentIndex, withTransition);
+
+    if (isSnapping.current) {
+      isSnapping.current = false;
+      isTransitioning.current = false;
+    }
+  }, [currentIndex]);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs once on mount
   useEffect(() => {
