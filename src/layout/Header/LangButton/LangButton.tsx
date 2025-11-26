@@ -112,10 +112,8 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   };
 
   return (
-    // biome-ignore lint/a11y/useSemanticElements: not a form group
+    // biome-ignore lint/a11y/noStaticElementInteractions: wrapper needs pointer/blur handlers
     <div
-      role="group"
-      aria-label={t("langNavLabel")}
       className={styles.dropdown}
       onPointerEnter={(e) => {
         if (e.pointerType === "mouse") setIsExpanded(true);

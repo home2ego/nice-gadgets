@@ -38,7 +38,7 @@
   }
 }
 
-.welcome-message {
+.welcome {
   margin-block: 24px;
 
   @include on-tablet {
@@ -50,7 +50,7 @@
   }
 }
 
-.carousel-wrapper {
+.wrapper {
   position: relative;
 
   &--pictures {
@@ -60,18 +60,20 @@
   }
 }
 
-.categories-heading {
-  margin-bottom: 24px;
-}
-
 .categories {
-  display: grid;
-  grid-template-columns: minmax(0, 368px);
-  gap: 32px 16px;
-  justify-content: center;
+  &__heading {
+    margin-bottom: 24px;
+  }
 
-  @include on-tablet {
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: normal;
+  &__list {
+    display: grid;
+    grid-template-columns: minmax(0, 368px);
+    gap: 32px 16px;
+    justify-content: center;
+
+    @include on-tablet {
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: normal;
+    }
   }
 }

@@ -1,18 +1,12 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import {
-  useEffect,
-  useId,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { focusElement } from "@/layout/shared/utils/focusElement";
 import type { Product } from "../../types/product";
 import type { PageOption, SortOption } from "../../types/select";
 import ProductCard from "../ProductCard";
+import ProductsTop from "../ProductsTop";
 import SkipLink from "../SkipLink";
 import {
   INITIAL_PAGE,
@@ -56,7 +50,6 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const loadBtnRef = useRef<HTMLButtonElement>(null);
   const focusLoadMore = useRef(false);
   const lastInputType = useRef<"pointer" | "keyboard">(null);
-  const regionId = useId();
 
   const currentSort = searchParams.get("sort") || INITIAL_SORT;
   const currentPage = +(searchParams.get("page") || INITIAL_PAGE);
@@ -148,14 +141,12 @@ const ProductsSection: React.FC<ProductsProps> = ({
   };
 
   return (
-    <section aria-labelledby={regionId}>
-      <h1 id={regionId} className={clsx(styles.heading, "title--xl")}>
-        {t(sectionHeading)}
-      </h1>
-
-      <p className={clsx(styles.models, "text--body")}>
-        {t("countModels", { count: countModels })}
-      </p>
+    <section aria-labelledby={sectionHeading}>
+      <ProductsTop
+        headingId={sectionHeading}
+        headingText={t(sectionHeading)}
+        infoText={t("countModels", { count: countModels })}
+      />
 
       <div className={styles.dropdowns} ref={dropdownsRef}>
         <Select
@@ -180,7 +171,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
       )}
 
       {visibleProducts.length > 0 && (
-        <div className={styles["products-wrapper"]} ref={productsRef}>
+        <div className={styles.wrapper} ref={productsRef}>
           <SkipLink
             content="skipForwardProducts"
             classAttr="skip-forward-products"
@@ -213,7 +204,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
 
       {!hasPagination && hasLoadMore && visibleProducts.length > 0 && (
         <>
-          <p className={clsx(styles["progress-info"], "text--body")}>
+          <p className={clsx(styles.progress, "text--body")}>
             {t("seenModels", {
               visibleCount: visibleCount,
               totalCount: countModels,
@@ -222,7 +213,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
 
           <button
             type="button"
-            className={clsx(styles["load-more"], "text--uppercase")}
+            className={clsx(styles.load, "text--uppercase")}
             onPointerDown={handleLoadMorePointer}
             onKeyDown={handleLoadMoreKey}
             ref={loadBtnRef}

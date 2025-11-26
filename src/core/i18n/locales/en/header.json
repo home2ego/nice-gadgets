@@ -10,6 +10,5 @@
   "cartLabelWithCount_one": "View shopping cart, {{count}} product",
   "cartLabelWithCount_other": "View shopping cart, {{count}} products",
   "themeLabel": "Dark mode",
-  "langNavLabel": "Language selection",
   "langLabel": "Change language, current: {{lang}}"
 }

@@ -12,6 +12,5 @@
   "cartLabelWithCount_few": "Переглянути кошик, {{count}} товари",
   "cartLabelWithCount_many": "Переглянути кошик, {{count}} товарів",
   "themeLabel": "Темна тема",
-  "langNavLabel": "Вибір мови",
   "langLabel": "Змінити мову, поточна: {{lang}}"
 }

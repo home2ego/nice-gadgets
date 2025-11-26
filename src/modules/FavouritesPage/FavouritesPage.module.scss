@@ -1,16 +1,3 @@
-.heading {
-  margin-bottom: 8px;
-}
-
-.items {
-  margin-bottom: 32px;
-  color: var(--text-color-secondary);
-
-  @include on-tablet {
-    margin-bottom: 40px;
-  }
-}
-
 .products {
   @include products-grid;
 }

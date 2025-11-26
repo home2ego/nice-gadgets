@@ -100,7 +100,7 @@ const HomePage = () => {
         className={clsx(
           styles.typing,
           styles[`typing--${normalizedLang}`],
-          styles["welcome-message"],
+          styles.welcome,
           "title--xl",
         )}
       >
@@ -109,10 +109,7 @@ const HomePage = () => {
 
       <section
         aria-label={t("picturesCarousel")}
-        className={clsx(
-          styles["carousel-wrapper"],
-          styles["carousel-wrapper--pictures"],
-        )}
+        className={clsx(styles.wrapper, styles["wrapper--pictures"])}
       >
         <SkipLink
           content="skipForwardCarousel"
@@ -132,7 +129,7 @@ const HomePage = () => {
       <section
         aria-labelledby="new-models-heading"
         aria-describedby="new-models-desc"
-        className={styles["carousel-wrapper"]}
+        className={styles.wrapper}
         ref={newModelsRef}
       >
         <ProductsCarousel
@@ -149,16 +146,20 @@ const HomePage = () => {
         />
       </section>
 
-      <section aria-labelledby="categories-heading" ref={categoriesRef}>
+      <section
+        className={styles.categories}
+        aria-labelledby="categories"
+        ref={categoriesRef}
+      >
         {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h2
-          id="categories-heading"
-          className={clsx(styles["categories-heading"], "title--lg")}
+          id="categories"
+          className={clsx(styles.categories__heading, "title--lg")}
         >
           {t("categoryHeading")}
         </h2>
 
-        <ul ref={categoriesObserverRef} className={styles.categories}>
+        <ul ref={categoriesObserverRef} className={styles.categories__list}>
           {loaded ? (
             <Suspense fallback={<CategorySkeleton />}>
               <ShopByCategory t={t} />
@@ -172,7 +173,7 @@ const HomePage = () => {
       <section
         aria-labelledby="hot-prices-heading"
         aria-describedby="hot-prices-desc"
-        className={styles["carousel-wrapper"]}
+        className={styles.wrapper}
         ref={hotPricesRef}
       >
         <ProductsCarousel

@@ -12,6 +12,5 @@
   "cartLabelWithCount_few": "Zobacz koszyk, {{count}} produkty",
   "cartLabelWithCount_many": "Zobacz koszyk, {{count}} produktów",
   "themeLabel": "Tryb ciemny",
-  "langNavLabel": "Wybór języka",
   "langLabel": "Zmień język, obecny: {{lang}}"
 }

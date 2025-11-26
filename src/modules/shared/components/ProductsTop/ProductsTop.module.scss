@@ -1,0 +1,12 @@
+.heading {
+  margin-bottom: 8px;
+}
+
+.info {
+  margin-bottom: 32px;
+  color: var(--text-color-secondary);
+
+  @include on-tablet {
+    margin-bottom: 40px;
+  }
+}
