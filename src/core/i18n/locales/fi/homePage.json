@@ -18,6 +18,7 @@
   "resumeLabel": "Jatka diaesitystä",
   "slideNavLabel": "Dianavigointi",
   "pictureOfTotal": "Kuva {{current}} / {{total}}",
-  "slideOfTotal": "Näytä dia {{current}} / {{total}}",
+  "slideOfTotal": "Dia {{current}} of {{total}}",
+  "showSlideOfTotal": "Näytä dia {{current}} / {{total}}",
   "viewCategoryLabel": "Näytä {{category}}-kategoria, {{count}} mallia"
 }

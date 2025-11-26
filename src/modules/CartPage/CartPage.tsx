@@ -52,14 +52,14 @@ const CartPage = () => {
       </button>
 
       {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-      <h1 id="cart-heading" className={clsx(styles.heading, "title--xl")}>
+      <h1 id="cart" className={clsx(styles.heading, "title--xl")}>
         {t("cart")}
       </h1>
 
       {cartProducts.length === 0 && <CartEmpty t={t} />}
 
       {cartProducts.length > 0 && (
-        <section className={styles.cart} aria-labelledby="cart-heading">
+        <section className={styles.cart} aria-labelledby="cart">
           <ul className={styles.products}>
             {cartProducts.map((product) => (
               <CartProduct

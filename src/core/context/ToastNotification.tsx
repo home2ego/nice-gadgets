@@ -12,7 +12,7 @@ const ToastNotification: React.FC<ToastNotificationProps> = ({
   onRemove,
 }) => (
   // biome-ignore lint/a11y/useSemanticElements: role=status is correct for toasts
-  <div className={styles.toast} role="status" aria-live="polite">
+  <div className={styles.toast} role="status">
     {toasts.map((toast) => (
       <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
     ))}

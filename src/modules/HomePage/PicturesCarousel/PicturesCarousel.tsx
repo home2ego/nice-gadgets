@@ -199,6 +199,14 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: this element handles focus intentionally
     <div className={styles.carousel} onFocus={handleFocus}>
+      {/* biome-ignore lint/a11y/useSemanticElements: role=status is correct for slide updates */}
+      <span role="status" className="sr-only">
+        {t("slideOfTotal", {
+          current: normalizedIndex + 1,
+          total: TOTAL_SLIDES,
+        })}
+      </span>
+
       <button
         type="button"
         className={styles.carousel__paused}
@@ -233,7 +241,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
               [styles.active]: normalizedIndex === i,
             })}
             onClick={() => handleSelectedSlideShow(i)}
-            aria-label={t("slideOfTotal", {
+            aria-label={t("showSlideOfTotal", {
               current: i + 1,
               total: TOTAL_SLIDES,
             })}
@@ -280,17 +288,15 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         </div>
 
         {slides.map((slide: Slide, i) => (
-          // biome-ignore lint/a11y/useSemanticElements: not a form group
           <div
             key={slide.id}
             className={styles.carousel__slide}
-            role="group"
-            aria-labelledby={`slide-${slide.id}`}
             aria-hidden={normalizedIndex !== i ? "true" : undefined}
           >
-            <h3 id={`slide-${slide.id}`} className="sr-only">
+            <h3 className="sr-only">
               {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
             </h3>
+
             <SlideImage
               t={t}
               slide={slide}

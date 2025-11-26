@@ -18,6 +18,7 @@
   "resumeLabel": "Resume slides",
   "slideNavLabel": "Slide navigation",
   "pictureOfTotal": "Picture {{current}} of {{total}}",
-  "slideOfTotal": "Show slide {{current}} of {{total}}",
+  "slideOfTotal": "Slide {{current}} of {{total}}",
+  "showSlideOfTotal": "Show slide {{current}} of {{total}}",
   "viewCategoryLabel": "View {{category}} category, {{count}} models"
 }

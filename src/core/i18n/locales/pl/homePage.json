@@ -18,6 +18,7 @@
   "resumeLabel": "Wznów pokaz slajdów",
   "slideNavLabel": "Nawigacja slajdów",
   "pictureOfTotal": "Zdjęcie {{current}} z {{total}}",
-  "slideOfTotal": "Pokaż slajd {{current}} z {{total}}",
+  "slideOfTotal": "Slajd {{current}} z {{total}}",
+  "showSlideOfTotal": "Pokaż slajd {{current}} z {{total}}",
   "viewCategoryLabel": "Zobacz kategorię {{category}}, {{count}} modeli"
 }

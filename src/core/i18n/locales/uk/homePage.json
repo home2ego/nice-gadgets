@@ -18,6 +18,7 @@
   "resumeLabel": "Відновити слайди",
   "slideNavLabel": "Навігація слайдів",
   "pictureOfTotal": "Зображення {{current}} із {{total}}",
-  "slideOfTotal": "Показати слайд {{current}} із {{total}}",
+  "slideOfTotal": "Слайд {{current}} з {{total}}",
+  "showSlideOfTotal": "Показати слайд {{current}} із {{total}}",
   "viewCategoryLabel": "Переглянути категорію {{category}}, {{count}} моделей"
 }

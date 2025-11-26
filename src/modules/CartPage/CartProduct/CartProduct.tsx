@@ -93,7 +93,8 @@ const CartProduct: React.FC<ProductProps> = ({
           {formatWithRate(price * count, normalizedLang)}
         </p>
 
-        <span aria-live="polite" aria-atomic="true" className="sr-only">
+        {/* biome-ignore lint/a11y/useSemanticElements: role=status is correct for product updates */}
+        <span role="status" className="sr-only">
           {t("productUpdate", {
             quantity: count,
             price: formatWithRate(price * count, normalizedLang),
