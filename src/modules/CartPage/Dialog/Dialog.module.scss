@@ -9,9 +9,7 @@
 
   visibility: hidden;
   opacity: 0;
-  background-color: var(--bg-nav);
-  -webkit-backdrop-filter: blur(6px); /* Safari support 9-17.6 */
-  backdrop-filter: blur(6px);
+  background-color: var(--backdrop-bg);
 
   transition: opacity 0.18s ease-out, visibility 0.18s allow-discrete;
 

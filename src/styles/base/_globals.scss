@@ -17,6 +17,7 @@
 
   --dialog-bg: #1a1d1f;
   --dialog-bd: #262a2d;
+  --backdrop-bg: rgb(33 37 41 / 80%);
 
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -40,6 +41,7 @@
 
   --dialog-bg: var(--bg-color-layout);
   --dialog-bd: var(--bd-color-primary);
+  --backdrop-bg: rgb(255 255 255 / 80%);
 
   -webkit-font-smoothing: auto;
 }
