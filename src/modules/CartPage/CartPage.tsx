@@ -1,10 +1,9 @@
 import clsx from "clsx";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
-import { focusElement } from "@/layout/shared/utils/focusElement";
 import type { OutletContext } from "../shared/types/outletContext";
 import { formatPrice } from "../shared/utils/priceUtils";
 import CartEmpty from "./CartEmpty";
@@ -14,27 +13,27 @@ import { calculateCartTotals } from "./calculateCartTotals";
 import Dialog from "./Dialog";
 
 const CartPage = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const { normalizedLang } = useOutletContext<OutletContext>();
   const { t } = useTranslation("cartPage");
   const cartProducts = useAppSelector((state) => state.cart);
   const navigate = useNavigate();
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const checkoutRef = useRef<HTMLButtonElement>(null);
+  const prevIsDialogOpen = useRef(isDialogOpen);
+
+  useEffect(() => {
+    if (prevIsDialogOpen.current && !isDialogOpen) {
+      checkoutRef.current?.focus();
+    }
+
+    prevIsDialogOpen.current = isDialogOpen;
+  }, [isDialogOpen]);
 
   const { totalSum, totalCount } = calculateCartTotals(
     cartProducts,
     normalizedLang,
   );
-
-  const handleOpenCheckout = (e: React.MouseEvent<HTMLButtonElement>) => {
-    const dialog = dialogRef.current;
-    if (!dialog) return;
-
-    dialog.showModal();
-
-    if (e.detail !== 0) {
-      focusElement(dialog);
-    }
-  };
 
   return (
     <>
@@ -86,7 +85,14 @@ const CartPage = () => {
             <button
               type="button"
               className={clsx(styles.summary__checkout, "text--btn")}
-              onClick={handleOpenCheckout}
+              onPointerDown={() => setIsDialogOpen(true)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setIsDialogOpen(true);
+                }
+              }}
+              ref={checkoutRef}
             >
               {t("checkout")}
             </button>
@@ -94,7 +100,11 @@ const CartPage = () => {
         </section>
       )}
 
-      <Dialog t={t} dialogRef={dialogRef} />
+      <Dialog
+        t={t}
+        isOpen={isDialogOpen}
+        onClose={() => setIsDialogOpen(false)}
+      />
     </>
   );
 };

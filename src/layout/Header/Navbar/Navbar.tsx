@@ -123,7 +123,6 @@ const Navbar: React.FC<NavbarProps> = ({
         type="button"
         aria-label={isExpanded ? t("closeNavLabel") : t("openNavLabel")}
         aria-expanded={isExpanded}
-        data-navbar-toggle="main"
         className={styles.navbar__toggle}
         onClick={() => setIsExpanded((prev) => !prev)}
         ref={toggleRef}
@@ -135,6 +134,7 @@ const Navbar: React.FC<NavbarProps> = ({
         className={styles.navbar__menu}
         ref={menuRef}
         aria-label={t("mainNavLabel")}
+        data-menu-open={isExpanded}
       >
         <ul className={styles["navbar__list-primary"]}>
           {["home", "phones", "tablets", "accessories"].map((item) => (

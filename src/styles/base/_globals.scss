@@ -17,7 +17,6 @@
 
   --dialog-bg: #1a1d1f;
   --dialog-bd: #262a2d;
-  --dialog-backdrop-bg: rgb(33 37 41 / 20%);
 
   font-family: system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +40,6 @@
 
   --dialog-bg: var(--bg-color-layout);
   --dialog-bd: var(--bd-color-primary);
-  --dialog-backdrop-bg: rgb(255 255 255 / 20%);
 
   -webkit-font-smoothing: auto;
 }
@@ -59,13 +57,10 @@ body {
   margin: 0;
 }
 
-body:has(dialog[open]),
-body:has(button[data-navbar-toggle="main"][aria-expanded="true"]) {
-  overflow-y: hidden;
-}
-
-body:has(button[data-navbar-toggle="main"][aria-expanded="true"]) {
+body:has(nav[data-menu-open="true"]),
+body:has(div[data-dialog-open="true"]) {
   touch-action: none;
+  overflow-y: hidden;
 }
 
 a {

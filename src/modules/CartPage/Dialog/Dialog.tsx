@@ -1,66 +1,94 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
+import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import styles from "./Dialog.module.scss";
 
 interface DialogProps {
   t: TFunction;
-  dialogRef: React.RefObject<HTMLDialogElement | null>;
+  isOpen: boolean;
+  onClose: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = ({ t, dialogRef }) => {
-  const handleDialogClick = (e: React.MouseEvent<HTMLDialogElement>) => {
-    const dialog = dialogRef.current;
+const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose }) => {
+  const okRef = useRef<HTMLButtonElement>(null);
 
-    if (!dialog || e.target !== dialog) {
+  useEffect(() => {
+    const app = document.querySelector(".App") as HTMLElement;
+
+    if (isOpen) {
+      app.inert = true;
+      okRef.current?.focus();
+    }
+
+    return () => {
+      app.inert = false;
+    };
+  }, [isOpen]);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: onClose is intentionally excluded
+  useEffect(() => {
+    if (!isOpen) {
       return;
     }
 
-    const rect = dialog.getBoundingClientRect();
+    const handleEscapeKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
 
-    const clickedInDialog =
-      rect.top <= e.clientY &&
-      e.clientY <= rect.bottom &&
-      rect.left <= e.clientX &&
-      e.clientX <= rect.right;
+    document.addEventListener("keydown", handleEscapeKey);
 
-    if (!clickedInDialog) {
-      dialog?.close();
-    }
-  };
+    return () => {
+      document.removeEventListener("keydown", handleEscapeKey);
+    };
+  }, [isOpen]);
 
-  return (
-    // biome-ignore lint/a11y/useKeyWithClickEvents: Native dialog handles keyboard (Esc) automatically
-    <dialog
-      ref={dialogRef}
-      className={styles.dialog}
+  return createPortal(
+    <div
+      className={styles.backdrop}
+      role="dialog"
+      aria-modal="true"
       aria-labelledby="not-available-title"
       aria-describedby="not-available-desc"
-      onClick={handleDialogClick}
+      data-dialog-open={isOpen}
+      onPointerDown={(e) => e.target === e.currentTarget && onClose()}
     >
-      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-      <h2
-        id="not-available-title"
-        className={clsx(styles.dialog__heading, "title--lg")}
-      >
-        {t("notAvailableTitle")}
-      </h2>
+      <div className={styles.dialog}>
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+        <h2
+          id="not-available-title"
+          className={clsx(styles.dialog__heading, "title--lg")}
+        >
+          {t("notAvailableTitle")}
+        </h2>
 
-      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-      <p
-        id="not-available-desc"
-        className={clsx(styles.dialog__message, "text--body")}
-      >
-        {t("notAvailableMessage")}
-      </p>
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+        <p
+          id="not-available-desc"
+          className={clsx(styles.dialog__message, "text--body")}
+        >
+          {t("notAvailableMessage")}
+        </p>
 
-      <button
-        type="button"
-        className={clsx(styles.dialog__ok, "text--btn")}
-        onClick={() => dialogRef.current?.close()}
-      >
-        OK
-      </button>
-    </dialog>
+        <button
+          type="button"
+          className={clsx(styles.dialog__ok, "text--btn")}
+          onPointerDown={onClose}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onClose();
+            }
+          }}
+          ref={okRef}
+        >
+          OK
+        </button>
+      </div>
+    </div>,
+    document.getElementById("root") as HTMLElement,
   );
 };
 

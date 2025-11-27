@@ -1,69 +1,67 @@
-.dialog {
-  padding: 28px;
-  border: $border-width solid var(--dialog-bd);
-  border-radius: 8px;
+.backdrop {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
 
-  color: var(--text-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  visibility: hidden;
   opacity: 0;
-  background-color: var(--dialog-bg);
+  background-color: var(--bg-nav);
+  -webkit-backdrop-filter: blur(6px); /* Safari support 9-17.6 */
+  backdrop-filter: blur(6px);
 
-  @include on-desktop {
-    transition: opacity 0.18s, overlay 0.28s allow-discrete,
-      display 0.28s allow-discrete;
-  }
+  transition: opacity 0.18s ease-out, visibility 0.18s allow-discrete;
 
-  &::backdrop {
-    opacity: 0;
-    background-color: var(--dialog-backdrop-bg);
-    -webkit-backdrop-filter: blur(4px); /* Safari support 9-17.6 */
-    backdrop-filter: blur(4px);
+  .dialog {
+    transform: scale(0.9);
 
-    @include on-desktop {
-      transition: opacity 0.28s;
+    padding: 28px;
+    border: $border-width solid var(--dialog-bd);
+    border-radius: 8px;
+
+    color: var(--text-color-primary);
+
+    background-color: var(--dialog-bg);
+
+    transition: transform 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    &__message {
+      white-space: pre-line;
+    }
+
+    &__heading,
+    &__message {
+      margin-bottom: 24px;
+    }
+
+    &__ok {
+      display: block;
+      margin-inline: auto;
+      padding: 8px 28px;
+      outline-offset: 2px;
+
+      @include accent-button;
     }
   }
 
-  &:focus {
-    outline: none;
-  }
-
-  &[open] {
-    touch-action: none;
-    transform: scale(1);
+  &[data-dialog-open="true"] {
+    visibility: visible;
     opacity: 1;
-    transition: opacity 0.28s, transform 0.28s;
+    transition: opacity 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
     @starting-style {
-      transform: scale(0.9);
       opacity: 0;
     }
-  }
 
-  &[open]::backdrop {
-    opacity: 1;
-    transition: opacity 0.28s;
+    .dialog {
+      transform: scale(1);
 
-    @starting-style {
-      opacity: 0;
+      @starting-style {
+        transform: scale(0.9);
+      }
     }
-  }
-
-  &__message {
-    white-space: pre-line;
-  }
-
-  &__heading,
-  &__message {
-    margin-bottom: 24px;
-  }
-
-  &__ok {
-    display: block;
-    margin-inline: auto;
-    padding: 8px 28px;
-    outline-offset: 2px;
-
-    @include accent-button;
   }
 }
