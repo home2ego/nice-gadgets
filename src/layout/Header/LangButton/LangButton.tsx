@@ -27,6 +27,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const toggleRef = useRef<HTMLButtonElement>(null);
   const langRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const openedByKeyboard = useRef(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const currentLangLabel =
     languages.find((lang) => lang.code === normalizedLang)?.label ?? "";
@@ -50,6 +51,8 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   }, [isExpanded]);
 
   useEffect(() => {
+    menuRef.current?.toggleAttribute("inert", !isExpanded);
+
     if (!isExpanded || !openedByKeyboard.current) {
       return;
     }
@@ -144,7 +147,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         </Icon>
       </button>
 
-      <div className={styles.dropdown__menu}>
+      <div className={styles.dropdown__menu} ref={menuRef}>
         {sortedLanguages.map((lang, idx) => (
           <button
             key={lang.code}

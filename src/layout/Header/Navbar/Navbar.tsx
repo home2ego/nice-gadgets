@@ -95,10 +95,12 @@ const Navbar: React.FC<NavbarProps> = ({
         mainRef.current?.removeAttribute("inert");
         footerRef.current?.removeAttribute("inert");
         skipRef.current?.removeAttribute("inert");
+        menuRef.current?.removeAttribute("inert");
       } else {
         mainRef.current?.toggleAttribute("inert", isExpanded);
         footerRef.current?.toggleAttribute("inert", isExpanded);
         skipRef.current?.toggleAttribute("inert", isExpanded);
+        menuRef.current?.toggleAttribute("inert", !isExpanded);
       }
     };
 

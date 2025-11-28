@@ -11,7 +11,7 @@
   opacity: 0;
   background-color: var(--backdrop-bg);
 
-  transition: opacity 0.18s ease-out, visibility 0.18s allow-discrete;
+  transition: opacity 0.18s ease-out, visibility 0s 0.18s;
 
   .dialog {
     transform: scale(0.9);
@@ -50,16 +50,8 @@
     opacity: 1;
     transition: opacity 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
-    @starting-style {
-      opacity: 0;
-    }
-
     .dialog {
       transform: scale(1);
-
-      @starting-style {
-        transform: scale(0.9);
-      }
     }
   }
 }

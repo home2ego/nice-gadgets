@@ -111,19 +111,19 @@
 
   &__toggle[aria-expanded="false"] + &__menu {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
     opacity: 0;
     transition: transform 0.36s,
-      opacity 1.44s cubic-bezier(0.445, 0.05, 0.55, 0.95),
-      display 0.72s allow-discrete;
+      opacity 0.1s 0.26s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+      visibility 0s 0.36s;
 
     @include on-tablet {
       transform: initial;
-      transition: opacity 0.18s, display 0.18s allow-discrete;
+      transition: opacity 0.18s, visibility 0s 0.18s;
     }
 
     @include on-desktop {
-      display: flex;
+      visibility: initial;
       opacity: 1;
       transition: none;
     }
@@ -135,18 +135,9 @@
     transition: transform 0.36s,
       opacity 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
-    @starting-style {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-
     @include on-tablet {
       transform: initial;
       transition: opacity 0.18s;
-
-      @starting-style {
-        opacity: 0;
-      }
     }
   }
 
