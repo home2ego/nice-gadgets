@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useOutletContext } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
-import Back from "../shared/components/Back/Back";
+import Icon from "@/layout/shared/components/Icon";
 import type { OutletContext } from "../shared/types/outletContext";
 import { formatPrice } from "../shared/utils/priceUtils";
 import CartEmpty from "./CartEmpty";
@@ -17,6 +17,7 @@ const CartPage = () => {
 
   const { normalizedLang } = useOutletContext<OutletContext>();
   const { t } = useTranslation("cartPage");
+  const navigate = useNavigate();
   const cartProducts = useAppSelector((state) => state.cart);
   const checkoutRef = useRef<HTMLButtonElement>(null);
   const prevIsDialogOpen = useRef(isDialogOpen);
@@ -38,7 +39,16 @@ const CartPage = () => {
     <>
       <title>{t("title")}</title>
 
-      <Back t={t} />
+      <button
+        type="button"
+        className={styles.back}
+        onClick={() => navigate(-1)}
+      >
+        <Icon>
+          <path d="m15 18-6-6 6-6" />
+        </Icon>
+        <span className="text--sm">{t("back")}</span>
+      </button>
 
       {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
       <h1 id="cart" className={clsx(styles.heading, "title--xl")}>

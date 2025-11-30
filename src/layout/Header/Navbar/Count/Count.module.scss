@@ -10,7 +10,7 @@
 
   color: $light-color;
 
-  background-color: var(--active-color);
+  background-color: $active-color;
 
   @include square-size(21px);
 

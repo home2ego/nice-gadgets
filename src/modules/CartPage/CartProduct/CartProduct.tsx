@@ -36,8 +36,7 @@ const CartProduct: React.FC<ProductProps> = ({
           onClick={() => dispatch(removeFromCart(product))}
         >
           <Icon>
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
+            <path d="M18 6 6 18M6 6l12 12" />
           </Icon>
         </button>
 
@@ -80,8 +79,7 @@ const CartProduct: React.FC<ProductProps> = ({
             aria-label={t("increaseQuantity")}
           >
             <Icon>
-              <path d="M5 12h14" />
-              <path d="M12 5v14" />
+              <path d="M5 12h14M12 5v14" />
             </Icon>
           </button>
         </div>

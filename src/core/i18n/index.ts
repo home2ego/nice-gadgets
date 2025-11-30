@@ -10,6 +10,7 @@ import enFooter from "./locales/en/footer.json";
 import enHeader from "./locales/en/header.json";
 import enHomePage from "./locales/en/homePage.json";
 import enPhonesPage from "./locales/en/phonesPage.json";
+import enRightsPage from "./locales/en/rightsPage.json";
 import enTabletsPage from "./locales/en/tabletsPage.json";
 
 import fiAccessoriesPage from "./locales/fi/accessoriesPage.json";
@@ -20,6 +21,7 @@ import fiFooter from "./locales/fi/footer.json";
 import fiHeader from "./locales/fi/header.json";
 import fiHomePage from "./locales/fi/homePage.json";
 import fiPhonesPage from "./locales/fi/phonesPage.json";
+import fiRightsPage from "./locales/fi/rightsPage.json";
 import fiTabletsPage from "./locales/fi/tabletsPage.json";
 
 import plAccessoriesPage from "./locales/pl/accessoriesPage.json";
@@ -30,6 +32,7 @@ import plFooter from "./locales/pl/footer.json";
 import plHeader from "./locales/pl/header.json";
 import plHomePage from "./locales/pl/homePage.json";
 import plPhonesPage from "./locales/pl/phonesPage.json";
+import plRightsPage from "./locales/pl/rightsPage.json";
 import plTabletsPage from "./locales/pl/tabletsPage.json";
 
 import ukAccessoriesPage from "./locales/uk/accessoriesPage.json";
@@ -40,6 +43,7 @@ import ukFooter from "./locales/uk/footer.json";
 import ukHeader from "./locales/uk/header.json";
 import ukHomePage from "./locales/uk/homePage.json";
 import ukPhonesPage from "./locales/uk/phonesPage.json";
+import ukRightsPage from "./locales/uk/rightsPage.json";
 import ukTabletsPage from "./locales/uk/tabletsPage.json";
 
 i18n
@@ -58,6 +62,7 @@ i18n
         accessoriesPage: enAccessoriesPage,
         cartPage: enCartPage,
         favouritesPage: enFavouritesPage,
+        rightsPage: enRightsPage,
       },
       fi: {
         common: fiCommon,
@@ -69,6 +74,7 @@ i18n
         accessoriesPage: fiAccessoriesPage,
         cartPage: fiCartPage,
         favouritesPage: fiFavouritesPage,
+        rightsPage: fiRightsPage,
       },
       pl: {
         common: plCommon,
@@ -80,6 +86,7 @@ i18n
         accessoriesPage: plAccessoriesPage,
         cartPage: plCartPage,
         favouritesPage: plFavouritesPage,
+        rightsPage: plRightsPage,
       },
       uk: {
         common: ukCommon,
@@ -91,6 +98,7 @@ i18n
         accessoriesPage: ukAccessoriesPage,
         cartPage: ukCartPage,
         favouritesPage: ukFavouritesPage,
+        rightsPage: ukRightsPage,
       },
     },
     fallbackLng: "en",
@@ -104,6 +112,7 @@ i18n
       "accessoriesPage",
       "cartPage",
       "favouritesPage",
+      "rightsPage",
     ],
     defaultNS: "common",
     fallbackNS: "common",

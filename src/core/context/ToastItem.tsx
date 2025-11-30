@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Icon from "@/layout/shared/components/Icon";
+import check from "@/assets/check.svg";
+import x from "@/assets/x.svg";
 import styles from "./ToastItem.module.scss";
 import type { Toast } from "./toast";
 
@@ -31,9 +32,7 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
         }
       }}
     >
-      <Icon stroke="currentColor" width="24" height="24">
-        <path d="M20 6 9 17l-5-5" />
-      </Icon>
+      <img src={check} alt="" width="24" height="24" decoding="async" />
 
       <span>{toast.message}</span>
 
@@ -43,10 +42,7 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
         aria-label={t("dismissNotificationLabel")}
         onClick={() => setIsClosing(true)}
       >
-        <Icon stroke="currentColor">
-          <path d="M18 6 6 18" />
-          <path d="m6 6 12 12" />
-        </Icon>
+        <img src={x} alt="" width="16" height="16" decoding="async" />
       </button>
     </div>
   );

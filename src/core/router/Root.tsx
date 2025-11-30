@@ -8,6 +8,7 @@ import FavouritesPage from "@/modules/FavouritesPage";
 import HomePage from "@/modules/HomePage";
 import NotFound from "@/modules/NotFound";
 import PhonesPage from "@/modules/PhonesPage";
+import RightsPage from "@/modules/RightsPage";
 import TabletsPage from "@/modules/TabletsPage";
 
 const Root = () => (
@@ -25,7 +26,7 @@ const Root = () => (
         <Route path="cart" element={<CartPage />} />
 
         <Route path="contacts" element={<div>Contacts Page</div>} />
-        <Route path="rights" element={<div>Rights Page</div>} />
+        <Route path="rights" element={<RightsPage />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

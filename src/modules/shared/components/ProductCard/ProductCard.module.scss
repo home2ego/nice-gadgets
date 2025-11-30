@@ -100,8 +100,8 @@
     @include square-size(42px);
 
     &.active svg {
-      fill: var(--active-color);
-      stroke: var(--active-color);
+      fill: $active-color;
+      stroke: $active-color;
     }
 
     .effect {
