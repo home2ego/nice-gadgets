@@ -78,7 +78,7 @@ const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
           type="button"
           className={clsx(styles.dialog__confirm, "text--btn")}
           ref={okRef}
-          onPointerDown={onClear}
+          onClick={onClear}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();
@@ -93,7 +93,7 @@ const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
           type="button"
           aria-label={t("cancel")}
           className={clsx(styles.dialog__cancel, "text--btn")}
-          onPointerDown={onClose}
+          onClick={onClose}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();
