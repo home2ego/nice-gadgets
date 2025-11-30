@@ -114,7 +114,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
   const visibleProducts: Product[] = sortedProducts.slice(startIndex, endIndex);
   const hasLoadMore = visibleProducts.length < countModels;
 
-  const handleLoadMorePointer = () => {
+  const handleLoadMoreClick = () => {
     prevVisibleCount.current = visibleCount;
     setVisibleCount((prev) => Math.min(prev + LOAD_STEP, countModels));
   };
@@ -124,7 +124,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
       e.preventDefault();
 
       focusLoadMore.current = true;
-      handleLoadMorePointer();
+      handleLoadMoreClick();
     }
   };
 
@@ -214,7 +214,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
           <button
             type="button"
             className={clsx(styles.load, "text--uppercase")}
-            onPointerDown={handleLoadMorePointer}
+            onClick={handleLoadMoreClick}
             onKeyDown={handleLoadMoreKey}
             ref={loadBtnRef}
           >
