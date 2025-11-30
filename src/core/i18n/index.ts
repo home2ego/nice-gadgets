@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 import enAccessoriesPage from "./locales/en/accessoriesPage.json";
 import enCartPage from "./locales/en/cartPage.json";
 import enCommon from "./locales/en/common.json";
+import enContactsPage from "./locales/en/contactsPage.json";
 import enFavouritesPage from "./locales/en/favouritesPage.json";
 import enFooter from "./locales/en/footer.json";
 import enHeader from "./locales/en/header.json";
@@ -16,6 +17,7 @@ import enTabletsPage from "./locales/en/tabletsPage.json";
 import fiAccessoriesPage from "./locales/fi/accessoriesPage.json";
 import fiCartPage from "./locales/fi/cartPage.json";
 import fiCommon from "./locales/fi/common.json";
+import fiContactsPage from "./locales/fi/contactsPage.json";
 import fiFavouritesPage from "./locales/fi/favouritesPage.json";
 import fiFooter from "./locales/fi/footer.json";
 import fiHeader from "./locales/fi/header.json";
@@ -27,6 +29,7 @@ import fiTabletsPage from "./locales/fi/tabletsPage.json";
 import plAccessoriesPage from "./locales/pl/accessoriesPage.json";
 import plCartPage from "./locales/pl/cartPage.json";
 import plCommon from "./locales/pl/common.json";
+import plContactsPage from "./locales/pl/contactsPage.json";
 import plFavouritesPage from "./locales/pl/favouritesPage.json";
 import plFooter from "./locales/pl/footer.json";
 import plHeader from "./locales/pl/header.json";
@@ -38,6 +41,7 @@ import plTabletsPage from "./locales/pl/tabletsPage.json";
 import ukAccessoriesPage from "./locales/uk/accessoriesPage.json";
 import ukCartPage from "./locales/uk/cartPage.json";
 import ukCommon from "./locales/uk/common.json";
+import ukContactsPage from "./locales/uk/contactsPage.json";
 import ukFavouritesPage from "./locales/uk/favouritesPage.json";
 import ukFooter from "./locales/uk/footer.json";
 import ukHeader from "./locales/uk/header.json";
@@ -63,6 +67,7 @@ i18n
         cartPage: enCartPage,
         favouritesPage: enFavouritesPage,
         rightsPage: enRightsPage,
+        contactsPage: enContactsPage,
       },
       fi: {
         common: fiCommon,
@@ -75,6 +80,7 @@ i18n
         cartPage: fiCartPage,
         favouritesPage: fiFavouritesPage,
         rightsPage: fiRightsPage,
+        contactsPage: fiContactsPage,
       },
       pl: {
         common: plCommon,
@@ -87,6 +93,7 @@ i18n
         cartPage: plCartPage,
         favouritesPage: plFavouritesPage,
         rightsPage: plRightsPage,
+        contactsPage: plContactsPage,
       },
       uk: {
         common: ukCommon,
@@ -99,6 +106,7 @@ i18n
         cartPage: ukCartPage,
         favouritesPage: ukFavouritesPage,
         rightsPage: ukRightsPage,
+        contactsPage: ukContactsPage,
       },
     },
     fallbackLng: "en",
@@ -113,6 +121,7 @@ i18n
       "cartPage",
       "favouritesPage",
       "rightsPage",
+      "contactsPage",
     ],
     defaultNS: "common",
     fallbackNS: "common",

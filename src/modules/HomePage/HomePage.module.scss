@@ -39,15 +39,7 @@
 }
 
 .welcome {
-  margin-block: 24px;
-
-  @include on-tablet {
-    margin-block: 32px;
-  }
-
-  @include on-desktop {
-    margin-block: 56px;
-  }
+  @extend %heading-spacing;
 }
 
 .wrapper {
