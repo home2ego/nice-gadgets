@@ -16,38 +16,40 @@ const ContactsPage = () => {
           {t("contactInfo")}
         </h2>
 
-        <dl className={styles.list}>
-          <dt className={clsx(styles.list__title, "text--body")}>
-            {t("website")}
-          </dt>
-          <dd className="text--btn">
+        <dl className={clsx(styles.list, "text--body")}>
+          <dt className={styles.list__title}>{t("website")}</dt>
+          <dd>
             <a
               className={styles.link}
               href="https://artemzhyrnyi.pages.dev/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className={styles.link__text}>artemzhyrnyi.pages.dev</span>
+              <span className={clsx(styles.link__text, "text--btn")}>
+                artemzhyrnyi.pages.dev
+              </span>
             </a>
           </dd>
 
-          <dt className={clsx(styles.list__title, "text--body")}>Email:</dt>
-          <dd className="text--btn">
+          <dt className={styles.list__title}>Email:</dt>
+          <dd>
             <a className={styles.link} href="mailto:ic3ego@gmail.com">
-              <span className={styles.link__text}>ic3ego@gmail.com</span>
+              <span className={clsx(styles.link__text, "text--btn")}>
+                ic3ego@gmail.com
+              </span>
             </a>
           </dd>
 
-          <dt className={clsx(styles.list__title, "text--body")}>LinkedIn:</dt>
-          <dd className="text--btn">
+          <dt className={styles.list__title}>LinkedIn:</dt>
+          <dd>
             <a
               className={styles.link}
               href="https://www.linkedin.com/in/home2ego"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className={styles.link__text}>
-                www.linkedin.com/in/home2ego
+              <span className={clsx(styles.link__text, "text--btn")}>
+                linkedin.com/in/home2ego
               </span>
             </a>
           </dd>
