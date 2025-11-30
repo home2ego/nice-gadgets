@@ -11,7 +11,7 @@
   "quantityFor": "Adjust quantity for {{product}}",
   "productUpdate": "Quantity: {{quantity}}. Total price: {{price}}",
   "orderTotal": "Order total",
-  "notAvailableTitle": "Not Available Yet",
-  "notAvailableMessage": "Checkout is currently in development.\nThanks for your patience!",
+  "checkoutMessage": "Checkout is not implemented yet.\nDo you want to clear the Cart?",
+  "cancel": "Cancel",
   "cartEmpty": "Your cart is empty"
 }

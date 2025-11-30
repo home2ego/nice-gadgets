@@ -2,15 +2,17 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import Icon from "@/layout/shared/components/Icon";
 import styles from "./Dialog.module.scss";
 
 interface DialogProps {
   t: TFunction;
   isOpen: boolean;
   onClose: () => void;
+  onClear: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose }) => {
+const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
   const okRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -50,41 +52,58 @@ const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose }) => {
       className={styles.backdrop}
       role="dialog"
       aria-modal="true"
-      aria-labelledby="not-available-title"
-      aria-describedby="not-available-desc"
+      aria-labelledby="checkout-title"
+      aria-describedby="checkout-desc"
       data-dialog-open={isOpen}
       onPointerDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className={styles.dialog}>
         {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h2
-          id="not-available-title"
+          id="checkout-title"
           className={clsx(styles.dialog__heading, "title--lg")}
         >
-          {t("notAvailableTitle")}
+          {t("checkout")}
         </h2>
 
         {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <p
-          id="not-available-desc"
+          id="checkout-desc"
           className={clsx(styles.dialog__message, "text--body")}
         >
-          {t("notAvailableMessage")}
+          {t("checkoutMessage")}
         </p>
 
         <button
           type="button"
-          className={clsx(styles.dialog__ok, "text--btn")}
-          onPointerDown={onClose}
+          className={clsx(styles.dialog__confirm, "text--btn")}
+          ref={okRef}
+          onClick={onClear}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              onClear();
+            }
+          }}
+        >
+          OK
+        </button>
+
+        <button
+          type="button"
+          aria-label={t("cancel")}
+          className={clsx(styles.dialog__cancel, "text--btn")}
+          onClick={onClose}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
               e.preventDefault();
               onClose();
             }
           }}
-          ref={okRef}
         >
-          OK
+          <Icon>
+            <path d="M18 6 6 18M6 6l12 12" />
+          </Icon>
         </button>
       </div>
     </div>,

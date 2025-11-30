@@ -12,7 +12,7 @@
   "quantityFor": "Dostosuj ilość dla {{product}}",
   "productUpdate": "Ilość: {{quantity}}. Cena całkowita: {{price}}",
   "orderTotal": "Suma zamówienia",
-  "notAvailableTitle": "Jeszcze niedostępne",
-  "notAvailableMessage": "Funkcja płatności jest w trakcie tworzenia.\nDziękujemy za cierpliwość!",
+  "checkoutMessage": "Proces realizacji zamówienia nie jest jeszcze dostępny.\nCzy chcesz wyczyścić koszyk?",
+  "cancel": "Anuluj",
   "cartEmpty": "Twój koszyk jest pusty"
 }

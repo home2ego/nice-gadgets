@@ -11,7 +11,7 @@
   "quantityFor": "Säädä määrä tuotteelle {{product}}",
   "productUpdate": "Määrä: {{quantity}}. Kokonaishinta: {{price}}",
   "orderTotal": "Tilaussumma",
-  "notAvailableTitle": "Ei vielä saatavilla",
-  "notAvailableMessage": "Kassaominaisuus on vielä kehitteillä.\nKiitos kärsivällisyydestäsi!",
+  "checkoutMessage": "Kassan toimintoja ei ole vielä toteutettu.\nHaluatko tyhjentää ostoskorin?",
+  "cancel": "Peruuta",
   "cartEmpty": "Ostoskorisi on tyhjä"
 }

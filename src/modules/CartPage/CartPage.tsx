@@ -2,7 +2,8 @@ import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext } from "react-router-dom";
-import { useAppSelector } from "@/core/store/hooks";
+import { clearCart } from "@/core/store/cart/cartSlice";
+import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
 import type { OutletContext } from "../shared/types/outletContext";
 import { formatPrice } from "../shared/utils/priceUtils";
@@ -18,6 +19,7 @@ const CartPage = () => {
   const { normalizedLang } = useOutletContext<OutletContext>();
   const { t } = useTranslation("cartPage");
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const cartProducts = useAppSelector((state) => state.cart);
   const checkoutRef = useRef<HTMLButtonElement>(null);
   const prevIsDialogOpen = useRef(isDialogOpen);
@@ -34,6 +36,11 @@ const CartPage = () => {
     cartProducts,
     normalizedLang,
   );
+
+  const handleCartClear = () => {
+    setIsDialogOpen(false);
+    dispatch(clearCart());
+  };
 
   return (
     <>
@@ -85,7 +92,7 @@ const CartPage = () => {
             <button
               type="button"
               className={clsx(styles.summary__checkout, "text--btn")}
-              onPointerDown={() => setIsDialogOpen(true)}
+              onClick={() => setIsDialogOpen(true)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
@@ -104,6 +111,7 @@ const CartPage = () => {
         t={t}
         isOpen={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
+        onClear={handleCartClear}
       />
     </>
   );
