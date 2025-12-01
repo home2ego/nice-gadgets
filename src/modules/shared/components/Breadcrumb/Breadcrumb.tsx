@@ -28,26 +28,33 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ t, heading, productName }) => (
 
       {productName ? (
         <>
-          <li className={styles.breadcrumb__item}>
-            <Link
-              to={`/${heading}`}
-              className={clsx(styles.breadcrumb__link, "text--sm")}
-            >
+          <li className={clsx(styles.breadcrumb__item, "text--sm")}>
+            <Link to={`/${heading}`} className={styles.breadcrumb__link}>
               {t(heading)}
             </Link>
           </li>
 
-          <li aria-current="page" className={styles.breadcrumb__item}>
-            <span className={clsx(styles.breadcrumb__current, "text--sm")}>
-              {productName}
-            </span>
+          <li
+            aria-current="page"
+            className={clsx(
+              styles.breadcrumb__item,
+              styles["breadcrumb__item--current"],
+              "text--sm",
+            )}
+          >
+            {productName}
           </li>
         </>
       ) : (
-        <li aria-current="page" className={styles.breadcrumb__item}>
-          <span className={clsx(styles.breadcrumb__current, "text--sm")}>
-            {t(heading)}
-          </span>
+        <li
+          aria-current="page"
+          className={clsx(
+            styles.breadcrumb__item,
+            styles["breadcrumb__item--current"],
+            "text--sm",
+          )}
+        >
+          {t(heading)}
         </li>
       )}
     </ol>

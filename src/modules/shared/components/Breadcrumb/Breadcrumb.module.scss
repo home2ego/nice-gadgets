@@ -20,6 +20,11 @@
       -webkit-mask-image: url("@/assets/chevron-right.svg");
       mask-image: url("@/assets/chevron-right.svg");
     }
+
+    &--current {
+      margin-left: 8px;
+      color: var(--text-color-secondary);
+    }
   }
 
   &__link {
@@ -29,10 +34,5 @@
     &:hover {
       opacity: 0.7;
     }
-  }
-
-  &__current {
-    margin-left: 8px;
-    color: var(--text-color-secondary);
   }
 }
