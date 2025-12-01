@@ -1,4 +1,6 @@
 .heading {
+  @extend %heading-spacing-secondary;
+
   margin-bottom: 8px;
 }
 

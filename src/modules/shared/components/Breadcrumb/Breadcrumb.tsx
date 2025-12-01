@@ -7,11 +7,12 @@ import styles from "./Breadcrumb.module.scss";
 interface BreadcrumbProps {
   t: TFunction;
   heading: string;
+  productName?: string;
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ t, heading }) => (
-  <nav aria-label={t("breadcrumbLabel")}>
-    <ol className={styles.breadcrumb}>
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ t, heading, productName }) => (
+  <nav aria-label={t("breadcrumbLabel")} className={styles.breadcrumb}>
+    <ol className={styles.breadcrumb__list}>
       <li className={styles.breadcrumb__item}>
         <Link
           to="/"
@@ -25,11 +26,30 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ t, heading }) => (
         </Link>
       </li>
 
-      <li aria-current="page" className={styles.breadcrumb__item}>
-        <span className={clsx(styles.breadcrumb__current, "text--sm")}>
-          {t(heading)}
-        </span>
-      </li>
+      {productName ? (
+        <>
+          <li className={styles.breadcrumb__item}>
+            <Link
+              to={`/${heading}`}
+              className={clsx(styles.breadcrumb__link, "text--sm")}
+            >
+              {t(heading)}
+            </Link>
+          </li>
+
+          <li aria-current="page" className={styles.breadcrumb__item}>
+            <span className={clsx(styles.breadcrumb__current, "text--sm")}>
+              {productName}
+            </span>
+          </li>
+        </>
+      ) : (
+        <li aria-current="page" className={styles.breadcrumb__item}>
+          <span className={clsx(styles.breadcrumb__current, "text--sm")}>
+            {t(heading)}
+          </span>
+        </li>
+      )}
     </ol>
   </nav>
 );

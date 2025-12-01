@@ -13,10 +13,6 @@ const RightsPage = () => {
       <h1 className={clsx(styles.heading, "title--xl")}>{t("rights")}</h1>
 
       <section>
-        <h2 className={clsx(styles.subheading, "title--lg")}>
-          {t("yourRights")}
-        </h2>
-
         <ul className={clsx(styles.list, "text--body")}>
           <li className={styles.list__item}>{t("items.explore")}</li>
           <li className={styles.list__item}>{t("items.privacy")}</li>

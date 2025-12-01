@@ -1,9 +1,5 @@
 .heading {
-  @extend %heading-spacing;
-}
-
-.subheading {
-  margin-bottom: 8px;
+  @extend %heading-spacing-utility;
 }
 
 .list {

@@ -20,14 +20,31 @@
   padding: 12px;
 }
 
-%heading-spacing {
-  margin-block: 24px;
+%heading-spacing-primary {
+  margin-top: 16px;
+  margin-bottom: 32px;
 
   @include on-tablet {
-    margin-block: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+%heading-spacing-secondary {
+  margin-top: 16px;
+
+  @include on-tablet {
+    margin-top: 32px;
+  }
+}
+
+%heading-spacing-utility {
+  margin-block: 24px 16px;
+
+  @include on-tablet {
+    margin-block: 32px 24px;
   }
 
   @include on-desktop {
-    margin-block: 56px;
+    margin-top: 56px;
   }
 }

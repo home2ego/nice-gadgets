@@ -5,6 +5,7 @@ import accessories from "@/api/accessories.json";
 import phones from "@/api/phones.json";
 import tablets from "@/api/tablets.json";
 import Back from "../shared/components/Back";
+import Breadcrumb from "../shared/components/Breadcrumb";
 import styles from "./ProductDetailsPage.module.scss";
 
 const ProductDetailsPage = () => {
@@ -20,6 +21,8 @@ const ProductDetailsPage = () => {
 
   return (
     <>
+      <Breadcrumb t={t} heading={product.category} productName={product.name} />
+
       <Back t={t} />
 
       <h1 className={clsx(styles.heading, "title--lg")}>{product?.name}</h1>

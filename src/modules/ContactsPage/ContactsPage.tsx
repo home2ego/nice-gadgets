@@ -12,10 +12,6 @@ const ContactsPage = () => {
       <h1 className={clsx(styles.heading, "title--xl")}>{t("contacts")}</h1>
 
       <section>
-        <h2 className={clsx(styles.subheading, "title--lg")}>
-          {t("contactInfo")}
-        </h2>
-
         <dl className={clsx(styles.list, "text--body")}>
           <dt className={styles.list__title}>{t("website")}</dt>
           <dd>
