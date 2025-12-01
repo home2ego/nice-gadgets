@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import { ToastContext } from "@/core/context/ToastProvider";
 import { addToCart, removeFromCart } from "@/core/store/cart/cartSlice";
 import {
@@ -46,6 +47,7 @@ const ProductCard: React.FC<ProductProps> = ({
     shortName,
     image,
     id: productId,
+    itemId,
     price,
     fullPrice,
     screen,
@@ -91,9 +93,8 @@ const ProductCard: React.FC<ProductProps> = ({
 
   return (
     <article className={styles.product}>
-      {/* biome-ignore lint/a11y/useAnchorContent: overlay link with aria-label provides accessible name */}
-      <a
-        href="/"
+      <Link
+        to={`/product/${itemId}`}
         aria-label={t("productLabel", {
           current: productIdx + 1,
           total: totalProducts,

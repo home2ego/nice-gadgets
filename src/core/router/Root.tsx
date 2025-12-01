@@ -9,6 +9,7 @@ import FavouritesPage from "@/modules/FavouritesPage";
 import HomePage from "@/modules/HomePage";
 import NotFound from "@/modules/NotFound";
 import PhonesPage from "@/modules/PhonesPage";
+import ProductDetailsPage from "@/modules/ProductDetailsPage";
 import RightsPage from "@/modules/RightsPage";
 import TabletsPage from "@/modules/TabletsPage";
 
@@ -28,6 +29,8 @@ const Root = () => (
 
         <Route path="contacts" element={<ContactsPage />} />
         <Route path="rights" element={<RightsPage />} />
+
+        <Route path="product/:productId" element={<ProductDetailsPage />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />
