@@ -25,12 +25,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ t, heading }) => (
         </Link>
       </li>
 
-      <li aria-hidden="true">
-        <Icon stroke="var(--text-color-secondary)">
-          <path d="m9 18 6-6-6-6" />
-        </Icon>
-      </li>
-
       <li aria-current="page" className={styles.breadcrumb__item}>
         <span className={clsx(styles.breadcrumb__current, "text--sm")}>
           {t(heading)}
