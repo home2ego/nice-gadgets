@@ -14,7 +14,7 @@ const FavouritesPage = () => {
 
   return (
     <>
-      <title>{t("title")}</title>
+      <title>{t("favouritesPageTitle")}</title>
 
       <Breadcrumb t={t} heading="favourites" />
 

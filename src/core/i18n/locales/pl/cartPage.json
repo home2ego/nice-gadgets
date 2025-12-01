@@ -1,5 +1,5 @@
 {
-  "title": "Koszyk | Nice Gadgets",
+  "cartPageTitle": "Koszyk | Nice Gadgets",
   "cart": "Koszyk",
   "totalForItems_one": "Suma za {{count}} produkt",
   "totalForItems_few": "Suma za {{count}} produkty",

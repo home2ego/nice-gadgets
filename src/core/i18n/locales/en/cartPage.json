@@ -1,5 +1,5 @@
 {
-  "title": "Shopping cart | Nice Gadgets",
+  "cartPageTitle": "Shopping cart | Nice Gadgets",
   "cart": "Cart",
   "totalForItems_one": "Total for {{count}} product",
   "totalForItems_other": "Total for {{count}} products",

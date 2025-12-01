@@ -10,11 +10,11 @@ const countTablets = tablets.length;
 
 const TabletsPage = () => {
   const { footerRef, normalizedLang } = useOutletContext<OutletContext>();
-  const { t } = useTranslation("tabletsPage");
+  const { t } = useTranslation();
 
   return (
     <>
-      <title>{t("title")}</title>
+      <title>{t("tabletsPageTitle")}</title>
 
       <Breadcrumb t={t} heading="tablets" />
 

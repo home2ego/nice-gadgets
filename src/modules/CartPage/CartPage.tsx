@@ -43,7 +43,7 @@ const CartPage = () => {
 
   return (
     <>
-      <title>{t("title")}</title>
+      <title>{t("cartPageTitle")}</title>
 
       <Back t={t} />
 

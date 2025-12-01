@@ -2,7 +2,6 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-import enAccessoriesPage from "./locales/en/accessoriesPage.json";
 import enCartPage from "./locales/en/cartPage.json";
 import enCommon from "./locales/en/common.json";
 import enContactsPage from "./locales/en/contactsPage.json";
@@ -10,11 +9,8 @@ import enFavouritesPage from "./locales/en/favouritesPage.json";
 import enFooter from "./locales/en/footer.json";
 import enHeader from "./locales/en/header.json";
 import enHomePage from "./locales/en/homePage.json";
-import enPhonesPage from "./locales/en/phonesPage.json";
 import enRightsPage from "./locales/en/rightsPage.json";
-import enTabletsPage from "./locales/en/tabletsPage.json";
 
-import fiAccessoriesPage from "./locales/fi/accessoriesPage.json";
 import fiCartPage from "./locales/fi/cartPage.json";
 import fiCommon from "./locales/fi/common.json";
 import fiContactsPage from "./locales/fi/contactsPage.json";
@@ -22,11 +18,8 @@ import fiFavouritesPage from "./locales/fi/favouritesPage.json";
 import fiFooter from "./locales/fi/footer.json";
 import fiHeader from "./locales/fi/header.json";
 import fiHomePage from "./locales/fi/homePage.json";
-import fiPhonesPage from "./locales/fi/phonesPage.json";
 import fiRightsPage from "./locales/fi/rightsPage.json";
-import fiTabletsPage from "./locales/fi/tabletsPage.json";
 
-import plAccessoriesPage from "./locales/pl/accessoriesPage.json";
 import plCartPage from "./locales/pl/cartPage.json";
 import plCommon from "./locales/pl/common.json";
 import plContactsPage from "./locales/pl/contactsPage.json";
@@ -34,11 +27,8 @@ import plFavouritesPage from "./locales/pl/favouritesPage.json";
 import plFooter from "./locales/pl/footer.json";
 import plHeader from "./locales/pl/header.json";
 import plHomePage from "./locales/pl/homePage.json";
-import plPhonesPage from "./locales/pl/phonesPage.json";
 import plRightsPage from "./locales/pl/rightsPage.json";
-import plTabletsPage from "./locales/pl/tabletsPage.json";
 
-import ukAccessoriesPage from "./locales/uk/accessoriesPage.json";
 import ukCartPage from "./locales/uk/cartPage.json";
 import ukCommon from "./locales/uk/common.json";
 import ukContactsPage from "./locales/uk/contactsPage.json";
@@ -46,9 +36,7 @@ import ukFavouritesPage from "./locales/uk/favouritesPage.json";
 import ukFooter from "./locales/uk/footer.json";
 import ukHeader from "./locales/uk/header.json";
 import ukHomePage from "./locales/uk/homePage.json";
-import ukPhonesPage from "./locales/uk/phonesPage.json";
 import ukRightsPage from "./locales/uk/rightsPage.json";
-import ukTabletsPage from "./locales/uk/tabletsPage.json";
 
 i18n
   .use(LanguageDetector)
@@ -61,9 +49,6 @@ i18n
         header: enHeader,
         footer: enFooter,
         homePage: enHomePage,
-        phonesPage: enPhonesPage,
-        tabletsPage: enTabletsPage,
-        accessoriesPage: enAccessoriesPage,
         cartPage: enCartPage,
         favouritesPage: enFavouritesPage,
         rightsPage: enRightsPage,
@@ -74,9 +59,6 @@ i18n
         header: fiHeader,
         footer: fiFooter,
         homePage: fiHomePage,
-        phonesPage: fiPhonesPage,
-        tabletsPage: fiTabletsPage,
-        accessoriesPage: fiAccessoriesPage,
         cartPage: fiCartPage,
         favouritesPage: fiFavouritesPage,
         rightsPage: fiRightsPage,
@@ -87,9 +69,6 @@ i18n
         header: plHeader,
         footer: plFooter,
         homePage: plHomePage,
-        phonesPage: plPhonesPage,
-        tabletsPage: plTabletsPage,
-        accessoriesPage: plAccessoriesPage,
         cartPage: plCartPage,
         favouritesPage: plFavouritesPage,
         rightsPage: plRightsPage,
@@ -100,9 +79,6 @@ i18n
         header: ukHeader,
         footer: ukFooter,
         homePage: ukHomePage,
-        phonesPage: ukPhonesPage,
-        tabletsPage: ukTabletsPage,
-        accessoriesPage: ukAccessoriesPage,
         cartPage: ukCartPage,
         favouritesPage: ukFavouritesPage,
         rightsPage: ukRightsPage,
@@ -115,9 +91,6 @@ i18n
       "header",
       "footer",
       "homePage",
-      "phonesPage",
-      "tabletsPage",
-      "accessoriesPage",
       "cartPage",
       "favouritesPage",
       "rightsPage",

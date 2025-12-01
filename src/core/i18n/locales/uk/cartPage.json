@@ -1,5 +1,5 @@
 {
-  "title": "Кошик | Nice Gadgets",
+  "cartPageTitle": "Кошик | Nice Gadgets",
   "cart": "Кошик",
   "totalForItems_one": "Разом за {{count}} товар",
   "totalForItems_few": "Разом за {{count}} товари",

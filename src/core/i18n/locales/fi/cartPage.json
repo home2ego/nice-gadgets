@@ -1,5 +1,5 @@
 {
-  "title": "Ostoskori | Nice Gadgets",
+  "cartPageTitle": "Ostoskori | Nice Gadgets",
   "cart": "Ostoskori",
   "totalForItems_one": "Yhteensä {{count}} tuote",
   "totalForItems_other": "Yhteensä {{count}} tuotetta",

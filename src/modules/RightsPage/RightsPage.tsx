@@ -8,7 +8,7 @@ const RightsPage = () => {
 
   return (
     <>
-      <title>{t("title")}</title>
+      <title>{t("rightsPageTitle")}</title>
 
       <h1 className={clsx(styles.heading, "title--xl")}>{t("rights")}</h1>
 

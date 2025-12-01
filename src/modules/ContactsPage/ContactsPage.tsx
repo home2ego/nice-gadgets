@@ -7,7 +7,7 @@ const ContactsPage = () => {
 
   return (
     <>
-      <title>{t("title")}</title>
+      <title>{t("contactsPageTitle")}</title>
 
       <h1 className={clsx(styles.heading, "title--xl")}>{t("contacts")}</h1>
 

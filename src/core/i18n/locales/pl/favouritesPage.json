@@ -1,5 +1,5 @@
 {
-  "title": "Ulubione | Nice Gadgets",
+  "favouritesPageTitle": "Ulubione | Nice Gadgets",
   "favourites": "Ulubione",
   "countItems_one": "{{count}} produkt",
   "countItems_few": "{{count}} produkty",

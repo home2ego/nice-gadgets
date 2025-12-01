@@ -10,11 +10,11 @@ const countAccessories = accessories.length;
 
 const AccessoriesPage = () => {
   const { footerRef, normalizedLang } = useOutletContext<OutletContext>();
-  const { t } = useTranslation("accessoriesPage");
+  const { t } = useTranslation();
 
   return (
     <>
-      <title>{t("title")}</title>
+      <title>{t("accessoriesPageTitle")}</title>
 
       <Breadcrumb t={t} heading="accessories" />
 
