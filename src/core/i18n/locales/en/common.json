@@ -9,7 +9,7 @@
   "skipForwardProducts": "Skip over products",
   "skipBackProducts": "Skip back over products",
   "errorMessage": "Error 404",
-  "notFound": "Page not found",
+  "notFoundPage": "Page not found",
   "goHomePage": "Go to home page",
   "back": "Back",
   "phones": "Phones",

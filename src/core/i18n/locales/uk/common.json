@@ -9,7 +9,7 @@
   "skipForwardProducts": "Пропустити товари",
   "skipBackProducts": "Повернутися над товарами",
   "errorMessage": "Помилка 404",
-  "notFound": "Сторінку не знайдено",
+  "notFoundPage": "Сторінку не знайдено",
   "goHomePage": "На головну",
   "back": "Назад",
   "phones": "Телефони",

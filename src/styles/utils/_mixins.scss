@@ -57,11 +57,8 @@
   }
 }
 
-@mixin primary-button(
-  $bg-color: var(--bg-color-primary),
-  $bd-color: var(--bd-color-icon)
-) {
-  border: $border-width solid $bd-color;
+@mixin primary-button($bg-color: var(--bg-color-primary)) {
+  border: $border-width solid var(--bd-color-icon);
   background-color: $bg-color;
   transition: opacity 0.18s;
 

@@ -6,21 +6,24 @@ import phones from "@/api/phones.json";
 import tablets from "@/api/tablets.json";
 import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
+import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
 
 const ProductDetailsPage = () => {
   const { productId } = useParams();
-  const { t } = useTranslation();
+  const { t } = useTranslation("productDetailsPage");
 
   const allProducts = [...phones, ...tablets, ...accessories];
   const product = allProducts.find((product) => product.id === productId);
 
   if (!product) {
-    return <div>Product not found</div>;
+    return <NotFoundProduct t={t} />;
   }
 
   return (
     <>
+      <title>ShortName | Nice Gadgets</title>
+
       <Breadcrumb t={t} heading={product.category} productName={product.name} />
 
       <Back t={t} />

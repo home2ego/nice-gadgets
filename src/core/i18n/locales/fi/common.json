@@ -9,7 +9,7 @@
   "skipForwardProducts": "Ohita tuotteet",
   "skipBackProducts": "Palaa tuotteiden yläpuolelle",
   "errorMessage": "Virhe 404",
-  "notFound": "Sivua ei löytynyt",
+  "notFoundPage": "Sivua ei löytynyt",
   "goHomePage": "Siirry etusivulle",
   "back": "Takaisin",
   "phones": "Puhelimet",

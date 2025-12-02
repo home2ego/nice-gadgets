@@ -1,29 +1,29 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import styles from "./NotFound.module.scss";
+import styles from "./NotFoundPage.module.scss";
 
-const NotFound = () => {
+const NotFoundPage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className={styles["not-found"]}>
+    <div className={clsx(styles["not-found"], "container")}>
       <title>404 | Nice Gadgets</title>
 
-      <h1 className={clsx(styles["not-found__heading"], "title--sm")}>
+      <h1 className={clsx(styles["not-found__heading"], "title--md")}>
         {t("errorMessage")}
       </h1>
 
       <img
         src="/img/page-not-found.svg"
         alt=""
-        width="250"
-        height="240"
+        width="300"
+        height="288"
         decoding="async"
       />
 
-      <h2 className={clsx(styles["not-found__subheading"], "title--md")}>
-        {t("notFound")}
+      <h2 className={clsx(styles["not-found__subheading"], "title--lg")}>
+        {t("notFoundPage")}
       </h2>
 
       <Link
@@ -36,4 +36,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

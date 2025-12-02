@@ -10,30 +10,26 @@ html:has(.not-found) {
 
   min-height: 100vh;
 
-  -webkit-font-smoothing: auto;
-  color: $dark-color;
-
-  background-color: $light-color;
-
   &__heading {
     margin-bottom: 24px;
     opacity: 0.7;
   }
 
   img {
+    max-width: 100%;
     height: auto;
     margin-bottom: 12px;
   }
 
   &__subheading {
-    margin-bottom: 8px;
+    margin-bottom: 24px;
   }
 
   &__link {
-    padding: 16px 8px;
+    padding: 20px 24px;
     border-radius: 4px;
-    outline-offset: -1px;
+    outline-offset: 2px;
 
-    @include primary-button($light-color, $light-border-color);
+    @include accent-button;
   }
 }

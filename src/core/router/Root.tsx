@@ -7,7 +7,7 @@ import CartPage from "@/modules/CartPage";
 import ContactsPage from "@/modules/ContactsPage";
 import FavouritesPage from "@/modules/FavouritesPage";
 import HomePage from "@/modules/HomePage";
-import NotFound from "@/modules/NotFound";
+import NotFoundPage from "@/modules/NotFoundPage";
 import PhonesPage from "@/modules/PhonesPage";
 import ProductDetailsPage from "@/modules/ProductDetailsPage";
 import RightsPage from "@/modules/RightsPage";
@@ -33,7 +33,7 @@ const Root = () => (
         <Route path="product/:productId" element={<ProductDetailsPage />} />
       </Route>
 
-      <Route path="*" element={<NotFound />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   </BrowserRouter>
 );
