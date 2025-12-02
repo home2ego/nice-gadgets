@@ -7,6 +7,11 @@
     border-right: 3px solid;
 
     white-space: nowrap;
+
+    @include reduce-motion {
+      padding-right: initial;
+      border-right: none;
+    }
   }
 
   .typing--en,
@@ -23,6 +28,15 @@
   .typing--uk {
     width: 23ch;
     animation: typing 0.75s steps(23), blink 1.5s step-start infinite;
+  }
+
+  @include reduce-motion {
+    .typing--en,
+    .typing--pl,
+    .typing--fi,
+    .typing--uk {
+      animation: none;
+    }
   }
 
   @keyframes typing {

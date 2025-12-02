@@ -41,4 +41,8 @@
   grid-auto-columns: $tablet-card-width;
   grid-auto-flow: column;
   column-gap: 16px;
+
+  @include reduce-motion {
+    scroll-behavior: auto;
+  }
 }

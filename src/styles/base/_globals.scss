@@ -51,6 +51,10 @@
 
 html {
   scroll-behavior: smooth;
+
+  @include reduce-motion {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -130,10 +134,4 @@ a:focus-visible,
 button:focus-visible,
 div[role="option"]:focus-visible {
   outline: 3px solid $accent-color;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
 }

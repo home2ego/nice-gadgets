@@ -27,10 +27,18 @@
     width: 100%;
     object-fit: contain;
     transition: scale 0.28s;
+
+    @include reduce-motion {
+      transition: none;
+    }
   }
 
   &:hover &__image {
     scale: 1.05;
+
+    @include reduce-motion {
+      scale: 1;
+    }
   }
 
   &__prices {
@@ -147,6 +155,13 @@
 
       .particle {
         animation: particle-effect 1s ease-out forwards;
+      }
+
+      @include reduce-motion {
+        .circle,
+        .particle {
+          animation: none;
+        }
       }
     }
   }

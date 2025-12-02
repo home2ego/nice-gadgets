@@ -28,6 +28,12 @@
   }
 }
 
+@mixin reduce-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
 @mixin products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, $mobile-card-width);

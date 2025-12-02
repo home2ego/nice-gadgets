@@ -8,6 +8,12 @@ import styles from "./PicturesCarousel.module.scss";
 import SlideImage from "./SlideImage";
 import { useHorizontalSwipe } from "./useHorizontalSwipe";
 
+const reduceMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+).matches;
+
+console.log(reduceMotion);
+
 const slides: Slide[] = [
   {
     id: 1,

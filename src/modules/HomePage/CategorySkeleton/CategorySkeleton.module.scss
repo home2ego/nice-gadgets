@@ -21,6 +21,10 @@
       );
 
       animation: shine 1.28s ease-in-out infinite;
+
+      @include reduce-motion {
+        animation: none;
+      }
     }
   }
 
@@ -46,13 +50,5 @@
 @keyframes shine {
   100% {
     transform: translateX(100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .category__image::after,
-  .category__heading::after,
-  .category__text::after {
-    animation: none;
   }
 }
