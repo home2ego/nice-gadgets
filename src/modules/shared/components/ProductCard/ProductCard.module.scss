@@ -26,19 +26,11 @@
     transform-origin: bottom;
     width: 100%;
     object-fit: contain;
-    transition: scale 0.28s;
-
-    @include reduce-motion {
-      transition: none;
-    }
+    transition: scale 0.36s;
   }
 
   &:hover &__image {
-    scale: 1.05;
-
-    @include reduce-motion {
-      scale: 1;
-    }
+    scale: 1.025;
   }
 
   &__prices {

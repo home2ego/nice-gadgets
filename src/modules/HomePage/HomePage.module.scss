@@ -7,11 +7,6 @@
     border-right: 3px solid;
 
     white-space: nowrap;
-
-    @include reduce-motion {
-      padding-right: initial;
-      border-right: none;
-    }
   }
 
   .typing--en,
@@ -31,6 +26,11 @@
   }
 
   @include reduce-motion {
+    .typing {
+      padding-right: initial;
+      border-right: none;
+    }
+
     .typing--en,
     .typing--pl,
     .typing--fi,

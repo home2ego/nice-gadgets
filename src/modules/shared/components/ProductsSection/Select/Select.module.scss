@@ -89,4 +89,14 @@
     opacity: 1;
     transition: opacity 0.18s, visibility 0s;
   }
+
+  @include reduce-motion {
+    svg {
+      transition: opacity 0.18s, scale 0.28s;
+    }
+
+    &__toggle[aria-expanded="true"] svg {
+      rotate: initial;
+    }
+  }
 }

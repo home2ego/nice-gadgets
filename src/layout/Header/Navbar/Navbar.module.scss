@@ -176,4 +176,16 @@
       }
     }
   }
+
+  @include reduce-motion {
+    &__toggle[aria-expanded="false"] + &__menu {
+      transform: initial;
+      transition: opacity 0.18s, visibility 0s 0.18s;
+    }
+
+    &__toggle[aria-expanded="true"] + &__menu {
+      transform: initial;
+      transition: opacity 0.18s;
+    }
+  }
 }

@@ -26,6 +26,10 @@
 
     transition: transform 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
+    @include reduce-motion {
+      transform: scale(0.95);
+    }
+
     &__message {
       white-space: pre-line;
     }
