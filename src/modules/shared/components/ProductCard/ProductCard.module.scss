@@ -23,14 +23,8 @@
   }
 
   &__image {
-    transform-origin: bottom;
     width: 100%;
     object-fit: contain;
-    transition: scale 0.36s;
-  }
-
-  &:hover &__image {
-    scale: 1.025;
   }
 
   &__prices {

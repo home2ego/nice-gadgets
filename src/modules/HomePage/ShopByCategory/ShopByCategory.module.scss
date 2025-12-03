@@ -70,6 +70,10 @@
 
   &:hover &__heading::after {
     scale: 1;
+
+    @include reduce-motion {
+      scale: 0;
+    }
   }
 
   &__models {

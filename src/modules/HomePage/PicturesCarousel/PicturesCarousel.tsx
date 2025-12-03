@@ -68,7 +68,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs moveSlide on currentIndex change
   useEffect(() => {
-    const withTransition = !isSnapping.current;
+    const withTransition = !isSnapping.current && !isReducedMotion;
     moveSlide(currentIndex, withTransition);
 
     if (isSnapping.current) {
@@ -84,13 +84,17 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       return;
     }
 
-    const nextIndex = typeof index === "function" ? index(currentIndex) : index;
+    let nextIndex = typeof index === "function" ? index(currentIndex) : index;
 
     if (nextIndex === currentIndex) {
       return;
     }
 
-    isTransitioning.current = true;
+    if (isReducedMotion) {
+      nextIndex = (nextIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
+    } else {
+      isTransitioning.current = true;
+    }
     setCurrentIndex(nextIndex);
 
     if (!isReducedMotion) {

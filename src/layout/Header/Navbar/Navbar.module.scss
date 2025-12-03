@@ -178,6 +178,12 @@
   }
 
   @include reduce-motion {
+    &__toggle-icon,
+    &__toggle-icon::after,
+    &__toggle-icon::before {
+      transition: none;
+    }
+
     &__toggle[aria-expanded="false"] + &__menu {
       transform: initial;
       transition: opacity 0.18s, visibility 0s 0.18s;

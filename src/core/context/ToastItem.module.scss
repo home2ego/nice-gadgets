@@ -32,6 +32,18 @@
     display: none;
     opacity: 0;
   }
+
+  @include reduce-motion {
+    transition: opacity 0.18s, display 0.28s allow-discrete;
+
+    @starting-style {
+      transform: none;
+    }
+
+    &.closing {
+      transform: scale(1);
+    }
+  }
 }
 
 .cross {

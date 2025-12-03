@@ -52,7 +52,9 @@ export function useAutoplay({ isReducedMotion, onTick }: UseAutoplayOptions) {
       return document.hidden ? stopAutoplay() : startAutoplay();
     };
 
-    startAutoplay();
+    if (!isPaused.current) {
+      startAutoplay();
+    }
 
     document.addEventListener("visibilitychange", handleVisibilityChange);
 

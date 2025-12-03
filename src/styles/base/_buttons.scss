@@ -127,3 +127,32 @@
     opacity: 1;
   }
 }
+
+@include reduce-motion {
+  .btn--nav-left::after,
+  .btn--nav-right::after,
+  .btn--theme img {
+    transition: none;
+  }
+
+  .btn--theme span {
+    justify-content: center;
+
+    border-color: transparent;
+
+    opacity: 0.7;
+    background-color: inherit;
+
+    transition: opacity 0.18s;
+  }
+
+  .btn--theme:hover span {
+    border-color: transparent;
+    opacity: 1;
+  }
+
+  .btn--theme img,
+  .light-theme .btn--theme img {
+    transform: none;
+  }
+}

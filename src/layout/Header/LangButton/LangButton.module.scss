@@ -26,6 +26,17 @@
     @include on-desktop {
       padding: 24px;
     }
+
+    @include reduce-motion {
+      svg {
+        transition: opacity 0.18s;
+      }
+
+      &[aria-expanded="true"] svg:nth-child(2),
+      &:focus-visible svg:nth-child(2) {
+        scale: 1;
+      }
+    }
   }
 
   &__menu {

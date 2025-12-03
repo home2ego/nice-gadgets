@@ -92,11 +92,12 @@
 
   @include reduce-motion {
     svg {
-      transition: opacity 0.18s, scale 0.28s;
+      transition: opacity 0.18s;
     }
 
-    &__toggle[aria-expanded="true"] svg {
-      rotate: initial;
+    &__toggle:hover svg,
+    &__toggle:focus-visible svg {
+      scale: 1;
     }
   }
 }
