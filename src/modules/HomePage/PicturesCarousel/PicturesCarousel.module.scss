@@ -74,6 +74,11 @@
 
     transition: transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 
+    @include reduce-motion {
+      transition-timing-function: linear;
+      transition-duration: 0.01ms;
+    }
+
     &--no-transition {
       transition: none;
     }
