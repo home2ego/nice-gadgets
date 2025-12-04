@@ -51,13 +51,13 @@ const CartPage = () => {
         <>
           <Back t={t} />
 
-          <section aria-labelledby="cart" className={styles.cart}>
-            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-            <h1 id="cart" className={clsx(styles.heading, "title--xl")}>
-              {t("cart")}
-            </h1>
+          {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+          <h1 id="cart" className={clsx(styles.heading, "title--xl")}>
+            {t("cart")}
+          </h1>
 
-            <ul className={styles.products}>
+          <section aria-labelledby="cart" className={styles.cart}>
+            <ul className={styles.cart__products}>
               {cartProducts.map((product) => (
                 <CartProduct
                   key={product.id}
@@ -68,21 +68,21 @@ const CartPage = () => {
               ))}
             </ul>
 
-            <div className={styles.summary}>
+            <div className={styles.cart__summary}>
               <h2 className="title--lg">
                 <span className="sr-only">{t("orderTotal")}</span>
                 {formatPrice(totalSum, normalizedLang)}
               </h2>
 
-              <p className={clsx(styles.summary__total, "text--body")}>
+              <p className={clsx(styles.cart__total, "text--body")}>
                 {t("totalForItems", { count: totalCount })}
               </p>
 
-              <span className={styles.summary__line} />
+              <span className={styles.cart__line} />
 
               <button
                 type="button"
-                className={clsx(styles.summary__checkout, "text--btn")}
+                className={clsx(styles.cart__checkout, "text--btn")}
                 onClick={() => setIsDialogOpen(true)}
                 onKeyDown={(e) => {
                   if (e.key === "Enter" || e.key === " ") {

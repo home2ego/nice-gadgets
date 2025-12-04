@@ -28,9 +28,14 @@ const ProductDetailsPage = () => {
 
       <Back t={t} />
 
-      <h1 className={clsx(styles.heading, "title--lg")}>{product?.name}</h1>
+      <article aria-labelledby="product" className={styles.product}>
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+        <h1 id="product" className={clsx(styles.product__heading, "title--lg")}>
+          {product?.name}
+        </h1>
 
-      <article className={styles.product}></article>
+        <section className={styles.product__overview}></section>
+      </article>
     </>
   );
 };

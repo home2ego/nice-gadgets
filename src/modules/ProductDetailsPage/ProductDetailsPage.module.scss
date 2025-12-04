@@ -1,3 +1,9 @@
-.heading {
-  @extend %heading-spacing-primary;
+.product {
+  &__heading {
+    @extend %heading-spacing-primary;
+  }
+
+  &__overview {
+    @include page-grid;
+  }
 }

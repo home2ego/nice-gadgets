@@ -5,45 +5,55 @@
 .cart {
   @include page-grid;
 
-  .products {
+  &__products {
     grid-column: 1 / -1;
+    width: 100%;
+    max-width: 752px;
+    margin-inline: auto;
 
     @include on-desktop {
       grid-column: 1 / 17;
     }
   }
 
-  .summary {
+  &__summary {
     grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 752px;
+    height: fit-content;
+    margin-inline: auto;
     padding: 24px;
+    border: $border-width solid var(--bd-color-primary);
+
     text-align: center;
 
     @include on-desktop {
       grid-column: 17 / -1;
     }
+  }
 
-    &__total {
-      color: var(--text-color-secondary);
+  &__total {
+    color: var(--text-color-secondary);
+  }
+
+  &__line {
+    display: block;
+    height: 1px;
+    margin-block: 16px;
+    background-color: var(--bd-color-primary);
+
+    @include on-desktop {
+      margin-block: 24px;
     }
+  }
 
-    &__line {
-      display: block;
-      height: 1px;
-      margin-block: 16px;
-      background-color: var(--bd-color-primary);
+  &__checkout {
+    display: inline-block;
+    width: 100%;
+    padding-block: 14px;
+    outline-offset: 2px;
 
-      @include on-desktop {
-        margin-block: 24px;
-      }
-    }
-
-    &__checkout {
-      display: inline-block;
-      width: 100%;
-      padding-block: 14px;
-      outline-offset: 2px;
-
-      @include accent-button;
-    }
+    @include accent-button;
   }
 }
