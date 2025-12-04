@@ -8,14 +8,18 @@ interface CartEmptyProps {
 
 const CartEmpty: React.FC<CartEmptyProps> = ({ t }) => {
   return (
-    <section>
-      <h2 className={clsx(styles.heading, "title--lg")}>{t("cartEmpty")}</h2>
+    <section aria-labelledby="cart-empty" className={styles.wrapper}>
+      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+      <h1 id="cart-empty" className={clsx(styles.heading, "title--lg")}>
+        {t("cartEmpty")}
+      </h1>
+
       <img
         className={styles.image}
         src="/img/cart-is-empty.svg"
         alt=""
-        width="250"
-        height="223"
+        width="300"
+        height="268"
         decoding="async"
       />
     </section>

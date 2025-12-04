@@ -22,13 +22,15 @@ const ProductDetailsPage = () => {
 
   return (
     <>
-      <title>ShortName | Nice Gadgets</title>
+      <title>{`${product.name} | Nice Gadgets`}</title>
 
       <Breadcrumb t={t} heading={product.category} productName={product.name} />
 
       <Back t={t} />
 
       <h1 className={clsx(styles.heading, "title--lg")}>{product?.name}</h1>
+
+      <article className={styles.product}></article>
     </>
   );
 };

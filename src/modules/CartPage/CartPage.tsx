@@ -45,56 +45,58 @@ const CartPage = () => {
     <>
       <title>{t("cartPageTitle")}</title>
 
-      <Back t={t} />
-
-      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-      <h1 id="cart" className={clsx(styles.heading, "title--xl")}>
-        {t("cart")}
-      </h1>
-
       {cartProducts.length === 0 && <CartEmpty t={t} />}
 
       {cartProducts.length > 0 && (
-        <section className={styles.cart} aria-labelledby="cart">
-          <ul className={styles.products}>
-            {cartProducts.map((product) => (
-              <CartProduct
-                key={product.id}
-                t={t}
-                product={product}
-                normalizedLang={normalizedLang}
-              />
-            ))}
-          </ul>
+        <>
+          <Back t={t} />
 
-          <div className={styles.summary}>
-            <h2 className="title--lg">
-              <span className="sr-only">{t("orderTotal")}</span>
-              {formatPrice(totalSum, normalizedLang)}
-            </h2>
+          <section aria-labelledby="cart" className={styles.cart}>
+            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+            <h1 id="cart" className={clsx(styles.heading, "title--xl")}>
+              {t("cart")}
+            </h1>
 
-            <p className={clsx(styles.summary__total, "text--body")}>
-              {t("totalForItems", { count: totalCount })}
-            </p>
+            <ul className={styles.products}>
+              {cartProducts.map((product) => (
+                <CartProduct
+                  key={product.id}
+                  t={t}
+                  product={product}
+                  normalizedLang={normalizedLang}
+                />
+              ))}
+            </ul>
 
-            <span className={styles.summary__line} />
+            <div className={styles.summary}>
+              <h2 className="title--lg">
+                <span className="sr-only">{t("orderTotal")}</span>
+                {formatPrice(totalSum, normalizedLang)}
+              </h2>
 
-            <button
-              type="button"
-              className={clsx(styles.summary__checkout, "text--btn")}
-              onClick={() => setIsDialogOpen(true)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  setIsDialogOpen(true);
-                }
-              }}
-              ref={checkoutRef}
-            >
-              {t("checkout")}
-            </button>
-          </div>
-        </section>
+              <p className={clsx(styles.summary__total, "text--body")}>
+                {t("totalForItems", { count: totalCount })}
+              </p>
+
+              <span className={styles.summary__line} />
+
+              <button
+                type="button"
+                className={clsx(styles.summary__checkout, "text--btn")}
+                onClick={() => setIsDialogOpen(true)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setIsDialogOpen(true);
+                  }
+                }}
+                ref={checkoutRef}
+              >
+                {t("checkout")}
+              </button>
+            </div>
+          </section>
+        </>
       )}
 
       <Dialog

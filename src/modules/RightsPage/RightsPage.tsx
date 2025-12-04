@@ -10,9 +10,12 @@ const RightsPage = () => {
     <>
       <title>{t("rightsPageTitle")}</title>
 
-      <h1 className={clsx(styles.heading, "title--xl")}>{t("rights")}</h1>
+      <section aria-labelledby="rights">
+        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+        <h1 id="rights" className={clsx(styles.heading, "title--xl")}>
+          {t("rights")}
+        </h1>
 
-      <section>
         <ul className={clsx(styles.list, "text--body")}>
           <li className={styles.list__item}>{t("items.explore")}</li>
           <li className={styles.list__item}>{t("items.privacy")}</li>

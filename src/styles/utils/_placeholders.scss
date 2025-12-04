@@ -48,3 +48,15 @@
     margin-top: 56px;
   }
 }
+
+%heading-spacing-top {
+  margin-top: 56px;
+
+  @include on-tablet {
+    margin-top: 64px;
+  }
+
+  @include on-desktop {
+    margin-top: 80px;
+  }
+}
