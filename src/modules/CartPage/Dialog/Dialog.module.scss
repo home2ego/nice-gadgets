@@ -11,7 +11,7 @@
   opacity: 0;
   background-color: var(--backdrop-bg);
 
-  transition: opacity 0.18s ease-out, visibility 0s 0.18s;
+  transition: opacity 0.18s, visibility 0s 0.18s;
 
   .dialog {
     transform: scale(0.9);
@@ -24,7 +24,7 @@
 
     background-color: var(--dialog-bg);
 
-    transition: transform 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: transform 0.28s;
 
     @include reduce-motion {
       transform: scale(1);
@@ -67,7 +67,7 @@
   &[data-dialog-open="true"] {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.18s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transition: opacity 0.18s;
 
     .dialog {
       transform: scale(1);

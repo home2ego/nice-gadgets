@@ -52,12 +52,11 @@
   }
 
   &__wrapper {
-    transform: translateZ(0);
     display: grid;
     justify-items: center;
 
     &--transition {
-      transition: transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.36s cubic-bezier(0.25, 0.1, 0.25, 1);
     }
   }
 }
