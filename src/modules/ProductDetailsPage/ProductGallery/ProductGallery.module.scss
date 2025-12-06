@@ -52,14 +52,12 @@
   }
 
   &__wrapper {
-    will-change: transform;
-    // POSSIBLY SHOULD BE ATTACHED TO SLIDE
     transform: translateZ(0);
     display: grid;
     justify-items: center;
 
     &--transition {
-      transition: transform 0.28s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+      transition: transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
   }
 }
@@ -85,7 +83,6 @@
 
 .thumbnail {
   border: $border-width solid var(--bd-color-primary);
-  transition: border-color 0.18s ease-out;
 
   &[aria-current="true"] {
     border-color: var(--text-color-primary);

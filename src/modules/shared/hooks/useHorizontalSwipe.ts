@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef } from "react";
-import { SWIPE_THRESHOLD } from "../constants";
+
+const SWIPE_THRESHOLD = 20;
 
 export function useHorizontalSwipe(
   sliderRef: React.RefObject<HTMLDivElement | null>,

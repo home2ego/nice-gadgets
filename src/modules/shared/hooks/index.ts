@@ -1,0 +1,1 @@
+export { useHorizontalSwipe } from "./useHorizontalSwipe";

@@ -70,7 +70,6 @@
   }
 
   &__wrapper {
-    will-change: transform;
     display: grid;
     grid-template-columns: repeat(5, 100%);
 
@@ -111,7 +110,6 @@
       width: 14px;
       height: 4px;
       background-color: var(--bd-color-primary);
-      transition: background-color 0.18s ease-out;
     }
   }
 

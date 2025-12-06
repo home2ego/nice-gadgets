@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
+import { useHorizontalSwipe } from "@/modules/shared/hooks";
 import type { ProductDetails } from "../productDetails";
 import styles from "./ProductGallery.module.scss";
 
@@ -13,6 +14,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const sliderRef = useRef<HTMLDivElement>(null);
   const withTransition = useRef(false);
   const isSnapping = useRef(false);
 
@@ -62,6 +64,8 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
     }
   };
 
+  useHorizontalSwipe(sliderRef, handlePrevClick, handleNextClick);
+
   return (
     <>
       <div className={styles.carousel}>
@@ -93,6 +97,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
             gridTemplateColumns: `repeat(${clonedImages.length}, 100%)`,
             transform: `translateX(-${(currentIndex + 1) * 100}%)`,
           }}
+          ref={sliderRef}
           onTransitionEnd={handleTransitionEnd}
         >
           {clonedImages.map((img, idx) => (
@@ -120,6 +125,11 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
             key={img}
             type="button"
             className={styles.thumbnail}
+            style={{
+              transition: withTransition.current
+                ? "border-color 0.18s ease-out"
+                : undefined,
+            }}
             onClick={() => idx !== normalizedIndex && setCurrentIndex(idx)}
             aria-current={normalizedIndex === idx ? "true" : undefined}
           >

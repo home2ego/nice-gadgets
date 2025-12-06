@@ -2,8 +2,9 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
+import { useHorizontalSwipe } from "@/modules/shared/hooks";
 import type { Slide } from "../slide";
-import { useAutoplay, useHorizontalSwipe, useReducedMotion } from "./hooks";
+import { useAutoplay, useReducedMotion } from "./hooks";
 import styles from "./PicturesCarousel.module.scss";
 import SlideImage from "./SlideImage";
 
@@ -167,7 +168,10 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
             className={styles.dots__dot}
             onClick={() => {
               if (idx !== normalizedIndex) {
-                withTransition.current = true;
+                if (!isReducedMotion) {
+                  withTransition.current = true;
+                }
+
                 setCurrentIndex(idx);
               }
             }}
@@ -177,7 +181,14 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
             })}
             aria-current={normalizedIndex === idx ? "true" : undefined}
           >
-            <span className={styles.line} />
+            <span
+              className={styles.line}
+              style={{
+                transition: withTransition.current
+                  ? "background-color 0.18s ease-out"
+                  : undefined,
+              }}
+            />
           </button>
         ))}
       </div>
@@ -245,7 +256,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         ))}
 
         <div className={styles.carousel__slide}>
-          <SlideImage slide={slides[0]} hasAlt={false} isPriority={false} />
+          <SlideImage slide={slides[0]} hasAlt={false} isPriority={true} />
         </div>
       </div>
     </div>

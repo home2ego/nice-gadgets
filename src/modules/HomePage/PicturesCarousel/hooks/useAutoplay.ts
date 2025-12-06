@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { AUTOPLAY_THRESHOLD } from "../constants";
+
+const AUTOPLAY_THRESHOLD = 5000;
 
 interface UseAutoplayOptions {
   isReducedMotion: boolean;
