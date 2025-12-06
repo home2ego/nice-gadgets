@@ -79,8 +79,6 @@
   }
 
   &__slide {
-    // Fix iOS/WebKit slide flicker/jitter on mobile via GPU promotion
-    transform: translateZ(0);
     max-height: 400px;
 
     img {
