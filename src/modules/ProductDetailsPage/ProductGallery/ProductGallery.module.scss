@@ -53,7 +53,8 @@
 
   &__wrapper {
     will-change: transform;
-    transform: translateX(-0%);
+    // POSSIBLY SHOULD BE ATTACHED TO SLIDE
+    transform: translateZ(0);
     display: grid;
     justify-items: center;
 
@@ -84,6 +85,7 @@
 
 .thumbnail {
   border: $border-width solid var(--bd-color-primary);
+  transition: border-color 0.18s ease-out;
 
   &[aria-current="true"] {
     border-color: var(--text-color-primary);

@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
@@ -27,7 +28,7 @@ const slides: Slide[] = [
   },
 ];
 
-const TOTAL_SLIDES = slides.length;
+const REAL_SLIDE_COUNT = slides.length;
 
 interface CarouselProps {
   t: TFunction;
@@ -37,89 +38,83 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const sliderRef = useRef<HTMLDivElement>(null);
-  const isTransitioning = useRef(false);
+  const withTransition = useRef(false);
   const isSnapping = useRef(false);
 
   const isReducedMotion = useReducedMotion();
 
   const { pausedState, togglePause, pauseForInteraction } = useAutoplay({
     isReducedMotion,
-    onTick: () => setCurrentIndex((prev) => prev + 1),
+    onTick: () => {
+      if (isSnapping.current) return;
+
+      withTransition.current = true;
+
+      setCurrentIndex((prev) => prev + 1);
+    },
   });
 
-  const normalizedIndex = (currentIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
+  const normalizedIndex = (currentIndex + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT;
 
-  const moveSlide = (index: number, withTransition: boolean) => {
-    const slider = sliderRef.current;
-
-    if (!slider) {
-      return;
-    }
-
-    if (withTransition) {
-      slider.classList.remove(styles["carousel__wrapper--no-transition"]);
-    } else {
-      slider.classList.add(styles["carousel__wrapper--no-transition"]);
-    }
-
-    slider.style.transform = `translateX(-${(index + 1) * 100}%)`;
-  };
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: this effect runs moveSlide on currentIndex change
+  //  biome-ignore lint/correctness/useExhaustiveDependencies: this effect unlocks snapping
   useEffect(() => {
-    const withTransition = !isSnapping.current && !isReducedMotion;
-    moveSlide(currentIndex, withTransition);
-
     if (isSnapping.current) {
       isSnapping.current = false;
-      isTransitioning.current = false;
     }
   }, [currentIndex]);
 
-  const handleSelectedSlideShow = (
-    index: number | ((prev: number) => number),
-  ) => {
-    if (isTransitioning.current) {
-      return;
-    }
-
-    let nextIndex = typeof index === "function" ? index(currentIndex) : index;
-
-    if (nextIndex === currentIndex) {
+  const handlePrevClick = () => {
+    if (withTransition.current || isSnapping.current) {
       return;
     }
 
     if (isReducedMotion) {
-      nextIndex = (nextIndex + TOTAL_SLIDES) % TOTAL_SLIDES;
+      setCurrentIndex(
+        (prev) => (prev - 1 + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT,
+      );
     } else {
-      isTransitioning.current = true;
-    }
-    setCurrentIndex(nextIndex);
+      withTransition.current = true;
 
-    if (!isReducedMotion) {
+      setCurrentIndex((prev) => (prev === 0 ? -1 : prev - 1));
+
       pauseForInteraction();
     }
   };
 
-  const handleNextSlideShow = () => handleSelectedSlideShow((prev) => prev + 1);
-  const handlePrevSlideShow = () => handleSelectedSlideShow((prev) => prev - 1);
+  const handleNextClick = () => {
+    if (withTransition.current || isSnapping.current) {
+      return;
+    }
+
+    if (isReducedMotion) {
+      setCurrentIndex(
+        (prev) => (prev + 1 + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT,
+      );
+    } else {
+      withTransition.current = true;
+
+      setCurrentIndex((prev) =>
+        prev === REAL_SLIDE_COUNT - 1 ? REAL_SLIDE_COUNT : prev + 1,
+      );
+
+      pauseForInteraction();
+    }
+  };
 
   const handleTransitionEnd = () => {
-    if (currentIndex < 0) {
-      const newIndex = TOTAL_SLIDES - 1;
+    withTransition.current = false;
+
+    if (currentIndex === -1) {
       isSnapping.current = true;
-      setCurrentIndex(newIndex);
+      setCurrentIndex(REAL_SLIDE_COUNT - 1);
       return;
     }
 
-    if (currentIndex >= TOTAL_SLIDES) {
-      const newIndex = 0;
+    if (currentIndex === REAL_SLIDE_COUNT) {
       isSnapping.current = true;
-      setCurrentIndex(newIndex);
+      setCurrentIndex(0);
       return;
     }
-
-    isTransitioning.current = false;
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLDivElement>) => {
@@ -128,7 +123,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     }
   };
 
-  useHorizontalSwipe(sliderRef, handleNextSlideShow, handlePrevSlideShow);
+  useHorizontalSwipe(sliderRef, handlePrevClick, handleNextClick);
 
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: this element handles focus intentionally
@@ -137,7 +132,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       <span role="status" className="sr-only">
         {t("slideOfTotal", {
           current: normalizedIndex + 1,
-          total: TOTAL_SLIDES,
+          total: REAL_SLIDE_COUNT,
         })}
       </span>
 
@@ -165,17 +160,22 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
       {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
       <div role="group" aria-label={t("slideNavLabel")} className={styles.dots}>
-        {slides.map((slide: Slide, i) => (
+        {slides.map((slide: Slide, idx) => (
           <button
             type="button"
             key={slide.id}
             className={styles.dots__dot}
-            onClick={() => handleSelectedSlideShow(i)}
+            onClick={() => {
+              if (idx !== normalizedIndex) {
+                withTransition.current = true;
+                setCurrentIndex(idx);
+              }
+            }}
             aria-label={t("showSlideOfTotal", {
-              current: i + 1,
-              total: TOTAL_SLIDES,
+              current: idx + 1,
+              total: REAL_SLIDE_COUNT,
             })}
-            aria-current={normalizedIndex === i ? "true" : undefined}
+            aria-current={normalizedIndex === idx ? "true" : undefined}
           >
             <span className={styles.line} />
           </button>
@@ -185,7 +185,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       <button
         type="button"
         className={styles.carousel__prev}
-        onClick={handlePrevSlideShow}
+        onClick={handlePrevClick}
         aria-label={t("prevLabel")}
       >
         <Icon>
@@ -196,7 +196,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       <button
         type="button"
         className={styles.carousel__next}
-        onClick={handleNextSlideShow}
+        onClick={handleNextClick}
         aria-label={t("nextLabel")}
       >
         <Icon>
@@ -205,7 +205,12 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       </button>
 
       <div
-        className={styles.carousel__wrapper}
+        className={clsx(styles.carousel__wrapper, {
+          [styles["carousel__wrapper--transition"]]: withTransition.current,
+        })}
+        style={{
+          transform: `translateX(-${(currentIndex + 1) * 100}%)`,
+        }}
         ref={sliderRef}
         onTransitionEnd={handleTransitionEnd}
       >
@@ -217,21 +222,24 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
           />
         </div>
 
-        {slides.map((slide: Slide, i) => (
+        {slides.map((slide: Slide, idx) => (
           <div
             key={slide.id}
             className={styles.carousel__slide}
-            aria-hidden={normalizedIndex !== i ? "true" : undefined}
+            aria-hidden={normalizedIndex !== idx ? "true" : undefined}
           >
             <h3 className="sr-only">
-              {t("pictureOfTotal", { current: i + 1, total: TOTAL_SLIDES })}
+              {t("pictureOfTotal", {
+                current: idx + 1,
+                total: REAL_SLIDE_COUNT,
+              })}
             </h3>
 
             <SlideImage
               t={t}
               slide={slide}
               hasAlt={true}
-              isPriority={i === 0}
+              isPriority={idx === 0}
             />
           </div>
         ))}

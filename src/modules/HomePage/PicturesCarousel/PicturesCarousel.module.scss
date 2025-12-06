@@ -71,20 +71,16 @@
 
   &__wrapper {
     will-change: transform;
-
-    transform: translateX(-100%);
-
     display: grid;
     grid-template-columns: repeat(5, 100%);
 
-    transition: transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-
-    &--no-transition {
-      transition: none;
+    &--transition {
+      transition: transform 0.36s cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
   }
 
   &__slide {
+    // Fix iOS/WebKit slide flicker/jitter on mobile via GPU promotion
     transform: translateZ(0);
     max-height: 400px;
 

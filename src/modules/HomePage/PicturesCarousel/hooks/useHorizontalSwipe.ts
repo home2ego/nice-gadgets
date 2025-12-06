@@ -3,19 +3,19 @@ import { SWIPE_THRESHOLD } from "../constants";
 
 export function useHorizontalSwipe(
   sliderRef: React.RefObject<HTMLDivElement | null>,
-  onNext: () => void,
   onPrev: () => void,
+  onNext: () => void,
 ) {
   const touchStartX = useRef(0);
   const touchStartY = useRef(0);
 
-  const nextRef = useRef(onNext);
   const prevRef = useRef(onPrev);
+  const nextRef = useRef(onNext);
 
   useEffect(() => {
-    nextRef.current = onNext;
     prevRef.current = onPrev;
-  }, [onNext, onPrev]);
+    nextRef.current = onNext;
+  }, [onPrev, onNext]);
 
   const handleTouchStart = useCallback((e: TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
