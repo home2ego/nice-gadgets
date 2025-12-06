@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
@@ -170,9 +169,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
           <button
             type="button"
             key={slide.id}
-            className={clsx(styles.dots__dot, {
-              [styles.active]: normalizedIndex === i,
-            })}
+            className={styles.dots__dot}
             onClick={() => handleSelectedSlideShow(i)}
             aria-label={t("showSlideOfTotal", {
               current: i + 1,

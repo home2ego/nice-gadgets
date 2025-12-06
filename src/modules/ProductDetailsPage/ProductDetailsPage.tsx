@@ -8,6 +8,7 @@ import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
 import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
+import ProductGallery from "./ProductGallery";
 
 const ProductDetailsPage = () => {
   const { productId } = useParams();
@@ -34,7 +35,15 @@ const ProductDetailsPage = () => {
           {product?.name}
         </h1>
 
-        <section className={styles.product__overview}></section>
+        <section className={styles.product__overview}>
+          <ProductGallery product={product} />
+
+          <div className={styles.product__details}>
+            <div className={styles.colors}>
+              <p>Available colors</p>
+            </div>
+          </div>
+        </section>
       </article>
     </>
   );

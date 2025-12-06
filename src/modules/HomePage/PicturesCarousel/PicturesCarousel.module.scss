@@ -37,7 +37,6 @@
   &__prev,
   &__next {
     display: none;
-    outline-offset: -1px;
 
     @include on-tablet {
       position: absolute;
@@ -48,6 +47,8 @@
 
       width: 30px;
 
+      outline-offset: -1px;
+
       @include primary-button;
 
       svg {
@@ -57,11 +58,15 @@
   }
 
   &__prev {
-    left: 0;
+    @include on-tablet {
+      left: 0;
+    }
   }
 
   &__next {
-    right: 0;
+    @include on-tablet {
+      right: 0;
+    }
   }
 
   &__wrapper {
@@ -110,14 +115,15 @@
       width: 14px;
       height: 4px;
       background-color: var(--bd-color-primary);
+      transition: background-color 0.18s ease-out;
     }
   }
 
-  &__dot.active .line {
+  &__dot[aria-current="true"] .line {
     background-color: var(--text-color-primary);
   }
 
-  &__dot:not(.active) {
+  &__dot:not([aria-current="true"]) {
     .line {
       transition: opacity 0.18s;
     }
