@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
-import { useHorizontalSwipe } from "@/modules/shared/hooks";
+import { useHorizontalSwipe, useReducedMotion } from "@/modules/shared/hooks";
 import type { ProductDetails } from "../productDetails";
 import styles from "./ProductGallery.module.scss";
 
@@ -21,6 +21,8 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
   const clonedImages = [images[images.length - 1], ...images, images[0]];
   const normalizedIndex = (currentIndex + images.length) % images.length;
 
+  const isReducedMotion = useReducedMotion();
+
   //  biome-ignore lint/correctness/useExhaustiveDependencies: this effect unlocks snapping
   useEffect(() => {
     if (isSnapping.current) {
@@ -33,8 +35,13 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
       return;
     }
 
-    withTransition.current = true;
-    setCurrentIndex((prev) => (prev === 0 ? -1 : prev - 1));
+    if (isReducedMotion) {
+      setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    } else {
+      withTransition.current = true;
+
+      setCurrentIndex((prev) => (prev === 0 ? -1 : prev - 1));
+    }
   };
 
   const handleNextClick = () => {
@@ -42,10 +49,15 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
       return;
     }
 
-    withTransition.current = true;
-    setCurrentIndex((prev) =>
-      prev === images.length - 1 ? images.length : prev + 1,
-    );
+    if (isReducedMotion) {
+      setCurrentIndex((prev) => (prev + 1 + images.length) % images.length);
+    } else {
+      withTransition.current = true;
+
+      setCurrentIndex((prev) =>
+        prev === images.length - 1 ? images.length : prev + 1,
+      );
+    }
   };
 
   const handleTransitionEnd = () => {

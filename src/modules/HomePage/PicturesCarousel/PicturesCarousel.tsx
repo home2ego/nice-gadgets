@@ -2,11 +2,11 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
-import { useHorizontalSwipe } from "@/modules/shared/hooks";
+import { useHorizontalSwipe, useReducedMotion } from "@/modules/shared/hooks";
 import type { Slide } from "../slide";
-import { useAutoplay, useReducedMotion } from "./hooks";
 import styles from "./PicturesCarousel.module.scss";
 import SlideImage from "./SlideImage";
+import { useAutoplay } from "./useAutoplay";
 
 const slides: Slide[] = [
   {
@@ -42,6 +42,8 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const withTransition = useRef(false);
   const isSnapping = useRef(false);
 
+  const normalizedIndex = (currentIndex + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT;
+
   const isReducedMotion = useReducedMotion();
 
   const { pausedState, togglePause, pauseForInteraction } = useAutoplay({
@@ -54,8 +56,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       setCurrentIndex((prev) => prev + 1);
     },
   });
-
-  const normalizedIndex = (currentIndex + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT;
 
   //  biome-ignore lint/correctness/useExhaustiveDependencies: this effect unlocks snapping
   useEffect(() => {
