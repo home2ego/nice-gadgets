@@ -251,7 +251,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
       {/*  biome-ignore lint/a11y/useSemanticElements: role="region" was used intentionally */}
       <div
         role="region"
-        aria-label={t("productsCarousel")}
+        aria-label={t("productCarousel")}
         className={styles.products}
         tabIndex={-1}
         ref={containerRef}

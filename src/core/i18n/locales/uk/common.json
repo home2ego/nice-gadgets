@@ -46,5 +46,9 @@
   "loadMore": "Показати більше",
   "seenModels": "Ви переглянули {{visibleCount}} із {{totalCount}} моделей",
   "cartSuccessMessage": "Додано до кошика — {{name}}",
-  "dismissNotificationLabel": "Закрити сповіщення"
+  "dismissNotificationLabel": "Закрити сповіщення",
+  "productCarousel": "Карусель товарів",
+  "prevImageLabel": "Показати попереднє зображення",
+  "nextImageLabel": "Показати наступне зображення",
+  "imageOfTotal": "Зображення {{current}} із {{total}}"
 }

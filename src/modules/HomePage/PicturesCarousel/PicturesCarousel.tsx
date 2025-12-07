@@ -193,7 +193,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         type="button"
         className={styles.carousel__prev}
         onClick={handlePrevClick}
-        aria-label={t("prevLabel")}
+        aria-label={t("prevImageLabel")}
       >
         <Icon>
           <path d="m15 18-6-6 6-6" />
@@ -204,7 +204,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         type="button"
         className={styles.carousel__next}
         onClick={handleNextClick}
-        aria-label={t("nextLabel")}
+        aria-label={t("nextImageLabel")}
       >
         <Icon>
           <path d="m9 18 6-6-6-6" />

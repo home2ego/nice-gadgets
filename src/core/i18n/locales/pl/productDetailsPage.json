@@ -1,4 +1,7 @@
 {
   "notFoundProductTitle": "Nie znaleziono | Nice Gadgets",
-  "notFoundProductHeading": "Nie znaleziono produktu"
+  "notFoundProductHeading": "Nie znaleziono produktu",
+  "productAlt": "{{name}}. Obraz {{current}} z {{total}}.",
+  "productThumbnailsLabel": "Miniatury produktów",
+  "thumbnailLabel": "Miniatura {{current}} z {{total}}"
 }

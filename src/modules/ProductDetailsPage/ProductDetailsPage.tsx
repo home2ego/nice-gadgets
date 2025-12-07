@@ -36,7 +36,7 @@ const ProductDetailsPage = () => {
         </h1>
 
         <section className={styles.product__overview}>
-          <ProductGallery product={product} />
+          <ProductGallery product={product} t={t} />
 
           <div className={styles.product__details}>
             <div className={styles.colors}>

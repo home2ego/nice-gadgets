@@ -1,4 +1,7 @@
 {
   "notFoundProductTitle": "Ei löytynyt | Nice Gadgets",
-  "notFoundProductHeading": "Tuotetta ei löytynyt"
+  "notFoundProductHeading": "Tuotetta ei löytynyt",
+  "productAlt": "{{name}}. Kuva {{current}} / {{total}}.",
+  "productThumbnailsLabel": "Tuotteen pikkukuvat",
+  "thumbnailLabel": "Pikkukuva {{current}} / {{total}}"
 }

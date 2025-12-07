@@ -108,7 +108,7 @@ const HomePage = () => {
       </h2>
 
       <section
-        aria-label={t("picturesCarousel")}
+        aria-label={t("productCarousel")}
         className={clsx(styles.wrapper, styles["wrapper--pictures"])}
       >
         <SkipLink

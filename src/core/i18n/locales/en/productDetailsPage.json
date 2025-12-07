@@ -1,4 +1,7 @@
 {
   "notFoundProductTitle": "Not Found | Nice Gadgets",
-  "notFoundProductHeading": "Product not found"
+  "notFoundProductHeading": "Product not found",
+  "productAlt": "{{name}}. Image {{current}} of {{total}}.",
+  "productThumbnailsLabel": "Product thumbnails",
+  "thumbnailLabel": "Thumbnail {{current}} of {{total}}"
 }

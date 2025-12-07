@@ -1,4 +1,7 @@
 {
   "notFoundProductTitle": "Не знайдено | Nice Gadgets",
-  "notFoundProductHeading": "Товар не знайдено"
+  "notFoundProductHeading": "Товар не знайдено",
+  "productAlt": "{{name}}. Зображення {{current}} із {{total}}.",
+  "productThumbnailsLabel": "Мініатюри товарів",
+  "thumbnailLabel": "Мініатюра {{current}} із {{total}}"
 }

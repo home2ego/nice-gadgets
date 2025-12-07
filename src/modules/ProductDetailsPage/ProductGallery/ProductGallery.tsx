@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
 import { useHorizontalSwipe, useReducedMotion } from "@/modules/shared/hooks";
@@ -7,9 +8,10 @@ import styles from "./ProductGallery.module.scss";
 
 interface ProductGalleryProps {
   product: ProductDetails;
+  t: TFunction;
 }
 
-const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
+const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
   const { images } = product;
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -80,11 +82,25 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
 
   return (
     <>
-      <div className={styles.carousel}>
+      {/*  biome-ignore lint/a11y/useSemanticElements: role="region" was used intentionally */}
+      <div
+        role="region"
+        aria-label={t("productCarousel")}
+        className={styles.carousel}
+      >
+        {/* biome-ignore lint/a11y/useSemanticElements: role=status is correct for slide updates */}
+        <span role="status" className="sr-only">
+          {t("imageOfTotal", {
+            current: normalizedIndex + 1,
+            total: images.length,
+          })}
+        </span>
+
         <button
           type="button"
           className={styles.carousel__prev}
           onClick={handlePrevClick}
+          aria-label={t("prevImageLabel")}
         >
           <Icon width="24" height="24">
             <path d="m15 18-6-6 6-6" />
@@ -95,6 +111,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
           type="button"
           className={styles.carousel__next}
           onClick={handleNextClick}
+          aria-label={t("nextImageLabel")}
         >
           <Icon width="24" height="24">
             <path d="m9 18 6-6-6-6" />
@@ -118,9 +135,18 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
               key={idx}
               className={styles.carousel__image}
               src={img}
-              alt=""
+              alt={
+                normalizedIndex + 1 === idx
+                  ? t("productAlt", {
+                      name: product.name,
+                      current: idx,
+                      total: images.length,
+                    })
+                  : ""
+              }
               width="464"
               height="464"
+              decoding="async"
             />
           ))}
         </div>
@@ -129,7 +155,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
       {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
       <div
         role="group"
-        aria-label="Product thumbnails"
+        aria-label={t("productThumbnailsLabel")}
         className={styles.thumbnails}
       >
         {images.map((img, idx) => (
@@ -148,9 +174,13 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product }) => {
             <img
               className={styles.thumbnail__image}
               src={img}
-              alt=""
+              alt={t("thumbnailLabel", {
+                current: idx + 1,
+                total: images.length,
+              })}
               width="80"
               height="80"
+              decoding="async"
             />
           </button>
         ))}

@@ -46,5 +46,9 @@
   "loadMore": "Pokaż więcej",
   "seenModels": "Zobaczyłeś {{visibleCount}} z {{totalCount}} modeli",
   "cartSuccessMessage": "Dodano do koszyka — {{name}}",
-  "dismissNotificationLabel": "Odrzuć powiadomienie"
+  "dismissNotificationLabel": "Odrzuć powiadomienie",
+  "productCarousel": "Karuzela produktów",
+  "prevImageLabel": "Pokaż poprzedni obraz",
+  "nextImageLabel": "Pokaż następny obraz",
+  "imageOfTotal": "Obraz {{current}} z {{total}}"
 }

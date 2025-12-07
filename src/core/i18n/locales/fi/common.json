@@ -45,5 +45,9 @@
   "loadMore": "Näytä lisää",
   "seenModels": "Olet nähnyt {{visibleCount}} / {{totalCount}} mallia",
   "cartSuccessMessage": "Lisätty ostoskoriin — {{name}}",
-  "dismissNotificationLabel": "Hylkää ilmoitus"
+  "dismissNotificationLabel": "Hylkää ilmoitus",
+  "productCarousel": "Tuotekaruselli",
+  "prevImageLabel": "Näytä edellinen kuva",
+  "nextImageLabel": "Näytä seuraava kuva",
+  "imageOfTotal": "Kuva {{current}} / {{total}}"
 }
