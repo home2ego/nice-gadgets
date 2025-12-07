@@ -1,4 +1,4 @@
-export interface Slide {
+export interface SlideImage {
   id: number;
   src: string;
   srcMini: string;

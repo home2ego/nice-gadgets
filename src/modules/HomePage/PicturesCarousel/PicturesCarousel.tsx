@@ -3,12 +3,11 @@ import type { TFunction } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
 import { useHorizontalSwipe, useReducedMotion } from "@/modules/shared/hooks";
-import type { Slide } from "../slide";
+import type { SlideImage } from "../slideImage";
 import styles from "./PicturesCarousel.module.scss";
-import SlideImage from "./SlideImage";
 import { useAutoplay } from "./useAutoplay";
 
-const slides: Slide[] = [
+const images: SlideImage[] = [
   {
     id: 1,
     src: "/img/iPhone-lg.webp",
@@ -29,7 +28,7 @@ const slides: Slide[] = [
   },
 ];
 
-const REAL_SLIDE_COUNT = slides.length;
+const IMAGES_COUNT = images.length;
 
 interface CarouselProps {
   t: TFunction;
@@ -42,7 +41,8 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const withTransition = useRef(false);
   const isSnapping = useRef(false);
 
-  const normalizedIndex = (currentIndex + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT;
+  const clonedImages = [images[images.length - 1], ...images, images[0]];
+  const normalizedIndex = (currentIndex + IMAGES_COUNT) % IMAGES_COUNT;
 
   const isReducedMotion = useReducedMotion();
 
@@ -70,9 +70,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     }
 
     if (isReducedMotion) {
-      setCurrentIndex(
-        (prev) => (prev - 1 + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT,
-      );
+      setCurrentIndex((prev) => (prev - 1 + IMAGES_COUNT) % IMAGES_COUNT);
     } else {
       withTransition.current = true;
 
@@ -88,14 +86,12 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     }
 
     if (isReducedMotion) {
-      setCurrentIndex(
-        (prev) => (prev + 1 + REAL_SLIDE_COUNT) % REAL_SLIDE_COUNT,
-      );
+      setCurrentIndex((prev) => (prev + 1 + IMAGES_COUNT) % IMAGES_COUNT);
     } else {
       withTransition.current = true;
 
       setCurrentIndex((prev) =>
-        prev === REAL_SLIDE_COUNT - 1 ? REAL_SLIDE_COUNT : prev + 1,
+        prev === IMAGES_COUNT - 1 ? IMAGES_COUNT : prev + 1,
       );
 
       pauseForInteraction();
@@ -107,11 +103,11 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
     if (currentIndex === -1) {
       isSnapping.current = true;
-      setCurrentIndex(REAL_SLIDE_COUNT - 1);
+      setCurrentIndex(IMAGES_COUNT - 1);
       return;
     }
 
-    if (currentIndex === REAL_SLIDE_COUNT) {
+    if (currentIndex === IMAGES_COUNT) {
       isSnapping.current = true;
       setCurrentIndex(0);
       return;
@@ -131,9 +127,9 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     <div className={styles.carousel} onFocus={handleFocus}>
       {/* biome-ignore lint/a11y/useSemanticElements: role=status is correct for slide updates */}
       <span role="status" className="sr-only">
-        {t("slideOfTotal", {
+        {t("imageOfTotal", {
           current: normalizedIndex + 1,
-          total: REAL_SLIDE_COUNT,
+          total: IMAGES_COUNT,
         })}
       </span>
 
@@ -160,11 +156,11 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       )}
 
       {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
-      <div role="group" aria-label={t("slideNavLabel")} className={styles.dots}>
-        {slides.map((slide: Slide, idx) => (
+      <div role="group" aria-label={t("imageNavLabel")} className={styles.dots}>
+        {images.map((image: SlideImage, idx) => (
           <button
             type="button"
-            key={slide.id}
+            key={image.id}
             className={styles.dots__dot}
             onClick={() => {
               if (idx !== normalizedIndex) {
@@ -175,9 +171,9 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
                 setCurrentIndex(idx);
               }
             }}
-            aria-label={t("showSlideOfTotal", {
+            aria-label={t("showImageOfTotal", {
               current: idx + 1,
-              total: REAL_SLIDE_COUNT,
+              total: IMAGES_COUNT,
             })}
             aria-current={normalizedIndex === idx ? "true" : undefined}
           >
@@ -225,39 +221,42 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         ref={sliderRef}
         onTransitionEnd={handleTransitionEnd}
       >
-        <div className={styles.carousel__slide}>
-          <SlideImage
-            slide={slides[slides.length - 1]}
-            hasAlt={false}
-            isPriority={false}
-          />
-        </div>
+        {clonedImages.map((image: SlideImage, idx) => {
+          const hasAlt = idx !== 0 && idx !== clonedImages.length - 1;
+          const priority = idx === 1 || idx === clonedImages.length - 1;
 
-        {slides.map((slide: Slide, idx) => (
-          <div
-            key={slide.id}
-            className={styles.carousel__slide}
-            aria-hidden={normalizedIndex !== idx ? "true" : undefined}
-          >
-            <h3 className="sr-only">
-              {t("pictureOfTotal", {
-                current: idx + 1,
-                total: REAL_SLIDE_COUNT,
-              })}
-            </h3>
+          return (
+            <picture
+              // biome-ignore lint/suspicious/noArrayIndexKey: Safe to use index as key here
+              key={idx}
+              aria-hidden={normalizedIndex + 1 !== idx ? "true" : undefined}
+            >
+              <source
+                media="(max-width: 440px)"
+                type="image/webp"
+                srcSet={image.srcMini}
+              />
 
-            <SlideImage
-              t={t}
-              slide={slide}
-              hasAlt={true}
-              isPriority={idx === 0}
-            />
-          </div>
-        ))}
-
-        <div className={styles.carousel__slide}>
-          <SlideImage slide={slides[0]} hasAlt={false} isPriority={true} />
-        </div>
+              <img
+                className={styles.carousel__image}
+                src={image.src}
+                width="600"
+                height="400"
+                alt={
+                  hasAlt
+                    ? t(image.alt, {
+                        current: idx,
+                        total: IMAGES_COUNT,
+                      })
+                    : ""
+                }
+                loading={priority ? "eager" : "lazy"}
+                fetchPriority={priority ? "high" : "low"}
+                decoding={priority ? "sync" : "async"}
+              />
+            </picture>
+          );
+        })}
       </div>
     </div>
   );
