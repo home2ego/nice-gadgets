@@ -107,7 +107,7 @@ const ProductCard: React.FC<ProductProps> = ({
       <img
         className={styles.product__image}
         src={image}
-        alt=""
+        alt={product.name}
         width="206"
         height="194"
         loading={loading}

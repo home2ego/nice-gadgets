@@ -40,7 +40,13 @@ const CartProduct: React.FC<ProductProps> = ({
           </Icon>
         </button>
 
-        <img src={image} alt="" width="80" height="80" decoding="async" />
+        <img
+          src={image}
+          alt={product.name}
+          width="80"
+          height="80"
+          decoding="async"
+        />
 
         <h3 className="text--body">{name}</h3>
       </div>
