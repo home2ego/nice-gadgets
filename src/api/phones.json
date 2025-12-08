@@ -8,7 +8,14 @@
     "capacity": "128GB",
     "priceRegular": 1100,
     "priceDiscount": 1050,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-11/black/00.webp",
@@ -56,7 +63,14 @@
     "capacity": "128GB",
     "priceRegular": 1100,
     "priceDiscount": 1050,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "green",
     "images": [
       "/img/phones/apple-iphone-11/green/00.webp",
@@ -104,7 +118,14 @@
     "capacity": "128GB",
     "priceRegular": 1100,
     "priceDiscount": 1050,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-11/purple/00.webp",
@@ -152,7 +173,14 @@
     "capacity": "128GB",
     "priceRegular": 1100,
     "priceDiscount": 1050,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-11/red/00.webp",
@@ -200,7 +228,14 @@
     "capacity": "128GB",
     "priceRegular": 1100,
     "priceDiscount": 1050,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-11/white/00.webp",
@@ -248,7 +283,14 @@
     "capacity": "128GB",
     "priceRegular": 1100,
     "priceDiscount": 1050,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-11/yellow/00.webp",
@@ -296,7 +338,14 @@
     "capacity": "256GB",
     "priceRegular": 1172,
     "priceDiscount": 1115,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-11/black/00.webp",
@@ -344,7 +393,14 @@
     "capacity": "256GB",
     "priceRegular": 1172,
     "priceDiscount": 1115,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "green",
     "images": [
       "/img/phones/apple-iphone-11/green/00.webp",
@@ -392,7 +448,14 @@
     "capacity": "256GB",
     "priceRegular": 1172,
     "priceDiscount": 1115,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-11/purple/00.webp",
@@ -440,7 +503,14 @@
     "capacity": "256GB",
     "priceRegular": 1172,
     "priceDiscount": 1115,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-11/red/00.webp",
@@ -488,7 +558,14 @@
     "capacity": "256GB",
     "priceRegular": 1172,
     "priceDiscount": 1115,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-11/white/00.webp",
@@ -536,7 +613,14 @@
     "capacity": "256GB",
     "priceRegular": 1172,
     "priceDiscount": 1115,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-11/yellow/00.webp",
@@ -584,7 +668,14 @@
     "capacity": "64GB",
     "priceRegular": 932,
     "priceDiscount": 880,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-11/black/00.webp",
@@ -632,7 +723,14 @@
     "capacity": "64GB",
     "priceRegular": 932,
     "priceDiscount": 880,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "green",
     "images": [
       "/img/phones/apple-iphone-11/green/00.webp",
@@ -680,7 +778,14 @@
     "capacity": "64GB",
     "priceRegular": 932,
     "priceDiscount": 880,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-11/purple/00.webp",
@@ -728,7 +833,14 @@
     "capacity": "64GB",
     "priceRegular": 932,
     "priceDiscount": 880,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-11/red/00.webp",
@@ -776,7 +888,14 @@
     "capacity": "64GB",
     "priceRegular": 932,
     "priceDiscount": 880,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-11/white/00.webp",
@@ -824,7 +943,14 @@
     "capacity": "64GB",
     "priceRegular": 932,
     "priceDiscount": 880,
-    "colorsAvailable": ["black", "green", "yellow", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["green", "#b9ebdc"],
+      ["yellow", "#fae682"],
+      ["white", "#f5f3ee"],
+      ["purple", "#e1d7eb"],
+      ["red", "#c81e2d"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-11/yellow/00.webp",
@@ -872,7 +998,12 @@
     "capacity": "256GB",
     "priceRegular": 1640,
     "priceDiscount": 1570,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-11-pro/gold/00.webp",
@@ -918,7 +1049,12 @@
     "capacity": "256GB",
     "priceRegular": 1640,
     "priceDiscount": 1570,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "midnightgreen",
     "images": [
       "/img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
@@ -965,7 +1101,12 @@
     "capacity": "256GB",
     "priceRegular": 1640,
     "priceDiscount": 1570,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-11-pro/silver/00.webp",
@@ -1011,7 +1152,12 @@
     "capacity": "256GB",
     "priceRegular": 1640,
     "priceDiscount": 1570,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-11-pro/spacegray/00.webp",
@@ -1057,7 +1203,12 @@
     "capacity": "512GB",
     "priceRegular": 1880,
     "priceDiscount": 1780,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-11-pro/gold/00.webp",
@@ -1103,7 +1254,12 @@
     "capacity": "512GB",
     "priceRegular": 1880,
     "priceDiscount": 1780,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "midnightgreen",
     "images": [
       "/img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
@@ -1150,7 +1306,12 @@
     "capacity": "512GB",
     "priceRegular": 1880,
     "priceDiscount": 1780,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-11-pro/silver/00.webp",
@@ -1196,7 +1357,12 @@
     "capacity": "512GB",
     "priceRegular": 1880,
     "priceDiscount": 1780,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-11-pro/spacegray/00.webp",
@@ -1242,7 +1408,12 @@
     "capacity": "64GB",
     "priceRegular": 1312,
     "priceDiscount": 1270,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-11-pro/gold/00.webp",
@@ -1288,7 +1459,12 @@
     "capacity": "64GB",
     "priceRegular": 1312,
     "priceDiscount": 1270,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "midnightgreen",
     "images": [
       "/img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
@@ -1335,7 +1511,12 @@
     "capacity": "64GB",
     "priceRegular": 1312,
     "priceDiscount": 1270,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-11-pro/silver/00.webp",
@@ -1381,7 +1562,12 @@
     "capacity": "64GB",
     "priceRegular": 1312,
     "priceDiscount": 1270,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-11-pro/spacegray/00.webp",
@@ -1427,7 +1613,12 @@
     "capacity": "256GB",
     "priceRegular": 1776,
     "priceDiscount": 1680,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-11-pro/gold/00.webp",
@@ -1473,7 +1664,12 @@
     "capacity": "256GB",
     "priceRegular": 1776,
     "priceDiscount": 1680,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "midnightgreen",
     "images": [
       "/img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
@@ -1519,7 +1715,12 @@
     "capacity": "256GB",
     "priceRegular": 1776,
     "priceDiscount": 1680,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-11-pro/silver/00.webp",
@@ -1565,7 +1766,12 @@
     "capacity": "256GB",
     "priceRegular": 1776,
     "priceDiscount": 1680,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-11-pro/spacegray/00.webp",
@@ -1611,7 +1817,12 @@
     "capacity": "512GB",
     "priceRegular": 2020,
     "priceDiscount": 1930,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-11-pro/gold/00.webp",
@@ -1657,7 +1868,12 @@
     "capacity": "512GB",
     "priceRegular": 2020,
     "priceDiscount": 1930,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "midnightgreen",
     "images": [
       "/img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
@@ -1703,7 +1919,12 @@
     "capacity": "512GB",
     "priceRegular": 2020,
     "priceDiscount": 1930,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-11-pro/silver/00.webp",
@@ -1749,7 +1970,12 @@
     "capacity": "512GB",
     "priceRegular": 2020,
     "priceDiscount": 1930,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-11-pro/spacegray/00.webp",
@@ -1795,7 +2021,12 @@
     "capacity": "64GB",
     "priceRegular": 1480,
     "priceDiscount": 1400,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-11-pro/gold/00.webp",
@@ -1841,7 +2072,12 @@
     "capacity": "64GB",
     "priceRegular": 1480,
     "priceDiscount": 1400,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "midnightgreen",
     "images": [
       "/img/phones/apple-iphone-11-pro/midnightgreen/00.webp",
@@ -1887,7 +2123,12 @@
     "capacity": "64GB",
     "priceRegular": 1480,
     "priceDiscount": 1400,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-11-pro/silver/00.webp",
@@ -1933,7 +2174,12 @@
     "capacity": "64GB",
     "priceRegular": 1480,
     "priceDiscount": 1400,
-    "colorsAvailable": ["spacegray", "midnightgreen", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["midnightgreen", "#3c5046"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-11-pro/spacegray/00.webp",
@@ -1979,7 +2225,12 @@
     "capacity": "32GB",
     "priceRegular": 400,
     "priceDiscount": 375,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-7/black/00.webp",
@@ -2027,7 +2278,12 @@
     "capacity": "32GB",
     "priceRegular": 400,
     "priceDiscount": 375,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-7/gold/00.webp",
@@ -2075,7 +2331,12 @@
     "capacity": "32GB",
     "priceRegular": 400,
     "priceDiscount": 375,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "rosegold",
     "images": [
       "/img/phones/apple-iphone-7/rosegold/00.webp",
@@ -2123,7 +2384,12 @@
     "capacity": "32GB",
     "priceRegular": 400,
     "priceDiscount": 375,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-7/silver/00.webp",
@@ -2171,7 +2437,12 @@
     "capacity": "32GB",
     "priceRegular": 540,
     "priceDiscount": 500,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-7/black/00.webp",
@@ -2219,7 +2490,12 @@
     "capacity": "32GB",
     "priceRegular": 540,
     "priceDiscount": 500,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-7/gold/00.webp",
@@ -2267,7 +2543,12 @@
     "capacity": "32GB",
     "priceRegular": 540,
     "priceDiscount": 500,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "rosegold",
     "images": [
       "/img/phones/apple-iphone-7/rosegold/00.webp",
@@ -2315,7 +2596,12 @@
     "capacity": "32GB",
     "priceRegular": 540,
     "priceDiscount": 500,
-    "colorsAvailable": ["black", "rosegold", "gold", "silver"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["rosegold", "#f0beb9"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f0f0f2"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-7/silver/00.webp",
@@ -2363,7 +2649,11 @@
     "capacity": "64GB",
     "priceRegular": 600,
     "priceDiscount": 550,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-8/gold/00.webp",
@@ -2410,7 +2700,11 @@
     "capacity": "64GB",
     "priceRegular": 600,
     "priceDiscount": 550,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-8/silver/00.webp",
@@ -2457,7 +2751,11 @@
     "capacity": "64GB",
     "priceRegular": 600,
     "priceDiscount": 550,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#f5dcc8"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-8/spacegray/00.webp",
@@ -2504,14 +2802,17 @@
     "capacity": "128GB",
     "priceRegular": 880,
     "priceDiscount": 815,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "coral",
     "images": [
       "/img/phones/apple-iphone-xr/coral/00.webp",
       "/img/phones/apple-iphone-xr/coral/01.webp",
-      "/img/phones/apple-iphone-xr/coral/02.webp",
-      "/img/phones/apple-iphone-xr/coral/03.webp",
-      "/img/phones/apple-iphone-xr/coral/04.webp"
+      "/img/phones/apple-iphone-xr/coral/02.webp"
     ],
     "description": [
       {
@@ -2552,7 +2853,12 @@
     "capacity": "128GB",
     "priceRegular": 880,
     "priceDiscount": 815,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-xr/red/00.webp",
@@ -2600,14 +2906,18 @@
     "capacity": "128GB",
     "priceRegular": 880,
     "priceDiscount": 815,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-xr/white/00.webp",
       "/img/phones/apple-iphone-xr/white/01.webp",
       "/img/phones/apple-iphone-xr/white/02.webp",
-      "/img/phones/apple-iphone-xr/white/03.webp",
-      "/img/phones/apple-iphone-xr/white/04.webp"
+      "/img/phones/apple-iphone-xr/white/03.webp"
     ],
     "description": [
       {
@@ -2648,7 +2958,12 @@
     "capacity": "128GB",
     "priceRegular": 880,
     "priceDiscount": 815,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-xr/yellow/00.webp",
@@ -2696,7 +3011,12 @@
     "capacity": "64GB",
     "priceRegular": 712,
     "priceDiscount": 670,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "coral",
     "images": [
       "/img/phones/apple-iphone-xr/coral/00.webp",
@@ -2742,7 +3062,12 @@
     "capacity": "64GB",
     "priceRegular": 712,
     "priceDiscount": 670,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-xr/red/00.webp",
@@ -2790,14 +3115,18 @@
     "capacity": "64GB",
     "priceRegular": 712,
     "priceDiscount": 670,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-xr/white/00.webp",
       "/img/phones/apple-iphone-xr/white/01.webp",
       "/img/phones/apple-iphone-xr/white/02.webp",
-      "/img/phones/apple-iphone-xr/white/03.webp",
-      "/img/phones/apple-iphone-xr/white/04.webp"
+      "/img/phones/apple-iphone-xr/white/03.webp"
     ],
     "description": [
       {
@@ -2838,7 +3167,12 @@
     "capacity": "64GB",
     "priceRegular": 712,
     "priceDiscount": 670,
-    "colorsAvailable": ["white", "yellow", "red", "coral"],
+    "colorsAvailable": [
+      ["white", "#f5f3ee"],
+      ["yellow", "#fae15f"],
+      ["red", "#b90014"],
+      ["coral", "#ff735f"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-xr/yellow/00.webp",
@@ -2886,7 +3220,7 @@
     "capacity": "256GB",
     "priceRegular": 960,
     "priceDiscount": 900,
-    "colorsAvailable": ["spacegray", "gold"],
+    "colorsAvailable": [["spacegray", "#37373c"], ["gold", "#ebd7b9"]],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-xs/gold/00.webp",
@@ -2934,7 +3268,7 @@
     "capacity": "256GB",
     "priceRegular": 960,
     "priceDiscount": 900,
-    "colorsAvailable": ["spacegray", "gold"],
+    "colorsAvailable": [["spacegray", "#37373c"], ["gold", "#ebd7b9"]],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-xs/spacegray/00.webp",
@@ -2982,7 +3316,7 @@
     "capacity": "64GB",
     "priceRegular": 760,
     "priceDiscount": 720,
-    "colorsAvailable": ["spacegray", "gold"],
+    "colorsAvailable": [["spacegray", "#37373c"], ["gold", "#ebd7b9"]],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-xs/gold/00.webp",
@@ -3030,7 +3364,7 @@
     "capacity": "64GB",
     "priceRegular": 760,
     "priceDiscount": 720,
-    "colorsAvailable": ["spacegray", "gold"],
+    "colorsAvailable": [["spacegray", "#37373c"], ["gold", "#ebd7b9"]],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-xs/spacegray/00.webp",
@@ -3078,7 +3412,11 @@
     "capacity": "256GB",
     "priceRegular": 1080,
     "priceDiscount": 1000,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-xs/gold/00.webp",
@@ -3126,7 +3464,11 @@
     "capacity": "256GB",
     "priceRegular": 1080,
     "priceDiscount": 1000,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-xs/silver/00.webp",
@@ -3174,7 +3516,11 @@
     "capacity": "256GB",
     "priceRegular": 1080,
     "priceDiscount": 1000,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-xs/spacegray/00.webp",
@@ -3222,7 +3568,11 @@
     "capacity": "64GB",
     "priceRegular": 960,
     "priceDiscount": 900,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-xs/gold/00.webp",
@@ -3270,7 +3620,11 @@
     "capacity": "64GB",
     "priceRegular": 960,
     "priceDiscount": 900,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "silver",
     "images": [
       "/img/phones/apple-iphone-xs/silver/00.webp",
@@ -3318,7 +3672,11 @@
     "capacity": "64GB",
     "priceRegular": 960,
     "priceDiscount": 900,
-    "colorsAvailable": ["spacegray", "gold", "silver"],
+    "colorsAvailable": [
+      ["spacegray", "#37373c"],
+      ["gold", "#ebd7b9"],
+      ["silver", "#f5f5f0"]
+    ],
     "color": "spacegray",
     "images": [
       "/img/phones/apple-iphone-xs/spacegray/00.webp",
@@ -3365,7 +3723,11 @@
     "capacity": "128GB",
     "priceRegular": 1056,
     "priceDiscount": 980,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "midnight",
     "images": [
       "/img/phones/apple-iphone-14/midnight/00.webp",
@@ -3412,7 +3774,11 @@
     "capacity": "256GB",
     "priceRegular": 1200,
     "priceDiscount": 1160,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "midnight",
     "images": [
       "/img/phones/apple-iphone-14/midnight/00.webp",
@@ -3459,7 +3825,11 @@
     "capacity": "512GB",
     "priceRegular": 1466,
     "priceDiscount": 1378,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "midnight",
     "images": [
       "/img/phones/apple-iphone-14/midnight/00.webp",
@@ -3506,7 +3876,11 @@
     "capacity": "128GB",
     "priceRegular": 1056,
     "priceDiscount": 980,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-14/yellow/00.webp",
@@ -3553,7 +3927,11 @@
     "capacity": "256GB",
     "priceRegular": 1200,
     "priceDiscount": 1160,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-14/yellow/00.webp",
@@ -3600,7 +3978,11 @@
     "capacity": "512GB",
     "priceRegular": 1466,
     "priceDiscount": 1378,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "yellow",
     "images": [
       "/img/phones/apple-iphone-14/yellow/00.webp",
@@ -3647,7 +4029,11 @@
     "capacity": "128GB",
     "priceRegular": 1056,
     "priceDiscount": 980,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-14/purple/00.webp",
@@ -3694,7 +4080,11 @@
     "capacity": "256GB",
     "priceRegular": 1256,
     "priceDiscount": 1180,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-14/purple/00.webp",
@@ -3741,7 +4131,11 @@
     "capacity": "512GB",
     "priceRegular": 1600,
     "priceDiscount": 1450,
-    "colorsAvailable": ["midnight", "yellow", "purple"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["yellow", "#fae682"],
+      ["purple", "#d7cde6"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-14/purple/00.webp",
@@ -3788,7 +4182,7 @@
     "capacity": "128GB",
     "priceRegular": 1056,
     "priceDiscount": 980,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "spaceblack",
     "images": [
       "/img/phones/apple-iphone-14-pro/spaceblack/00.webp",
@@ -3835,7 +4229,7 @@
     "capacity": "256GB",
     "priceRegular": 1200,
     "priceDiscount": 1160,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "spaceblack",
     "images": [
       "/img/phones/apple-iphone-14-pro/spaceblack/00.webp",
@@ -3882,7 +4276,7 @@
     "capacity": "512GB",
     "priceRegular": 1466,
     "priceDiscount": 1378,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "spaceblack",
     "images": [
       "/img/phones/apple-iphone-14-pro/spaceblack/00.webp",
@@ -3929,7 +4323,7 @@
     "capacity": "1TB",
     "priceRegular": 1740,
     "priceDiscount": 1520,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "spaceblack",
     "images": [
       "/img/phones/apple-iphone-14-pro/spaceblack/00.webp",
@@ -3976,7 +4370,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-12/black/00.webp",
@@ -4021,7 +4420,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-12/black/00.webp",
@@ -4066,7 +4470,12 @@
     "capacity": "256GB",
     "priceRegular": 1180,
     "priceDiscount": 1100,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "black",
     "images": [
       "/img/phones/apple-iphone-12/black/00.webp",
@@ -4111,7 +4520,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-12/purple/00.webp",
@@ -4156,7 +4570,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-12/purple/00.webp",
@@ -4201,7 +4620,12 @@
     "capacity": "256GB",
     "priceRegular": 1180,
     "priceDiscount": 1100,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "purple",
     "images": [
       "/img/phones/apple-iphone-12/purple/00.webp",
@@ -4246,7 +4670,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-12/red/00.webp",
@@ -4291,7 +4720,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-12/red/00.webp",
@@ -4336,7 +4770,12 @@
     "capacity": "256GB",
     "priceRegular": 1180,
     "priceDiscount": 1100,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "red",
     "images": [
       "/img/phones/apple-iphone-12/red/00.webp",
@@ -4381,7 +4820,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-12/white/00.webp",
@@ -4426,7 +4870,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-12/white/00.webp",
@@ -4471,7 +4920,12 @@
     "capacity": "256GB",
     "priceRegular": 1180,
     "priceDiscount": 1100,
-    "colorsAvailable": ["black", "white", "purple", "red"],
+    "colorsAvailable": [
+      ["black", "#19191c"],
+      ["white", "#f5f3ee"],
+      ["purple", "#b9aadc"],
+      ["red", "#e6373c"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-12/white/00.webp",
@@ -4516,7 +4970,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "midnight",
     "images": [
       "/img/phones/apple-iphone-13-mini/midnight/00.webp",
@@ -4561,7 +5020,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "midnight",
     "images": [
       "/img/phones/apple-iphone-13-mini/midnight/00.webp",
@@ -4606,7 +5070,12 @@
     "capacity": "256GB",
     "priceRegular": 1180,
     "priceDiscount": 1100,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "midnight",
     "images": [
       "/img/phones/apple-iphone-13-mini/midnight/00.webp",
@@ -4651,7 +5120,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "pink",
     "images": [
       "/img/phones/apple-iphone-13-mini/pink/00.webp",
@@ -4696,7 +5170,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "pink",
     "images": [
       "/img/phones/apple-iphone-13-mini/pink/00.webp",
@@ -4741,7 +5220,12 @@
     "capacity": "256GB",
     "priceRegular": 1180,
     "priceDiscount": 1100,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "pink",
     "images": [
       "/img/phones/apple-iphone-13-mini/pink/00.webp",
@@ -4786,7 +5270,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-13-mini/white/00.webp",
@@ -4831,7 +5320,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-13-mini/white/00.webp",
@@ -4876,7 +5370,12 @@
     "capacity": "256GB",
     "priceRegular": 999,
     "priceDiscount": 949,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "white",
     "images": [
       "/img/phones/apple-iphone-13-mini/white/00.webp",
@@ -4921,7 +5420,12 @@
     "capacity": "64GB",
     "priceRegular": 880,
     "priceDiscount": 800,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "blue",
     "images": [
       "/img/phones/apple-iphone-13-mini/blue/00.webp",
@@ -4966,7 +5470,12 @@
     "capacity": "128GB",
     "priceRegular": 980,
     "priceDiscount": 900,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "blue",
     "images": [
       "/img/phones/apple-iphone-13-mini/blue/00.webp",
@@ -5011,7 +5520,12 @@
     "capacity": "256GB",
     "priceRegular": 999,
     "priceDiscount": 949,
-    "colorsAvailable": ["midnight", "white", "blue", "pink"],
+    "colorsAvailable": [
+      ["midnight", "#191d29"],
+      ["white", "#f5f3ee"],
+      ["blue", "#285f82"],
+      ["pink", "#F5D7DC"]
+    ],
     "color": "blue",
     "images": [
       "/img/phones/apple-iphone-13-mini/blue/00.webp",
@@ -5056,7 +5570,11 @@
     "capacity": "128GB",
     "priceRegular": 1286,
     "priceDiscount": 1260,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "sierrablue",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/sierrablue/00.webp",
@@ -5107,7 +5625,11 @@
     "capacity": "256GB",
     "priceRegular": 1399,
     "priceDiscount": 1379,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "sierrablue",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/sierrablue/00.webp",
@@ -5158,7 +5680,11 @@
     "capacity": "512GB",
     "priceRegular": 1426,
     "priceDiscount": 1371,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "sierrablue",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/sierrablue/00.webp",
@@ -5209,7 +5735,11 @@
     "capacity": "1TB",
     "priceRegular": 1700,
     "priceDiscount": 1540,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "sierrablue",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/sierrablue/00.webp",
@@ -5255,7 +5785,11 @@
     "capacity": "128GB",
     "priceRegular": 1286,
     "priceDiscount": 1260,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "graphite",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/graphite/00.webp",
@@ -5306,7 +5840,11 @@
     "capacity": "256GB",
     "priceRegular": 1399,
     "priceDiscount": 1379,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "graphite",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/graphite/00.webp",
@@ -5357,7 +5895,11 @@
     "capacity": "512GB",
     "priceRegular": 1426,
     "priceDiscount": 1371,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "graphite",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/graphite/00.webp",
@@ -5408,7 +5950,11 @@
     "capacity": "1TB",
     "priceRegular": 1700,
     "priceDiscount": 1540,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "graphite",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/graphite/00.webp",
@@ -5454,7 +6000,11 @@
     "capacity": "128GB",
     "priceRegular": 1286,
     "priceDiscount": 1260,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/gold/00.webp",
@@ -5505,7 +6055,11 @@
     "capacity": "256GB",
     "priceRegular": 1399,
     "priceDiscount": 1379,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/gold/00.webp",
@@ -5556,7 +6110,11 @@
     "capacity": "512GB",
     "priceRegular": 1426,
     "priceDiscount": 1371,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/gold/00.webp",
@@ -5607,7 +6165,11 @@
     "capacity": "1TB",
     "priceRegular": 1700,
     "priceDiscount": 1540,
-    "colorsAvailable": ["graphite", "gold", "sierrablue"],
+    "colorsAvailable": [
+      ["graphite", "#46464b"],
+      ["gold", "#ebe1c8"],
+      ["sierrablue", "#a5b9cd"]
+    ],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-13-pro-max/gold/00.webp",
@@ -5653,7 +6215,7 @@
     "capacity": "128GB",
     "priceRegular": 1056,
     "priceDiscount": 980,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-14-pro/gold/00.webp",
@@ -5700,7 +6262,7 @@
     "capacity": "256GB",
     "priceRegular": 1200,
     "priceDiscount": 1160,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-14-pro/gold/00.webp",
@@ -5739,7 +6301,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
-    "id": "apple-iphone-14-pro-512gb",
+    "id": "apple-iphone-14-pro-512gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
     "name": "Apple iPhone 14 Pro 512GB Space Black",
@@ -5747,7 +6309,7 @@
     "capacity": "512GB",
     "priceRegular": 1466,
     "priceDiscount": 1378,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-14-pro/gold/00.webp",
@@ -5794,7 +6356,7 @@
     "capacity": "1TB",
     "priceRegular": 1740,
     "priceDiscount": 1520,
-    "colorsAvailable": ["spaceblack", "gold"],
+    "colorsAvailable": [["spaceblack", "#37373a"], ["gold", "#ebe1c8"]],
     "color": "gold",
     "images": [
       "/img/phones/apple-iphone-14-pro/gold/00.webp",

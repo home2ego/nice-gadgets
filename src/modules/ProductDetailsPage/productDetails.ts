@@ -7,7 +7,7 @@ export interface ProductDetails {
   capacity: string;
   priceRegular: number;
   priceDiscount: number;
-  colorsAvailable: string[];
+  colorsAvailable: string[][];
   color: string;
   images: string[];
   description: {
