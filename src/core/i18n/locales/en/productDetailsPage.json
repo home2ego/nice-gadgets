@@ -3,5 +3,7 @@
   "notFoundProductHeading": "Product not found",
   "productAlt": "{{name}}. Image {{current}} of {{total}}.",
   "productThumbnailsLabel": "Product thumbnails",
-  "thumbnailLabel": "Thumbnail {{current}} of {{total}}"
+  "thumbnailLabel": "Thumbnail {{current}} of {{total}}",
+  "availableColors": "Available colors",
+  "selectCapacity": "Select capacity"
 }

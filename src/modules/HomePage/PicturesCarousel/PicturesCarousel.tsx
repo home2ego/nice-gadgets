@@ -155,12 +155,18 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
         </button>
       )}
 
-      {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
-      <div role="group" aria-label={t("imageNavLabel")} className={styles.dots}>
+      <div
+        role="radiogroup"
+        aria-label={t("imageNavLabel")}
+        className={styles.dots}
+      >
         {images.map((image: SlideImage, idx) => (
+          // biome-ignore lint/a11y/useSemanticElements: custom radio control with dots
           <button
-            type="button"
+            role="radio"
+            aria-checked={normalizedIndex === idx}
             key={image.id}
+            type="button"
             className={styles.dots__dot}
             onClick={() => {
               if (idx !== normalizedIndex) {
@@ -175,7 +181,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
               current: idx + 1,
               total: IMAGES_COUNT,
             })}
-            aria-current={normalizedIndex === idx ? "true" : undefined}
           >
             <span
               className={styles.line}

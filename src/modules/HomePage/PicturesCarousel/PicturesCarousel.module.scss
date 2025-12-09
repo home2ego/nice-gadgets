@@ -111,11 +111,11 @@
     }
   }
 
-  &__dot[aria-current="true"] .line {
+  &__dot[aria-checked="true"] .line {
     background-color: var(--text-color-primary);
   }
 
-  &__dot:not([aria-current="true"]) {
+  &__dot:not([aria-checked="true"]) {
     .line {
       transition: opacity 0.18s;
     }

@@ -3,5 +3,7 @@
   "notFoundProductHeading": "Nie znaleziono produktu",
   "productAlt": "{{name}}. Obraz {{current}} z {{total}}.",
   "productThumbnailsLabel": "Miniatury produktów",
-  "thumbnailLabel": "Miniatura {{current}} z {{total}}"
+  "thumbnailLabel": "Miniatura {{current}} z {{total}}",
+  "availableColors": "Dostępne kolory",
+  "selectCapacity": "Wybierz pojemność"
 }

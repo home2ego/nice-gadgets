@@ -3,5 +3,7 @@
   "notFoundProductHeading": "Tuotetta ei löytynyt",
   "productAlt": "{{name}}. Kuva {{current}} / {{total}}.",
   "productThumbnailsLabel": "Tuotteen pikkukuvat",
-  "thumbnailLabel": "Pikkukuva {{current}} / {{total}}"
+  "thumbnailLabel": "Pikkukuva {{current}} / {{total}}",
+  "availableColors": "Saatavilla olevat värit",
+  "selectCapacity": "Valitse kapasiteetti"
 }

@@ -9,11 +9,11 @@
     "priceRegular": 199,
     "priceDiscount": 169,
     "colorsAvailable": [
-      ["spacegray", "#37373c"],
-      ["silver", "#b6b7ba"],
-      ["gold", "#e6c8bf"]
+      ["Space Gray", "#37373c"],
+      ["Silver", "#b6b7ba"],
+      ["Gold", "#e6c8bf"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-3/space-gray/00.webp",
       "/img/accessories/apple-watch-series-3/space-gray/01.webp",
@@ -55,11 +55,11 @@
     "priceRegular": 250,
     "priceDiscount": 219,
     "colorsAvailable": [
-      ["spacegray", "#37373c"],
-      ["silver", "#b6b7ba"],
-      ["gold", "#e6c8bf"]
+      ["Space Gray", "#37373c"],
+      ["Silver", "#b6b7ba"],
+      ["Gold", "#e6c8bf"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-3/space-gray/00.webp",
       "/img/accessories/apple-watch-series-3/space-gray/01.webp",
@@ -101,11 +101,11 @@
     "priceRegular": 199,
     "priceDiscount": 169,
     "colorsAvailable": [
-      ["spacegray", "#37373c"],
-      ["silver", "#b6b7ba"],
-      ["gold", "#e6c8bf"]
+      ["Space Gray", "#37373c"],
+      ["Silver", "#b6b7ba"],
+      ["Gold", "#e6c8bf"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-3/gold/00.webp",
       "/img/accessories/apple-watch-series-3/gold/01.webp",
@@ -147,11 +147,11 @@
     "priceRegular": 250,
     "priceDiscount": 219,
     "colorsAvailable": [
-      ["spacegray", "#37373c"],
-      ["silver", "#b6b7ba"],
-      ["gold", "#e6c8bf"]
+      ["Space Gray", "#37373c"],
+      ["Silver", "#b6b7ba"],
+      ["Gold", "#e6c8bf"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-3/gold/00.webp",
       "/img/accessories/apple-watch-series-3/gold/01.webp",
@@ -193,11 +193,11 @@
     "priceRegular": 199,
     "priceDiscount": 169,
     "colorsAvailable": [
-      ["spacegray", "#37373c"],
-      ["silver", "#b6b7ba"],
-      ["gold", "#e6c8bf"]
+      ["Space Gray", "#37373c"],
+      ["Silver", "#b6b7ba"],
+      ["Gold", "#e6c8bf"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-3/silver/00.webp",
       "/img/accessories/apple-watch-series-3/silver/01.webp",
@@ -239,11 +239,11 @@
     "priceRegular": 250,
     "priceDiscount": 219,
     "colorsAvailable": [
-      ["spacegray", "#37373c"],
-      ["silver", "#b6b7ba"],
-      ["gold", "#e6c8bf"]
+      ["Space Gray", "#37373c"],
+      ["Silver", "#b6b7ba"],
+      ["Gold", "#e6c8bf"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-3/silver/00.webp",
       "/img/accessories/apple-watch-series-3/silver/01.webp",
@@ -285,13 +285,13 @@
     "priceRegular": 399,
     "priceDiscount": 329,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-6/space-gray/00.webp",
       "/img/accessories/apple-watch-series-6/space-gray/01.webp",
@@ -333,13 +333,13 @@
     "priceRegular": 429,
     "priceDiscount": 359,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-6/space-gray/00.webp",
       "/img/accessories/apple-watch-series-6/space-gray/01.webp",
@@ -381,13 +381,13 @@
     "priceRegular": 399,
     "priceDiscount": 329,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-6/silver/00.webp",
       "/img/accessories/apple-watch-series-6/silver/01.webp",
@@ -429,13 +429,13 @@
     "priceRegular": 429,
     "priceDiscount": 359,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-6/silver/00.webp",
       "/img/accessories/apple-watch-series-6/silver/01.webp",
@@ -477,13 +477,13 @@
     "priceRegular": 399,
     "priceDiscount": 329,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-6/gold/00.webp",
       "/img/accessories/apple-watch-series-6/gold/01.webp",
@@ -525,13 +525,13 @@
     "priceRegular": 429,
     "priceDiscount": 359,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-6/gold/00.webp",
       "/img/accessories/apple-watch-series-6/gold/01.webp",
@@ -573,13 +573,13 @@
     "priceRegular": 399,
     "priceDiscount": 329,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "blue",
+    "color": "Blue",
     "images": [
       "/img/accessories/apple-watch-series-6/blue/00.webp",
       "/img/accessories/apple-watch-series-6/blue/01.webp",
@@ -621,13 +621,13 @@
     "priceRegular": 429,
     "priceDiscount": 359,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "blue",
+    "color": "Blue",
     "images": [
       "/img/accessories/apple-watch-series-6/blue/00.webp",
       "/img/accessories/apple-watch-series-6/blue/01.webp",
@@ -669,13 +669,13 @@
     "priceRegular": 399,
     "priceDiscount": 329,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "red",
+    "color": "Red",
     "images": [
       "/img/accessories/apple-watch-series-6/red/00.webp",
       "/img/accessories/apple-watch-series-6/red/01.webp",
@@ -717,13 +717,13 @@
     "priceRegular": 429,
     "priceDiscount": 359,
     "colorsAvailable": [
-      ["spacegray", "#3c3c41"],
-      ["silver", "#f0f0f2"],
-      ["gold", "#eacfb9"],
-      ["blue", "#1f2c47"],
-      ["red", "#e14a4a"]
+      ["Space Gray", "#3c3c41"],
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#eacfb9"],
+      ["Blue", "#1f2c47"],
+      ["Red", "#e14a4a"]
     ],
-    "color": "red",
+    "color": "Red",
     "images": [
       "/img/accessories/apple-watch-series-6/red/00.webp",
       "/img/accessories/apple-watch-series-6/red/01.webp",
@@ -765,11 +765,11 @@
     "priceRegular": 399,
     "priceDiscount": 299,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-5/silver/00.webp",
       "/img/accessories/apple-watch-series-5/silver/01.webp",
@@ -811,11 +811,11 @@
     "priceRegular": 429,
     "priceDiscount": 399,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-5/silver/00.webp",
       "/img/accessories/apple-watch-series-5/silver/01.webp",
@@ -857,11 +857,11 @@
     "priceRegular": 399,
     "priceDiscount": 299,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-5/gold/00.webp",
       "/img/accessories/apple-watch-series-5/gold/01.webp",
@@ -903,11 +903,11 @@
     "priceRegular": 429,
     "priceDiscount": 399,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-5/gold/00.webp",
       "/img/accessories/apple-watch-series-5/gold/01.webp",
@@ -949,11 +949,11 @@
     "priceRegular": 399,
     "priceDiscount": 299,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-5/space-gray/00.webp",
       "/img/accessories/apple-watch-series-5/space-gray/01.webp",
@@ -995,11 +995,11 @@
     "priceRegular": 429,
     "priceDiscount": 399,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-5/space-gray/00.webp",
       "/img/accessories/apple-watch-series-5/space-gray/01.webp",
@@ -1041,11 +1041,11 @@
     "priceRegular": 399,
     "priceDiscount": 349,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-4/silver/00.webp",
       "/img/accessories/apple-watch-series-4/silver/01.webp",
@@ -1087,11 +1087,11 @@
     "priceRegular": 429,
     "priceDiscount": 379,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-series-4/silver/00.webp",
       "/img/accessories/apple-watch-series-4/silver/01.webp",
@@ -1133,11 +1133,11 @@
     "priceRegular": 399,
     "priceDiscount": 349,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-4/gold/00.webp",
       "/img/accessories/apple-watch-series-4/gold/01.webp",
@@ -1179,11 +1179,11 @@
     "priceRegular": 429,
     "priceDiscount": 379,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-series-4/gold/00.webp",
       "/img/accessories/apple-watch-series-4/gold/01.webp",
@@ -1225,11 +1225,11 @@
     "priceRegular": 399,
     "priceDiscount": 349,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-4/space-gray/00.webp",
       "/img/accessories/apple-watch-series-4/space-gray/01.webp",
@@ -1271,11 +1271,11 @@
     "priceRegular": 429,
     "priceDiscount": 379,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#e6c8bf"],
-      ["spacegray", "#4a4743"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#e6c8bf"],
+      ["Space Gray", "#4a4743"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-series-4/space-gray/00.webp",
       "/img/accessories/apple-watch-series-4/space-gray/01.webp",
@@ -1317,11 +1317,11 @@
     "priceRegular": 279,
     "priceDiscount": 249,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#dbd3ce"],
-      ["spacegray", "#46464b"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#dbd3ce"],
+      ["Space Gray", "#46464b"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-se/silver/00.webp",
       "/img/accessories/apple-watch-se/silver/01.webp",
@@ -1363,11 +1363,11 @@
     "priceRegular": 309,
     "priceDiscount": 279,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#dbd3ce"],
-      ["spacegray", "#46464b"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#dbd3ce"],
+      ["Space Gray", "#46464b"]
     ],
-    "color": "silver",
+    "color": "Silver",
     "images": [
       "/img/accessories/apple-watch-se/silver/00.webp",
       "/img/accessories/apple-watch-se/silver/01.webp",
@@ -1409,11 +1409,11 @@
     "priceRegular": 279,
     "priceDiscount": 259,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#dbd3ce"],
-      ["spacegray", "#46464b"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#dbd3ce"],
+      ["Space Gray", "#46464b"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-se/gold/00.webp",
       "/img/accessories/apple-watch-se/gold/01.webp",
@@ -1455,11 +1455,11 @@
     "priceRegular": 309,
     "priceDiscount": 289,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#dbd3ce"],
-      ["spacegray", "#46464b"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#dbd3ce"],
+      ["Space Gray", "#46464b"]
     ],
-    "color": "gold",
+    "color": "Gold",
     "images": [
       "/img/accessories/apple-watch-se/gold/00.webp",
       "/img/accessories/apple-watch-se/gold/01.webp",
@@ -1501,11 +1501,11 @@
     "priceRegular": 279,
     "priceDiscount": 259,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#dbd3ce"],
-      ["spacegray", "#46464b"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#dbd3ce"],
+      ["Space Gray", "#46464b"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-se/space-gray/00.webp",
       "/img/accessories/apple-watch-se/space-gray/01.webp",
@@ -1547,11 +1547,11 @@
     "priceRegular": 309,
     "priceDiscount": 289,
     "colorsAvailable": [
-      ["silver", "#f0f0f2"],
-      ["gold", "#dbd3ce"],
-      ["spacegray", "#46464b"]
+      ["Silver", "#f0f0f2"],
+      ["Gold", "#dbd3ce"],
+      ["Space Gray", "#46464b"]
     ],
-    "color": "spacegray",
+    "color": "Space Gray",
     "images": [
       "/img/accessories/apple-watch-se/space-gray/00.webp",
       "/img/accessories/apple-watch-se/space-gray/01.webp",

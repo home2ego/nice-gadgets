@@ -20,14 +20,17 @@ const Navbar: React.FC<NavbarProps> = ({
   footerRef,
   skipRef,
 }) => {
-  const pathname = useLocation().pathname;
+  const { pathname, state } = useLocation();
   const [isExpanded, setIsExpanded] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLElement>(null);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: pathname triggers scroll on route change
+  // biome-ignore lint/correctness/useExhaustiveDependencies: state is not a dependency
   useLayoutEffect(() => {
-    if (window.scrollY > 0) {
+    if (
+      (window.scrollY > 0 && !pathname.startsWith("/product")) ||
+      state?.scrollToTop
+    ) {
       window.scrollTo({ top: 0, behavior: "instant" });
     }
   }, [pathname]);

@@ -87,7 +87,7 @@
 .thumbnail {
   border: $border-width solid var(--bd-color-primary);
 
-  &[aria-current="true"] {
+  &[aria-checked="true"] {
     border-color: var(--text-color-primary);
   }
 }

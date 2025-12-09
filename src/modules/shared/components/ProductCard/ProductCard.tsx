@@ -95,6 +95,9 @@ const ProductCard: React.FC<ProductProps> = ({
     <article className={styles.product}>
       <Link
         to={`/product/${itemId}`}
+        state={{
+          scrollToTop: true,
+        }}
         aria-label={t("productLabel", {
           current: productIdx + 1,
           total: totalProducts,

@@ -1,7 +1,6 @@
 import clsx from "clsx";
-import { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import accessories from "@/api/accessories.json";
 import phones from "@/api/phones.json";
 import tablets from "@/api/tablets.json";
@@ -15,19 +14,13 @@ const mergedProducts = [...phones, ...tablets, ...accessories];
 
 const ProductDetailsPage = () => {
   const { productId } = useParams();
+  const navigate = useNavigate();
   const { t } = useTranslation("productDetailsPage");
-  const [product, setProduct] = useState(() =>
-    mergedProducts.find((product) => product.id === productId),
-  );
+  const product = mergedProducts.find((product) => product.id === productId);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: intentional, run only once
-  const allProducts = useMemo(() => {
-    if (!product) return [];
-
-    return mergedProducts.filter((p) => {
-      return p.namespaceId === product.namespaceId;
-    });
-  }, []);
+  const allProducts = mergedProducts.filter((p) => {
+    return p.namespaceId === product?.namespaceId;
+  });
 
   if (!product) {
     return <NotFoundProduct t={t} />;
@@ -35,21 +28,21 @@ const ProductDetailsPage = () => {
 
   const handleColorsOptionClick = (colorAvailable: string) => {
     if (colorAvailable !== product.color) {
-      const newProduct = allProducts.find((p) => {
+      const newSlug = allProducts.find((p) => {
         return p.color === colorAvailable && p.capacity === product.capacity;
-      });
+      })?.id;
 
-      setProduct(newProduct);
+      navigate(`/product/${newSlug}`, { replace: true });
     }
   };
 
   const handleCapacityOptionClick = (capacity: string) => {
     if (capacity !== product.capacity) {
-      const newProduct = allProducts.find((p) => {
+      const newSlug = allProducts.find((p) => {
         return p.capacity === capacity && p.color === product.color;
-      });
+      })?.id;
 
-      setProduct(newProduct);
+      navigate(`/product/${newSlug}`, { replace: true });
     }
   };
 
@@ -72,22 +65,34 @@ const ProductDetailsPage = () => {
 
           <div className={styles.product__details}>
             <div className={styles.product__colors}>
-              <p className={clsx(styles["product__colors-title"], "text--sm")}>
-                Available colors
+              {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+              <p
+                id="colors-title"
+                className={clsx(styles["product__colors-title"], "text--sm")}
+              >
+                {t("availableColors")}
               </p>
 
-              <div className={styles["product__colors-options"]}>
-                {product.colorsAvailable.map((colorAvailable) => (
+              <div
+                role="radiogroup"
+                aria-labelledby="colors-title"
+                className={styles["product__colors-options"]}
+              >
+                {product.colorsAvailable.map(([colorName, colorHex]) => (
+                  // biome-ignore lint/a11y/useSemanticElements: custom radio control with color options
                   <button
-                    key={colorAvailable[0]}
+                    role="radio"
+                    aria-checked={colorName === product.color}
+                    aria-label={colorName}
+                    key={colorName}
                     type="button"
                     className={clsx(styles["product__colors-option"], {
-                      [styles.active]: colorAvailable[0] === product.color,
+                      [styles.active]: colorName === product.color,
                     })}
                     style={{
-                      backgroundColor: colorAvailable[1],
+                      backgroundColor: colorHex,
                     }}
-                    onClick={() => handleColorsOptionClick(colorAvailable[0])}
+                    onClick={() => handleColorsOptionClick(colorName)}
                   />
                 ))}
               </div>
@@ -96,15 +101,24 @@ const ProductDetailsPage = () => {
             <span className={styles.product__line} />
 
             <div className={styles.product__capacity}>
+              {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
               <p
+                id="capacity-title"
                 className={clsx(styles["product__capacity-title"], "text--sm")}
               >
-                Select capacity
+                {t("selectCapacity")}
               </p>
 
-              <div className={styles["product__capacity-options"]}>
+              <div
+                role="radiogroup"
+                aria-labelledby="capacity-title"
+                className={styles["product__capacity-options"]}
+              >
                 {product.capacityAvailable.map((capacity) => (
+                  // biome-ignore lint/a11y/useSemanticElements: custom radio control with capacity options
                   <button
+                    role="radio"
+                    aria-checked={capacity === product.capacity}
                     key={capacity}
                     type="button"
                     className={clsx(

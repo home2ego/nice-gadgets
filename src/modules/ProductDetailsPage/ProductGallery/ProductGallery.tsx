@@ -152,14 +152,16 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
         </div>
       </div>
 
-      {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
       <div
-        role="group"
+        role="radiogroup"
         aria-label={t("productThumbnailsLabel")}
         className={styles.thumbnails}
       >
         {images.map((img, idx) => (
+          // biome-ignore lint/a11y/useSemanticElements: custom radio control with image thumbnails
           <button
+            role="radio"
+            aria-checked={normalizedIndex === idx}
             key={img}
             type="button"
             className={styles.thumbnail}
@@ -169,7 +171,6 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
                 : undefined,
             }}
             onClick={() => idx !== normalizedIndex && setCurrentIndex(idx)}
-            aria-current={normalizedIndex === idx ? "true" : undefined}
           >
             <img
               className={styles.thumbnail__image}

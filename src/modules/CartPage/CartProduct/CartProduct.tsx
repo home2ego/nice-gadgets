@@ -52,7 +52,7 @@ const CartProduct: React.FC<ProductProps> = ({
       </div>
 
       <div className={styles.product__bottom}>
-        {/* biome-ignore lint/a11y/useSemanticElements: not a form group */}
+        {/* biome-ignore lint/a11y/useSemanticElements: group related controls */}
         <div
           role="group"
           aria-label={t("quantityFor", { product: shortName })}

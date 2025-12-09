@@ -3,5 +3,7 @@
   "notFoundProductHeading": "Товар не знайдено",
   "productAlt": "{{name}}. Зображення {{current}} із {{total}}.",
   "productThumbnailsLabel": "Мініатюри товарів",
-  "thumbnailLabel": "Мініатюра {{current}} із {{total}}"
+  "thumbnailLabel": "Мініатюра {{current}} із {{total}}",
+  "availableColors": "Доступні кольори",
+  "selectCapacity": "Виберіть місткість"
 }
