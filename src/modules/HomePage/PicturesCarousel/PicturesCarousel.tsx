@@ -120,6 +120,16 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     }
   };
 
+  const handleDotClick = (idx: number) => {
+    if (idx !== normalizedIndex) {
+      if (!isReducedMotion) {
+        withTransition.current = true;
+      }
+
+      setCurrentIndex(idx);
+    }
+  };
+
   useHorizontalSwipe(sliderRef, handlePrevClick, handleNextClick);
 
   return (
@@ -168,15 +178,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
             key={image.id}
             type="button"
             className={styles.dots__dot}
-            onClick={() => {
-              if (idx !== normalizedIndex) {
-                if (!isReducedMotion) {
-                  withTransition.current = true;
-                }
-
-                setCurrentIndex(idx);
-              }
-            }}
+            onClick={() => handleDotClick(idx)}
             aria-label={t("showImageOfTotal", {
               current: idx + 1,
               total: IMAGES_COUNT,

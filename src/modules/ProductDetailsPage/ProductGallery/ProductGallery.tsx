@@ -78,6 +78,16 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
     }
   };
 
+  const handleThumbnailClick = (idx: number) => {
+    if (idx !== normalizedIndex) {
+      if (!isReducedMotion) {
+        withTransition.current = true;
+      }
+
+      setCurrentIndex(idx);
+    }
+  };
+
   useHorizontalSwipe(sliderRef, handlePrevClick, handleNextClick);
 
   return (
@@ -170,7 +180,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
                 ? "border-color 0.18s ease-out"
                 : undefined,
             }}
-            onClick={() => idx !== normalizedIndex && setCurrentIndex(idx)}
+            onClick={() => handleThumbnailClick(idx)}
           >
             <img
               className={styles.thumbnail__image}
