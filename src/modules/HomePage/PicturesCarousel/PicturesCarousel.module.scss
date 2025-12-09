@@ -74,7 +74,7 @@
     grid-template-columns: repeat(5, 100%);
 
     &--transition {
-      transition: transform 0.36s cubic-bezier(0.22, 0.61, 0.36, 1);
+      transition: transform 0.36s;
     }
   }
 

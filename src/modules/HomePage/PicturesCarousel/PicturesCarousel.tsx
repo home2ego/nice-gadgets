@@ -223,7 +223,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
           [styles["carousel__wrapper--transition"]]: withTransition.current,
         })}
         style={{
-          transform: `translateX(-${(currentIndex + 1) * 100}%)`,
+          transform: `translate3d(-${(currentIndex + 1) * 100}%, 0, 0)`,
         }}
         ref={sliderRef}
         onTransitionEnd={handleTransitionEnd}

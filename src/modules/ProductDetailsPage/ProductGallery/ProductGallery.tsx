@@ -134,7 +134,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
           })}
           style={{
             gridTemplateColumns: `repeat(${clonedImages.length}, 100%)`,
-            transform: `translateX(-${(currentIndex + 1) * 100}%)`,
+            transform: `translate3d(-${(currentIndex + 1) * 100}%, 0, 0)`,
           }}
           ref={sliderRef}
           onTransitionEnd={handleTransitionEnd}
