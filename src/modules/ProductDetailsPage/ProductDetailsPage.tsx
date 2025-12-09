@@ -1,11 +1,13 @@
 import clsx from "clsx";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import accessories from "@/api/accessories.json";
 import phones from "@/api/phones.json";
 import tablets from "@/api/tablets.json";
 import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
+import ProductPrices from "../shared/components/ProductPrices";
+import type { OutletContext } from "../shared/types/outletContext";
 import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
 import ProductGallery from "./ProductGallery";
@@ -13,6 +15,7 @@ import ProductGallery from "./ProductGallery";
 const mergedProducts = [...phones, ...tablets, ...accessories];
 
 const ProductDetailsPage = () => {
+  const { normalizedLang } = useOutletContext<OutletContext>();
   const { productId } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation("productDetailsPage");
@@ -137,6 +140,16 @@ const ProductDetailsPage = () => {
             </div>
 
             <span className={styles.product__line} />
+
+            <div className={styles.product__buybox}>
+              <ProductPrices
+                hasOnlyFullPrice={false}
+                t={t}
+                price={product.priceDiscount}
+                fullPrice={product.priceRegular}
+                normalizedLang={normalizedLang}
+              />
+            </div>
           </div>
         </section>
       </article>

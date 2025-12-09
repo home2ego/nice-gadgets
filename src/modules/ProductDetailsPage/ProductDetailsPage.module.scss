@@ -70,7 +70,18 @@
   &__line {
     display: block;
     height: 1px;
-    margin-bottom: 24px;
     background-color: var(--bd-color-primary);
+
+    &:first-of-type {
+      margin-bottom: 24px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__buybox {
+    margin-bottom: 32px;
   }
 }

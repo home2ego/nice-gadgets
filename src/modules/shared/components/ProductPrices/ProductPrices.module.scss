@@ -1,0 +1,9 @@
+.prices {
+  display: flex;
+  column-gap: 8px;
+
+  &__full-price {
+    color: var(--text-color-secondary);
+    text-decoration: line-through;
+  }
+}

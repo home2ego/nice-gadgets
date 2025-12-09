@@ -11,7 +11,7 @@ import {
 import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
 import type { Product } from "../../types/product";
-import { formatWithRate } from "../../utils/priceUtils";
+import ProductPrices from "../ProductPrices";
 import { PARTICLE_KEYS } from "./constants";
 import styles from "./ProductCard.module.scss";
 
@@ -119,23 +119,13 @@ const ProductCard: React.FC<ProductProps> = ({
 
       <h3 className="text--body">{name}</h3>
 
-      <div className={clsx(styles.product__prices, "title--sm")}>
-        {hasOnlyFullPrice ? (
-          <p>{formatWithRate(fullPrice, normalizedLang)}</p>
-        ) : (
-          <>
-            <p>
-              {formatWithRate(price, normalizedLang)}
-              <span className="sr-only">{t("priceLabel")}</span>
-            </p>
-
-            <p className={styles["product__full-price"]}>
-              {formatWithRate(fullPrice, normalizedLang)}
-              <span className="sr-only">{t("fullPriceLabel")}</span>
-            </p>
-          </>
-        )}
-      </div>
+      <ProductPrices
+        hasOnlyFullPrice={hasOnlyFullPrice}
+        t={t}
+        price={price}
+        fullPrice={fullPrice}
+        normalizedLang={normalizedLang}
+      />
 
       <span className={styles.product__line} />
 
