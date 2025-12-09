@@ -32,6 +32,18 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
     }
   }, [currentIndex]);
 
+  const enableWillChange = () => {
+    if (sliderRef.current) {
+      sliderRef.current.style.willChange = "transform";
+    }
+  };
+
+  const disableWillChange = () => {
+    if (sliderRef.current) {
+      sliderRef.current.style.willChange = "";
+    }
+  };
+
   const handlePrevClick = () => {
     if (withTransition.current || isSnapping.current) {
       return;
@@ -41,6 +53,8 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
       setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     } else {
       withTransition.current = true;
+
+      enableWillChange();
 
       setCurrentIndex((prev) => (prev === 0 ? -1 : prev - 1));
     }
@@ -56,6 +70,8 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
     } else {
       withTransition.current = true;
 
+      enableWillChange();
+
       setCurrentIndex((prev) =>
         prev === images.length - 1 ? images.length : prev + 1,
       );
@@ -64,6 +80,8 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
 
   const handleTransitionEnd = () => {
     withTransition.current = false;
+
+    disableWillChange();
 
     if (currentIndex === -1) {
       isSnapping.current = true;
@@ -82,6 +100,8 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
     if (idx !== normalizedIndex) {
       if (!isReducedMotion) {
         withTransition.current = true;
+
+        enableWillChange();
       }
 
       setCurrentIndex(idx);
@@ -133,8 +153,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
             [styles["carousel__wrapper--transition"]]: withTransition.current,
           })}
           style={{
-            gridTemplateColumns: `repeat(${clonedImages.length}, 100%)`,
-            transform: `translate3d(-${(currentIndex + 1) * 100}%, 0, 0)`,
+            transform: `translateX(-${(currentIndex + 1) * 100}%)`,
           }}
           ref={sliderRef}
           onTransitionEnd={handleTransitionEnd}

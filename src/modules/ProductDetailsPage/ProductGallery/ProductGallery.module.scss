@@ -53,10 +53,11 @@
 
   &__wrapper {
     display: grid;
-    justify-items: center;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
 
     &--transition {
-      transition: transform 0.28s;
+      transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
   }
 

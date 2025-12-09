@@ -71,10 +71,11 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(5, 100%);
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
 
     &--transition {
-      transition: transform 0.36s;
+      transition: transform 0.36s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
   }
 

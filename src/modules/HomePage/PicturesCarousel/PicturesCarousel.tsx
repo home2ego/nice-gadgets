@@ -46,12 +46,26 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const isReducedMotion = useReducedMotion();
 
+  const enableWillChange = () => {
+    if (sliderRef.current) {
+      sliderRef.current.style.willChange = "transform";
+    }
+  };
+
+  const disableWillChange = () => {
+    if (sliderRef.current) {
+      sliderRef.current.style.willChange = "";
+    }
+  };
+
   const { pausedState, togglePause, pauseForInteraction } = useAutoplay({
     isReducedMotion,
     onTick: () => {
       if (isSnapping.current) return;
 
       withTransition.current = true;
+
+      enableWillChange();
 
       setCurrentIndex((prev) => prev + 1);
     },
@@ -74,6 +88,8 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     } else {
       withTransition.current = true;
 
+      enableWillChange();
+
       setCurrentIndex((prev) => (prev === 0 ? -1 : prev - 1));
 
       pauseForInteraction();
@@ -90,6 +106,8 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     } else {
       withTransition.current = true;
 
+      enableWillChange();
+
       setCurrentIndex((prev) =>
         prev === IMAGES_COUNT - 1 ? IMAGES_COUNT : prev + 1,
       );
@@ -100,6 +118,8 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const handleTransitionEnd = () => {
     withTransition.current = false;
+
+    disableWillChange();
 
     if (currentIndex === -1) {
       isSnapping.current = true;
@@ -114,19 +134,21 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     }
   };
 
-  const handleFocus = (e: React.FocusEvent<HTMLDivElement>) => {
-    if (!isReducedMotion && !e.target.matches("[data-pause-button]")) {
-      pauseForInteraction();
-    }
-  };
-
   const handleDotClick = (idx: number) => {
     if (idx !== normalizedIndex) {
       if (!isReducedMotion) {
         withTransition.current = true;
+
+        enableWillChange();
       }
 
       setCurrentIndex(idx);
+    }
+  };
+
+  const handleFocus = (e: React.FocusEvent<HTMLDivElement>) => {
+    if (!isReducedMotion && !e.target.matches("[data-pause-button]")) {
+      pauseForInteraction();
     }
   };
 
@@ -223,7 +245,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
           [styles["carousel__wrapper--transition"]]: withTransition.current,
         })}
         style={{
-          transform: `translate3d(-${(currentIndex + 1) * 100}%, 0, 0)`,
+          transform: `translateX(-${(currentIndex + 1) * 100}%)`,
         }}
         ref={sliderRef}
         onTransitionEnd={handleTransitionEnd}
