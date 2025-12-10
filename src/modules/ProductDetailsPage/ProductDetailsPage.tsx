@@ -6,8 +6,10 @@ import phones from "@/api/phones.json";
 import tablets from "@/api/tablets.json";
 import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
+import ProductControls from "../shared/components/ProductControls";
 import ProductPrices from "../shared/components/ProductPrices";
 import type { OutletContext } from "../shared/types/outletContext";
+import type { Product } from "../shared/types/product";
 import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
 import ProductGallery from "./ProductGallery";
@@ -28,6 +30,22 @@ const ProductDetailsPage = () => {
   if (!product) {
     return <NotFoundProduct t={t} />;
   }
+
+  const productStorage: Product = {
+    id: null,
+    category: product.category,
+    itemId: product.id,
+    name: product.name,
+    shortName: product.shortName,
+    fullPrice: product.priceRegular,
+    price: product.priceDiscount,
+    screen: product.screen,
+    capacity: product.capacity,
+    color: product.color,
+    ram: product.ram,
+    year: null,
+    image: product.images[0],
+  };
 
   const handleColorsOptionClick = (colorAvailable: string) => {
     if (colorAvailable !== product.color) {
@@ -149,6 +167,8 @@ const ProductDetailsPage = () => {
                 fullPrice={product.priceRegular}
                 normalizedLang={normalizedLang}
               />
+
+              <ProductControls t={t} product={productStorage} />
             </div>
           </div>
         </section>

@@ -83,5 +83,9 @@
 
   &__buybox {
     margin-bottom: 32px;
+
+    & > *:first-child {
+      margin-bottom: 16px;
+    }
   }
 }
