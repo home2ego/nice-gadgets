@@ -180,7 +180,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   const productCards = useMemo(() => {
     return products.map((product, idx) => (
       <ProductCard
-        key={product.id}
+        key={product.itemId}
         t={t}
         product={product}
         totalProducts={products.length}

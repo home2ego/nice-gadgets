@@ -23,7 +23,7 @@ const CartProduct: React.FC<ProductProps> = ({
   product,
   normalizedLang,
 }) => {
-  const { count = MIN_COUNT, price, name, shortName, image } = product;
+  const { count = MIN_COUNT, price, name, shortName, image, itemId } = product;
   const dispatch = useAppDispatch();
 
   return (
@@ -33,20 +33,14 @@ const CartProduct: React.FC<ProductProps> = ({
           type="button"
           className={styles.product__remove}
           aria-label={t("removeCartLabel", { product: shortName })}
-          onClick={() => dispatch(removeFromCart(product))}
+          onClick={() => dispatch(removeFromCart(itemId))}
         >
           <Icon>
             <path d="M18 6 6 18M6 6l12 12" />
           </Icon>
         </button>
 
-        <img
-          src={image}
-          alt={product.name}
-          width="80"
-          height="80"
-          decoding="async"
-        />
+        <img src={image} alt={name} width="80" height="80" decoding="async" />
 
         <h3 className="text--body">{name}</h3>
       </div>
@@ -61,7 +55,7 @@ const CartProduct: React.FC<ProductProps> = ({
           <button
             type="button"
             className={styles.product__decrement}
-            onClick={() => dispatch(decrementQuantity(product))}
+            onClick={() => dispatch(decrementQuantity(itemId))}
             disabled={count === MIN_COUNT}
             aria-label={t("decreaseQuantity")}
           >
@@ -80,7 +74,7 @@ const CartProduct: React.FC<ProductProps> = ({
           <button
             type="button"
             className={styles.product__increment}
-            onClick={() => dispatch(incrementQuantity(product))}
+            onClick={() => dispatch(incrementQuantity(itemId))}
             disabled={count === MAX_COUNT}
             aria-label={t("increaseQuantity")}
           >

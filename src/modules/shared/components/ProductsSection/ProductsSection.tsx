@@ -180,7 +180,7 @@ const ProductsSection: React.FC<ProductsProps> = ({
 
           <ul className={styles.products}>
             {visibleProducts.map((product, idx) => (
-              <li key={product.id}>
+              <li key={product.itemId}>
                 <ProductCard
                   t={t}
                   product={product}

@@ -1,18 +1,9 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { ToastContext } from "@/core/context/ToastProvider";
-import { addToCart, removeFromCart } from "@/core/store/cart/cartSlice";
-import {
-  addToFavourites,
-  removeFromFavourites,
-} from "@/core/store/favourites/favouritesSlice";
-import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
-import Icon from "@/layout/shared/components/Icon";
 import type { Product } from "../../types/product";
+import ProductControls from "../ProductControls";
 import ProductPrices from "../ProductPrices";
-import { PARTICLE_KEYS } from "./constants";
 import styles from "./ProductCard.module.scss";
 
 interface ProductProps {
@@ -41,153 +32,68 @@ const ProductCard: React.FC<ProductProps> = ({
   onShiftTabKey,
   onTabFocus,
   onTabKey,
-}) => {
-  const {
-    name,
-    shortName,
-    image,
-    id: productId,
-    itemId,
-    price,
-    fullPrice,
-    screen,
-    capacity,
-    ram,
-  } = product;
-  const dispatch = useAppDispatch();
-  const cartProducts = useAppSelector((state) => state.cart);
-  const favouritesProducts = useAppSelector((state) => state.favourites);
-  const { showToast } = useContext(ToastContext);
-  const [isAnimating, setIsAnimating] = useState(false);
+}) => (
+  <article className={styles.product}>
+    <Link
+      to={`/product/${product.itemId}`}
+      state={{
+        scrollToTop: true,
+      }}
+      aria-label={t("productLabel", {
+        current: productIdx + 1,
+        total: totalProducts,
+      })}
+      className={styles.product__link}
+      onFocus={onShiftTabFocus}
+      onKeyDown={onShiftTabKey}
+    />
 
-  const isInCart = cartProducts.some((cartProduct) => {
-    return cartProduct.id === productId;
-  });
+    <img
+      className={styles.product__image}
+      src={product.image}
+      alt={product.name}
+      width="206"
+      height="194"
+      loading={loading}
+      decoding="async"
+    />
 
-  const isInFavourites = favouritesProducts.some((favouritesProduct) => {
-    return favouritesProduct.id === productId;
-  });
+    <h3 className="text--body">{product.name}</h3>
 
-  const handleCartClick = () => {
-    if (!isInCart) {
-      dispatch(addToCart(product));
-      showToast(t("cartSuccessMessage", { name: shortName }));
-    } else {
-      dispatch(removeFromCart(product));
-    }
-  };
+    <ProductPrices
+      hasOnlyFullPrice={hasOnlyFullPrice}
+      t={t}
+      price={product.price}
+      fullPrice={product.fullPrice}
+      normalizedLang={normalizedLang}
+    />
 
-  const handleFavouritesClick = () => {
-    if (!isInFavourites) {
-      dispatch(addToFavourites(product));
+    <span className={styles.product__line} />
 
-      setIsAnimating(false);
-
-      requestAnimationFrame(() => {
-        setIsAnimating(true);
-      });
-    } else {
-      dispatch(removeFromFavourites(product));
-    }
-  };
-
-  return (
-    <article className={styles.product}>
-      <Link
-        to={`/product/${itemId}`}
-        state={{
-          scrollToTop: true,
-        }}
-        aria-label={t("productLabel", {
-          current: productIdx + 1,
-          total: totalProducts,
-        })}
-        className={styles.product__link}
-        onFocus={onShiftTabFocus}
-        onKeyDown={onShiftTabKey}
-      />
-
-      <img
-        className={styles.product__image}
-        src={image}
-        alt={product.name}
-        width="206"
-        height="194"
-        loading={loading}
-        decoding="async"
-      />
-
-      <h3 className="text--body">{name}</h3>
-
-      <ProductPrices
-        hasOnlyFullPrice={hasOnlyFullPrice}
-        t={t}
-        price={price}
-        fullPrice={fullPrice}
-        normalizedLang={normalizedLang}
-      />
-
-      <span className={styles.product__line} />
-
-      <dl className={clsx(styles.product__details, "text--sm")}>
-        <div className={styles.product__detail}>
-          <dt className={styles.product__subname}>{t("screen")}</dt>
-          <dd>{screen}</dd>
-        </div>
-
-        <div className={styles.product__detail}>
-          <dt className={styles.product__subname}>{t("capacity")}</dt>
-          <dd>{capacity}</dd>
-        </div>
-
-        <div className={styles.product__detail}>
-          <dt className={styles.product__subname}>RAM</dt>
-          <dd>{ram}</dd>
-        </div>
-      </dl>
-
-      <div className={styles.product__controls}>
-        <button
-          type="button"
-          className={clsx(styles.product__cart, "text--btn", {
-            [styles.added]: isInCart,
-          })}
-          aria-label={t("cartLabel", { product: shortName })}
-          aria-pressed={isInCart}
-          onClick={handleCartClick}
-        >
-          {isInCart ? t("addedButton") : t("cartButton")}
-        </button>
-
-        <button
-          type="button"
-          className={clsx(styles.product__favorite, {
-            [styles.active]: isInFavourites,
-            [styles.animating]: isAnimating,
-          })}
-          aria-label={t("favoriteLabel", { product: shortName })}
-          aria-pressed={isInFavourites}
-          onFocus={onTabFocus}
-          onKeyDown={onTabKey}
-          onClick={handleFavouritesClick}
-        >
-          <Icon>
-            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
-          </Icon>
-
-          <div className={styles.effect}>
-            <div className={styles.circle} />
-
-            <div>
-              {PARTICLE_KEYS.map((key) => (
-                <div key={key} className={styles.particle} />
-              ))}
-            </div>
-          </div>
-        </button>
+    <dl className={clsx(styles.product__details, "text--sm")}>
+      <div className={styles.product__detail}>
+        <dt className={styles.product__subname}>{t("screen")}</dt>
+        <dd>{product.screen}</dd>
       </div>
-    </article>
-  );
-};
+
+      <div className={styles.product__detail}>
+        <dt className={styles.product__subname}>{t("capacity")}</dt>
+        <dd>{product.capacity}</dd>
+      </div>
+
+      <div className={styles.product__detail}>
+        <dt className={styles.product__subname}>RAM</dt>
+        <dd>{product.ram}</dd>
+      </div>
+    </dl>
+
+    <ProductControls
+      t={t}
+      product={product}
+      onTabFocus={onTabFocus}
+      onTabKey={onTabKey}
+    />
+  </article>
+);
 
 export default ProductCard;

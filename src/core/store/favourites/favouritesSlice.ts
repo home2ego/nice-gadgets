@@ -11,8 +11,10 @@ const favouritesSlice = createSlice({
       state.push(action.payload);
     },
 
-    removeFromFavourites: (state, action: PayloadAction<Product>) => {
-      const index = state.findIndex((item) => item.id === action.payload.id);
+    removeFromFavourites: (state, action: PayloadAction<string>) => {
+      const index = state.findIndex((product) => {
+        return product.itemId === action.payload;
+      });
 
       if (index !== -1) {
         state.splice(index, 1);

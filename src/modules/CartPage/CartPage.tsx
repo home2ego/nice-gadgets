@@ -60,7 +60,7 @@ const CartPage = () => {
             <ul className={styles.cart__products}>
               {cartProducts.map((product) => (
                 <CartProduct
-                  key={product.id}
+                  key={product.itemId}
                   t={t}
                   product={product}
                   normalizedLang={normalizedLang}

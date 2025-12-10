@@ -1,5 +1,5 @@
 export interface Product {
-  id: number;
+  id: number | null;
   category: string;
   itemId: string;
   name: string;
@@ -10,7 +10,7 @@ export interface Product {
   capacity: string;
   color: string;
   ram: string;
-  year: number;
+  year: number | null;
   image: string;
   count?: number;
 }
