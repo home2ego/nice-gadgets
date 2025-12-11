@@ -17,16 +17,9 @@ export const PARTICLE_KEYS = ["p1", "p2", "p3", "p4", "p5", "p6"];
 interface ProductControlsProps {
   t: TFunction;
   product: Product;
-  onTabFocus?: React.FocusEventHandler<HTMLButtonElement>;
-  onTabKey?: React.KeyboardEventHandler<HTMLButtonElement>;
 }
 
-const ProductControls: React.FC<ProductControlsProps> = ({
-  t,
-  product,
-  onTabFocus,
-  onTabKey,
-}) => {
+const ProductControls: React.FC<ProductControlsProps> = ({ t, product }) => {
   const dispatch = useAppDispatch();
   const { showToast } = useContext(ToastContext);
   const cartProducts = useAppSelector((state) => state.cart);
@@ -86,8 +79,6 @@ const ProductControls: React.FC<ProductControlsProps> = ({
         })}
         aria-label={t("favoriteLabel", { product: product.shortName })}
         aria-pressed={isInFavourites}
-        onFocus={onTabFocus}
-        onKeyDown={onTabKey}
         onClick={handleFavouritesClick}
       >
         <Icon>

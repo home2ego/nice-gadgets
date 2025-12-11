@@ -14,10 +14,7 @@ interface ProductProps {
   loading: "eager" | "lazy";
   hasOnlyFullPrice: boolean;
   normalizedLang: string;
-  onShiftTabFocus?: React.FocusEventHandler<HTMLAnchorElement>;
-  onShiftTabKey?: React.KeyboardEventHandler<HTMLAnchorElement>;
-  onTabFocus?: React.FocusEventHandler<HTMLButtonElement>;
-  onTabKey?: React.KeyboardEventHandler<HTMLButtonElement>;
+  onTabKeyDown?: (e: React.KeyboardEvent<HTMLAnchorElement>) => void;
 }
 
 const ProductCard: React.FC<ProductProps> = ({
@@ -28,10 +25,7 @@ const ProductCard: React.FC<ProductProps> = ({
   loading,
   hasOnlyFullPrice,
   normalizedLang,
-  onShiftTabFocus,
-  onShiftTabKey,
-  onTabFocus,
-  onTabKey,
+  onTabKeyDown,
 }) => (
   <article className={styles.product}>
     <Link
@@ -44,8 +38,7 @@ const ProductCard: React.FC<ProductProps> = ({
         total: totalProducts,
       })}
       className={styles.product__link}
-      onFocus={onShiftTabFocus}
-      onKeyDown={onShiftTabKey}
+      onKeyDown={onTabKeyDown}
     />
 
     <img
@@ -87,12 +80,7 @@ const ProductCard: React.FC<ProductProps> = ({
       </div>
     </dl>
 
-    <ProductControls
-      t={t}
-      product={product}
-      onTabFocus={onTabFocus}
-      onTabKey={onTabKey}
-    />
+    <ProductControls t={t} product={product} />
   </article>
 );
 

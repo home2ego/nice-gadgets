@@ -40,7 +40,6 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   const firstVisibleCard = useRef<HTMLElement | null>(null);
 
   const focusTarget = useRef<"next" | "prev" | null>(null);
-  const focusKey = useRef<"tab" | "shiftTab" | null>(null);
 
   useEffect(() => {
     const cards = Array.from(
@@ -108,17 +107,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     }
   }, [disabledNext, disabledPrev]);
 
-  const handleNextClick = () => {
-    const next = lastVisibleCard.current?.nextElementSibling;
-    next?.scrollIntoView({ inline: "start", block: "nearest" });
-  };
-
-  const handlePrevClick = () => {
-    const prev = firstVisibleCard.current?.previousElementSibling;
-    prev?.scrollIntoView({ inline: "end", block: "nearest" });
-  };
-
-  const handleCardFocus = () => {
+  const focusCard = () => {
     if (focusTarget.current === "next") {
       firstVisibleCard.current?.querySelector("a")?.focus();
       focusTarget.current = null;
@@ -130,50 +119,66 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     }
   };
 
-  const handleShiftTabFocus = (e: React.FocusEvent<HTMLAnchorElement>) => {
-    if (focusTarget.current) {
-      handleCardFocus();
-    } else {
-      const nextCard = lastVisibleCard.current?.nextElementSibling;
-      const nextFocusable = nextCard?.querySelector("a");
-
-      if (e.currentTarget === nextFocusable && focusKey.current === "tab") {
-        requestAnimationFrame(() => {
-          nextCard?.scrollIntoView({ inline: "start", block: "nearest" });
-        });
-      }
-    }
-  };
-
-  const handleShiftTabKey = (e: React.KeyboardEvent<HTMLAnchorElement>) => {
-    if (e.shiftKey && e.key === "Tab") {
-      focusKey.current = "shiftTab";
-    }
-  };
-
-  const handleTabFocus = (e: React.FocusEvent<HTMLButtonElement>) => {
-    const prevCard = firstVisibleCard.current?.previousElementSibling;
-    const prevFocusable = prevCard?.querySelector("button:last-of-type");
-
-    if (e.currentTarget === prevFocusable && focusKey.current === "shiftTab") {
-      requestAnimationFrame(() => {
-        prevCard?.scrollIntoView({ inline: "end", block: "nearest" });
-      });
-    }
-  };
-
-  const handleTabKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (!e.shiftKey && e.key === "Tab") {
-      focusKey.current = "tab";
-    }
-  };
-
   const getLazy = (idx: number): "lazy" | "eager" => {
     if (isLazy) {
       return "lazy";
     }
 
     return idx < 4 ? "eager" : "lazy";
+  };
+
+  const handlePrevClick = () => {
+    const prev = firstVisibleCard.current?.previousElementSibling;
+    prev?.scrollIntoView({ inline: "end", block: "nearest" });
+  };
+
+  const handleNextClick = () => {
+    const next = lastVisibleCard.current?.nextElementSibling;
+    next?.scrollIntoView({ inline: "start", block: "nearest" });
+  };
+
+  const handlePrevKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      focusTarget.current = "prev";
+    }
+  };
+
+  const handleNextKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === "Enter" || e.key === " ") {
+      focusTarget.current = "next";
+    }
+
+    if (e.key === "Tab" && !e.shiftKey) {
+      e.preventDefault();
+
+      if (!focusTarget.current) {
+        focusTarget.current = "next";
+      }
+
+      focusCard();
+    }
+  };
+
+  const handleTabKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+    const target = e.currentTarget.closest("article") as HTMLElement;
+
+    if (target === lastVisibleCard.current && e.key === "Tab" && !e.shiftKey) {
+      e.preventDefault();
+
+      lastVisibleCard.current?.scrollIntoView({
+        inline: "start",
+        block: "nearest",
+      });
+    }
+
+    if (target === firstVisibleCard.current && e.key === "Tab" && e.shiftKey) {
+      e.preventDefault();
+
+      firstVisibleCard.current?.scrollIntoView({
+        inline: "end",
+        block: "nearest",
+      });
+    }
   };
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: this useMemo re-computes only when the language changes
@@ -188,10 +193,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
         loading={getLazy(idx)}
         hasOnlyFullPrice={hasOnlyFullPrice}
         normalizedLang={normalizedLang}
-        onShiftTabFocus={handleShiftTabFocus}
-        onShiftTabKey={handleShiftTabKey}
-        onTabFocus={handleTabFocus}
-        onTabKey={handleTabKey}
+        onTabKeyDown={handleTabKeyDown}
       />
     ));
   }, [t]);
@@ -219,11 +221,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
           aria-label={t("prevProductsLabel")}
           disabled={disabledPrev}
           onClick={handlePrevClick}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              focusTarget.current = "prev";
-            }
-          }}
+          onKeyDown={handlePrevKeyDown}
         >
           <Icon>
             <path d="m15 18-6-6 6-6" />
@@ -236,11 +234,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
           aria-label={t("nextProductsLabel")}
           disabled={disabledNext}
           onClick={handleNextClick}
-          onKeyDown={(e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              focusTarget.current = "next";
-            }
-          }}
+          onKeyDown={handleNextKeyDown}
         >
           <Icon>
             <path d="m9 18 6-6-6-6" />
