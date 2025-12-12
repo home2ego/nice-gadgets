@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
 import { useHorizontalSwipe, useReducedMotion } from "@/modules/shared/hooks";
 import type { ProductDetails } from "../productDetails";
@@ -18,19 +18,11 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const withTransition = useRef(false);
-  const isSnapping = useRef(false);
 
   const clonedImages = [images[images.length - 1], ...images, images[0]];
   const normalizedIndex = (currentIndex + images.length) % images.length;
 
   const isReducedMotion = useReducedMotion();
-
-  //  biome-ignore lint/correctness/useExhaustiveDependencies: this effect unlocks snapping
-  useEffect(() => {
-    if (isSnapping.current) {
-      isSnapping.current = false;
-    }
-  }, [currentIndex]);
 
   const enableWillChange = () => {
     if (sliderRef.current) {
@@ -45,7 +37,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
   };
 
   const handlePrevClick = () => {
-    if (withTransition.current || isSnapping.current) {
+    if (withTransition.current) {
       return;
     }
 
@@ -61,7 +53,7 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
   };
 
   const handleNextClick = () => {
-    if (withTransition.current || isSnapping.current) {
+    if (withTransition.current) {
       return;
     }
 
@@ -84,13 +76,11 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, t }) => {
     disableWillChange();
 
     if (currentIndex === -1) {
-      isSnapping.current = true;
       setCurrentIndex(images.length - 1);
       return;
     }
 
     if (currentIndex === images.length) {
-      isSnapping.current = true;
       setCurrentIndex(0);
       return;
     }

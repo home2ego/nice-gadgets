@@ -60,10 +60,6 @@
       transition: transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
   }
-
-  &__image {
-    transform: translateZ(0);
-  }
 }
 
 .thumbnails {

@@ -39,7 +39,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const sliderRef = useRef<HTMLDivElement>(null);
   const withTransition = useRef(false);
-  const isSnapping = useRef(false);
 
   const clonedImages = [images[images.length - 1], ...images, images[0]];
   const normalizedIndex = (currentIndex + IMAGES_COUNT) % IMAGES_COUNT;
@@ -61,8 +60,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   const { pausedState, togglePause, pauseForInteraction } = useAutoplay({
     isReducedMotion,
     onTick: () => {
-      if (isSnapping.current) return;
-
       withTransition.current = true;
 
       enableWillChange();
@@ -71,15 +68,18 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     },
   });
 
-  //  biome-ignore lint/correctness/useExhaustiveDependencies: this effect unlocks snapping
   useEffect(() => {
-    if (isSnapping.current) {
-      isSnapping.current = false;
-    }
-  }, [currentIndex]);
+    images.forEach((img) => {
+      [img.src, img.srcMini].forEach((source) => {
+        const image = new Image();
+        image.src = source;
+        image.decode();
+      });
+    });
+  }, []);
 
   const handlePrevClick = () => {
-    if (withTransition.current || isSnapping.current) {
+    if (withTransition.current) {
       return;
     }
 
@@ -97,7 +97,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   };
 
   const handleNextClick = () => {
-    if (withTransition.current || isSnapping.current) {
+    if (withTransition.current) {
       return;
     }
 
@@ -122,13 +122,11 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     disableWillChange();
 
     if (currentIndex === -1) {
-      isSnapping.current = true;
       setCurrentIndex(IMAGES_COUNT - 1);
       return;
     }
 
     if (currentIndex === IMAGES_COUNT) {
-      isSnapping.current = true;
       setCurrentIndex(0);
       return;
     }
@@ -279,7 +277,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
                       })
                     : ""
                 }
-                loading={priority ? "eager" : "lazy"}
                 fetchPriority={priority ? "high" : "low"}
                 decoding={priority ? "sync" : "async"}
               />
