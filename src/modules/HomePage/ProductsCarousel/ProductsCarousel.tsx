@@ -38,6 +38,8 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   const containerRef = useRef<HTMLDivElement | null>(null);
   const lastVisibleCard = useRef<HTMLElement | null>(null);
   const firstVisibleCard = useRef<HTMLElement | null>(null);
+  const firstCardOfContainer = useRef<HTMLElement | null>(null);
+  const lastCardOfContainer = useRef<HTMLElement | null>(null);
 
   const focusTarget = useRef<"next" | "prev" | null>(null);
 
@@ -45,6 +47,9 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     const cards = Array.from(
       containerRef.current?.querySelectorAll<HTMLElement>("article") ?? [],
     );
+
+    firstCardOfContainer.current = cards[0];
+    lastCardOfContainer.current = cards[cards.length - 1];
 
     if (!cards.length) {
       return;
@@ -161,6 +166,13 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
 
   const handleTabKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
     const target = e.currentTarget.closest("article") as HTMLElement;
+
+    if (
+      target === firstCardOfContainer.current ||
+      target === lastCardOfContainer.current
+    ) {
+      return;
+    }
 
     if (target === lastVisibleCard.current && e.key === "Tab" && !e.shiftKey) {
       e.preventDefault();
