@@ -1,0 +1,16 @@
+.details {
+  padding-block: 8px;
+
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__detail:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: var(--text-color-secondary);
+  }
+}

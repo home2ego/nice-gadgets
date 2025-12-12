@@ -1,8 +1,8 @@
-import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { Link } from "react-router-dom";
 import type { Product } from "../../types/product";
 import ProductControls from "../ProductControls";
+import ProductDetails from "../ProductDetails";
 import ProductPrices from "../ProductPrices";
 import styles from "./ProductCard.module.scss";
 
@@ -63,22 +63,12 @@ const ProductCard: React.FC<ProductProps> = ({
 
     <span className={styles.product__line} />
 
-    <dl className={clsx(styles.product__details, "text--sm")}>
-      <div className={styles.product__detail}>
-        <dt className={styles.product__subname}>{t("screen")}</dt>
-        <dd>{product.screen}</dd>
-      </div>
-
-      <div className={styles.product__detail}>
-        <dt className={styles.product__subname}>{t("capacity")}</dt>
-        <dd>{product.capacity}</dd>
-      </div>
-
-      <div className={styles.product__detail}>
-        <dt className={styles.product__subname}>RAM</dt>
-        <dd>{product.ram}</dd>
-      </div>
-    </dl>
+    <ProductDetails
+      t={t}
+      screen={product.screen}
+      capacity={product.capacity}
+      ram={product.ram}
+    />
 
     <ProductControls t={t} product={product} />
   </article>

@@ -13,6 +13,7 @@ import type { Product } from "../shared/types/product";
 import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
 import ProductGallery from "./ProductGallery";
+import ProductDetails from "../shared/components/ProductDetails";
 
 const mergedProducts = [...phones, ...tablets, ...accessories];
 
@@ -170,6 +171,13 @@ const ProductDetailsPage = () => {
 
               <ProductControls t={t} product={productStorage} />
             </div>
+
+            <ProductDetails
+              t={t}
+              screen={product.screen}
+              capacity={product.capacity}
+              ram={product.ram}
+            />
           </div>
         </section>
       </article>
