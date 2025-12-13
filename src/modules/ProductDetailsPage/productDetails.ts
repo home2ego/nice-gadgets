@@ -1,10 +1,11 @@
 export interface ProductDetails {
   id: string;
-  category: string;
+  category: "phones" | "tablets" | "accessories";
   namespaceId: string;
   name: string;
-  capacityAvailable: string[];
-  capacity: string;
+  shortName: string;
+  variant: string;
+  variantAvailable: string[];
   priceRegular: number;
   priceDiscount: number;
   colorsAvailable: string[][];
@@ -19,4 +20,6 @@ export interface ProductDetails {
   processor: string;
   ram: string;
   cell: string[];
+  zoom?: string;
+  camera?: string;
 }

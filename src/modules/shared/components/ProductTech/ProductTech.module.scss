@@ -1,0 +1,12 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    color: var(--text-color-secondary);
+  }
+}

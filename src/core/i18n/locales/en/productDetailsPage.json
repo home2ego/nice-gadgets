@@ -5,5 +5,9 @@
   "productThumbnailsLabel": "Product thumbnails",
   "thumbnailLabel": "Thumbnail {{current}} of {{total}}",
   "availableColors": "Available colors",
-  "selectCapacity": "Select capacity"
+  "selectCapacity": "Select capacity",
+  "selectSize": "Select size",
+  "overview": "Overview",
+  "about": "About",
+  "techspecs": "Tech specs"
 }

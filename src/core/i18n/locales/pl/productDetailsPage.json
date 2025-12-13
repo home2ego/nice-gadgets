@@ -5,5 +5,9 @@
   "productThumbnailsLabel": "Miniatury produktów",
   "thumbnailLabel": "Miniatura {{current}} z {{total}}",
   "availableColors": "Dostępne kolory",
-  "selectCapacity": "Wybierz pojemność"
+  "selectCapacity": "Wybierz pojemność",
+  "selectSize": "Wybierz rozmiar",
+  "overview": "Przegląd",
+  "about": "O produkcie",
+  "techspecs": "Specyfikacja techniczna"
 }

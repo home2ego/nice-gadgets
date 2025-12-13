@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Fragment } from "react/jsx-runtime";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import accessories from "@/api/accessories.json";
@@ -7,15 +8,20 @@ import tablets from "@/api/tablets.json";
 import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
 import ProductControls from "../shared/components/ProductControls";
-import ProductDetails from "../shared/components/ProductDetails";
 import ProductPrices from "../shared/components/ProductPrices";
+import ProductTech from "../shared/components/ProductTech";
 import type { OutletContext } from "../shared/types/outletContext";
 import type { Product } from "../shared/types/product";
 import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
 import ProductGallery from "./ProductGallery";
+import type { ProductDetails } from "./productDetails";
 
-const mergedProducts = [...phones, ...tablets, ...accessories];
+const mergedProducts = [
+  ...phones,
+  ...tablets,
+  ...accessories,
+] as ProductDetails[];
 
 const ProductDetailsPage = () => {
   const { normalizedLang } = useOutletContext<OutletContext>();
@@ -41,7 +47,7 @@ const ProductDetailsPage = () => {
     fullPrice: product.priceRegular,
     price: product.priceDiscount,
     screen: product.screen,
-    capacity: product.capacity,
+    variant: product.variant,
     color: product.color,
     ram: product.ram,
     year: null,
@@ -51,17 +57,17 @@ const ProductDetailsPage = () => {
   const handleColorsOptionClick = (colorAvailable: string) => {
     if (colorAvailable !== product.color) {
       const newSlug = allProducts.find((p) => {
-        return p.color === colorAvailable && p.capacity === product.capacity;
+        return p.color === colorAvailable && p.variant === product.variant;
       })?.id;
 
       navigate(`/product/${newSlug}`, { replace: true });
     }
   };
 
-  const handleCapacityOptionClick = (capacity: string) => {
-    if (capacity !== product.capacity) {
+  const handleVariantOptionClick = (variantAvailable: string) => {
+    if (variantAvailable !== product.variant) {
       const newSlug = allProducts.find((p) => {
-        return p.capacity === capacity && p.color === product.color;
+        return p.variant === variantAvailable && p.color === product.color;
       })?.id;
 
       navigate(`/product/${newSlug}`, { replace: true });
@@ -76,16 +82,13 @@ const ProductDetailsPage = () => {
 
       <Back t={t} />
 
-      <article aria-labelledby="product">
+      <article aria-labelledby="product" className={styles.product}>
         {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-        <h1
-          id="product"
-          className={clsx(styles["product-heading"], "title--lg")}
-        >
+        <h1 id="product" className={clsx(styles.product__heading, "title--lg")}>
           {product?.name}
         </h1>
 
-        <section className={styles.overview}>
+        <section aria-label={t("overview")} className={styles.overview}>
           <ProductGallery product={product} t={t} />
 
           <div className={styles.overview__details}>
@@ -123,45 +126,47 @@ const ProductDetailsPage = () => {
               </div>
             </div>
 
-            <span className={styles.overview__line} />
+            <span className={styles.product__line} />
 
-            <div className={styles.overview__capacity}>
+            <div className={styles.overview__variant}>
               {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
               <p
-                id="capacity-title"
-                className={clsx(styles["overview__capacity-title"], "text--sm")}
+                id="variant-title"
+                className={clsx(styles["overview__variant-title"], "text--sm")}
               >
-                {t("selectCapacity")}
+                {product.category === "accessories"
+                  ? t("selectSize")
+                  : t("selectCapacity")}
               </p>
 
               <div
                 role="radiogroup"
-                aria-labelledby="capacity-title"
-                className={styles["overview__capacity-options"]}
+                aria-labelledby="variant-title"
+                className={styles["overview__variant-options"]}
               >
-                {product.capacityAvailable.map((capacity) => (
-                  // biome-ignore lint/a11y/useSemanticElements: custom radio control with capacity options
+                {product.variantAvailable.map((variant) => (
+                  // biome-ignore lint/a11y/useSemanticElements: custom radio control with variant options
                   <button
                     role="radio"
-                    aria-checked={capacity === product.capacity}
-                    key={capacity}
+                    aria-checked={variant === product.variant}
+                    key={variant}
                     type="button"
                     className={clsx(
                       "text--body",
-                      styles["overview__capacity-option"],
+                      styles["overview__variant-option"],
                       {
-                        [styles.active]: capacity === product.capacity,
+                        [styles.active]: variant === product.variant,
                       },
                     )}
-                    onClick={() => handleCapacityOptionClick(capacity)}
+                    onClick={() => handleVariantOptionClick(variant)}
                   >
-                    {capacity}
+                    {variant}
                   </button>
                 ))}
               </div>
             </div>
 
-            <span className={styles.overview__line} />
+            <span className={styles.product__line} />
 
             <div className={styles.overview__buybox}>
               <ProductPrices
@@ -175,14 +180,73 @@ const ProductDetailsPage = () => {
               <ProductControls t={t} product={productStorage} />
             </div>
 
-            <ProductDetails
+            <ProductTech
               t={t}
-              screen={product.screen}
-              capacity={product.capacity}
-              ram={product.ram}
+              productDetails={[
+                { key: "screen", value: product.screen },
+                { key: "resolution", value: product.resolution },
+                { key: "processor", value: product.processor },
+                { key: "RAM", value: product.ram },
+              ]}
             />
           </div>
         </section>
+
+        <div className={styles.wrapper}>
+          <section aria-labelledby="about" className={styles.about}>
+            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+            <h2 id="about" className={clsx(styles.about__heading, "title--md")}>
+              {t("about")}
+            </h2>
+
+            <span className={styles.product__line} />
+
+            {product.description.map((productDesc, idx) => (
+              // biome-ignore lint/suspicious/noArrayIndexKey: Safe to use index as key here
+              <Fragment key={idx}>
+                <h3 className={clsx(styles.about__subheading, "title--sm")}>
+                  {productDesc.title}
+                </h3>
+
+                <p className={clsx(styles.about__text, "text--body")}>
+                  {productDesc.text}
+                </p>
+              </Fragment>
+            ))}
+          </section>
+
+          <section aria-labelledby="techspecs" className={styles.techspecs}>
+            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+            <h2
+              id="techspecs"
+              className={clsx(styles.techspecs__heading, "title--md")}
+            >
+              {t("techspecs")}
+            </h2>
+
+            <span className={styles.product__line} />
+
+            <ProductTech
+              t={t}
+              productDetails={[
+                { key: "screen", value: product.screen },
+                { key: "resolution", value: product.resolution },
+                { key: "processor", value: product.processor },
+                { key: "RAM", value: product.ram },
+                {
+                  key:
+                    product.category === "accessories"
+                      ? "caseSize"
+                      : "builtMemory",
+                  value: product.variant,
+                },
+                { key: "camera", value: product.camera },
+                { key: "zoom", value: product.zoom },
+                { key: "cell", value: product.cell },
+              ]}
+            />
+          </section>
+        </div>
       </article>
     </>
   );

@@ -5,5 +5,9 @@
   "productThumbnailsLabel": "Tuotteen pikkukuvat",
   "thumbnailLabel": "Pikkukuva {{current}} / {{total}}",
   "availableColors": "Saatavilla olevat värit",
-  "selectCapacity": "Valitse kapasiteetti"
+  "selectCapacity": "Valitse kapasiteetti",
+  "selectSize": "Valitse koko",
+  "overview": "Yleiskatsaus",
+  "about": "Tietoa",
+  "techspecs": "Tekniset tiedot"
 }

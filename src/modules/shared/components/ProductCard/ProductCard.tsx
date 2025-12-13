@@ -2,8 +2,8 @@ import type { TFunction } from "i18next";
 import { Link } from "react-router-dom";
 import type { Product } from "../../types/product";
 import ProductControls from "../ProductControls";
-import ProductDetails from "../ProductDetails";
 import ProductPrices from "../ProductPrices";
+import ProductTech from "../ProductTech";
 import styles from "./ProductCard.module.scss";
 
 interface ProductProps {
@@ -63,11 +63,16 @@ const ProductCard: React.FC<ProductProps> = ({
 
     <span className={styles.product__line} />
 
-    <ProductDetails
+    <ProductTech
       t={t}
-      screen={product.screen}
-      capacity={product.capacity}
-      ram={product.ram}
+      productDetails={[
+        { key: "screen", value: product.screen },
+        {
+          key: product.category === "accessories" ? "size" : "capacity",
+          value: product.variant,
+        },
+        { key: "RAM", value: product.ram },
+      ]}
     />
 
     <ProductControls t={t} product={product} />
