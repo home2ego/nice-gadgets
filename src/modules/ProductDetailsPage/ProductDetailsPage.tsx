@@ -194,10 +194,25 @@ const ProductDetailsPage = () => {
 
         <div className={styles.wrapper}>
           <section aria-labelledby="about" className={styles.about}>
-            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-            <h2 id="about" className={clsx(styles.about__heading, "title--md")}>
-              {t("about")}
-            </h2>
+            <div className={styles.about__header}>
+              {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+              <h2 id="about" className="title--md">
+                {t("about")}
+              </h2>
+
+              {normalizedLang !== "en" && (
+                <>
+                  <span className="sr-only">{t("englishOnly")}</span>
+
+                  <span
+                    aria-hidden="true"
+                    className={clsx(styles.about__badge, "title--md")}
+                  >
+                    EN
+                  </span>
+                </>
+              )}
+            </div>
 
             <span className={styles.product__line} />
 

@@ -99,7 +99,27 @@
   }
 }
 
-.about,
+.about {
+  &__header {
+    display: flex;
+    column-gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__badge {
+    color: var(--text-color-secondary);
+  }
+
+  &__subheading {
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    color: var(--text-color-secondary);
+  }
+}
+
 .techspecs {
   &__heading {
     margin-bottom: 16px;
@@ -109,14 +129,16 @@
     margin-top: 32px;
     margin-bottom: 16px;
   }
-}
 
-.about {
-  &__text {
-    color: var(--text-color-secondary);
+  & > *:last-child {
+    margin-top: 24px;
   }
-}
 
-.techspecs > *:last-child {
-  margin-top: 24px;
+  & dt {
+    margin-right: 16px;
+  }
+
+  & dd {
+    text-align: justify;
+  }
 }
