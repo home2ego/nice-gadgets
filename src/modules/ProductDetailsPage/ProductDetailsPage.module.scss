@@ -1,12 +1,10 @@
-.product {
-  &__heading {
-    @extend %heading-spacing-primary;
-  }
+.product-heading {
+  @extend %heading-spacing-primary;
+}
 
-  &__overview {
-    @include on-tablet {
-      @include page-grid;
-    }
+.overview {
+  @include on-tablet {
+    @include page-grid;
   }
 
   &__details {

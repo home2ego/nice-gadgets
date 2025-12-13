@@ -7,13 +7,13 @@ import tablets from "@/api/tablets.json";
 import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
 import ProductControls from "../shared/components/ProductControls";
+import ProductDetails from "../shared/components/ProductDetails";
 import ProductPrices from "../shared/components/ProductPrices";
 import type { OutletContext } from "../shared/types/outletContext";
 import type { Product } from "../shared/types/product";
 import NotFoundProduct from "./NotFoundProduct";
 import styles from "./ProductDetailsPage.module.scss";
 import ProductGallery from "./ProductGallery";
-import ProductDetails from "../shared/components/ProductDetails";
 
 const mergedProducts = [...phones, ...tablets, ...accessories];
 
@@ -76,21 +76,24 @@ const ProductDetailsPage = () => {
 
       <Back t={t} />
 
-      <article aria-labelledby="product" className={styles.product}>
+      <article aria-labelledby="product">
         {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-        <h1 id="product" className={clsx(styles.product__heading, "title--lg")}>
+        <h1
+          id="product"
+          className={clsx(styles["product-heading"], "title--lg")}
+        >
           {product?.name}
         </h1>
 
-        <section className={styles.product__overview}>
+        <section className={styles.overview}>
           <ProductGallery product={product} t={t} />
 
-          <div className={styles.product__details}>
-            <div className={styles.product__colors}>
+          <div className={styles.overview__details}>
+            <div className={styles.overview__colors}>
               {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
               <p
                 id="colors-title"
-                className={clsx(styles["product__colors-title"], "text--sm")}
+                className={clsx(styles["overview__colors-title"], "text--sm")}
               >
                 {t("availableColors")}
               </p>
@@ -98,7 +101,7 @@ const ProductDetailsPage = () => {
               <div
                 role="radiogroup"
                 aria-labelledby="colors-title"
-                className={styles["product__colors-options"]}
+                className={styles["overview__colors-options"]}
               >
                 {product.colorsAvailable.map(([colorName, colorHex]) => (
                   // biome-ignore lint/a11y/useSemanticElements: custom radio control with color options
@@ -108,7 +111,7 @@ const ProductDetailsPage = () => {
                     aria-label={colorName}
                     key={colorName}
                     type="button"
-                    className={clsx(styles["product__colors-option"], {
+                    className={clsx(styles["overview__colors-option"], {
                       [styles.active]: colorName === product.color,
                     })}
                     style={{
@@ -120,13 +123,13 @@ const ProductDetailsPage = () => {
               </div>
             </div>
 
-            <span className={styles.product__line} />
+            <span className={styles.overview__line} />
 
-            <div className={styles.product__capacity}>
+            <div className={styles.overview__capacity}>
               {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
               <p
                 id="capacity-title"
-                className={clsx(styles["product__capacity-title"], "text--sm")}
+                className={clsx(styles["overview__capacity-title"], "text--sm")}
               >
                 {t("selectCapacity")}
               </p>
@@ -134,7 +137,7 @@ const ProductDetailsPage = () => {
               <div
                 role="radiogroup"
                 aria-labelledby="capacity-title"
-                className={styles["product__capacity-options"]}
+                className={styles["overview__capacity-options"]}
               >
                 {product.capacityAvailable.map((capacity) => (
                   // biome-ignore lint/a11y/useSemanticElements: custom radio control with capacity options
@@ -145,7 +148,7 @@ const ProductDetailsPage = () => {
                     type="button"
                     className={clsx(
                       "text--body",
-                      styles["product__capacity-option"],
+                      styles["overview__capacity-option"],
                       {
                         [styles.active]: capacity === product.capacity,
                       },
@@ -158,9 +161,9 @@ const ProductDetailsPage = () => {
               </div>
             </div>
 
-            <span className={styles.product__line} />
+            <span className={styles.overview__line} />
 
-            <div className={styles.product__buybox}>
+            <div className={styles.overview__buybox}>
               <ProductPrices
                 hasOnlyFullPrice={false}
                 t={t}
