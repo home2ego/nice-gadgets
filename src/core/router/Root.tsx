@@ -1,5 +1,4 @@
-// React.lazy() for large pages
-
+import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import App from "@/App";
 import AccessoriesPage from "@/modules/AccessoriesPage";
@@ -9,9 +8,11 @@ import FavouritesPage from "@/modules/FavouritesPage";
 import HomePage from "@/modules/HomePage";
 import NotFoundPage from "@/modules/NotFoundPage";
 import PhonesPage from "@/modules/PhonesPage";
-import ProductDetailsPage from "@/modules/ProductDetailsPage";
+import ProductDetailsSkeleton from "@/modules/ProductDetailsPage/ProductDetailsSkeleton";
 import RightsPage from "@/modules/RightsPage";
 import TabletsPage from "@/modules/TabletsPage";
+
+const ProductDetailsPage = lazy(() => import("@/modules/ProductDetailsPage"));
 
 const Root = () => (
   <BrowserRouter>
@@ -30,7 +31,14 @@ const Root = () => (
         <Route path="contacts" element={<ContactsPage />} />
         <Route path="rights" element={<RightsPage />} />
 
-        <Route path="product/:productId" element={<ProductDetailsPage />} />
+        <Route
+          path="product/:productId"
+          element={
+            <Suspense fallback={<ProductDetailsSkeleton />}>
+              <ProductDetailsPage />
+            </Suspense>
+          }
+        />
       </Route>
 
       <Route path="*" element={<NotFoundPage />} />

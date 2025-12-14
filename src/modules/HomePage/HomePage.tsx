@@ -1,17 +1,15 @@
 import clsx from "clsx";
-import { lazy, Suspense, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
 import products from "@/api/products.json";
 import SkipLink from "@/modules/shared/components/SkipLink";
 import type { OutletContext } from "../shared/types/outletContext";
 import type { Product } from "../shared/types/product";
-import CategorySkeleton from "./CategorySkeleton";
 import styles from "./HomePage.module.scss";
 import PicturesCarousel from "./PicturesCarousel";
 import ProductsCarousel from "./ProductsCarousel";
-
-const ShopByCategory = lazy(() => import("./ShopByCategory"));
+import ShopByCategory from "./ShopByCategory";
 
 const { maxYear, maxModel } = (products as Product[]).reduce(
   (acc, product) => {
@@ -62,35 +60,11 @@ const HomePage = () => {
   const { mainRef, footerRef, normalizedLang } =
     useOutletContext<OutletContext>();
 
-  const [loaded, setLoaded] = useState(false);
   const newModelsRef = useRef<HTMLElement>(null);
   const categoriesRef = useRef<HTMLElement>(null);
   const hotPricesRef = useRef<HTMLHeadingElement>(null);
-  const categoriesObserverRef = useRef<HTMLUListElement>(null);
 
   const { t } = useTranslation("homePage");
-
-  // If IntersectionObserver is not removed, wrap Pictures Carousel and Product Carousel in .memo()
-  useEffect(() => {
-    if (!categoriesObserverRef.current) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setLoaded(true);
-        }
-      },
-      { rootMargin: "200px" },
-    );
-
-    observer.observe(categoriesObserverRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   return (
     <>
@@ -159,14 +133,8 @@ const HomePage = () => {
           {t("categoryHeading")}
         </h2>
 
-        <ul ref={categoriesObserverRef} className={styles.categories__list}>
-          {loaded ? (
-            <Suspense fallback={<CategorySkeleton />}>
-              <ShopByCategory t={t} />
-            </Suspense>
-          ) : (
-            <CategorySkeleton />
-          )}
+        <ul className={styles.categories__list}>
+          <ShopByCategory t={t} />
         </ul>
       </section>
 
