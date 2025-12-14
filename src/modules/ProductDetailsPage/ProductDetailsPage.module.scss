@@ -114,14 +114,8 @@
 }
 
 .about {
-  &__header {
-    display: flex;
-    column-gap: 16px;
+  &__heading {
     margin-bottom: 16px;
-  }
-
-  &__badge {
-    color: var(--text-color-secondary);
   }
 
   &__subheading {

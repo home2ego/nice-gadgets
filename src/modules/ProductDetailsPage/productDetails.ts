@@ -13,9 +13,11 @@ export interface ProductDetails {
   color: string;
   images: string[];
   description: {
-    title: string;
-    text: string[];
-  }[];
+    [languageCode: string]: {
+      title: string;
+      text: string[];
+    }[];
+  };
   screen: string;
   resolution: string;
   processor: string;

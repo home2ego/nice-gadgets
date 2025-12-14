@@ -198,29 +198,14 @@ const ProductDetailsPage = () => {
 
         <div className={styles.wrapper}>
           <section aria-labelledby="about" className={styles.about}>
-            <div className={styles.about__header}>
-              {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
-              <h2 id="about" className="title--md">
-                {t("about")}
-              </h2>
-
-              {normalizedLang !== "en" && (
-                <>
-                  <span className="sr-only">{t("englishOnly")}</span>
-
-                  <span
-                    aria-hidden="true"
-                    className={clsx(styles.about__badge, "title--md")}
-                  >
-                    EN
-                  </span>
-                </>
-              )}
-            </div>
+            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
+            <h2 id="about" className={clsx(styles.about__heading, "title--md")}>
+              {t("about")}
+            </h2>
 
             <span className={styles.product__line} />
 
-            {product.description.map((productDesc, idx) => (
+            {product.description[normalizedLang].map((productDesc, idx) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: Safe to use index as key here
               <Fragment key={idx}>
                 <h3 className={clsx(styles.about__subheading, "title--sm")}>

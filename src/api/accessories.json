@@ -21,26 +21,91 @@
       "/img/accessories/apple-watch-series-3/space-gray/01.webp",
       "/img/accessories/apple-watch-series-3/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Monitor your health",
-        "text": [
-          "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
-        ]
-      },
-      {
-        "title": "Stay connected on the go",
-        "text": [
-          "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
-        ]
-      },
-      {
-        "title": "Stream your favorite music",
-        "text": [
-          "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Monitor your health",
+          "text": [
+            "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
+          ]
+        },
+        {
+          "title": "Stay connected on the go",
+          "text": [
+            "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
+          ]
+        },
+        {
+          "title": "Stream your favorite music",
+          "text": [
+            "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Seuraa terveyttäsi",
+          "text": [
+            "Apple Watch Series 3 on varustettu sensoreilla, jotka seuraavat sykettäsi, kulutettuja kaloreita ja muita kuntoilumittareita koko päivän ajan. Se voi myös seurata harjoituksiasi ja ehdottaa henkilökohtaisia kuntotavoitteita."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä liikkeellä",
+          "text": [
+            "Mobiiliyhteyden ansiosta voit soittaa puheluita ja lähettää viestejä suoraan ranteestasi ilman iPhonea lähistöllä. Sirin avulla saat reittiohjeita, lähetät viestejä ja asetat muistutuksia handsfree-tilassa."
+          ]
+        },
+        {
+          "title": "Kuuntele suosikkimusiikkiasi",
+          "text": [
+            "Apple Musicin ja Sirin avulla voit suoratoistaa yli 75 miljoonaa kappaletta Apple Watch Series 3 -kellollasi. Voit myös kuunnella podcasteja, äänikirjoja ja radiokanavia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Monitoruj swoje zdrowie",
+          "text": [
+            "Apple Watch Series 3 jest wyposażony w czujniki monitorujące tętno, spalone kalorie i inne parametry aktywności przez cały dzień. Może także śledzić Twoje treningi i proponować spersonalizowane cele fitness."
+          ]
+        },
+        {
+          "title": "Bądź w kontakcie w ruchu",
+          "text": [
+            "Dzięki łączności komórkowej możesz dzwonić i wysyłać wiadomości z nadgarstka nawet bez iPhone’a w pobliżu. Z pomocą Siri otrzymasz wskazówki dojazdu, wyślesz wiadomości i ustawisz przypomnienia bez użycia rąk."
+          ]
+        },
+        {
+          "title": "Słuchaj ulubionej muzyki",
+          "text": [
+            "Dzięki Apple Music i Siri możesz strumieniować ponad 75 milionów utworów na Apple Watch Series 3. Możesz także słuchać podcastów, audiobooków i stacji radiowych."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Стежте за своїм здоров’ям",
+          "text": [
+            "Apple Watch Series 3 оснащений датчиками для відстеження пульсу, спалених калорій та інших фітнес-показників протягом дня. Він також може відстежувати тренування та пропонувати персоналізовані фітнес-цілі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку в дорозі",
+          "text": [
+            "Завдяки стільниковому звʼязку ви можете здійснювати дзвінки та надсилати повідомлення прямо з запʼястя навіть без iPhone поруч. За допомогою Siri можна отримувати маршрути, надсилати повідомлення та встановлювати нагадування без рук."
+          ]
+        },
+        {
+          "title": "Слухайте улюблену музику",
+          "text": [
+            "З Apple Music і Siri ви можете слухати понад 75 мільйонів пісень на Apple Watch Series 3, а також подкасти, аудіокниги та радіостанції."
+          ]
+        }
+      ]
+    },
     "screen": "1.3' OLED",
     "resolution": "272x340",
     "processor": "Apple S3",
@@ -69,26 +134,91 @@
       "/img/accessories/apple-watch-series-3/space-gray/01.webp",
       "/img/accessories/apple-watch-series-3/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Monitor your health",
-        "text": [
-          "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
-        ]
-      },
-      {
-        "title": "Stay connected on the go",
-        "text": [
-          "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
-        ]
-      },
-      {
-        "title": "Stream your favorite music",
-        "text": [
-          "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Monitor your health",
+          "text": [
+            "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
+          ]
+        },
+        {
+          "title": "Stay connected on the go",
+          "text": [
+            "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
+          ]
+        },
+        {
+          "title": "Stream your favorite music",
+          "text": [
+            "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Seuraa terveyttäsi",
+          "text": [
+            "Apple Watch Series 3 on varustettu sensoreilla, jotka seuraavat sykettäsi, kulutettuja kaloreita ja muita kuntoilumittareita koko päivän ajan. Se voi myös seurata harjoituksiasi ja ehdottaa henkilökohtaisia kuntotavoitteita."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä liikkeellä",
+          "text": [
+            "Mobiiliyhteyden ansiosta voit soittaa puheluita ja lähettää viestejä suoraan ranteestasi ilman iPhonea lähistöllä. Sirin avulla saat reittiohjeita, lähetät viestejä ja asetat muistutuksia handsfree-tilassa."
+          ]
+        },
+        {
+          "title": "Kuuntele suosikkimusiikkiasi",
+          "text": [
+            "Apple Musicin ja Sirin avulla voit suoratoistaa yli 75 miljoonaa kappaletta Apple Watch Series 3 -kellollasi. Voit myös kuunnella podcasteja, äänikirjoja ja radiokanavia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Monitoruj swoje zdrowie",
+          "text": [
+            "Apple Watch Series 3 jest wyposażony w czujniki monitorujące tętno, spalone kalorie i inne parametry aktywności przez cały dzień. Może także śledzić Twoje treningi i proponować spersonalizowane cele fitness."
+          ]
+        },
+        {
+          "title": "Bądź w kontakcie w ruchu",
+          "text": [
+            "Dzięki łączności komórkowej możesz dzwonić i wysyłać wiadomości z nadgarstka nawet bez iPhone’a w pobliżu. Z pomocą Siri otrzymasz wskazówki dojazdu, wyślesz wiadomości i ustawisz przypomnienia bez użycia rąk."
+          ]
+        },
+        {
+          "title": "Słuchaj ulubionej muzyki",
+          "text": [
+            "Dzięki Apple Music i Siri możesz strumieniować ponad 75 milionów utworów na Apple Watch Series 3. Możesz także słuchać podcastów, audiobooków i stacji radiowych."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Стежте за своїм здоров’ям",
+          "text": [
+            "Apple Watch Series 3 оснащений датчиками для відстеження пульсу, спалених калорій та інших фітнес-показників протягом дня. Він також може відстежувати тренування та пропонувати персоналізовані фітнес-цілі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку в дорозі",
+          "text": [
+            "Завдяки стільниковому звʼязку ви можете здійснювати дзвінки та надсилати повідомлення прямо з запʼястя навіть без iPhone поруч. За допомогою Siri можна отримувати маршрути, надсилати повідомлення та встановлювати нагадування без рук."
+          ]
+        },
+        {
+          "title": "Слухайте улюблену музику",
+          "text": [
+            "З Apple Music і Siri ви можете слухати понад 75 мільйонів пісень на Apple Watch Series 3, а також подкасти, аудіокниги та радіостанції."
+          ]
+        }
+      ]
+    },
     "screen": "1.3' OLED",
     "resolution": "272x340",
     "processor": "Apple S3",
@@ -117,26 +247,91 @@
       "/img/accessories/apple-watch-series-3/gold/01.webp",
       "/img/accessories/apple-watch-series-3/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Monitor your health",
-        "text": [
-          "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
-        ]
-      },
-      {
-        "title": "Stay connected on the go",
-        "text": [
-          "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
-        ]
-      },
-      {
-        "title": "Stream your favorite music",
-        "text": [
-          "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Monitor your health",
+          "text": [
+            "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
+          ]
+        },
+        {
+          "title": "Stay connected on the go",
+          "text": [
+            "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
+          ]
+        },
+        {
+          "title": "Stream your favorite music",
+          "text": [
+            "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Seuraa terveyttäsi",
+          "text": [
+            "Apple Watch Series 3 on varustettu sensoreilla, jotka seuraavat sykettäsi, kulutettuja kaloreita ja muita kuntoilumittareita koko päivän ajan. Se voi myös seurata harjoituksiasi ja ehdottaa henkilökohtaisia kuntotavoitteita."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä liikkeellä",
+          "text": [
+            "Mobiiliyhteyden ansiosta voit soittaa puheluita ja lähettää viestejä suoraan ranteestasi ilman iPhonea lähistöllä. Sirin avulla saat reittiohjeita, lähetät viestejä ja asetat muistutuksia handsfree-tilassa."
+          ]
+        },
+        {
+          "title": "Kuuntele suosikkimusiikkiasi",
+          "text": [
+            "Apple Musicin ja Sirin avulla voit suoratoistaa yli 75 miljoonaa kappaletta Apple Watch Series 3 -kellollasi. Voit myös kuunnella podcasteja, äänikirjoja ja radiokanavia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Monitoruj swoje zdrowie",
+          "text": [
+            "Apple Watch Series 3 jest wyposażony w czujniki monitorujące tętno, spalone kalorie i inne parametry aktywności przez cały dzień. Może także śledzić Twoje treningi i proponować spersonalizowane cele fitness."
+          ]
+        },
+        {
+          "title": "Bądź w kontakcie w ruchu",
+          "text": [
+            "Dzięki łączności komórkowej możesz dzwonić i wysyłać wiadomości z nadgarstka nawet bez iPhone’a w pobliżu. Z pomocą Siri otrzymasz wskazówki dojazdu, wyślesz wiadomości i ustawisz przypomnienia bez użycia rąk."
+          ]
+        },
+        {
+          "title": "Słuchaj ulubionej muzyki",
+          "text": [
+            "Dzięki Apple Music i Siri możesz strumieniować ponad 75 milionów utworów na Apple Watch Series 3. Możesz także słuchać podcastów, audiobooków i stacji radiowych."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Стежте за своїм здоров’ям",
+          "text": [
+            "Apple Watch Series 3 оснащений датчиками для відстеження пульсу, спалених калорій та інших фітнес-показників протягом дня. Він також може відстежувати тренування та пропонувати персоналізовані фітнес-цілі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку в дорозі",
+          "text": [
+            "Завдяки стільниковому звʼязку ви можете здійснювати дзвінки та надсилати повідомлення прямо з запʼястя навіть без iPhone поруч. За допомогою Siri можна отримувати маршрути, надсилати повідомлення та встановлювати нагадування без рук."
+          ]
+        },
+        {
+          "title": "Слухайте улюблену музику",
+          "text": [
+            "З Apple Music і Siri ви можете слухати понад 75 мільйонів пісень на Apple Watch Series 3, а також подкасти, аудіокниги та радіостанції."
+          ]
+        }
+      ]
+    },
     "screen": "1.3' OLED",
     "resolution": "272x340",
     "processor": "Apple S3",
@@ -165,26 +360,91 @@
       "/img/accessories/apple-watch-series-3/gold/01.webp",
       "/img/accessories/apple-watch-series-3/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Monitor your health",
-        "text": [
-          "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
-        ]
-      },
-      {
-        "title": "Stay connected on the go",
-        "text": [
-          "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
-        ]
-      },
-      {
-        "title": "Stream your favorite music",
-        "text": [
-          "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Monitor your health",
+          "text": [
+            "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
+          ]
+        },
+        {
+          "title": "Stay connected on the go",
+          "text": [
+            "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
+          ]
+        },
+        {
+          "title": "Stream your favorite music",
+          "text": [
+            "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Seuraa terveyttäsi",
+          "text": [
+            "Apple Watch Series 3 on varustettu sensoreilla, jotka seuraavat sykettäsi, kulutettuja kaloreita ja muita kuntoilumittareita koko päivän ajan. Se voi myös seurata harjoituksiasi ja ehdottaa henkilökohtaisia kuntotavoitteita."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä liikkeellä",
+          "text": [
+            "Mobiiliyhteyden ansiosta voit soittaa puheluita ja lähettää viestejä suoraan ranteestasi ilman iPhonea lähistöllä. Sirin avulla saat reittiohjeita, lähetät viestejä ja asetat muistutuksia handsfree-tilassa."
+          ]
+        },
+        {
+          "title": "Kuuntele suosikkimusiikkiasi",
+          "text": [
+            "Apple Musicin ja Sirin avulla voit suoratoistaa yli 75 miljoonaa kappaletta Apple Watch Series 3 -kellollasi. Voit myös kuunnella podcasteja, äänikirjoja ja radiokanavia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Monitoruj swoje zdrowie",
+          "text": [
+            "Apple Watch Series 3 jest wyposażony w czujniki monitorujące tętno, spalone kalorie i inne parametry aktywności przez cały dzień. Może także śledzić Twoje treningi i proponować spersonalizowane cele fitness."
+          ]
+        },
+        {
+          "title": "Bądź w kontakcie w ruchu",
+          "text": [
+            "Dzięki łączności komórkowej możesz dzwonić i wysyłać wiadomości z nadgarstka nawet bez iPhone’a w pobliżu. Z pomocą Siri otrzymasz wskazówki dojazdu, wyślesz wiadomości i ustawisz przypomnienia bez użycia rąk."
+          ]
+        },
+        {
+          "title": "Słuchaj ulubionej muzyki",
+          "text": [
+            "Dzięki Apple Music i Siri możesz strumieniować ponad 75 milionów utworów na Apple Watch Series 3. Możesz także słuchać podcastów, audiobooków i stacji radiowych."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Стежте за своїм здоров’ям",
+          "text": [
+            "Apple Watch Series 3 оснащений датчиками для відстеження пульсу, спалених калорій та інших фітнес-показників протягом дня. Він також може відстежувати тренування та пропонувати персоналізовані фітнес-цілі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку в дорозі",
+          "text": [
+            "Завдяки стільниковому звʼязку ви можете здійснювати дзвінки та надсилати повідомлення прямо з запʼястя навіть без iPhone поруч. За допомогою Siri можна отримувати маршрути, надсилати повідомлення та встановлювати нагадування без рук."
+          ]
+        },
+        {
+          "title": "Слухайте улюблену музику",
+          "text": [
+            "З Apple Music і Siri ви можете слухати понад 75 мільйонів пісень на Apple Watch Series 3, а також подкасти, аудіокниги та радіостанції."
+          ]
+        }
+      ]
+    },
     "screen": "1.3' OLED",
     "resolution": "272x340",
     "processor": "Apple S3",
@@ -213,26 +473,91 @@
       "/img/accessories/apple-watch-series-3/silver/01.webp",
       "/img/accessories/apple-watch-series-3/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Monitor your health",
-        "text": [
-          "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
-        ]
-      },
-      {
-        "title": "Stay connected on the go",
-        "text": [
-          "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
-        ]
-      },
-      {
-        "title": "Stream your favorite music",
-        "text": [
-          "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Monitor your health",
+          "text": [
+            "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
+          ]
+        },
+        {
+          "title": "Stay connected on the go",
+          "text": [
+            "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
+          ]
+        },
+        {
+          "title": "Stream your favorite music",
+          "text": [
+            "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Seuraa terveyttäsi",
+          "text": [
+            "Apple Watch Series 3 on varustettu sensoreilla, jotka seuraavat sykettäsi, kulutettuja kaloreita ja muita kuntoilumittareita koko päivän ajan. Se voi myös seurata harjoituksiasi ja ehdottaa henkilökohtaisia kuntotavoitteita."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä liikkeellä",
+          "text": [
+            "Mobiiliyhteyden ansiosta voit soittaa puheluita ja lähettää viestejä suoraan ranteestasi ilman iPhonea lähistöllä. Sirin avulla saat reittiohjeita, lähetät viestejä ja asetat muistutuksia handsfree-tilassa."
+          ]
+        },
+        {
+          "title": "Kuuntele suosikkimusiikkiasi",
+          "text": [
+            "Apple Musicin ja Sirin avulla voit suoratoistaa yli 75 miljoonaa kappaletta Apple Watch Series 3 -kellollasi. Voit myös kuunnella podcasteja, äänikirjoja ja radiokanavia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Monitoruj swoje zdrowie",
+          "text": [
+            "Apple Watch Series 3 jest wyposażony w czujniki monitorujące tętno, spalone kalorie i inne parametry aktywności przez cały dzień. Może także śledzić Twoje treningi i proponować spersonalizowane cele fitness."
+          ]
+        },
+        {
+          "title": "Bądź w kontakcie w ruchu",
+          "text": [
+            "Dzięki łączności komórkowej możesz dzwonić i wysyłać wiadomości z nadgarstka nawet bez iPhone’a w pobliżu. Z pomocą Siri otrzymasz wskazówki dojazdu, wyślesz wiadomości i ustawisz przypomnienia bez użycia rąk."
+          ]
+        },
+        {
+          "title": "Słuchaj ulubionej muzyki",
+          "text": [
+            "Dzięki Apple Music i Siri możesz strumieniować ponad 75 milionów utworów na Apple Watch Series 3. Możesz także słuchać podcastów, audiobooków i stacji radiowych."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Стежте за своїм здоров’ям",
+          "text": [
+            "Apple Watch Series 3 оснащений датчиками для відстеження пульсу, спалених калорій та інших фітнес-показників протягом дня. Він також може відстежувати тренування та пропонувати персоналізовані фітнес-цілі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку в дорозі",
+          "text": [
+            "Завдяки стільниковому звʼязку ви можете здійснювати дзвінки та надсилати повідомлення прямо з запʼястя навіть без iPhone поруч. За допомогою Siri можна отримувати маршрути, надсилати повідомлення та встановлювати нагадування без рук."
+          ]
+        },
+        {
+          "title": "Слухайте улюблену музику",
+          "text": [
+            "З Apple Music і Siri ви можете слухати понад 75 мільйонів пісень на Apple Watch Series 3, а також подкасти, аудіокниги та радіостанції."
+          ]
+        }
+      ]
+    },
     "screen": "1.3' OLED",
     "resolution": "272x340",
     "processor": "Apple S3",
@@ -261,26 +586,91 @@
       "/img/accessories/apple-watch-series-3/silver/01.webp",
       "/img/accessories/apple-watch-series-3/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Monitor your health",
-        "text": [
-          "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
-        ]
-      },
-      {
-        "title": "Stay connected on the go",
-        "text": [
-          "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
-        ]
-      },
-      {
-        "title": "Stream your favorite music",
-        "text": [
-          "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Monitor your health",
+          "text": [
+            "The Apple Watch Series 3 is equipped with sensors to track your heart rate, calories burned, and other fitness metrics throughout the day. It can even track your workouts and suggest personalized fitness goals."
+          ]
+        },
+        {
+          "title": "Stay connected on the go",
+          "text": [
+            "With cellular connectivity, you can make calls and send texts from your wrist even without your iPhone nearby. And with Siri, you can get directions, send messages, and set reminders hands-free."
+          ]
+        },
+        {
+          "title": "Stream your favorite music",
+          "text": [
+            "With Apple Music and Siri, you can stream over 75 million songs on your Apple Watch Series 3. Or listen to your favorite podcasts, audiobooks, and radio stations."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Seuraa terveyttäsi",
+          "text": [
+            "Apple Watch Series 3 on varustettu sensoreilla, jotka seuraavat sykettäsi, kulutettuja kaloreita ja muita kuntoilumittareita koko päivän ajan. Se voi myös seurata harjoituksiasi ja ehdottaa henkilökohtaisia kuntotavoitteita."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä liikkeellä",
+          "text": [
+            "Mobiiliyhteyden ansiosta voit soittaa puheluita ja lähettää viestejä suoraan ranteestasi ilman iPhonea lähistöllä. Sirin avulla saat reittiohjeita, lähetät viestejä ja asetat muistutuksia handsfree-tilassa."
+          ]
+        },
+        {
+          "title": "Kuuntele suosikkimusiikkiasi",
+          "text": [
+            "Apple Musicin ja Sirin avulla voit suoratoistaa yli 75 miljoonaa kappaletta Apple Watch Series 3 -kellollasi. Voit myös kuunnella podcasteja, äänikirjoja ja radiokanavia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Monitoruj swoje zdrowie",
+          "text": [
+            "Apple Watch Series 3 jest wyposażony w czujniki monitorujące tętno, spalone kalorie i inne parametry aktywności przez cały dzień. Może także śledzić Twoje treningi i proponować spersonalizowane cele fitness."
+          ]
+        },
+        {
+          "title": "Bądź w kontakcie w ruchu",
+          "text": [
+            "Dzięki łączności komórkowej możesz dzwonić i wysyłać wiadomości z nadgarstka nawet bez iPhone’a w pobliżu. Z pomocą Siri otrzymasz wskazówki dojazdu, wyślesz wiadomości i ustawisz przypomnienia bez użycia rąk."
+          ]
+        },
+        {
+          "title": "Słuchaj ulubionej muzyki",
+          "text": [
+            "Dzięki Apple Music i Siri możesz strumieniować ponad 75 milionów utworów na Apple Watch Series 3. Możesz także słuchać podcastów, audiobooków i stacji radiowych."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Стежте за своїм здоров’ям",
+          "text": [
+            "Apple Watch Series 3 оснащений датчиками для відстеження пульсу, спалених калорій та інших фітнес-показників протягом дня. Він також може відстежувати тренування та пропонувати персоналізовані фітнес-цілі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку в дорозі",
+          "text": [
+            "Завдяки стільниковому звʼязку ви можете здійснювати дзвінки та надсилати повідомлення прямо з запʼястя навіть без iPhone поруч. За допомогою Siri можна отримувати маршрути, надсилати повідомлення та встановлювати нагадування без рук."
+          ]
+        },
+        {
+          "title": "Слухайте улюблену музику",
+          "text": [
+            "З Apple Music і Siri ви можете слухати понад 75 мільйонів пісень на Apple Watch Series 3, а також подкасти, аудіокниги та радіостанції."
+          ]
+        }
+      ]
+    },
     "screen": "1.3' OLED",
     "resolution": "272x340",
     "processor": "Apple S3",
@@ -311,26 +701,91 @@
       "/img/accessories/apple-watch-series-6/space-gray/01.webp",
       "/img/accessories/apple-watch-series-6/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -361,26 +816,91 @@
       "/img/accessories/apple-watch-series-6/space-gray/01.webp",
       "/img/accessories/apple-watch-series-6/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -411,26 +931,91 @@
       "/img/accessories/apple-watch-series-6/silver/01.webp",
       "/img/accessories/apple-watch-series-6/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -461,26 +1046,91 @@
       "/img/accessories/apple-watch-series-6/silver/01.webp",
       "/img/accessories/apple-watch-series-6/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -511,26 +1161,91 @@
       "/img/accessories/apple-watch-series-6/gold/01.webp",
       "/img/accessories/apple-watch-series-6/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -561,26 +1276,91 @@
       "/img/accessories/apple-watch-series-6/gold/01.webp",
       "/img/accessories/apple-watch-series-6/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -611,26 +1391,91 @@
       "/img/accessories/apple-watch-series-6/blue/01.webp",
       "/img/accessories/apple-watch-series-6/blue/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -661,26 +1506,91 @@
       "/img/accessories/apple-watch-series-6/blue/01.webp",
       "/img/accessories/apple-watch-series-6/blue/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -711,26 +1621,91 @@
       "/img/accessories/apple-watch-series-6/red/01.webp",
       "/img/accessories/apple-watch-series-6/red/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -761,26 +1736,91 @@
       "/img/accessories/apple-watch-series-6/red/01.webp",
       "/img/accessories/apple-watch-series-6/red/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
-        ]
-      },
-      {
-        "title": "Blood oxygen sensor",
-        "text": [
-          "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 6 features an Always-On Retina display that is 2.5 times brighter outdoors when your wrist is down. So you can see all the information on your watch face at a glance."
+          ]
+        },
+        {
+          "title": "Blood oxygen sensor",
+          "text": [
+            "The Blood Oxygen app measures your blood oxygen levels with a revolutionary new sensor and app. You can also take an ECG from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch Series 6 tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 6 -kellossa on aina päällä oleva Retina-näyttö, joka on ulkona jopa 2,5 kertaa kirkkaampi ranne alhaalla. Näet kaikki kellotaulun tiedot yhdellä silmäyksellä."
+          ]
+        },
+        {
+          "title": "Veren happipitoisuuden mittaus",
+          "text": [
+            "Veren happipitoisuus -sovellus mittaa happitasosi vallankumouksellisella uudella sensorilla ja sovelluksella. Voit myös ottaa EKG:n suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch Series 6 seuraa päivittäistä aktiivisuuttasi, kuten harjoituksia, askelmäärää ja kulutettuja kaloreita. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 6 posiada zawsze włączony wyświetlacz Retina, który jest na zewnątrz nawet 2,5 raza jaśniejszy, gdy nadgarstek jest opuszczony. Dzięki temu wszystkie informacje na tarczy zegarka są widoczne na pierwszy rzut oka."
+          ]
+        },
+        {
+          "title": "Czujnik natlenienia krwi",
+          "text": [
+            "Aplikacja Tlen we krwi mierzy poziom natlenienia krwi za pomocą innowacyjnego czujnika i aplikacji. Możesz także wykonać EKG bezpośrednio z nadgarstka w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch Series 6 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 6 оснащений завжди активним дисплеєм Retina, який у 2,5 раза яскравіший на вулиці, коли запʼястя опущене. Уся інформація на циферблаті добре помітна з першого погляду."
+          ]
+        },
+        {
+          "title": "Датчик рівня кисню в крові",
+          "text": [
+            "Застосунок «Рівень кисню в крові» вимірює насичення крові киснем за допомогою інноваційного датчика та застосунку. Ви також можете зняти ЕКГ прямо з запʼястя у будь-який час."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch Series 6 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S6",
@@ -809,26 +1849,91 @@
       "/img/accessories/apple-watch-series-5/silver/01.webp",
       "/img/accessories/apple-watch-series-5/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "With the Always-On Retina display, you can easily see the time and important information without raising your wrist. The display is also 30% larger than the Series 3, making it easier to read and interact with."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "The ECG app can detect irregular heart rhythms and alert you if something seems amiss. You can also take an ECG anytime, anywhere, right from your wrist."
-        ]
-      },
-      {
-        "title": "Activity tracking",
-        "text": [
-          "The Apple Watch Series 5 tracks your daily activity, including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "With the Always-On Retina display, you can easily see the time and important information without raising your wrist. The display is also 30% larger than the Series 3, making it easier to read and interact with."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "The ECG app can detect irregular heart rhythms and alert you if something seems amiss. You can also take an ECG anytime, anywhere, right from your wrist."
+          ]
+        },
+        {
+          "title": "Activity tracking",
+          "text": [
+            "The Apple Watch Series 5 tracks your daily activity, including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Aina päällä olevan Retina-näytön ansiosta näet ajan ja tärkeät tiedot helposti ilman, että nostat rannettasi. Näyttö on myös 30 % suurempi kuin Series 3 -mallissa, mikä tekee lukemisesta ja käytöstä helpompaa."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovellus voi tunnistaa epäsäännölliset sydämen rytmit ja ilmoittaa, jos jokin vaikuttaa poikkeavalta. Voit myös ottaa EKG:n milloin ja missä tahansa suoraan ranteestasi."
+          ]
+        },
+        {
+          "title": "Aktiivisuuden seuranta",
+          "text": [
+            "Apple Watch Series 5 seuraa päivittäistä aktiivisuuttasi, mukaan lukien harjoitukset, askeleet ja kulutetut kalorit. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Dzięki zawsze włączonemu wyświetlaczowi Retina możesz łatwo sprawdzić godzinę i ważne informacje bez podnoszenia nadgarstka. Wyświetlacz jest także o 30% większy niż w Series 3, co ułatwia czytanie i obsługę."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Aplikacja EKG może wykrywać nieregularne rytmy serca i powiadomić Cię, jeśli coś będzie nie tak. Możesz także wykonać EKG w dowolnym miejscu i czasie bezpośrednio z nadgarstka."
+          ]
+        },
+        {
+          "title": "Śledzenie aktywności",
+          "text": [
+            "Apple Watch Series 5 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Завдяки завжди активному дисплею Retina ви можете легко бачити час і важливу інформацію без підняття запʼястя. Дисплей також на 30% більший, ніж у Series 3, що робить його зручнішим для читання та взаємодії."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "Застосунок ЕКГ може виявляти нерегулярні серцеві ритми та сповіщати, якщо щось не так. Ви також можете зняти ЕКГ у будь-який час і будь-де прямо з запʼястя."
+          ]
+        },
+        {
+          "title": "Відстеження активності",
+          "text": [
+            "Apple Watch Series 5 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S5",
@@ -857,26 +1962,91 @@
       "/img/accessories/apple-watch-series-5/silver/01.webp",
       "/img/accessories/apple-watch-series-5/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 5 features an Always-On Retina display that allows you to glance at your watch without raising your wrist."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram from your wrist anytime, anywhere. "
-        ]
-      },
-      {
-        "title": "Track your workouts",
-        "text": [
-          "The Apple Watch Series 5 tracks your workouts including running, walking, cycling, and swimming. It also has a built-in GPS to track your location and route."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 5 features an Always-On Retina display that allows you to glance at your watch without raising your wrist."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your workouts",
+          "text": [
+            "The Apple Watch Series 5 tracks your workouts including running, walking, cycling, and swimming. It also has a built-in GPS to track your location and route."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 5 -kellossa on aina päällä oleva Retina-näyttö, jonka ansiosta voit vilkaista kelloa nostamatta rannettasi."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa harjoituksiasi",
+          "text": [
+            "Apple Watch Series 5 seuraa harjoituksiasi, kuten juoksua, kävelyä, pyöräilyä ja uintia. Sisäänrakennettu GPS seuraa sijaintiasi ja reittiäsi."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 5 posiada zawsze włączony wyświetlacz Retina, który umożliwia szybkie sprawdzenie godziny bez podnoszenia nadgarstka."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka, w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź swoje treningi",
+          "text": [
+            "Apple Watch Series 5 śledzi Twoje treningi, w tym bieganie, chodzenie, jazdę na rowerze i pływanie. Wbudowany GPS umożliwia monitorowanie Twojej lokalizacji i trasy."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 5 оснащений завжди активним дисплеєм Retina, який дозволяє швидко переглянути час без підняття запʼястя."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя у будь-який час і будь-де."
+          ]
+        },
+        {
+          "title": "Відстежуйте тренування",
+          "text": [
+            "Apple Watch Series 5 відстежує ваші тренування, зокрема біг, ходьбу, їзду на велосипеді та плавання. Вбудований GPS дозволяє відстежувати ваше місцезнаходження та маршрут."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' LTPO OLED",
     "resolution": "368x448",
     "processor": "Apple S5",
@@ -905,26 +2075,91 @@
       "/img/accessories/apple-watch-series-5/gold/01.webp",
       "/img/accessories/apple-watch-series-5/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "With the Always-On Retina display, you can easily see the time and important information without raising your wrist. The display is also 30% larger than the Series 3, making it easier to read and interact with."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "The ECG app can detect irregular heart rhythms and alert you if something seems amiss. You can also take an ECG anytime, anywhere, right from your wrist."
-        ]
-      },
-      {
-        "title": "Activity tracking",
-        "text": [
-          "The Apple Watch Series 5 tracks your daily activity, including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "With the Always-On Retina display, you can easily see the time and important information without raising your wrist. The display is also 30% larger than the Series 3, making it easier to read and interact with."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "The ECG app can detect irregular heart rhythms and alert you if something seems amiss. You can also take an ECG anytime, anywhere, right from your wrist."
+          ]
+        },
+        {
+          "title": "Activity tracking",
+          "text": [
+            "The Apple Watch Series 5 tracks your daily activity, including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Aina päällä olevan Retina-näytön ansiosta näet ajan ja tärkeät tiedot helposti ilman, että nostat rannettasi. Näyttö on myös 30 % suurempi kuin Series 3 -mallissa, mikä tekee lukemisesta ja käytöstä helpompaa."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovellus voi tunnistaa epäsäännölliset sydämen rytmit ja ilmoittaa, jos jokin vaikuttaa poikkeavalta. Voit myös ottaa EKG:n milloin ja missä tahansa suoraan ranteestasi."
+          ]
+        },
+        {
+          "title": "Aktiivisuuden seuranta",
+          "text": [
+            "Apple Watch Series 5 seuraa päivittäistä aktiivisuuttasi, mukaan lukien harjoitukset, askeleet ja kulutetut kalorit. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Dzięki zawsze włączonemu wyświetlaczowi Retina możesz łatwo sprawdzić godzinę i ważne informacje bez podnoszenia nadgarstka. Wyświetlacz jest także o 30% większy niż w Series 3, co ułatwia czytanie i obsługę."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Aplikacja EKG może wykrywać nieregularne rytmy serca i powiadomić Cię, jeśli coś będzie nie tak. Możesz także wykonać EKG w dowolnym miejscu i czasie bezpośrednio z nadgarstka."
+          ]
+        },
+        {
+          "title": "Śledzenie aktywności",
+          "text": [
+            "Apple Watch Series 5 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Завдяки завжди активному дисплею Retina ви можете легко бачити час і важливу інформацію без підняття запʼястя. Дисплей також на 30% більший, ніж у Series 3, що робить його зручнішим для читання та взаємодії."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "Застосунок ЕКГ може виявляти нерегулярні серцеві ритми та сповіщати, якщо щось не так. Ви також можете зняти ЕКГ у будь-який час і будь-де прямо з запʼястя."
+          ]
+        },
+        {
+          "title": "Відстеження активності",
+          "text": [
+            "Apple Watch Series 5 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S5",
@@ -953,26 +2188,91 @@
       "/img/accessories/apple-watch-series-5/gold/01.webp",
       "/img/accessories/apple-watch-series-5/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 5 features an Always-On Retina display that allows you to glance at your watch without raising your wrist."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram from your wrist anytime, anywhere. "
-        ]
-      },
-      {
-        "title": "Track your workouts",
-        "text": [
-          "The Apple Watch Series 5 tracks your workouts including running, walking, cycling, and swimming. It also has a built-in GPS to track your location and route."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 5 features an Always-On Retina display that allows you to glance at your watch without raising your wrist."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your workouts",
+          "text": [
+            "The Apple Watch Series 5 tracks your workouts including running, walking, cycling, and swimming. It also has a built-in GPS to track your location and route."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 5 -kellossa on aina päällä oleva Retina-näyttö, jonka ansiosta voit vilkaista kelloa nostamatta rannettasi."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa harjoituksiasi",
+          "text": [
+            "Apple Watch Series 5 seuraa harjoituksiasi, kuten juoksua, kävelyä, pyöräilyä ja uintia. Sisäänrakennettu GPS seuraa sijaintiasi ja reittiäsi."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 5 posiada zawsze włączony wyświetlacz Retina, który umożliwia szybkie sprawdzenie godziny bez podnoszenia nadgarstka."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka, w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź swoje treningi",
+          "text": [
+            "Apple Watch Series 5 śledzi Twoje treningi, w tym bieganie, chodzenie, jazdę na rowerze i pływanie. Wbudowany GPS umożliwia monitorowanie Twojej lokalizacji i trasy."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 5 оснащений завжди активним дисплеєм Retina, який дозволяє швидко переглянути час без підняття запʼястя."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя у будь-який час і будь-де."
+          ]
+        },
+        {
+          "title": "Відстежуйте тренування",
+          "text": [
+            "Apple Watch Series 5 відстежує ваші тренування, зокрема біг, ходьбу, їзду на велосипеді та плавання. Вбудований GPS дозволяє відстежувати ваше місцезнаходження та маршрут."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' LTPO OLED",
     "resolution": "368x448",
     "processor": "Apple S5",
@@ -1001,26 +2301,91 @@
       "/img/accessories/apple-watch-series-5/space-gray/01.webp",
       "/img/accessories/apple-watch-series-5/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "With the Always-On Retina display, you can easily see the time and important information without raising your wrist. The display is also 30% larger than the Series 3, making it easier to read and interact with."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "The ECG app can detect irregular heart rhythms and alert you if something seems amiss. You can also take an ECG anytime, anywhere, right from your wrist."
-        ]
-      },
-      {
-        "title": "Activity tracking",
-        "text": [
-          "The Apple Watch Series 5 tracks your daily activity, including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "With the Always-On Retina display, you can easily see the time and important information without raising your wrist. The display is also 30% larger than the Series 3, making it easier to read and interact with."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "The ECG app can detect irregular heart rhythms and alert you if something seems amiss. You can also take an ECG anytime, anywhere, right from your wrist."
+          ]
+        },
+        {
+          "title": "Activity tracking",
+          "text": [
+            "The Apple Watch Series 5 tracks your daily activity, including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Aina päällä olevan Retina-näytön ansiosta näet ajan ja tärkeät tiedot helposti ilman, että nostat rannettasi. Näyttö on myös 30 % suurempi kuin Series 3 -mallissa, mikä tekee lukemisesta ja käytöstä helpompaa."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovellus voi tunnistaa epäsäännölliset sydämen rytmit ja ilmoittaa, jos jokin vaikuttaa poikkeavalta. Voit myös ottaa EKG:n milloin ja missä tahansa suoraan ranteestasi."
+          ]
+        },
+        {
+          "title": "Aktiivisuuden seuranta",
+          "text": [
+            "Apple Watch Series 5 seuraa päivittäistä aktiivisuuttasi, mukaan lukien harjoitukset, askeleet ja kulutetut kalorit. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Dzięki zawsze włączonemu wyświetlaczowi Retina możesz łatwo sprawdzić godzinę i ważne informacje bez podnoszenia nadgarstka. Wyświetlacz jest także o 30% większy niż w Series 3, co ułatwia czytanie i obsługę."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Aplikacja EKG może wykrywać nieregularne rytmy serca i powiadomić Cię, jeśli coś będzie nie tak. Możesz także wykonać EKG w dowolnym miejscu i czasie bezpośrednio z nadgarstka."
+          ]
+        },
+        {
+          "title": "Śledzenie aktywności",
+          "text": [
+            "Apple Watch Series 5 monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Завдяки завжди активному дисплею Retina ви можете легко бачити час і важливу інформацію без підняття запʼястя. Дисплей також на 30% більший, ніж у Series 3, що робить його зручнішим для читання та взаємодії."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "Застосунок ЕКГ може виявляти нерегулярні серцеві ритми та сповіщати, якщо щось не так. Ви також можете зняти ЕКГ у будь-який час і будь-де прямо з запʼястя."
+          ]
+        },
+        {
+          "title": "Відстеження активності",
+          "text": [
+            "Apple Watch Series 5 відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S5",
@@ -1049,26 +2414,91 @@
       "/img/accessories/apple-watch-series-5/space-gray/01.webp",
       "/img/accessories/apple-watch-series-5/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Always-On Retina display",
-        "text": [
-          "The Apple Watch Series 5 features an Always-On Retina display that allows you to glance at your watch without raising your wrist."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram from your wrist anytime, anywhere. "
-        ]
-      },
-      {
-        "title": "Track your workouts",
-        "text": [
-          "The Apple Watch Series 5 tracks your workouts including running, walking, cycling, and swimming. It also has a built-in GPS to track your location and route."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Always-On Retina display",
+          "text": [
+            "The Apple Watch Series 5 features an Always-On Retina display that allows you to glance at your watch without raising your wrist."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram from your wrist anytime, anywhere."
+          ]
+        },
+        {
+          "title": "Track your workouts",
+          "text": [
+            "The Apple Watch Series 5 tracks your workouts including running, walking, cycling, and swimming. It also has a built-in GPS to track your location and route."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Aina päällä oleva Retina-näyttö",
+          "text": [
+            "Apple Watch Series 5 -kellossa on aina päällä oleva Retina-näyttö, jonka ansiosta voit vilkaista kelloa nostamatta rannettasi."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi milloin ja missä tahansa."
+          ]
+        },
+        {
+          "title": "Seuraa harjoituksiasi",
+          "text": [
+            "Apple Watch Series 5 seuraa harjoituksiasi, kuten juoksua, kävelyä, pyöräilyä ja uintia. Sisäänrakennettu GPS seuraa sijaintiasi ja reittiäsi."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Zawsze włączony wyświetlacz Retina",
+          "text": [
+            "Apple Watch Series 5 posiada zawsze włączony wyświetlacz Retina, który umożliwia szybkie sprawdzenie godziny bez podnoszenia nadgarstka."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka, w dowolnym miejscu i czasie."
+          ]
+        },
+        {
+          "title": "Śledź swoje treningi",
+          "text": [
+            "Apple Watch Series 5 śledzi Twoje treningi, w tym bieganie, chodzenie, jazdę na rowerze i pływanie. Wbudowany GPS umożliwia monitorowanie Twojej lokalizacji i trasy."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Завжди активний дисплей Retina",
+          "text": [
+            "Apple Watch Series 5 оснащений завжди активним дисплеєм Retina, який дозволяє швидко переглянути час без підняття запʼястя."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя у будь-який час і будь-де."
+          ]
+        },
+        {
+          "title": "Відстежуйте тренування",
+          "text": [
+            "Apple Watch Series 5 відстежує ваші тренування, зокрема біг, ходьбу, їзду на велосипеді та плавання. Вбудований GPS дозволяє відстежувати ваше місцезнаходження та маршрут."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' LTPO OLED",
     "resolution": "368x448",
     "processor": "Apple S5",
@@ -1097,26 +2527,91 @@
       "/img/accessories/apple-watch-series-4/silver/01.webp",
       "/img/accessories/apple-watch-series-4/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Larger display",
-        "text": [
-          "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
-        ]
-      },
-      {
-        "title": "Fall detection",
-        "text": [
-          "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Larger display",
+          "text": [
+            "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
+          ]
+        },
+        {
+          "title": "Fall detection",
+          "text": [
+            "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Suurempi näyttö",
+          "text": [
+            "Apple Watch Series 4:ssa on suurempi näyttö, jonka ansiosta näet enemmän tietoa yhdellä silmäyksellä. Näyttö on yli 30 % suurempi kuin Series 3 -mallissa ja ulottuu reunasta reunaan kaarevin kulmin."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi. Ominaisuus on saatavilla vain tietyissä maissa ja alueilla."
+          ]
+        },
+        {
+          "title": "Kaatumisen tunnistus",
+          "text": [
+            "Apple Watch Series 4 tunnistaa kaatumisen ja voi lähettää hälytyksen hätäpalveluihin, jos et reagoi minuutin kuluessa. Ominaisuus on käytettävissä vain yli 65-vuotiaille käyttäjille."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Większy wyświetlacz",
+          "text": [
+            "Apple Watch Series 4 ma większy wyświetlacz, który pozwala zobaczyć więcej informacji na pierwszy rzut oka. Jest on o ponad 30% większy niż w Series 3 i sięga od krawędzi do krawędzi z zaokrąglonymi rogami."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka. Funkcja ta jest dostępna tylko w wybranych krajach i regionach."
+          ]
+        },
+        {
+          "title": "Wykrywanie upadków",
+          "text": [
+            "Apple Watch Series 4 potrafi wykryć upadek i wysłać alert do służb ratunkowych, jeśli nie odpowiesz w ciągu minuty. Funkcja ta jest dostępna tylko dla użytkowników powyżej 65 roku życia."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Більший дисплей",
+          "text": [
+            "Apple Watch Series 4 має більший дисплей, який дозволяє бачити більше інформації з першого погляду. Він більш ніж на 30% більший за Series 3 і має вигнуті краї від краю до краю."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя. Ця функція доступна лише в окремих країнах і регіонах."
+          ]
+        },
+        {
+          "title": "Виявлення падінь",
+          "text": [
+            "Apple Watch Series 4 може виявити падіння та надіслати сповіщення до екстрених служб, якщо ви не відповісте протягом хвилини. Функція доступна лише для користувачів віком від 65 років."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S4",
@@ -1145,26 +2640,91 @@
       "/img/accessories/apple-watch-series-4/silver/01.webp",
       "/img/accessories/apple-watch-series-4/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Larger display",
-        "text": [
-          "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
-        ]
-      },
-      {
-        "title": "Fall detection",
-        "text": [
-          "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Larger display",
+          "text": [
+            "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
+          ]
+        },
+        {
+          "title": "Fall detection",
+          "text": [
+            "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Suurempi näyttö",
+          "text": [
+            "Apple Watch Series 4:ssa on suurempi näyttö, jonka ansiosta näet enemmän tietoa yhdellä silmäyksellä. Näyttö on yli 30 % suurempi kuin Series 3 -mallissa ja ulottuu reunasta reunaan kaarevin kulmin."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi. Ominaisuus on saatavilla vain tietyissä maissa ja alueilla."
+          ]
+        },
+        {
+          "title": "Kaatumisen tunnistus",
+          "text": [
+            "Apple Watch Series 4 tunnistaa kaatumisen ja voi lähettää hälytyksen hätäpalveluihin, jos et reagoi minuutin kuluessa. Ominaisuus on käytettävissä vain yli 65-vuotiaille käyttäjille."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Większy wyświetlacz",
+          "text": [
+            "Apple Watch Series 4 ma większy wyświetlacz, który pozwala zobaczyć więcej informacji na pierwszy rzut oka. Jest on o ponad 30% większy niż w Series 3 i sięga od krawędzi do krawędzi z zaokrąglonymi rogami."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka. Funkcja ta jest dostępna tylko w wybranych krajach i regionach."
+          ]
+        },
+        {
+          "title": "Wykrywanie upadków",
+          "text": [
+            "Apple Watch Series 4 potrafi wykryć upadek i wysłać alert do służb ratunkowych, jeśli nie odpowiesz w ciągu minuty. Funkcja ta jest dostępna tylko dla użytkowników powyżej 65 roku życia."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Більший дисплей",
+          "text": [
+            "Apple Watch Series 4 має більший дисплей, який дозволяє бачити більше інформації з першого погляду. Він більш ніж на 30% більший за Series 3 і має вигнуті краї від краю до краю."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя. Ця функція доступна лише в окремих країнах і регіонах."
+          ]
+        },
+        {
+          "title": "Виявлення падінь",
+          "text": [
+            "Apple Watch Series 4 може виявити падіння та надіслати сповіщення до екстрених служб, якщо ви не відповісте протягом хвилини. Функція доступна лише для користувачів віком від 65 років."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' OLED",
     "resolution": "368x448",
     "processor": "Apple S4",
@@ -1193,26 +2753,91 @@
       "/img/accessories/apple-watch-series-4/gold/01.webp",
       "/img/accessories/apple-watch-series-4/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Larger display",
-        "text": [
-          "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
-        ]
-      },
-      {
-        "title": "Fall detection",
-        "text": [
-          "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Larger display",
+          "text": [
+            "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
+          ]
+        },
+        {
+          "title": "Fall detection",
+          "text": [
+            "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Suurempi näyttö",
+          "text": [
+            "Apple Watch Series 4:ssa on suurempi näyttö, jonka ansiosta näet enemmän tietoa yhdellä silmäyksellä. Näyttö on yli 30 % suurempi kuin Series 3 -mallissa ja ulottuu reunasta reunaan kaarevin kulmin."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi. Ominaisuus on saatavilla vain tietyissä maissa ja alueilla."
+          ]
+        },
+        {
+          "title": "Kaatumisen tunnistus",
+          "text": [
+            "Apple Watch Series 4 tunnistaa kaatumisen ja voi lähettää hälytyksen hätäpalveluihin, jos et reagoi minuutin kuluessa. Ominaisuus on käytettävissä vain yli 65-vuotiaille käyttäjille."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Większy wyświetlacz",
+          "text": [
+            "Apple Watch Series 4 ma większy wyświetlacz, który pozwala zobaczyć więcej informacji na pierwszy rzut oka. Jest on o ponad 30% większy niż w Series 3 i sięga od krawędzi do krawędzi z zaokrąglonymi rogami."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka. Funkcja ta jest dostępna tylko w wybranych krajach i regionach."
+          ]
+        },
+        {
+          "title": "Wykrywanie upadków",
+          "text": [
+            "Apple Watch Series 4 potrafi wykryć upadek i wysłać alert do służb ratunkowych, jeśli nie odpowiesz w ciągu minuty. Funkcja ta jest dostępna tylko dla użytkowników powyżej 65 roku życia."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Більший дисплей",
+          "text": [
+            "Apple Watch Series 4 має більший дисплей, який дозволяє бачити більше інформації з першого погляду. Він більш ніж на 30% більший за Series 3 і має вигнуті краї від краю до краю."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя. Ця функція доступна лише в окремих країнах і регіонах."
+          ]
+        },
+        {
+          "title": "Виявлення падінь",
+          "text": [
+            "Apple Watch Series 4 може виявити падіння та надіслати сповіщення до екстрених служб, якщо ви не відповісте протягом хвилини. Функція доступна лише для користувачів віком від 65 років."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S4",
@@ -1241,26 +2866,91 @@
       "/img/accessories/apple-watch-series-4/gold/01.webp",
       "/img/accessories/apple-watch-series-4/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Larger display",
-        "text": [
-          "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
-        ]
-      },
-      {
-        "title": "Fall detection",
-        "text": [
-          "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Larger display",
+          "text": [
+            "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
+          ]
+        },
+        {
+          "title": "Fall detection",
+          "text": [
+            "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Suurempi näyttö",
+          "text": [
+            "Apple Watch Series 4:ssa on suurempi näyttö, jonka ansiosta näet enemmän tietoa yhdellä silmäyksellä. Näyttö on yli 30 % suurempi kuin Series 3 -mallissa ja ulottuu reunasta reunaan kaarevin kulmin."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi. Ominaisuus on saatavilla vain tietyissä maissa ja alueilla."
+          ]
+        },
+        {
+          "title": "Kaatumisen tunnistus",
+          "text": [
+            "Apple Watch Series 4 tunnistaa kaatumisen ja voi lähettää hälytyksen hätäpalveluihin, jos et reagoi minuutin kuluessa. Ominaisuus on käytettävissä vain yli 65-vuotiaille käyttäjille."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Większy wyświetlacz",
+          "text": [
+            "Apple Watch Series 4 ma większy wyświetlacz, który pozwala zobaczyć więcej informacji na pierwszy rzut oka. Jest on o ponad 30% większy niż w Series 3 i sięga od krawędzi do krawędzi z zaokrąglonymi rogami."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka. Funkcja ta jest dostępna tylko w wybranych krajach i regionach."
+          ]
+        },
+        {
+          "title": "Wykrywanie upadków",
+          "text": [
+            "Apple Watch Series 4 potrafi wykryć upadek i wysłać alert do służb ratunkowych, jeśli nie odpowiesz w ciągu minuty. Funkcja ta jest dostępna tylko dla użytkowników powyżej 65 roku życia."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Більший дисплей",
+          "text": [
+            "Apple Watch Series 4 має більший дисплей, який дозволяє бачити більше інформації з першого погляду. Він більш ніж на 30% більший за Series 3 і має вигнуті краї від краю до краю."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя. Ця функція доступна лише в окремих країнах і регіонах."
+          ]
+        },
+        {
+          "title": "Виявлення падінь",
+          "text": [
+            "Apple Watch Series 4 може виявити падіння та надіслати сповіщення до екстрених служб, якщо ви не відповісте протягом хвилини. Функція доступна лише для користувачів віком від 65 років."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' OLED",
     "resolution": "368x448",
     "processor": "Apple S4",
@@ -1289,26 +2979,91 @@
       "/img/accessories/apple-watch-series-4/space-gray/01.webp",
       "/img/accessories/apple-watch-series-4/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Larger display",
-        "text": [
-          "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
-        ]
-      },
-      {
-        "title": "Fall detection",
-        "text": [
-          "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Larger display",
+          "text": [
+            "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
+          ]
+        },
+        {
+          "title": "Fall detection",
+          "text": [
+            "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Suurempi näyttö",
+          "text": [
+            "Apple Watch Series 4:ssa on suurempi näyttö, jonka ansiosta näet enemmän tietoa yhdellä silmäyksellä. Näyttö on yli 30 % suurempi kuin Series 3 -mallissa ja ulottuu reunasta reunaan kaarevin kulmin."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi. Ominaisuus on saatavilla vain tietyissä maissa ja alueilla."
+          ]
+        },
+        {
+          "title": "Kaatumisen tunnistus",
+          "text": [
+            "Apple Watch Series 4 tunnistaa kaatumisen ja voi lähettää hälytyksen hätäpalveluihin, jos et reagoi minuutin kuluessa. Ominaisuus on käytettävissä vain yli 65-vuotiaille käyttäjille."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Większy wyświetlacz",
+          "text": [
+            "Apple Watch Series 4 ma większy wyświetlacz, który pozwala zobaczyć więcej informacji na pierwszy rzut oka. Jest on o ponad 30% większy niż w Series 3 i sięga od krawędzi do krawędzi z zaokrąglonymi rogami."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka. Funkcja ta jest dostępna tylko w wybranych krajach i regionach."
+          ]
+        },
+        {
+          "title": "Wykrywanie upadków",
+          "text": [
+            "Apple Watch Series 4 potrafi wykryć upadek i wysłać alert do służb ratunkowych, jeśli nie odpowiesz w ciągu minuty. Funkcja ta jest dostępna tylko dla użytkowników powyżej 65 roku życia."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Більший дисплей",
+          "text": [
+            "Apple Watch Series 4 має більший дисплей, який дозволяє бачити більше інформації з першого погляду. Він більш ніж на 30% більший за Series 3 і має вигнуті краї від краю до краю."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя. Ця функція доступна лише в окремих країнах і регіонах."
+          ]
+        },
+        {
+          "title": "Виявлення падінь",
+          "text": [
+            "Apple Watch Series 4 може виявити падіння та надіслати сповіщення до екстрених служб, якщо ви не відповісте протягом хвилини. Функція доступна лише для користувачів віком від 65 років."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S4",
@@ -1337,26 +3092,91 @@
       "/img/accessories/apple-watch-series-4/space-gray/01.webp",
       "/img/accessories/apple-watch-series-4/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Larger display",
-        "text": [
-          "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
-        ]
-      },
-      {
-        "title": "ECG app",
-        "text": [
-          "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
-        ]
-      },
-      {
-        "title": "Fall detection",
-        "text": [
-          "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Larger display",
+          "text": [
+            "The Apple Watch Series 4 has a larger display that lets you see more information at a glance. The display is over 30% larger than the Series 3 and is edge-to-edge with curved corners."
+          ]
+        },
+        {
+          "title": "ECG app",
+          "text": [
+            "With the ECG app, you can take an electrocardiogram right from your wrist. This feature is only available in certain countries and regions."
+          ]
+        },
+        {
+          "title": "Fall detection",
+          "text": [
+            "The Apple Watch Series 4 can detect when you fall and can send an alert to emergency services if you don't respond within a minute. This feature is only available for users over 65 years old."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Suurempi näyttö",
+          "text": [
+            "Apple Watch Series 4:ssa on suurempi näyttö, jonka ansiosta näet enemmän tietoa yhdellä silmäyksellä. Näyttö on yli 30 % suurempi kuin Series 3 -mallissa ja ulottuu reunasta reunaan kaarevin kulmin."
+          ]
+        },
+        {
+          "title": "EKG-sovellus",
+          "text": [
+            "EKG-sovelluksella voit ottaa sydänsähkökäyrän suoraan ranteestasi. Ominaisuus on saatavilla vain tietyissä maissa ja alueilla."
+          ]
+        },
+        {
+          "title": "Kaatumisen tunnistus",
+          "text": [
+            "Apple Watch Series 4 tunnistaa kaatumisen ja voi lähettää hälytyksen hätäpalveluihin, jos et reagoi minuutin kuluessa. Ominaisuus on käytettävissä vain yli 65-vuotiaille käyttäjille."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Większy wyświetlacz",
+          "text": [
+            "Apple Watch Series 4 ma większy wyświetlacz, który pozwala zobaczyć więcej informacji na pierwszy rzut oka. Jest on o ponad 30% większy niż w Series 3 i sięga od krawędzi do krawędzi z zaokrąglonymi rogami."
+          ]
+        },
+        {
+          "title": "Aplikacja EKG",
+          "text": [
+            "Dzięki aplikacji EKG możesz wykonać elektrokardiogram bezpośrednio z nadgarstka. Funkcja ta jest dostępna tylko w wybranych krajach i regionach."
+          ]
+        },
+        {
+          "title": "Wykrywanie upadków",
+          "text": [
+            "Apple Watch Series 4 potrafi wykryć upadek i wysłać alert do służb ratunkowych, jeśli nie odpowiesz w ciągu minuty. Funkcja ta jest dostępna tylko dla użytkowników powyżej 65 roku życia."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Більший дисплей",
+          "text": [
+            "Apple Watch Series 4 має більший дисплей, який дозволяє бачити більше інформації з першого погляду. Він більш ніж на 30% більший за Series 3 і має вигнуті краї від краю до краю."
+          ]
+        },
+        {
+          "title": "Застосунок ЕКГ",
+          "text": [
+            "За допомогою застосунку ЕКГ ви можете зняти електрокардіограму прямо з запʼястя. Ця функція доступна лише в окремих країнах і регіонах."
+          ]
+        },
+        {
+          "title": "Виявлення падінь",
+          "text": [
+            "Apple Watch Series 4 може виявити падіння та надіслати сповіщення до екстрених служб, якщо ви не відповісте протягом хвилини. Функція доступна лише для користувачів віком від 65 років."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' OLED",
     "resolution": "368x448",
     "processor": "Apple S4",
@@ -1385,26 +3205,91 @@
       "/img/accessories/apple-watch-se/silver/01.webp",
       "/img/accessories/apple-watch-se/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Retina display",
-        "text": [
-          "The Apple Watch SE features a Retina display that provides clear and vibrant visuals for easy readability."
-        ]
-      },
-      {
-        "title": "Family Setup",
-        "text": [
-          "With Family Setup, you can pair your Apple Watch SE with a family member's iPhone, so you can stay connected even without owning an iPhone yourself."
-        ]
-      },
-      {
-        "title": "Fitness tracking",
-        "text": [
-          "The Apple Watch SE offers comprehensive fitness tracking features, including activity tracking, heart rate monitoring, and built-in GPS for tracking your outdoor workouts."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Retina display",
+          "text": [
+            "The Apple Watch SE features a Retina display that provides clear and vibrant visuals for easy readability."
+          ]
+        },
+        {
+          "title": "Family Setup",
+          "text": [
+            "With Family Setup, you can pair your Apple Watch SE with a family member's iPhone, so you can stay connected even without owning an iPhone yourself."
+          ]
+        },
+        {
+          "title": "Fitness tracking",
+          "text": [
+            "The Apple Watch SE offers comprehensive fitness tracking features, including activity tracking, heart rate monitoring, and built-in GPS for tracking your outdoor workouts."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Retina-näyttö",
+          "text": [
+            "Apple Watch SE:ssa on Retina-näyttö, joka tarjoaa selkeän ja kirkkaan kuvan helppoa luettavuutta varten."
+          ]
+        },
+        {
+          "title": "Perhejako",
+          "text": [
+            "Perhejako-toiminnon avulla voit liittää Apple Watch SE -kellon perheenjäsenen iPhoneen, jotta voit pysyä yhteydessä myös ilman omaa iPhonea."
+          ]
+        },
+        {
+          "title": "Kuntoilun seuranta",
+          "text": [
+            "Apple Watch SE tarjoaa monipuoliset kuntoilun seurantaominaisuudet, kuten aktiivisuuden seurannan, sykkeen mittauksen ja sisäänrakennetun GPS:n ulkotreenejä varten."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Wyświetlacz Retina",
+          "text": [
+            "Apple Watch SE posiada wyświetlacz Retina, który zapewnia wyraźny i żywy obraz ułatwiający odczyt informacji."
+          ]
+        },
+        {
+          "title": "Konfiguracja rodzinna",
+          "text": [
+            "Dzięki funkcji Konfiguracja rodzinna możesz sparować Apple Watch SE z iPhonem członka rodziny i pozostać w kontakcie nawet bez posiadania własnego iPhone’a."
+          ]
+        },
+        {
+          "title": "Śledzenie aktywności fizycznej",
+          "text": [
+            "Apple Watch SE oferuje rozbudowane funkcje śledzenia aktywności fizycznej, w tym monitorowanie aktywności, pomiar tętna oraz wbudowany GPS do rejestrowania treningów na świeżym powietrzu."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Дисплей Retina",
+          "text": [
+            "Apple Watch SE оснащений дисплеєм Retina, який забезпечує чітке та яскраве зображення для зручного читання."
+          ]
+        },
+        {
+          "title": "Сімейне налаштування",
+          "text": [
+            "Завдяки функції «Сімейне налаштування» ви можете підʼєднати Apple Watch SE до iPhone члена родини та залишатися на звʼязку навіть без власного iPhone."
+          ]
+        },
+        {
+          "title": "Відстеження фізичної активності",
+          "text": [
+            "Apple Watch SE пропонує комплексні функції відстеження фізичної активності, включно з обліком активності, вимірюванням пульсу та вбудованим GPS для тренувань на відкритому повітрі."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S5",
@@ -1433,26 +3318,91 @@
       "/img/accessories/apple-watch-se/silver/01.webp",
       "/img/accessories/apple-watch-se/silver/02.webp"
     ],
-    "description": [
-      {
-        "title": "Retina display",
-        "text": [
-          "The Apple Watch SE features a Retina display that provides clear and vibrant visuals for easy readability."
-        ]
-      },
-      {
-        "title": "Family Setup",
-        "text": [
-          "With Family Setup, you can pair your Apple Watch SE with a family member's iPhone, so you can stay connected even without owning an iPhone yourself."
-        ]
-      },
-      {
-        "title": "Fitness tracking",
-        "text": [
-          "The Apple Watch SE offers comprehensive fitness tracking features, including activity tracking, heart rate monitoring, and built-in GPS for tracking your outdoor workouts."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Retina display",
+          "text": [
+            "The Apple Watch SE features a Retina display that provides clear and vibrant visuals for easy readability."
+          ]
+        },
+        {
+          "title": "Family Setup",
+          "text": [
+            "With Family Setup, you can pair your Apple Watch SE with a family member's iPhone, so you can stay connected even without owning an iPhone yourself."
+          ]
+        },
+        {
+          "title": "Fitness tracking",
+          "text": [
+            "The Apple Watch SE offers comprehensive fitness tracking features, including activity tracking, heart rate monitoring, and built-in GPS for tracking your outdoor workouts."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Retina-näyttö",
+          "text": [
+            "Apple Watch SE:ssa on Retina-näyttö, joka tarjoaa selkeän ja kirkkaan kuvan helppoa luettavuutta varten."
+          ]
+        },
+        {
+          "title": "Perhejako",
+          "text": [
+            "Perhejako-toiminnon avulla voit liittää Apple Watch SE -kellon perheenjäsenen iPhoneen, jotta voit pysyä yhteydessä myös ilman omaa iPhonea."
+          ]
+        },
+        {
+          "title": "Kuntoilun seuranta",
+          "text": [
+            "Apple Watch SE tarjoaa monipuoliset kuntoilun seurantaominaisuudet, kuten aktiivisuuden seurannan, sykkeen mittauksen ja sisäänrakennetun GPS:n ulkotreenejä varten."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Wyświetlacz Retina",
+          "text": [
+            "Apple Watch SE posiada wyświetlacz Retina, który zapewnia wyraźny i żywy obraz ułatwiający odczyt informacji."
+          ]
+        },
+        {
+          "title": "Konfiguracja rodzinna",
+          "text": [
+            "Dzięki funkcji Konfiguracja rodzinna możesz sparować Apple Watch SE z iPhonem członka rodziny i pozostać w kontakcie nawet bez posiadania własnego iPhone’a."
+          ]
+        },
+        {
+          "title": "Śledzenie aktywności fizycznej",
+          "text": [
+            "Apple Watch SE oferuje rozbudowane funkcje śledzenia aktywności fizycznej, w tym monitorowanie aktywności, pomiar tętna oraz wbudowany GPS do rejestrowania treningów na świeżym powietrzu."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Дисплей Retina",
+          "text": [
+            "Apple Watch SE оснащений дисплеєм Retina, який забезпечує чітке та яскраве зображення для зручного читання."
+          ]
+        },
+        {
+          "title": "Сімейне налаштування",
+          "text": [
+            "Завдяки функції «Сімейне налаштування» ви можете підʼєднати Apple Watch SE до iPhone члена родини та залишатися на звʼязку навіть без власного iPhone."
+          ]
+        },
+        {
+          "title": "Відстеження фізичної активності",
+          "text": [
+            "Apple Watch SE пропонує комплексні функції відстеження фізичної активності, включно з обліком активності, вимірюванням пульсу та вбудованим GPS для тренувань на відкритому повітрі."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' OLED",
     "resolution": "368x448",
     "processor": "Apple S5",
@@ -1481,26 +3431,91 @@
       "/img/accessories/apple-watch-se/gold/01.webp",
       "/img/accessories/apple-watch-se/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Retina display",
-        "text": [
-          "The Apple Watch SE features a stunning Retina display that is always on, so you can easily see the time and important information without having to raise your wrist."
-        ]
-      },
-      {
-        "title": "Health and fitness tracking",
-        "text": [
-          "The Apple Watch SE has all the features you need to stay healthy and active, including heart rate monitoring, activity tracking, and sleep tracking. It also has built-in GPS so you can track your workouts and outdoor activities."
-        ]
-      },
-      {
-        "title": "Stay connected",
-        "text": [
-          "With cellular and Wi-Fi connectivity, you can stay connected wherever you go. You can make and receive calls, send texts, and stream music directly from your wrist."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Retina display",
+          "text": [
+            "The Apple Watch SE features a stunning Retina display that is always on, so you can easily see the time and important information without having to raise your wrist."
+          ]
+        },
+        {
+          "title": "Health and fitness tracking",
+          "text": [
+            "The Apple Watch SE has all the features you need to stay healthy and active, including heart rate monitoring, activity tracking, and sleep tracking. It also has built-in GPS so you can track your workouts and outdoor activities."
+          ]
+        },
+        {
+          "title": "Stay connected",
+          "text": [
+            "With cellular and Wi-Fi connectivity, you can stay connected wherever you go. You can make and receive calls, send texts, and stream music directly from your wrist."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Retina-näyttö",
+          "text": [
+            "Apple Watch SE:ssa on upea aina päällä oleva Retina-näyttö, jonka ansiosta näet ajan ja tärkeät tiedot helposti ilman, että nostat rannettasi."
+          ]
+        },
+        {
+          "title": "Terveyden ja kunnon seuranta",
+          "text": [
+            "Apple Watch SE tarjoaa kaikki ominaisuudet terveenä ja aktiivisena pysymiseen, mukaan lukien sykkeen mittauksen, aktiivisuuden seurannan ja unen seurannan. Sisäänrakennettu GPS mahdollistaa harjoitusten ja ulkoaktiviteettien seurannan."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä",
+          "text": [
+            "Mobiili- ja Wi-Fi-yhteyksien ansiosta pysyt yhteydessä missä tahansa. Voit soittaa ja vastaanottaa puheluita, lähettää viestejä ja suoratoistaa musiikkia suoraan ranteestasi."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Wyświetlacz Retina",
+          "text": [
+            "Apple Watch SE posiada zachwycający wyświetlacz Retina, który jest zawsze włączony, dzięki czemu możesz łatwo sprawdzić godzinę i ważne informacje bez podnoszenia nadgarstka."
+          ]
+        },
+        {
+          "title": "Monitorowanie zdrowia i aktywności",
+          "text": [
+            "Apple Watch SE oferuje wszystkie funkcje potrzebne do dbania o zdrowie i kondycję, w tym monitorowanie tętna, aktywności oraz snu. Wbudowany GPS umożliwia śledzenie treningów i aktywności na świeżym powietrzu."
+          ]
+        },
+        {
+          "title": "Pozostań w kontakcie",
+          "text": [
+            "Dzięki łączności komórkowej i Wi-Fi możesz pozostać w kontakcie, gdziekolwiek jesteś. Możesz wykonywać i odbierać połączenia, wysyłać wiadomości oraz strumieniować muzykę bezpośrednio z nadgarstka."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Дисплей Retina",
+          "text": [
+            "Apple Watch SE оснащений приголомшливим завжди активним дисплеєм Retina, завдяки якому ви легко побачите час і важливу інформацію без підняття запʼястя."
+          ]
+        },
+        {
+          "title": "Відстеження здоровʼя та фізичної форми",
+          "text": [
+            "Apple Watch SE має всі необхідні функції для підтримки здоровʼя та активного способу життя, зокрема вимірювання пульсу, відстеження активності та сну. Вбудований GPS дозволяє відстежувати тренування та активності на відкритому повітрі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку",
+          "text": [
+            "Завдяки стільниковому звʼязку та Wi-Fi ви можете залишатися на звʼязку будь-де. Ви можете здійснювати й приймати дзвінки, надсилати повідомлення та слухати музику прямо з запʼястя."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S5",
@@ -1529,26 +3544,91 @@
       "/img/accessories/apple-watch-se/gold/01.webp",
       "/img/accessories/apple-watch-se/gold/02.webp"
     ],
-    "description": [
-      {
-        "title": "Retina display",
-        "text": [
-          "The Apple Watch SE features a stunning Retina display that is always on, so you can easily see the time and important information without lifting your wrist."
-        ]
-      },
-      {
-        "title": "Track your daily activity",
-        "text": [
-          "The Apple Watch SE tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
-        ]
-      },
-      {
-        "title": "Stay connected",
-        "text": [
-          "The Apple Watch SE keeps you connected with the people and information you care about most. With cellular service, you can make and receive calls and texts, stream music, and use Siri, all without your iPhone."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Retina display",
+          "text": [
+            "The Apple Watch SE features a stunning Retina display that is always on, so you can easily see the time and important information without lifting your wrist."
+          ]
+        },
+        {
+          "title": "Track your daily activity",
+          "text": [
+            "The Apple Watch SE tracks your daily activity including workouts, steps taken, and calories burned. It also has a built-in GPS to track your runs, walks, and hikes."
+          ]
+        },
+        {
+          "title": "Stay connected",
+          "text": [
+            "The Apple Watch SE keeps you connected with the people and information you care about most. With cellular service, you can make and receive calls and texts, stream music, and use Siri, all without your iPhone."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Retina-näyttö",
+          "text": [
+            "Apple Watch SE:ssa on upea aina päällä oleva Retina-näyttö, jonka ansiosta näet ajan ja tärkeät tiedot helposti ilman, että nostat rannettasi."
+          ]
+        },
+        {
+          "title": "Seuraa päivittäistä aktiivisuuttasi",
+          "text": [
+            "Apple Watch SE seuraa päivittäistä aktiivisuuttasi, mukaan lukien harjoitukset, askeleet ja kulutetut kalorit. Sisäänrakennettu GPS seuraa juoksuja, kävelyjä ja vaelluksia."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä",
+          "text": [
+            "Apple Watch SE pitää sinut yhteydessä tärkeimpiin ihmisiin ja tietoihin. Mobiiliyhteyden ansiosta voit soittaa ja vastaanottaa puheluita ja viestejä, suoratoistaa musiikkia ja käyttää Siriä ilman iPhonea."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Wyświetlacz Retina",
+          "text": [
+            "Apple Watch SE posiada zachwycający wyświetlacz Retina, który jest zawsze włączony, dzięki czemu możesz łatwo sprawdzić godzinę i ważne informacje bez podnoszenia nadgarstka."
+          ]
+        },
+        {
+          "title": "Śledź codzienną aktywność",
+          "text": [
+            "Apple Watch SE monitoruje Twoją codzienną aktywność, w tym treningi, liczbę kroków i spalone kalorie. Wbudowany GPS umożliwia śledzenie biegów, spacerów i wędrówek."
+          ]
+        },
+        {
+          "title": "Pozostań w kontakcie",
+          "text": [
+            "Apple Watch SE pozwala pozostać w kontakcie z najważniejszymi osobami i informacjami. Dzięki łączności komórkowej możesz wykonywać i odbierać połączenia oraz wiadomości, strumieniować muzykę i korzystać z Siri bez iPhone’a."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Дисплей Retina",
+          "text": [
+            "Apple Watch SE оснащений приголомшливим завжди активним дисплеєм Retina, завдяки якому ви легко побачите час і важливу інформацію без підняття запʼястя."
+          ]
+        },
+        {
+          "title": "Відстежуйте щоденну активність",
+          "text": [
+            "Apple Watch SE відстежує вашу щоденну активність, зокрема тренування, кількість кроків і спалені калорії. Вбудований GPS дозволяє відстежувати пробіжки, прогулянки та походи."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку",
+          "text": [
+            "Apple Watch SE допомагає залишатися на звʼязку з найважливішими людьми та інформацією. Завдяки стільниковому звʼязку ви можете здійснювати й приймати дзвінки та повідомлення, слухати музику й користуватися Siri без iPhone."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' OLED",
     "resolution": "368x448",
     "processor": "Apple S5",
@@ -1577,26 +3657,91 @@
       "/img/accessories/apple-watch-se/space-gray/01.webp",
       "/img/accessories/apple-watch-se/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Retina display",
-        "text": [
-          "The Apple Watch SE features a stunning Retina display that is always on, providing clear and vibrant visuals for easy readability."
-        ]
-      },
-      {
-        "title": "Fitness and health tracking",
-        "text": [
-          "The Apple Watch SE helps you stay active and monitors your health with features like heart rate monitoring, activity tracking, and built-in GPS for tracking your outdoor workouts."
-        ]
-      },
-      {
-        "title": "Stay connected",
-        "text": [
-          "With cellular and Wi-Fi connectivity, you can stay connected on the go. Make and receive calls, send messages, stream music, and access Siri right from your wrist."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Retina display",
+          "text": [
+            "The Apple Watch SE features a stunning Retina display that is always on, providing clear and vibrant visuals for easy readability."
+          ]
+        },
+        {
+          "title": "Fitness and health tracking",
+          "text": [
+            "The Apple Watch SE helps you stay active and monitors your health with features like heart rate monitoring, activity tracking, and built-in GPS for tracking your outdoor workouts."
+          ]
+        },
+        {
+          "title": "Stay connected",
+          "text": [
+            "With cellular and Wi-Fi connectivity, you can stay connected on the go. Make and receive calls, send messages, stream music, and access Siri right from your wrist."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Retina-näyttö",
+          "text": [
+            "Apple Watch SE:ssa on upea aina päällä oleva Retina-näyttö, joka tarjoaa selkeän ja kirkkaan kuvan helppoa luettavuutta varten."
+          ]
+        },
+        {
+          "title": "Kunnon ja terveyden seuranta",
+          "text": [
+            "Apple Watch SE auttaa pysymään aktiivisena ja seuraa terveyttäsi ominaisuuksilla, kuten sykkeen mittauksella, aktiivisuuden seurannalla ja sisäänrakennetulla GPS:llä ulkotreenejä varten."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä",
+          "text": [
+            "Mobiili- ja Wi-Fi-yhteyksien ansiosta pysyt yhteydessä liikkeellä ollessasi. Voit soittaa ja vastaanottaa puheluita, lähettää viestejä, suoratoistaa musiikkia ja käyttää Siriä suoraan ranteestasi."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Wyświetlacz Retina",
+          "text": [
+            "Apple Watch SE posiada zachwycający, zawsze włączony wyświetlacz Retina, który zapewnia wyraźny i żywy obraz ułatwiający odczyt informacji."
+          ]
+        },
+        {
+          "title": "Monitorowanie kondycji i zdrowia",
+          "text": [
+            "Apple Watch SE pomaga zachować aktywność i monitoruje zdrowie dzięki funkcjom takim jak pomiar tętna, śledzenie aktywności oraz wbudowany GPS do rejestrowania treningów na świeżym powietrzu."
+          ]
+        },
+        {
+          "title": "Pozostań w kontakcie",
+          "text": [
+            "Dzięki łączności komórkowej i Wi-Fi możesz pozostać w kontakcie w podróży. Wykonuj i odbieraj połączenia, wysyłaj wiadomości, strumieniuj muzykę i korzystaj z Siri bezpośrednio z nadgarstka."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Дисплей Retina",
+          "text": [
+            "Apple Watch SE оснащений приголомшливим завжди активним дисплеєм Retina, який забезпечує чітке та яскраве зображення для зручного читання."
+          ]
+        },
+        {
+          "title": "Відстеження фізичної форми та здоровʼя",
+          "text": [
+            "Apple Watch SE допомагає залишатися активними та стежить за здоровʼям завдяки таким функціям, як вимірювання пульсу, відстеження активності та вбудований GPS для тренувань на відкритому повітрі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку",
+          "text": [
+            "Завдяки стільниковому звʼязку та Wi-Fi ви можете залишатися на звʼязку в дорозі. Здійснюйте та приймайте дзвінки, надсилайте повідомлення, слухайте музику та користуйтеся Siri прямо з запʼястя."
+          ]
+        }
+      ]
+    },
     "screen": "1.57' OLED",
     "resolution": "324x394",
     "processor": "Apple S5",
@@ -1625,26 +3770,91 @@
       "/img/accessories/apple-watch-se/space-gray/01.webp",
       "/img/accessories/apple-watch-se/space-gray/02.webp"
     ],
-    "description": [
-      {
-        "title": "Retina display",
-        "text": [
-          "The Apple Watch SE features a stunning Retina display that is always on, providing clear and vibrant visuals for easy readability."
-        ]
-      },
-      {
-        "title": "Fitness and health tracking",
-        "text": [
-          "The Apple Watch SE helps you stay active and monitors your health with features like heart rate monitoring, activity tracking, and built-in GPS for tracking your outdoor workouts."
-        ]
-      },
-      {
-        "title": "Stay connected",
-        "text": [
-          "With cellular and Wi-Fi connectivity, you can stay connected on the go. Make and receive calls, send messages, stream music, and access Siri right from your wrist."
-        ]
-      }
-    ],
+    "description": {
+      "en": [
+        {
+          "title": "Retina display",
+          "text": [
+            "The Apple Watch SE features a stunning Retina display that is always on, providing clear and vibrant visuals for easy readability."
+          ]
+        },
+        {
+          "title": "Fitness and health tracking",
+          "text": [
+            "The Apple Watch SE helps you stay active and monitors your health with features like heart rate monitoring, activity tracking, and built-in GPS for tracking your outdoor workouts."
+          ]
+        },
+        {
+          "title": "Stay connected",
+          "text": [
+            "With cellular and Wi-Fi connectivity, you can stay connected on the go. Make and receive calls, send messages, stream music, and access Siri right from your wrist."
+          ]
+        }
+      ],
+
+      "fi": [
+        {
+          "title": "Retina-näyttö",
+          "text": [
+            "Apple Watch SE:ssa on upea aina päällä oleva Retina-näyttö, joka tarjoaa selkeän ja kirkkaan kuvan helppoa luettavuutta varten."
+          ]
+        },
+        {
+          "title": "Kunnon ja terveyden seuranta",
+          "text": [
+            "Apple Watch SE auttaa pysymään aktiivisena ja seuraa terveyttäsi ominaisuuksilla, kuten sykkeen mittauksella, aktiivisuuden seurannalla ja sisäänrakennetulla GPS:llä ulkotreenejä varten."
+          ]
+        },
+        {
+          "title": "Pysy yhteydessä",
+          "text": [
+            "Mobiili- ja Wi-Fi-yhteyksien ansiosta pysyt yhteydessä liikkeellä ollessasi. Voit soittaa ja vastaanottaa puheluita, lähettää viestejä, suoratoistaa musiikkia ja käyttää Siriä suoraan ranteestasi."
+          ]
+        }
+      ],
+
+      "pl": [
+        {
+          "title": "Wyświetlacz Retina",
+          "text": [
+            "Apple Watch SE posiada zachwycający, zawsze włączony wyświetlacz Retina, który zapewnia wyraźny i żywy obraz ułatwiający odczyt informacji."
+          ]
+        },
+        {
+          "title": "Monitorowanie kondycji i zdrowia",
+          "text": [
+            "Apple Watch SE pomaga zachować aktywność i monitoruje zdrowie dzięki funkcjom takim jak pomiar tętna, śledzenie aktywności oraz wbudowany GPS do rejestrowania treningów na świeżym powietrzu."
+          ]
+        },
+        {
+          "title": "Pozostań w kontakcie",
+          "text": [
+            "Dzięki łączności komórkowej i Wi-Fi możesz pozostać w kontakcie w podróży. Wykonuj i odbieraj połączenia, wysyłaj wiadomości, strumieniuj muzykę i korzystaj z Siri bezpośrednio z nadgarstka."
+          ]
+        }
+      ],
+
+      "uk": [
+        {
+          "title": "Дисплей Retina",
+          "text": [
+            "Apple Watch SE оснащений приголомшливим завжди активним дисплеєм Retina, який забезпечує чітке та яскраве зображення для зручного читання."
+          ]
+        },
+        {
+          "title": "Відстеження фізичної форми та здоровʼя",
+          "text": [
+            "Apple Watch SE допомагає залишатися активними та стежить за здоровʼям завдяки таким функціям, як вимірювання пульсу, відстеження активності та вбудований GPS для тренувань на відкритому повітрі."
+          ]
+        },
+        {
+          "title": "Залишайтеся на звʼязку",
+          "text": [
+            "Завдяки стільниковому звʼязку та Wi-Fi ви можете залишатися на звʼязку в дорозі. Здійснюйте та приймайте дзвінки, надсилайте повідомлення, слухайте музику та користуйтеся Siri прямо з запʼястя."
+          ]
+        }
+      ]
+    },
     "screen": "1.78' OLED",
     "resolution": "368x448",
     "processor": "Apple S5",
