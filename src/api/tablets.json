@@ -1,5 +1,6 @@
 [
   {
+    "productId": "850809",
     "id": "apple-ipad-pro-11-2021-128gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -48,6 +49,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "739651",
     "id": "apple-ipad-pro-11-2021-256gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -96,6 +98,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "913789",
     "id": "apple-ipad-pro-11-2021-512gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -144,6 +147,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "673870",
     "id": "apple-ipad-pro-11-2021-1tb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -192,6 +196,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "834951",
     "id": "apple-ipad-pro-11-2021-2tb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -240,6 +245,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "344671",
     "id": "apple-ipad-pro-11-2021-128gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -288,6 +294,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "948623",
     "id": "apple-ipad-pro-11-2021-256gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -336,6 +343,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "968064",
     "id": "apple-ipad-pro-11-2021-512gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -384,6 +392,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "682230",
     "id": "apple-ipad-pro-11-2021-1tb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -432,6 +441,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "927088",
     "id": "apple-ipad-pro-11-2021-2tb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-pro-11-2021",
@@ -480,6 +490,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "516878",
     "id": "apple-ipad-air-4th-gen-256gb-rose-gold",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -534,6 +545,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "413326",
     "id": "apple-ipad-air-4th-gen-64gb-rose-gold",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -588,6 +600,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "455292",
     "id": "apple-ipad-air-4th-gen-64gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -642,6 +655,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "253012",
     "id": "apple-ipad-air-4th-gen-256gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -696,6 +710,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "535074",
     "id": "apple-ipad-air-4th-gen-256gb-green",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -750,6 +765,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "710357",
     "id": "apple-ipad-air-4th-gen-64gb-green",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -804,6 +820,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "651134",
     "id": "apple-ipad-air-4th-gen-64gb-sky-blue",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -858,6 +875,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "856933",
     "id": "apple-ipad-air-4th-gen-256gb-sky-blue",
     "category": "tablets",
     "namespaceId": "apple-ipad-air-4th-gen",
@@ -912,6 +930,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "809843",
     "id": "apple-ipad-mini-6th-gen-64gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-6th-gen",
@@ -964,6 +983,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "530589",
     "id": "apple-ipad-mini-6th-gen-256gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-6th-gen",
@@ -1016,6 +1036,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "184079",
     "id": "apple-ipad-mini-6th-gen-256gb-starlight",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-6th-gen",
@@ -1068,6 +1089,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "204385",
     "id": "apple-ipad-mini-6th-gen-64gb-starlight",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-6th-gen",
@@ -1120,6 +1142,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "857179",
     "id": "apple-ipad-mini-6th-gen-64gb-pink",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-6th-gen",
@@ -1172,6 +1195,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "944921",
     "id": "apple-ipad-mini-6th-gen-256gb-pink",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-6th-gen",
@@ -1224,6 +1248,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "586905",
     "id": "apple-ipad-10-2-2020-128gb-gold",
     "category": "tablets",
     "namespaceId": "apple-ipad-10-2-2020",
@@ -1277,6 +1302,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "213762",
     "id": "apple-ipad-10-2-2020-32gb-gold",
     "category": "tablets",
     "namespaceId": "apple-ipad-10-2-2020",
@@ -1330,6 +1356,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "405650",
     "id": "apple-ipad-10-2-2020-32gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-10-2-2020",
@@ -1383,6 +1410,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "832880",
     "id": "apple-ipad-10-2-2020-128gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-10-2-2020",
@@ -1436,6 +1464,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "518377",
     "id": "apple-ipad-10-2-2020-128gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-10-2-2020",
@@ -1489,6 +1518,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "185107",
     "id": "apple-ipad-10-2-2020-32gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-10-2-2020",
@@ -1542,6 +1572,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "326982",
     "id": "apple-ipad-mini-5th-gen-256gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-5th-gen",
@@ -1593,6 +1624,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "631816",
     "id": "apple-ipad-mini-5th-gen-64gb-silver",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-5th-gen",
@@ -1644,6 +1676,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "703383",
     "id": "apple-ipad-mini-5th-gen-64gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-5th-gen",
@@ -1695,6 +1728,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "197484",
     "id": "apple-ipad-mini-5th-gen-256gb-spacegray",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-5th-gen",
@@ -1746,6 +1780,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "107938",
     "id": "apple-ipad-mini-5th-gen-256gb-gold",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-5th-gen",
@@ -1797,6 +1832,7 @@
     "cell": ["Not applicable"]
   },
   {
+    "productId": "700403",
     "id": "apple-ipad-mini-5th-gen-64gb-gold",
     "category": "tablets",
     "namespaceId": "apple-ipad-mini-5th-gen",

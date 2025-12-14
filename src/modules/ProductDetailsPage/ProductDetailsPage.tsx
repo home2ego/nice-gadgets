@@ -189,6 +189,10 @@ const ProductDetailsPage = () => {
                 { key: "RAM", value: product.ram },
               ]}
             />
+
+            <p className={clsx(styles.overview__id, "text--sm")}>
+              ID: {product.productId}
+            </p>
           </div>
         </section>
 

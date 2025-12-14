@@ -1,4 +1,5 @@
 export interface ProductDetails {
+  productId: string;
   id: string;
   category: "phones" | "tablets" | "accessories";
   namespaceId: string;

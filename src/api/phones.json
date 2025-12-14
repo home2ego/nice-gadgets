@@ -1,5 +1,6 @@
 [
   {
+    "productId": "837761",
     "id": "apple-iphone-11-128gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -54,8 +55,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "300186",
     "id": "apple-iphone-11-128gb-green",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -110,8 +111,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "280917",
     "id": "apple-iphone-11-128gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -166,8 +167,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "194120",
     "id": "apple-iphone-11-128gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -222,8 +223,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "127265",
     "id": "apple-iphone-11-128gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -278,8 +279,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "360966",
     "id": "apple-iphone-11-128gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -334,8 +335,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "954894",
     "id": "apple-iphone-11-256gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -390,8 +391,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "734797",
     "id": "apple-iphone-11-256gb-green",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -446,8 +447,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "444037",
     "id": "apple-iphone-11-256gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -502,8 +503,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "718408",
     "id": "apple-iphone-11-256gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -558,8 +559,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "545903",
     "id": "apple-iphone-11-256gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -614,8 +615,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "764875",
     "id": "apple-iphone-11-256gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -670,8 +671,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "147179",
     "id": "apple-iphone-11-64gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -726,8 +727,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "200845",
     "id": "apple-iphone-11-64gb-green",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -782,8 +783,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "792381",
     "id": "apple-iphone-11-64gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -838,8 +839,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "848616",
     "id": "apple-iphone-11-64gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -894,8 +895,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "769866",
     "id": "apple-iphone-11-64gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -950,8 +951,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "966490",
     "id": "apple-iphone-11-64gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-11",
@@ -1006,8 +1007,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "436943",
     "id": "apple-iphone-11-pro-256gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1058,8 +1059,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "361701",
     "id": "apple-iphone-11-pro-256gb-midnightgreen",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1111,8 +1112,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "491406",
     "id": "apple-iphone-11-pro-256gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1163,8 +1164,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "495682",
     "id": "apple-iphone-11-pro-256gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1215,8 +1216,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "481863",
     "id": "apple-iphone-11-pro-512gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1267,8 +1268,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "232693",
     "id": "apple-iphone-11-pro-512gb-midnightgreen",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1320,8 +1321,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "267650",
     "id": "apple-iphone-11-pro-512gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1372,8 +1373,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "336227",
     "id": "apple-iphone-11-pro-512gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1424,8 +1425,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "227766",
     "id": "apple-iphone-11-pro-64gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1476,8 +1477,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "733264",
     "id": "apple-iphone-11-pro-64gb-midnightgreen",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1529,8 +1530,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "265536",
     "id": "apple-iphone-11-pro-64gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1581,8 +1582,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "280279",
     "id": "apple-iphone-11-pro-64gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro",
@@ -1633,8 +1634,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "808921",
     "id": "apple-iphone-11-pro-max-256gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1685,8 +1686,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "615952",
     "id": "apple-iphone-11-pro-max-256gb-midnightgreen",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1737,8 +1738,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "225309",
     "id": "apple-iphone-11-pro-max-256gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1789,8 +1790,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "794532",
     "id": "apple-iphone-11-pro-max-256gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1841,8 +1842,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "266561",
     "id": "apple-iphone-11-pro-max-512gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1893,8 +1894,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "901970",
     "id": "apple-iphone-11-pro-max-512gb-midnightgreen",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1945,8 +1946,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "146630",
     "id": "apple-iphone-11-pro-max-512gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -1997,8 +1998,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "316972",
     "id": "apple-iphone-11-pro-max-512gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -2049,8 +2050,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "428166",
     "id": "apple-iphone-11-pro-max-64gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -2101,8 +2102,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "101026",
     "id": "apple-iphone-11-pro-max-64gb-midnightgreen",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -2153,8 +2154,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "774840",
     "id": "apple-iphone-11-pro-max-64gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -2205,8 +2206,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "310629",
     "id": "apple-iphone-11-pro-max-64gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-11-pro-max",
@@ -2257,8 +2258,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "717531",
     "id": "apple-iphone-7-32gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-7",
@@ -2311,8 +2312,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "339528",
     "id": "apple-iphone-7-32gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-7",
@@ -2365,8 +2366,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "153755",
     "id": "apple-iphone-7-32gb-rosegold",
     "category": "phones",
     "namespaceId": "apple-iphone-7",
@@ -2419,8 +2420,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "993244",
     "id": "apple-iphone-7-32gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-7",
@@ -2473,8 +2474,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "943599",
     "id": "apple-iphone-7-plus-32gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-7-plus",
@@ -2527,8 +2528,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "872591",
     "id": "apple-iphone-7-plus-32gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-7-plus",
@@ -2581,8 +2582,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "914710",
     "id": "apple-iphone-7-plus-32gb-rosegold",
     "category": "phones",
     "namespaceId": "apple-iphone-7-plus",
@@ -2635,8 +2636,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "153342",
     "id": "apple-iphone-7-plus-32gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-7-plus",
@@ -2689,8 +2690,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "808724",
     "id": "apple-iphone-8-64gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-8",
@@ -2741,8 +2742,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "248453",
     "id": "apple-iphone-8-64gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-8",
@@ -2793,8 +2794,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "426203",
     "id": "apple-iphone-8-64gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-8",
@@ -2845,8 +2846,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "529248",
     "id": "apple-iphone-xr-128gb-coral",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -2897,8 +2898,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "382810",
     "id": "apple-iphone-xr-128gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -2951,8 +2952,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "206231",
     "id": "apple-iphone-xr-128gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -3004,8 +3005,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "401647",
     "id": "apple-iphone-xr-128gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -3058,8 +3059,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "280939",
     "id": "apple-iphone-xr-64gb-coral",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -3110,8 +3111,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "539799",
     "id": "apple-iphone-xr-64gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -3164,8 +3165,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "556204",
     "id": "apple-iphone-xr-64gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -3217,8 +3218,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "786558",
     "id": "apple-iphone-xr-64gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-xr",
@@ -3271,8 +3272,8 @@
     "zoom": "Digital, 5x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "812508",
     "id": "apple-iphone-xs-256gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-xs",
@@ -3320,8 +3321,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "822941",
     "id": "apple-iphone-xs-256gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-xs",
@@ -3369,8 +3370,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "105172",
     "id": "apple-iphone-xs-64gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-xs",
@@ -3418,8 +3419,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "289412",
     "id": "apple-iphone-xs-64gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-xs",
@@ -3467,8 +3468,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "879644",
     "id": "apple-iphone-xs-max-256gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-xs-max",
@@ -3520,8 +3521,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "251108",
     "id": "apple-iphone-xs-max-256gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-xs-max",
@@ -3573,8 +3574,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "221867",
     "id": "apple-iphone-xs-max-256gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-xs-max",
@@ -3626,8 +3627,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "840513",
     "id": "apple-iphone-xs-max-64gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-xs-max",
@@ -3679,8 +3680,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "406428",
     "id": "apple-iphone-xs-max-64gb-silver",
     "category": "phones",
     "namespaceId": "apple-iphone-xs-max",
@@ -3732,8 +3733,8 @@
     "zoom": "Digital, 10x / Optical, 2x",
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
-
   {
+    "productId": "660214",
     "id": "apple-iphone-xs-max-64gb-spacegray",
     "category": "phones",
     "namespaceId": "apple-iphone-xs-max",
@@ -3786,6 +3787,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "583410",
     "id": "apple-iphone-14-128gb-midnight",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -3838,6 +3840,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "602776",
     "id": "apple-iphone-14-256gb-midnight",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -3890,6 +3893,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "455621",
     "id": "apple-iphone-14-512gb-midnight",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -3942,6 +3946,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "151013",
     "id": "apple-iphone-14-128gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -3994,6 +3999,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "481941",
     "id": "apple-iphone-14-256gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -4046,6 +4052,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "721764",
     "id": "apple-iphone-14-512gb-yellow",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -4098,6 +4105,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "486300",
     "id": "apple-iphone-14-128gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -4150,6 +4158,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "255375",
     "id": "apple-iphone-14-256gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -4202,6 +4211,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "255823",
     "id": "apple-iphone-14-512gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-14",
@@ -4254,6 +4264,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "369215",
     "id": "apple-iphone-14-pro-128gb-spaceblack",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -4302,6 +4313,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "592355",
     "id": "apple-iphone-14-pro-256gb-spaceblack",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -4350,6 +4362,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "338831",
     "id": "apple-iphone-14-pro-512gb-spaceblack",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -4398,6 +4411,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "462506",
     "id": "apple-iphone-14-pro-1tb-spaceblack",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -4446,6 +4460,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "718537",
     "id": "apple-iphone-12-64gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4497,6 +4512,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "280208",
     "id": "apple-iphone-12-128gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4548,6 +4564,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "689460",
     "id": "apple-iphone-12-256gb-black",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4599,6 +4616,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "582283",
     "id": "apple-iphone-12-64gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4650,6 +4668,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "467800",
     "id": "apple-iphone-12-128gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4701,6 +4720,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "712397",
     "id": "apple-iphone-12-256gb-purple",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4752,6 +4772,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "649428",
     "id": "apple-iphone-12-64gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4803,6 +4824,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "291325",
     "id": "apple-iphone-12-128gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4854,6 +4876,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "541858",
     "id": "apple-iphone-12-256gb-red",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4905,6 +4928,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "786454",
     "id": "apple-iphone-12-64gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -4956,6 +4980,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "772779",
     "id": "apple-iphone-12-128gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -5007,6 +5032,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "706976",
     "id": "apple-iphone-12-256gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-12",
@@ -5058,6 +5084,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE"]
   },
   {
+    "productId": "265560",
     "id": "apple-iphone-13-mini-64gb-midnight",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5109,6 +5136,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "606303",
     "id": "apple-iphone-13-mini-128gb-midnight",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5160,6 +5188,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "793015",
     "id": "apple-iphone-13-mini-256gb-midnight",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5211,6 +5240,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "437153",
     "id": "apple-iphone-13-mini-64gb-pink",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5262,6 +5292,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "514848",
     "id": "apple-iphone-13-mini-128gb-pink",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5313,6 +5344,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "803496",
     "id": "apple-iphone-13-mini-256gb-pink",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5364,6 +5396,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "640371",
     "id": "apple-iphone-13-mini-64gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5415,6 +5448,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "374444",
     "id": "apple-iphone-13-mini-128gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5466,6 +5500,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "237332",
     "id": "apple-iphone-13-mini-256gb-white",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5517,6 +5552,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "717322",
     "id": "apple-iphone-13-mini-64gb-blue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5568,6 +5604,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "338653",
     "id": "apple-iphone-13-mini-128gb-blue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5619,6 +5656,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "939176",
     "id": "apple-iphone-13-mini-256gb-blue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-mini",
@@ -5670,6 +5708,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "810984",
     "id": "apple-iphone-13-pro-max-128gb-sierrablue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -5726,6 +5765,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "648261",
     "id": "apple-iphone-13-pro-max-256gb-sierrablue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -5782,6 +5822,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "404292",
     "id": "apple-iphone-13-pro-max-512gb-sierrablue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -5838,6 +5879,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "826426",
     "id": "apple-iphone-13-pro-max-1tb-sierrablue",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -5889,6 +5931,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "648282",
     "id": "apple-iphone-13-pro-max-128gb-graphite",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -5945,6 +5988,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "392020",
     "id": "apple-iphone-13-pro-max-256gb-graphite",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6001,6 +6045,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "200230",
     "id": "apple-iphone-13-pro-max-512gb-graphite",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6057,6 +6102,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "443044",
     "id": "apple-iphone-13-pro-max-1tb-graphite",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6108,6 +6154,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "405130",
     "id": "apple-iphone-13-pro-max-128gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6164,6 +6211,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "880339",
     "id": "apple-iphone-13-pro-max-256gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6220,6 +6268,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "635347",
     "id": "apple-iphone-13-pro-max-512gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6276,6 +6325,7 @@
     "cell": ["GSM", "CDMA", "HSPA", "EVDO", "LTE", "5G"]
   },
   {
+    "productId": "793680",
     "id": "apple-iphone-13-pro-max-1tb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-13-pro-max",
@@ -6327,6 +6377,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "339609",
     "id": "apple-iphone-14-pro-128gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -6375,6 +6426,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "744884",
     "id": "apple-iphone-14-pro-256gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -6423,6 +6475,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "466837",
     "id": "apple-iphone-14-pro-512gb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",
@@ -6471,6 +6524,7 @@
     "cell": ["GPRS", "EDGE", "WCDMA", "UMTS", "HSPA", "LTE", "5G"]
   },
   {
+    "productId": "978849",
     "id": "apple-iphone-14-pro-1tb-gold",
     "category": "phones",
     "namespaceId": "apple-iphone-14-pro",

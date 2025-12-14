@@ -1,5 +1,6 @@
 [
   {
+    "productId": "733970",
     "id": "apple-watch-series-3-38mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-3",
@@ -47,6 +48,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "931669",
     "id": "apple-watch-series-3-42mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-3",
@@ -94,6 +96,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "383258",
     "id": "apple-watch-series-3-38mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-3",
@@ -141,6 +144,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "429662",
     "id": "apple-watch-series-3-42mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-3",
@@ -188,6 +192,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "915214",
     "id": "apple-watch-series-3-38mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-3",
@@ -235,6 +240,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "571863",
     "id": "apple-watch-series-3-42mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-3",
@@ -282,6 +288,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "500395",
     "id": "apple-watch-series-6-40mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -331,6 +338,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "541991",
     "id": "apple-watch-series-6-44mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -380,6 +388,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "690633",
     "id": "apple-watch-series-6-40mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -429,6 +438,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "782270",
     "id": "apple-watch-series-6-44mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -478,6 +488,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "272930",
     "id": "apple-watch-series-6-40mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -527,6 +538,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "831776",
     "id": "apple-watch-series-6-44mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -576,6 +588,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "757945",
     "id": "apple-watch-series-6-40mm-blue",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -625,6 +638,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "558893",
     "id": "apple-watch-series-6-44mm-blue",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -674,6 +688,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "515098",
     "id": "apple-watch-series-6-40mm-red",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -723,6 +738,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "186775",
     "id": "apple-watch-series-6-44mm-red",
     "category": "accessories",
     "namespaceId": "apple-watch-series-6",
@@ -772,6 +788,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "302658",
     "id": "apple-watch-series-5-40mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-5",
@@ -819,6 +836,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "517993",
     "id": "apple-watch-series-5-44mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-5",
@@ -866,6 +884,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "570910",
     "id": "apple-watch-series-5-40mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-5",
@@ -913,6 +932,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "771493",
     "id": "apple-watch-series-5-44mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-5",
@@ -960,6 +980,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "771457",
     "id": "apple-watch-series-5-40mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-5",
@@ -1007,6 +1028,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "576852",
     "id": "apple-watch-series-5-44mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-5",
@@ -1054,6 +1076,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "547671",
     "id": "apple-watch-series-4-40mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-4",
@@ -1101,6 +1124,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "204338",
     "id": "apple-watch-series-4-44mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-series-4",
@@ -1148,6 +1172,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "618538",
     "id": "apple-watch-series-4-40mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-4",
@@ -1195,6 +1220,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "794884",
     "id": "apple-watch-series-4-44mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-series-4",
@@ -1242,6 +1268,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "540782",
     "id": "apple-watch-series-4-40mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-4",
@@ -1289,6 +1316,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "140673",
     "id": "apple-watch-series-4-44mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-series-4",
@@ -1336,6 +1364,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "966790",
     "id": "apple-watch-se-40mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-se",
@@ -1383,6 +1412,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "772489",
     "id": "apple-watch-se-44mm-silver",
     "category": "accessories",
     "namespaceId": "apple-watch-se",
@@ -1430,6 +1460,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "927181",
     "id": "apple-watch-se-40mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-se",
@@ -1477,6 +1508,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "582677",
     "id": "apple-watch-se-44mm-gold",
     "category": "accessories",
     "namespaceId": "apple-watch-se",
@@ -1524,6 +1556,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "982699",
     "id": "apple-watch-se-40mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-se",
@@ -1571,6 +1604,7 @@
     "cell": ["Wi-Fi", "Bluetooth", "LTE"]
   },
   {
+    "productId": "359901",
     "id": "apple-watch-se-44mm-space-gray",
     "category": "accessories",
     "namespaceId": "apple-watch-se",
