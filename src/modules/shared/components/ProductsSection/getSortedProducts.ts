@@ -6,7 +6,7 @@ export const getSortedProducts = (products: Product[], option: SortOption) => {
 
   switch (option) {
     case "newest":
-      newProducts.sort((a, b) => b.year - a.year);
+      newProducts.sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
       break;
     case "alpha":
       newProducts.sort((a, b) => a.name.localeCompare(b.name));
