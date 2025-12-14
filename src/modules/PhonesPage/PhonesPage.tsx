@@ -3,9 +3,10 @@ import { useOutletContext } from "react-router-dom";
 import Breadcrumb from "@/modules/shared/components/Breadcrumb";
 import ProductsSection from "../shared/components/ProductsSection";
 import type { OutletContext } from "../shared/types/outletContext";
+import type { Product } from "../shared/types/product";
 import { getProductsByCategory } from "../shared/utils/getProductsByCategory";
 
-const phones = getProductsByCategory("phones");
+const phones = getProductsByCategory("phones") as Product[];
 const countPhones = phones.length;
 
 const PhonesPage = () => {

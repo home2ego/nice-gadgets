@@ -13,12 +13,12 @@ import ProductsCarousel from "./ProductsCarousel";
 
 const ShopByCategory = lazy(() => import("./ShopByCategory"));
 
-const { maxYear, maxModel } = products.reduce(
+const { maxYear, maxModel } = (products as Product[]).reduce(
   (acc, product) => {
     const modelNumber = Number(product.name.match(/\d+/)?.[0] ?? 0);
 
-    if (product.year > acc.maxYear) {
-      return { maxYear: product.year, maxModel: modelNumber };
+    if (product.year ?? 0 > acc.maxYear) {
+      return { maxYear: product.year ?? 0, maxModel: modelNumber };
     }
 
     if (product.year === acc.maxYear && modelNumber > acc.maxModel) {
@@ -27,10 +27,10 @@ const { maxYear, maxModel } = products.reduce(
 
     return acc;
   },
-  { maxYear: -Infinity, maxModel: -Infinity },
+  { maxYear: 0, maxModel: 0 },
 );
 
-const newProducts: Product[] = products
+const newProducts = (products as Product[])
   .filter((product) => {
     const modelNumber = Number(product.name.match(/\d+/)?.[0] ?? 0);
 
@@ -49,7 +49,7 @@ const newProducts: Product[] = products
   }, [])
   .toSorted((a, b) => b.fullPrice - a.fullPrice);
 
-const hotPricesProducts: Product[] = products
+const hotPricesProducts = (products as Product[])
   .toSorted((a, b) => {
     const discountA = (a.fullPrice - a.price) / a.fullPrice;
     const discountB = (b.fullPrice - b.price) / b.fullPrice;
