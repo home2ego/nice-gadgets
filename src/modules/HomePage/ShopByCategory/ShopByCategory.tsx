@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { decodeThumbhash } from "@/modules/shared/utils/decodeThumbhash";
 import { getProductsByCategory } from "@/modules/shared/utils/getProductsByCategory";
 import styles from "./ShopByCategory.module.scss";
 
@@ -16,7 +14,6 @@ interface CategoryCards {
   src: string;
   heading: string;
   countModels: number;
-  thumbhash: string;
 }
 
 const categoryCards: CategoryCards[] = [
@@ -26,7 +23,6 @@ const categoryCards: CategoryCards[] = [
     src: "/img/category-phones.webp",
     heading: "phones",
     countModels: countPhones,
-    thumbhash: "5yiKDAI5P4CGaZZ3+GRmT1aFgFOIR5h1BQ",
   },
   {
     id: 2,
@@ -34,7 +30,6 @@ const categoryCards: CategoryCards[] = [
     src: "/img/category-tablets.webp",
     heading: "tablets",
     countModels: countTablets,
-    thumbhash: "oYmGJQoqLlDHeGGddUFvBZV3Bxd4d4CJGA",
   },
   {
     id: 3,
@@ -42,7 +37,6 @@ const categoryCards: CategoryCards[] = [
     src: "/img/category-accessories.webp",
     heading: "accessories",
     countModels: countAccessories,
-    thumbhash: "5ziKIoodwDWJh4g/ZfdsdggIgohyKCc",
   },
 ];
 
@@ -50,64 +44,43 @@ interface CategoryProps {
   t: TFunction;
 }
 
-const ShopByCategory: React.FC<CategoryProps> = ({ t }) => {
-  const [loadedMap, setLoadedMap] = useState<{ [id: string]: boolean }>({});
+const ShopByCategory: React.FC<CategoryProps> = ({ t }) => (
+  <>
+    {categoryCards.map((card) => (
+      <li key={card.id} className={styles.category}>
+        <Link
+          to={card.path}
+          aria-label={t("viewCategoryLabel", {
+            category: t(card.heading),
+            count: card.countModels,
+          })}
+          className={styles.category__link}
+        />
 
-  const handleLoad = (id: number) => {
-    setLoadedMap((prev) => (prev[id] ? prev : { ...prev, [id]: true }));
-  };
-
-  return (
-    <>
-      {categoryCards.map((card) => (
-        <li key={card.id} className={styles.category}>
-          <Link
-            to={card.path}
-            aria-label={t("viewCategoryLabel", {
-              category: t(card.heading),
-              count: card.countModels,
-            })}
-            className={styles.category__link}
-          />
-
-          <div className={styles.category__wrapper}>
-            {!loadedMap[card.id] && (
-              <img
-                src={decodeThumbhash(card.thumbhash)}
-                alt=""
-                width="100%"
-                height="100%"
-                style={{ position: "absolute" }}
-                decoding="async"
-              />
+        <div className={styles.category__wrapper}>
+          <img
+            className={clsx(
+              styles.category__image,
+              styles[`category__image--${card.id}`],
             )}
+            src={card.src}
+            alt=""
+            width="368"
+            height="368"
+            decoding="async"
+          />
+        </div>
 
-            <img
-              className={clsx(
-                styles.category__image,
-                styles[`category__image--${card.id}`],
-                loadedMap[card.id] && styles.loaded,
-              )}
-              src={card.src}
-              alt=""
-              width="368"
-              height="368"
-              decoding="async"
-              onLoad={() => handleLoad(card.id)}
-            />
-          </div>
+        <h3 className={clsx(styles.category__heading, "title--sm")}>
+          {t(card.heading)}
+        </h3>
 
-          <h3 className={clsx(styles.category__heading, "title--sm")}>
-            {t(card.heading)}
-          </h3>
-
-          <p className={clsx(styles.category__models, "text--body")}>
-            {t("countModels", { count: card.countModels })}
-          </p>
-        </li>
-      ))}
-    </>
-  );
-};
+        <p className={clsx(styles.category__models, "text--body")}>
+          {t("countModels", { count: card.countModels })}
+        </p>
+      </li>
+    ))}
+  </>
+);
 
 export default ShopByCategory;
