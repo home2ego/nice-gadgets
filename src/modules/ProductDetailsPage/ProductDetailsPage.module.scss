@@ -100,7 +100,7 @@
 }
 
 @include on-desktop {
-  .wrapper {
+  .product__wrapper {
     @include page-grid;
   }
 
@@ -149,4 +149,8 @@
   & dd {
     text-align: justify;
   }
+}
+
+.recommended-wrapper {
+  position: relative;
 }

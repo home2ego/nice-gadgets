@@ -58,5 +58,8 @@
   "productCarousel": "Карусель товарів",
   "prevImageLabel": "Показати попереднє зображення",
   "nextImageLabel": "Показати наступне зображення",
-  "imageOfTotal": "Зображення {{current}} із {{total}}"
+  "imageOfTotal": "Зображення {{current}} із {{total}}",
+  "carouselInstructions": "Використовуйте клавішу Tab або Shift + Tab, щоб переміщатися між видимими товарами, або кнопки Попередній і Наступний, щоб прокручувати їх",
+  "prevProductsLabel": "Показати попередню групу товарів",
+  "nextProductsLabel": "Показати наступну групу товарів"
 }

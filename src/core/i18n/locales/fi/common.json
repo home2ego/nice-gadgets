@@ -57,5 +57,8 @@
   "productCarousel": "Tuotekaruselli",
   "prevImageLabel": "Näytä edellinen kuva",
   "nextImageLabel": "Näytä seuraava kuva",
-  "imageOfTotal": "Kuva {{current}} / {{total}}"
+  "imageOfTotal": "Kuva {{current}} / {{total}}",
+  "carouselInstructions": "Käytä sarkainnäppäintä tai Shift + sarkainnäppäintä siirtyäksesi näkyvien tuotteiden välillä, tai käytä Edellinen- ja Seuraava-painikkeita selataksesi niitä",
+  "prevProductsLabel": "Näytä edellinen tuotejoukko",
+  "nextProductsLabel": "Näytä seuraava tuotejoukko"
 }

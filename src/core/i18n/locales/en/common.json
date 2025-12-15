@@ -57,5 +57,8 @@
   "productCarousel": "Product carousel",
   "prevImageLabel": "Show previous image",
   "nextImageLabel": "Show next image",
-  "imageOfTotal": "Image {{current}} of {{total}}"
+  "imageOfTotal": "Image {{current}} of {{total}}",
+  "carouselInstructions": "Use Tab or Shift+Tab to move between visible products, or use the Previous and Next buttons to scroll through them",
+  "prevProductsLabel": "Show previous group of products",
+  "nextProductsLabel": "Show next group of products"
 }

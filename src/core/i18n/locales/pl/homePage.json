@@ -11,8 +11,5 @@
   "resumeLabel": "Wznów automatyczne odtwarzanie obrazów",
   "imageNavLabel": "Nawigacja obrazów",
   "showImageOfTotal": "Pokaż obraz {{current}} z {{total}}",
-  "carouselInstructions": "Użyj klawisza Tab lub Shift + Tab, aby przechodzić między widocznymi produktami, albo przycisków Poprzedni i Następny, aby przewijać je dalej",
-  "prevProductsLabel": "Pokaż poprzednią grupę produktów",
-  "nextProductsLabel": "Pokaż następną grupę produktów",
   "viewCategoryLabel": "Zobacz kategorię {{category}}, {{count}} modeli"
 }

@@ -54,7 +54,7 @@ const hotPricesProducts = (products as Product[])
 
     return discountB - discountA;
   })
-  .slice(0, 10);
+  .slice(0, 8);
 
 const HomePage = () => {
   const { mainRef, footerRef, normalizedLang } =

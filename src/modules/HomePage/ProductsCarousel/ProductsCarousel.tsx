@@ -42,6 +42,24 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   const lastCardOfContainer = useRef<HTMLElement | null>(null);
 
   const focusTarget = useRef<"next" | "prev" | null>(null);
+  const showNavigationButtons = !(disabledNext && disabledPrev);
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: products intentionally included
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    containerRef.current.scrollTo({
+      left: 0,
+      behavior: "instant",
+    });
+
+    firstVisibleCard.current = null;
+    lastVisibleCard.current = null;
+    focusTarget.current = null;
+
+    setDisabledPrev(true);
+    setDisabledNext(false);
+  }, [products]);
 
   useEffect(() => {
     const cards = Array.from(
@@ -208,7 +226,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
         onTabKeyDown={handleTabKeyDown}
       />
     ));
-  }, [t]);
+  }, [t, products]);
 
   return (
     <>
@@ -223,35 +241,39 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
           {t(headingContent)}
         </h2>
 
-        <p id={descId} className="sr-only">
-          {t("carouselInstructions")}
-        </p>
+        {showNavigationButtons && (
+          <>
+            <p id={descId} className="sr-only">
+              {t("carouselInstructions")}
+            </p>
 
-        <button
-          type="button"
-          className={styles.top__prev}
-          aria-label={t("prevProductsLabel")}
-          disabled={disabledPrev}
-          onClick={handlePrevClick}
-          onKeyDown={handlePrevKeyDown}
-        >
-          <Icon>
-            <path d="m15 18-6-6 6-6" />
-          </Icon>
-        </button>
+            <button
+              type="button"
+              className={styles.top__prev}
+              aria-label={t("prevProductsLabel")}
+              disabled={disabledPrev}
+              onClick={handlePrevClick}
+              onKeyDown={handlePrevKeyDown}
+            >
+              <Icon>
+                <path d="m15 18-6-6 6-6" />
+              </Icon>
+            </button>
 
-        <button
-          type="button"
-          className={styles.top__next}
-          aria-label={t("nextProductsLabel")}
-          disabled={disabledNext}
-          onClick={handleNextClick}
-          onKeyDown={handleNextKeyDown}
-        >
-          <Icon>
-            <path d="m9 18 6-6-6-6" />
-          </Icon>
-        </button>
+            <button
+              type="button"
+              className={styles.top__next}
+              aria-label={t("nextProductsLabel")}
+              disabled={disabledNext}
+              onClick={handleNextClick}
+              onKeyDown={handleNextKeyDown}
+            >
+              <Icon>
+                <path d="m9 18 6-6-6-6" />
+              </Icon>
+            </button>
+          </>
+        )}
       </div>
 
       {/*  biome-ignore lint/a11y/useSemanticElements: role="region" was used intentionally */}

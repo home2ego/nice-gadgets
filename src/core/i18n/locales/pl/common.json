@@ -58,5 +58,8 @@
   "productCarousel": "Karuzela produktów",
   "prevImageLabel": "Pokaż poprzedni obraz",
   "nextImageLabel": "Pokaż następny obraz",
-  "imageOfTotal": "Obraz {{current}} z {{total}}"
+  "imageOfTotal": "Obraz {{current}} z {{total}}",
+  "carouselInstructions": "Użyj klawisza Tab lub Shift + Tab, aby przechodzić między widocznymi produktami, albo przycisków Poprzedni i Następny, aby przewijać je dalej",
+  "prevProductsLabel": "Pokaż poprzednią grupę produktów",
+  "nextProductsLabel": "Pokaż następną grupę produktów"
 }

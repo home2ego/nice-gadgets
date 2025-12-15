@@ -1,10 +1,12 @@
 import clsx from "clsx";
+import { useMemo, useRef } from "react";
 import { Fragment } from "react/jsx-runtime";
 import { useTranslation } from "react-i18next";
 import { useNavigate, useOutletContext, useParams } from "react-router-dom";
 import accessories from "@/api/accessories.json";
 import phones from "@/api/phones.json";
 import tablets from "@/api/tablets.json";
+import ProductsCarousel from "../HomePage/ProductsCarousel";
 import Back from "../shared/components/Back";
 import Breadcrumb from "../shared/components/Breadcrumb";
 import ProductControls from "../shared/components/ProductControls";
@@ -24,19 +26,52 @@ const mergedProducts = [
 ] as ProductDetails[];
 
 const ProductDetailsPage = () => {
-  const { normalizedLang } = useOutletContext<OutletContext>();
+  const { normalizedLang, footerRef } = useOutletContext<OutletContext>();
   const { productId } = useParams();
   const navigate = useNavigate();
   const { t } = useTranslation("productDetailsPage");
+  const recommendedRef = useRef<HTMLHeadingElement>(null);
   const product = mergedProducts.find((product) => product.id === productId);
 
-  const allProducts = mergedProducts.filter((p) => {
-    return p.namespaceId === product?.namespaceId;
-  });
+  const recommendedProducts: Product[] = useMemo(() => {
+    const uniqueProducts = Array.from(
+      new Map(
+        mergedProducts
+          .filter(
+            (p) =>
+              p.category === product?.category &&
+              p.namespaceId !== product.namespaceId,
+          )
+          .map((p) => [p.namespaceId, p]),
+      ).values(),
+    );
+
+    const shuffled = uniqueProducts.toSorted(() => Math.random() - 0.5);
+
+    return shuffled.slice(0, 8).map((p) => ({
+      id: null,
+      category: p.category,
+      itemId: p.id,
+      name: p.name,
+      shortName: p.shortName,
+      fullPrice: p.priceRegular,
+      price: p.priceDiscount,
+      screen: p.screen,
+      variant: p.variant,
+      color: p.color,
+      ram: p.ram,
+      year: null,
+      image: p.images[0],
+    }));
+  }, [product?.category, product?.namespaceId]);
 
   if (!product) {
     return <NotFoundProduct t={t} />;
   }
+
+  const allProducts = mergedProducts.filter((p) => {
+    return p.namespaceId === product.namespaceId;
+  });
 
   const productStorage: Product = {
     id: null,
@@ -196,7 +231,7 @@ const ProductDetailsPage = () => {
           </div>
         </section>
 
-        <div className={styles.wrapper}>
+        <div className={styles.product__wrapper}>
           <section aria-labelledby="about" className={styles.about}>
             {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
             <h2 id="about" className={clsx(styles.about__heading, "title--md")}>
@@ -252,6 +287,26 @@ const ProductDetailsPage = () => {
           </section>
         </div>
       </article>
+
+      <section
+        aria-labelledby="recommended-heading"
+        aria-describedby="recommended-desc"
+        className={styles["recommended-wrapper"]}
+        ref={recommendedRef}
+      >
+        <ProductsCarousel
+          t={t}
+          normalizedLang={normalizedLang}
+          products={recommendedProducts}
+          skipForwardRef={footerRef}
+          skipBackRef={recommendedRef}
+          hasOnlyFullPrice={false}
+          isLazy={true}
+          headingId="recommended-heading"
+          headingContent="recommendedHeading"
+          descId="recommended-desc"
+        />
+      </section>
     </>
   );
 };

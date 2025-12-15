@@ -11,8 +11,5 @@
   "resumeLabel": "Resume autoplay images",
   "imageNavLabel": "Image navigation",
   "showImageOfTotal": "Show image {{current}} of {{total}}",
-  "carouselInstructions": "Use Tab or Shift+Tab to move between visible products, or use the Previous and Next buttons to scroll through them",
-  "prevProductsLabel": "Show previous group of products",
-  "nextProductsLabel": "Show next group of products",
   "viewCategoryLabel": "View {{category}} category, {{count}} models"
 }
