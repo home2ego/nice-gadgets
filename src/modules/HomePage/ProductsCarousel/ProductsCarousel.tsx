@@ -44,8 +44,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
   const focusTarget = useRef<"next" | "prev" | null>(null);
   const showNavigationButtons = !(disabledNext && disabledPrev);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: products intentionally included
-  useEffect(() => {
+  const resetToInitialValues = () => {
     if (!containerRef.current) return;
 
     containerRef.current.scrollTo({
@@ -59,9 +58,12 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
 
     setDisabledPrev(true);
     setDisabledNext(false);
-  }, [products]);
+  };
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: products intentionally included
   useEffect(() => {
+    resetToInitialValues();
+
     const cards = Array.from(
       containerRef.current?.querySelectorAll<HTMLElement>("article") ?? [],
     );
@@ -116,7 +118,7 @@ const ProductsCarousel: React.FC<CarouselProps> = ({
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [products]);
 
   useEffect(() => {
     if (disabledNext && focusTarget.current === "next") {
