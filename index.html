@@ -9,6 +9,23 @@
       content="Nice Gadgets is a web application that offers users product browsing, and shopping cart management, all within a highly responsive and interactive user interface."
     />
 
+    <link
+      rel="preload"
+      as="image"
+      href="/img/iPhone-sm.webp"
+      type="image/webp"
+      media="(max-width: 440px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/iPhone-lg.webp"
+      type="image/webp"
+      media="(min-width: 441px)"
+      fetchpriority="high"
+    />
+
     <script>
       const prefersLight = window.matchMedia(
         "(prefers-color-scheme: light)"
