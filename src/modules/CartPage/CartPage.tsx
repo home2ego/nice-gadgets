@@ -10,8 +10,8 @@ import { formatPrice } from "../shared/utils/priceUtils";
 import CartEmpty from "./CartEmpty";
 import styles from "./CartPage.module.scss";
 import CartProduct from "./CartProduct";
+import CheckoutDialog from "./CheckoutDialog";
 import { calculateCartTotals } from "./calculateCartTotals";
-import Dialog from "./Dialog";
 
 const CartPage = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
@@ -82,6 +82,7 @@ const CartPage = () => {
 
               <button
                 type="button"
+                aria-haspopup="dialog"
                 className={clsx(styles.cart__checkout, "text--btn")}
                 onClick={() => setIsDialogOpen(true)}
                 onKeyDown={(e) => {
@@ -99,7 +100,7 @@ const CartPage = () => {
         </>
       )}
 
-      <Dialog
+      <CheckoutDialog
         t={t}
         isOpen={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}

@@ -2,10 +2,13 @@
   position: relative;
 
   &__toggle {
-    display: inline-flex;
+    @extend %icon-control;
+
     padding: 16px;
-    border-left: $border-width solid var(--bd-color-primary);
-    outline-offset: -3px;
+
+    @include on-desktop {
+      padding: 24px;
+    }
 
     svg {
       transform: translateZ(0);
@@ -21,10 +24,6 @@
     &[aria-expanded="true"] svg:nth-child(2),
     &:focus-visible svg:nth-child(2) {
       scale: 1.25;
-    }
-
-    @include on-desktop {
-      padding: 24px;
     }
 
     @include reduce-motion {

@@ -26,7 +26,7 @@ const Footer: React.FC<FooterProps> = ({ mainRef, footerRef }) => {
   return (
     <footer ref={footerRef} className={styles.footer}>
       <div className={clsx(styles.footer__wrapper, "container")}>
-        <Logo />
+        <Logo isMobile={false} />
 
         <ul className={styles.footer__list} aria-label={t("linksLabel")}>
           <li>

@@ -131,7 +131,7 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         type="button"
         aria-label={t("langLabel", { lang: currentLangLabel })}
         aria-expanded={isExpanded}
-        aria-haspopup="true"
+        aria-haspopup="menu"
         className={styles.dropdown__toggle}
         onPointerDown={(e) => {
           if (e.pointerType !== "mouse") setIsExpanded((prev) => !prev);

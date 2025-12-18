@@ -4,7 +4,6 @@
   top: 0;
 
   display: flex;
-  column-gap: clamp(16px, 2.12vw, 24px);
   align-items: center;
   justify-content: space-between;
 
@@ -14,7 +13,12 @@
   -webkit-backdrop-filter: blur(8px); /* Safari support 9-17.6 */
   backdrop-filter: blur(8px);
 
+  @include on-desktop {
+    column-gap: 24px;
+  }
+
   &__logo {
+    display: inline-flex;
     padding-inline: 16px;
 
     @include on-desktop {

@@ -7,6 +7,12 @@
   justify-content: center;
 }
 
+%icon-control {
+  display: inline-flex;
+  border-left: $border-width solid var(--bd-color-primary);
+  outline-offset: -3px;
+}
+
 %scroll-margin {
   scroll-margin-top: $mobile-navbar-hight + 24px;
 
@@ -58,5 +64,17 @@
 
   @include on-desktop {
     margin-top: 80px;
+  }
+}
+
+%section-spacing-bottom {
+  margin-bottom: 56px;
+
+  @include on-tablet {
+    margin-bottom: 64px;
+  }
+
+  @include on-desktop {
+    margin-bottom: 80px;
   }
 }

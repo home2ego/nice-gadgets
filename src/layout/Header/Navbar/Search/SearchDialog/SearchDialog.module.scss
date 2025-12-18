@@ -1,0 +1,55 @@
+.dialog {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--bg-color-primary);
+
+  transition: opacity 0.18s, visibility 0s 0.18s;
+
+  &__wrapper {
+    position: relative;
+    max-width: 700px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 3.75vw, 24px);
+  }
+
+  &__heading {
+    margin-block: 16px;
+  }
+
+  &__search {
+    width: 100%;
+    height: 38px;
+    padding-inline: 16px;
+    border-radius: 19px / 50%;
+
+    background-color: $search-bg;
+
+    &::placeholder {
+      color: $search-color;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    padding: 6px;
+
+    transition: opacity 0.18s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &[data-search-dialog-open="true"] {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.18s;
+  }
+}

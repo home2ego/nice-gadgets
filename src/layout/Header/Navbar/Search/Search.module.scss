@@ -1,0 +1,18 @@
+.search {
+  @extend %icon-control;
+
+  padding: 16px;
+
+  @include on-desktop {
+    padding: 24px;
+  }
+
+  svg {
+    opacity: 0.7;
+    transition: opacity 0.18s;
+  }
+
+  &:hover svg {
+    opacity: 1;
+  }
+}

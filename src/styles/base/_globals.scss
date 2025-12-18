@@ -94,16 +94,16 @@ svg {
   display: block;
 }
 
+input,
 button {
   all: unset;
-
-  cursor: pointer;
-
   box-sizing: border-box;
-
   font: inherit;
-
   outline: revert;
+}
+
+button {
+  cursor: pointer;
 }
 
 dd {
@@ -112,16 +112,7 @@ dd {
 
 section {
   @extend %scroll-margin;
-
-  margin-bottom: 56px;
-
-  @include on-tablet {
-    margin-bottom: 64px;
-  }
-
-  @include on-desktop {
-    margin-bottom: 80px;
-  }
+  @extend %section-spacing-bottom;
 }
 
 main:focus,
@@ -132,6 +123,7 @@ section:focus {
 
 a:focus-visible,
 button:focus-visible,
+input:focus-visible,
 div[role="option"]:focus-visible {
   outline: 3px solid $accent-color;
 }

@@ -76,13 +76,14 @@
 }
 
 .btn--theme {
-  display: inline-flex;
+  @extend %icon-control;
+
   align-items: center;
-
   padding-inline: 16px;
-  border-left: $border-width solid var(--bd-color-primary);
 
-  outline-offset: -3px;
+  @include on-desktop {
+    padding-inline: 24px;
+  }
 
   span {
     display: inline-flex;
@@ -100,10 +101,6 @@
 
   &:hover span {
     border-color: $accent-color;
-  }
-
-  @include on-desktop {
-    padding-inline: 24px;
   }
 }
 

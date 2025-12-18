@@ -1,11 +1,14 @@
 import type { TFunction } from "i18next";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, type PathMatch, useLocation } from "react-router-dom";
 import CartLink from "./CartLink";
 import FavouritesLink from "./FavouritesLink";
 import styles from "./Navbar.module.scss";
+import Search from "./Search";
 
 interface NavbarProps {
+  isDesktop: boolean;
+  showSearch: PathMatch<string> | null;
   actionsRef: React.RefObject<HTMLElement | null>;
   t: TFunction;
   mainRef: React.RefObject<HTMLElement | null>;
@@ -14,6 +17,8 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({
+  isDesktop,
+  showSearch,
   actionsRef,
   t,
   mainRef,
@@ -89,31 +94,18 @@ const Navbar: React.FC<NavbarProps> = ({
     const customEventName = isExpanded ? "pause-slider" : "resume-slider";
     document.dispatchEvent(new CustomEvent(customEventName));
 
-    const mq = window.matchMedia("(min-width: 1136px)");
-
-    const handleChange = () => {
-      const isDesktop = mq.matches;
-
-      if (isDesktop) {
-        mainRef.current?.removeAttribute("inert");
-        footerRef.current?.removeAttribute("inert");
-        skipRef.current?.removeAttribute("inert");
-        menuRef.current?.removeAttribute("inert");
-      } else {
-        mainRef.current?.toggleAttribute("inert", isExpanded);
-        footerRef.current?.toggleAttribute("inert", isExpanded);
-        skipRef.current?.toggleAttribute("inert", isExpanded);
-        menuRef.current?.toggleAttribute("inert", !isExpanded);
-      }
-    };
-
-    handleChange();
-    mq.addEventListener("change", handleChange);
-
-    return () => {
-      mq.removeEventListener("change", handleChange);
-    };
-  }, [isExpanded]);
+    if (isDesktop) {
+      mainRef.current?.removeAttribute("inert");
+      footerRef.current?.removeAttribute("inert");
+      skipRef.current?.removeAttribute("inert");
+      menuRef.current?.removeAttribute("inert");
+    } else {
+      mainRef.current?.toggleAttribute("inert", isExpanded);
+      footerRef.current?.toggleAttribute("inert", isExpanded);
+      skipRef.current?.toggleAttribute("inert", isExpanded);
+      menuRef.current?.toggleAttribute("inert", !isExpanded);
+    }
+  }, [isExpanded, isDesktop]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!e.currentTarget.classList.contains("active")) {
@@ -154,6 +146,8 @@ const Navbar: React.FC<NavbarProps> = ({
             </li>
           ))}
         </ul>
+
+        {isDesktop && showSearch && <Search />}
 
         <ul className={styles["navbar__list-utility"]}>
           <li>

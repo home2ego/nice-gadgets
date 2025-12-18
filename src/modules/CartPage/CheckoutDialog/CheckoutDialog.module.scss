@@ -64,7 +64,7 @@
     }
   }
 
-  &[data-dialog-open="true"] {
+  &[data-checkout-dialog-open="true"] {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.18s;

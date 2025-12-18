@@ -1,9 +1,11 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useMatch } from "react-router-dom";
 import Logo from "@/layout/shared/components/Logo";
 import styles from "./Header.module.scss";
 import LangButton from "./LangButton";
 import Navbar from "./Navbar";
+import Search from "./Navbar/Search";
 import ThemeButton from "./ThemeButton";
 
 interface HeaderProps {
@@ -19,17 +21,54 @@ const Header: React.FC<HeaderProps> = ({
   footerRef,
   skipRef,
 }) => {
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia("(max-width: 591px)").matches,
+  );
+  const [isDesktop, setIsDesktop] = useState(
+    () => window.matchMedia("(min-width: 1136px)").matches,
+  );
+
   const actionsRef = useRef<HTMLDivElement>(null);
   const { t, i18n } = useTranslation("header");
+
+  const phonesMatch = useMatch("/phones");
+  const tabletsMatch = useMatch("/tablets");
+  const accessoriesMatch = useMatch("/accessories");
+  const showSearch = phonesMatch || tabletsMatch || accessoriesMatch;
+
+  useEffect(() => {
+    const mqMobile = window.matchMedia("(max-width: 591px)");
+    const mqDesktop = window.matchMedia("(min-width: 1136px)");
+
+    const handleChangeMobile = (e: MediaQueryListEvent) => {
+      setIsMobile(e.matches);
+    };
+
+    const handleChangeDesktop = (e: MediaQueryListEvent) => {
+      setIsDesktop(e.matches);
+    };
+
+    mqMobile.addEventListener("change", handleChangeMobile);
+    mqDesktop.addEventListener("change", handleChangeDesktop);
+
+    return () => {
+      mqMobile.removeEventListener("change", handleChangeMobile);
+      mqDesktop.removeEventListener("change", handleChangeDesktop);
+    };
+  }, []);
 
   return (
     <header className={styles.header}>
       <div className={styles.header__logo}>
-        <Logo />
+        <Logo isMobile={isMobile} />
       </div>
 
       <div ref={actionsRef} className={styles.header__actions}>
+        {!isDesktop && showSearch && <Search />}
+
         <Navbar
+          isDesktop={isDesktop}
+          showSearch={showSearch}
           actionsRef={actionsRef}
           t={t}
           mainRef={mainRef}

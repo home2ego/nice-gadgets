@@ -32,17 +32,14 @@
 }
 
 .overview {
-  margin-bottom: 56px;
+  @extend %section-spacing-bottom;
 
   @include on-tablet {
     @include page-grid;
-
-    margin-bottom: 64px;
   }
 
   @include on-desktop {
     position: relative;
-    margin-bottom: 80px;
   }
 
   &__thumbnails {

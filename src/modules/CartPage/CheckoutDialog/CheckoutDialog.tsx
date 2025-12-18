@@ -1,9 +1,10 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { createPortal } from "react-dom";
 import Icon from "@/layout/shared/components/Icon";
-import styles from "./Dialog.module.scss";
+import { useModalEffects } from "@/layout/shared/hooks/useModalEffects";
+import styles from "./CheckoutDialog.module.scss";
 
 interface DialogProps {
   t: TFunction;
@@ -12,40 +13,15 @@ interface DialogProps {
   onClear: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
+const CheckoutDialog: React.FC<DialogProps> = ({
+  t,
+  isOpen,
+  onClose,
+  onClear,
+}) => {
   const okRef = useRef<HTMLButtonElement>(null);
 
-  useEffect(() => {
-    const app = document.querySelector(".App") as HTMLElement;
-
-    if (isOpen) {
-      app.inert = true;
-      okRef.current?.focus();
-    }
-
-    return () => {
-      app.inert = false;
-    };
-  }, [isOpen]);
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: onClose is intentionally excluded
-  useEffect(() => {
-    if (!isOpen) {
-      return;
-    }
-
-    const handleEscapeKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    };
-
-    document.addEventListener("keydown", handleEscapeKey);
-
-    return () => {
-      document.removeEventListener("keydown", handleEscapeKey);
-    };
-  }, [isOpen]);
+  useModalEffects(isOpen, onClose, okRef.current);
 
   return createPortal(
     <div
@@ -54,7 +30,7 @@ const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
       aria-modal="true"
       aria-labelledby="checkout-title"
       aria-describedby="checkout-desc"
-      data-dialog-open={isOpen}
+      data-checkout-dialog-open={isOpen}
       onPointerDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className={styles.dialog}>
@@ -92,7 +68,7 @@ const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
         <button
           type="button"
           aria-label={t("cancel")}
-          className={clsx(styles.dialog__cancel, "text--btn")}
+          className={styles.dialog__cancel}
           onClick={onClose}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
@@ -111,4 +87,4 @@ const Dialog: React.FC<DialogProps> = ({ t, isOpen, onClose, onClear }) => {
   );
 };
 
-export default Dialog;
+export default CheckoutDialog;
