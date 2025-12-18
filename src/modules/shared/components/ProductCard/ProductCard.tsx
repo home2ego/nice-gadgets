@@ -1,6 +1,6 @@
 import type { TFunction } from "i18next";
 import { Link } from "react-router-dom";
-import type { Product } from "../../types/product";
+import type { Product } from "@/layout/shared/types/product";
 import ProductControls from "../ProductControls";
 import ProductPrices from "../ProductPrices";
 import ProductTech from "../ProductTech";

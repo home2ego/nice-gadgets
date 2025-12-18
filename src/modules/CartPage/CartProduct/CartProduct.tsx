@@ -7,7 +7,7 @@ import {
 } from "@/core/store/cart/cartSlice";
 import { useAppDispatch } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
-import type { Product } from "@/modules/shared/types/product";
+import type { Product } from "@/layout/shared/types/product";
 import { formatWithRate } from "@/modules/shared/utils/priceUtils";
 import { MAX_COUNT, MIN_COUNT } from "../constants";
 import styles from "./CartProduct.module.scss";

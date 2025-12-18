@@ -63,7 +63,8 @@ body {
 }
 
 body:has(nav[data-menu-open="true"]),
-body:has(div[data-dialog-open="true"]) {
+body:has(div[data-checkout-dialog-open="true"]),
+body:has(div[data-search-dialog-open="true"]) {
   touch-action: none;
   overflow-y: hidden;
 }

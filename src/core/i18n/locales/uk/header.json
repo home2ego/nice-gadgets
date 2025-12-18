@@ -12,5 +12,14 @@
   "cartLabelWithCount_few": "Переглянути кошик, {{count}} товари",
   "cartLabelWithCount_many": "Переглянути кошик, {{count}} товарів",
   "themeLabel": "Темна тема",
-  "langLabel": "Змінити мову, поточна: {{lang}}"
+  "langLabel": "Змінити мову, поточна: {{lang}}",
+  "openSearchLabel": "Відкрити пошук",
+  "closeSearchLabel": "Закрити пошук",
+  "searchHeading": "Пошук:",
+  "search": {
+    "phones": "Шукати телефони",
+    "accessories": "Шукати аксесуари",
+    "tablets": "Шукати планшети"
+  },
+  "searchDescription": "Почніть вводити текст для пошуку. Використовуйте клавіші зі стрілками для навігації результатами. Натисніть Enter, щоб вибрати."
 }

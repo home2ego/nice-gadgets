@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import type { Product } from "@/modules/shared/types/product";
+import type { Product } from "@/layout/shared/types/product";
 import cartReducer from "./cart/cartSlice";
 import favouritesReducer from "./favourites/favouritesSlice";
 import themeReducer from "./theme/themeSlice";

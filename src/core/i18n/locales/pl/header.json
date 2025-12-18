@@ -12,5 +12,14 @@
   "cartLabelWithCount_few": "Zobacz koszyk, {{count}} produkty",
   "cartLabelWithCount_many": "Zobacz koszyk, {{count}} produktów",
   "themeLabel": "Tryb ciemny",
-  "langLabel": "Zmień język, obecny: {{lang}}"
+  "langLabel": "Zmień język, obecny: {{lang}}",
+  "openSearchLabel": "Otwórz wyszukiwanie",
+  "closeSearchLabel": "Zamknij wyszukiwanie",
+  "searchHeading": "Wyszukiwanie:",
+  "search": {
+    "phones": "Szukaj telefonów",
+    "accessories": "Szukaj akcesoriów",
+    "tablets": "Szukaj tabletów"
+  },
+  "searchDescription": "Zacznij pisać, aby wyszukać. Poruszaj się po wynikach za pomocą klawiszy strzałek. Naciśnij Enter, aby wybrać."
 }

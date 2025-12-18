@@ -9,7 +9,7 @@ import {
 } from "@/core/store/favourites/favouritesSlice";
 import { useAppDispatch, useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
-import type { Product } from "../../types/product";
+import type { Product } from "@/layout/shared/types/product";
 import styles from "./ProductControls.module.scss";
 
 export const PARTICLE_KEYS = ["p1", "p2", "p3", "p4", "p5", "p6"];

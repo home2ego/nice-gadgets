@@ -1,4 +1,4 @@
-import type { Product } from "@/modules/shared/types/product";
+import type { Product } from "@/layout/shared/types/product";
 import type { SortOption } from "../../types/select";
 
 export const getSortedProducts = (products: Product[], option: SortOption) => {

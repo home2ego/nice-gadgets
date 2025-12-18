@@ -1,14 +1,15 @@
 import type { TFunction } from "i18next";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import { NavLink, type PathMatch, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
+import type { Category } from "@/layout/shared/types/category";
+import Search from "../Search";
 import CartLink from "./CartLink";
 import FavouritesLink from "./FavouritesLink";
 import styles from "./Navbar.module.scss";
-import Search from "./Search";
 
 interface NavbarProps {
+  categoryKey: Category | undefined;
   isDesktop: boolean;
-  showSearch: PathMatch<string> | null;
   actionsRef: React.RefObject<HTMLElement | null>;
   t: TFunction;
   mainRef: React.RefObject<HTMLElement | null>;
@@ -17,8 +18,8 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({
+  categoryKey,
   isDesktop,
-  showSearch,
   actionsRef,
   t,
   mainRef,
@@ -147,7 +148,7 @@ const Navbar: React.FC<NavbarProps> = ({
           ))}
         </ul>
 
-        {isDesktop && showSearch && <Search />}
+        {isDesktop && categoryKey && <Search t={t} categoryKey={categoryKey} />}
 
         <ul className={styles["navbar__list-utility"]}>
           <li>

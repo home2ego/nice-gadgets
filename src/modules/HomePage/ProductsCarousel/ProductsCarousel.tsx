@@ -2,9 +2,9 @@ import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Icon from "@/layout/shared/components/Icon";
+import type { Product } from "@/layout/shared/types/product";
 import ProductCard from "@/modules/shared/components/ProductCard";
 import SkipLink from "@/modules/shared/components/SkipLink";
-import type { Product } from "@/modules/shared/types/product";
 import styles from "./ProductsCarousel.module.scss";
 
 interface CarouselProps {

@@ -1,12 +1,17 @@
+import type { TFunction } from "i18next";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
 import { MIN_COUNT } from "@/modules/CartPage/constants";
 import Count from "../Count";
-import type { LinkProps } from "../linkProps";
 import styles from "./CartLink.module.scss";
 
 const PATH = "/cart";
+
+interface LinkProps {
+  t: TFunction;
+  onLinkClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}
 
 const CartLink: React.FC<LinkProps> = ({ t, onLinkClick }) => {
   const cartCount = useAppSelector((state) =>

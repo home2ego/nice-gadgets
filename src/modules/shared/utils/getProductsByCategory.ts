@@ -1,7 +1,6 @@
 import products from "@/api/products.json";
-import type { Product } from "../types/product";
-
-type Category = "phones" | "tablets" | "accessories";
+import type { Category } from "@/layout/shared/types/category";
+import type { Product } from "@/layout/shared/types/product";
 
 export const getProductsByCategory = (category: Category) => {
   return (products as Product[]).filter(

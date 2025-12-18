@@ -1,4 +1,4 @@
-import type { Product } from "../shared/types/product";
+import type { Product } from "@/layout/shared/types/product";
 import { exchangeRates } from "../shared/utils/priceUtils";
 import { MIN_COUNT } from "./constants";
 

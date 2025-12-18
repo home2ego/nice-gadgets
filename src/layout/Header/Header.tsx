@@ -2,11 +2,18 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useMatch } from "react-router-dom";
 import Logo from "@/layout/shared/components/Logo";
+import type { Category } from "../shared/types/category";
 import styles from "./Header.module.scss";
 import LangButton from "./LangButton";
 import Navbar from "./Navbar";
-import Search from "./Navbar/Search";
+import Search from "./Search";
 import ThemeButton from "./ThemeButton";
+
+const matchToCategory: Record<string, Category> = {
+  "/phones": "phones",
+  "/tablets": "tablets",
+  "/accessories": "accessories",
+};
 
 interface HeaderProps {
   normalizedLang: string;
@@ -34,7 +41,11 @@ const Header: React.FC<HeaderProps> = ({
   const phonesMatch = useMatch("/phones");
   const tabletsMatch = useMatch("/tablets");
   const accessoriesMatch = useMatch("/accessories");
-  const showSearch = phonesMatch || tabletsMatch || accessoriesMatch;
+  const match = phonesMatch || tabletsMatch || accessoriesMatch;
+
+  const categoryKey: Category | undefined = match
+    ? matchToCategory[match.pathname]
+    : undefined;
 
   useEffect(() => {
     const mqMobile = window.matchMedia("(max-width: 591px)");
@@ -64,11 +75,13 @@ const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div ref={actionsRef} className={styles.header__actions}>
-        {!isDesktop && showSearch && <Search />}
+        {!isDesktop && categoryKey && (
+          <Search t={t} categoryKey={categoryKey} />
+        )}
 
         <Navbar
+          categoryKey={categoryKey}
           isDesktop={isDesktop}
-          showSearch={showSearch}
           actionsRef={actionsRef}
           t={t}
           mainRef={mainRef}

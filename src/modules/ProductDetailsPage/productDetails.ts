@@ -1,7 +1,9 @@
+import type { Category } from "@/layout/shared/types/category";
+
 export interface ProductDetails {
   productId: string;
   id: string;
-  category: "phones" | "tablets" | "accessories";
+  category: Category;
   namespaceId: string;
   name: string;
   shortName: string;

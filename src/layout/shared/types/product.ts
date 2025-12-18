@@ -1,6 +1,8 @@
+import type { Category } from "./category";
+
 export interface Product {
   id: number | null;
-  category: "phones" | "tablets" | "accessories";
+  category: Category;
   itemId: string;
   name: string;
   shortName: string;

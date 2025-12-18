@@ -42,7 +42,11 @@ const Logo: React.FC<LogoProps> = ({ isMobile }) => {
         />
       </svg>
 
-      {isMobile && <span className="title--sm">NG</span>}
+      {isMobile && (
+        <span className="title--sm" aria-hidden="true">
+          NG
+        </span>
+      )}
     </a>
   );
 };

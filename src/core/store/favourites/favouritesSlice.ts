@@ -1,6 +1,6 @@
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { createSlice } from "@reduxjs/toolkit";
-import type { Product } from "@/modules/shared/types/product";
+import type { Product } from "@/layout/shared/types/product";
 import { getStoredProducts } from "../getStoredProducts";
 
 const favouritesSlice = createSlice({

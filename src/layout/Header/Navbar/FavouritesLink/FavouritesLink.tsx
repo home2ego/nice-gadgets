@@ -1,11 +1,16 @@
+import type { TFunction } from "i18next";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "@/core/store/hooks";
 import Icon from "@/layout/shared/components/Icon";
 import Count from "../Count";
-import type { LinkProps } from "../linkProps";
 import styles from "./FavouritesLink.module.scss";
 
 const PATH = "/favourites";
+
+interface LinkProps {
+  t: TFunction;
+  onLinkClick: (e: React.MouseEvent<HTMLAnchorElement>) => void;
+}
 
 const FavouritesLink: React.FC<LinkProps> = ({ t, onLinkClick }) => {
   const favouritesCount = useAppSelector((state) => state.favourites.length);
