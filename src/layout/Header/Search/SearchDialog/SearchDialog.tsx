@@ -148,7 +148,7 @@ const SearchDialog: React.FC<DialogProps> = ({
                 selectedIndex >= 0 ? `option-${selectedIndex}` : undefined
               }
               placeholder={t(`search.${categoryKey}`)}
-              className={clsx(styles.dialog__search, "text--btn")}
+              className={clsx(styles.dialog__search, "text--search")}
               spellCheck="false"
               autoCapitalize="none"
               autoCorrect="off"
