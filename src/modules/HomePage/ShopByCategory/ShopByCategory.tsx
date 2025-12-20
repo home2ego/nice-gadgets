@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import type { TFunction } from "i18next";
 import { Link } from "react-router-dom";
-import { getProductsByCategory } from "@/modules/shared/utils/getProductsByCategory";
+import { getProductsByCategory } from "@/layout/shared/utils/getProductsByCategory";
 import styles from "./ShopByCategory.module.scss";
 
 const countPhones = getProductsByCategory("phones").length;

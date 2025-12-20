@@ -3,13 +3,15 @@
   z-index: 50;
   inset: 0;
 
+  padding-top: 16px;
+
   visibility: hidden;
   opacity: 0;
   background-color: var(--bg-color-primary);
 
-  transition: opacity 0.18s, visibility 0s 0.18s;
+  transition: opacity 0.1s, visibility 0s 0.1s;
 
-  &__form {
+  &__wrapper {
     position: relative;
     max-width: 700px;
     margin-inline: auto;
@@ -17,7 +19,11 @@
   }
 
   &__heading {
-    margin-block: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__field {
+    position: relative;
   }
 
   &__search {
@@ -26,20 +32,29 @@
     padding-inline: 16px;
     border-radius: 19px / 50%;
 
-    background-color: $search-bg;
+    background-color: var(--bd-color-primary);
 
     &::placeholder {
-      color: $search-color;
+      color: var(--text-color-secondary);
     }
+  }
+
+  &__clear {
+    position: absolute;
+    top: 0;
+    right: 16px;
+    padding: 9px;
   }
 
   &__close {
     position: absolute;
-    top: 0;
+    top: -7px;
     right: 10px;
+    padding: 7px;
+  }
 
-    padding: 6px;
-
+  &__clear,
+  &__close {
     transition: opacity 0.18s;
 
     &:hover {
@@ -50,6 +65,25 @@
   &[data-search-dialog-open="true"] {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.18s;
+    transition: opacity 0.1s;
   }
+}
+
+.products {
+  padding-block: 16px;
+}
+
+.product {
+  display: block;
+  padding: 8px 16px;
+  outline-offset: -3px;
+
+  &:hover,
+  &[aria-selected="true"] {
+    background-color: var(--bd-color-primary);
+  }
+}
+
+.match {
+  font-weight: 800;
 }

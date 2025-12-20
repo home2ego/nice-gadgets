@@ -13,11 +13,13 @@
   "langLabel": "Vaihda kieltä, nykyinen: {{lang}}",
   "openSearchLabel": "Avaa haku",
   "closeSearchLabel": "Sulje haku",
+  "clearSearchLabel": "Tyhjennä haku",
   "searchHeading": "Haku:",
   "search": {
     "phones": "Hae puhelimia",
     "accessories": "Hae tarvikkeita",
     "tablets": "Hae tabletteja"
   },
-  "searchDescription": "Aloita kirjoittaminen hakeaksesi. Siirry tuloksissa nuolinäppäimillä. Valitse painamalla Enter."
+  "searchDescription": "Aloita kirjoittaminen hakeaksesi. Siirry tuloksissa nuolinäppäimillä. Valitse painamalla Enter.",
+  "searchResults": "Tuotehakutulokset"
 }

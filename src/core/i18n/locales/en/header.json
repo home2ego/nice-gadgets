@@ -13,11 +13,13 @@
   "langLabel": "Change language, current: {{lang}}",
   "openSearchLabel": "Open search",
   "closeSearchLabel": "Close search",
+  "clearSearchLabel": "Clear search",
   "searchHeading": "Search:",
   "search": {
     "phones": "Search phones",
     "accessories": "Search accessories",
     "tablets": "Search tablets"
   },
-  "searchDescription": "Begin typing to search. Use the arrow keys to navigate results. Press Enter to select."
+  "searchDescription": "Begin typing to search. Use the arrow keys to navigate results. Press Enter to select.",
+  "searchResults": "Product search results"
 }

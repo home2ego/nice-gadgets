@@ -1,12 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { useOutletContext } from "react-router-dom";
-import type { Product } from "@/layout/shared/types/product";
+import { getProductsByCategory } from "@/layout/shared/utils/getProductsByCategory";
 import Breadcrumb from "@/modules/shared/components/Breadcrumb";
 import ProductsSection from "../shared/components/ProductsSection";
 import type { OutletContext } from "../shared/types/outletContext";
-import { getProductsByCategory } from "../shared/utils/getProductsByCategory";
 
-const phones = getProductsByCategory("phones") as Product[];
+const phones = getProductsByCategory("phones");
 const countPhones = phones.length;
 
 const PhonesPage = () => {

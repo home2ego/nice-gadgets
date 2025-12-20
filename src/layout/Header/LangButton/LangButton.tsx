@@ -106,12 +106,15 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     toggleRef.current?.focus();
   };
 
-  const handleEscapeKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
-    if (e.key === "Escape") {
-      e.stopPropagation();
-      setIsExpanded(false);
-      toggleRef.current?.focus();
-    }
+  const handleEscapeKey = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== "Escape") return;
+
+    if (!isExpanded) return;
+
+    e.stopPropagation();
+
+    setIsExpanded(false);
+    toggleRef.current?.focus();
   };
 
   return (
@@ -125,13 +128,14 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
         if (e.pointerType === "mouse") setIsExpanded(false);
       }}
       onBlur={handleDropdownBlur}
+      onKeyDown={handleEscapeKey}
       ref={dropdownRef}
     >
       <button
         type="button"
         aria-label={t("langLabel", { lang: currentLangLabel })}
         aria-expanded={isExpanded}
-        aria-haspopup="menu"
+        aria-haspopup="true"
         className={styles.dropdown__toggle}
         onPointerDown={(e) => {
           if (e.pointerType !== "mouse") setIsExpanded((prev) => !prev);
@@ -155,7 +159,6 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
             type="button"
             aria-current={normalizedLang === lang.code ? "true" : undefined}
             onClick={() => handleLangClick(lang.code)}
-            onKeyDown={handleEscapeKey}
             ref={(el) => {
               langRefs.current[idx] = el;
             }}

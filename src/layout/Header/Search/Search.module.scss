@@ -1,6 +1,7 @@
 .search {
   @extend %icon-control;
 
+  margin-left: auto;
   padding: 16px;
 
   @include on-desktop {

@@ -107,9 +107,6 @@ const Select: React.FC<SelectProps> = ({
     option: SortOption | PageOption,
     idx: number,
   ) => {
-    const prev = optionRefs.current[idx - 1];
-    const next = optionRefs.current[idx + 1];
-
     switch (e.key) {
       case "Enter":
       case " ":
@@ -124,15 +121,22 @@ const Select: React.FC<SelectProps> = ({
         toggleRef.current?.focus();
         break;
 
-      case "ArrowDown":
+      case "ArrowDown": {
         e.preventDefault();
+
+        const nextIndex = idx === options.length - 1 ? 0 : idx + 1;
+        const next = optionRefs.current[nextIndex];
         next?.focus();
         break;
+      }
 
-      case "ArrowUp":
+      case "ArrowUp": {
         e.preventDefault();
+        const prevIndex = idx === 0 ? options.length - 1 : idx - 1;
+        const prev = optionRefs.current[prevIndex];
         prev?.focus();
         break;
+      }
 
       case "Escape":
         e.stopPropagation();

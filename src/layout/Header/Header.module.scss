@@ -28,7 +28,6 @@
 
   &__actions {
     display: flex;
-    justify-content: end;
 
     @include on-desktop {
       flex-grow: 1;

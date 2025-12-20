@@ -74,11 +74,9 @@ const Header: React.FC<HeaderProps> = ({
         <Logo isMobile={isMobile} />
       </div>
 
-      <div ref={actionsRef} className={styles.header__actions}>
-        {!isDesktop && categoryKey && (
-          <Search t={t} categoryKey={categoryKey} />
-        )}
+      {!isDesktop && categoryKey && <Search t={t} categoryKey={categoryKey} />}
 
+      <div ref={actionsRef} className={styles.header__actions}>
         <Navbar
           categoryKey={categoryKey}
           isDesktop={isDesktop}
