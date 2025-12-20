@@ -40,6 +40,7 @@ const Search: React.FC<SearchProps> = ({ t, categoryKey }) => {
       </button>
 
       <SearchDialog
+        key={categoryKey}
         t={t}
         categoryKey={categoryKey}
         isOpen={isDialogOpen}
