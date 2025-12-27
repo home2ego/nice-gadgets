@@ -45,24 +45,10 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const isReducedMotion = useReducedMotion();
 
-  const enableWillChange = () => {
-    if (sliderRef.current) {
-      sliderRef.current.style.willChange = "transform";
-    }
-  };
-
-  const disableWillChange = () => {
-    if (sliderRef.current) {
-      sliderRef.current.style.willChange = "";
-    }
-  };
-
   const { pausedState, togglePause, pauseForInteraction } = useAutoplay({
     isReducedMotion,
     onTick: () => {
       withTransition.current = true;
-
-      enableWillChange();
 
       setCurrentIndex((prev) => prev + 1);
     },
@@ -88,8 +74,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     } else {
       withTransition.current = true;
 
-      enableWillChange();
-
       setCurrentIndex((prev) => (prev === 0 ? -1 : prev - 1));
 
       pauseForInteraction();
@@ -106,8 +90,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     } else {
       withTransition.current = true;
 
-      enableWillChange();
-
       setCurrentIndex((prev) =>
         prev === IMAGES_COUNT - 1 ? IMAGES_COUNT : prev + 1,
       );
@@ -118,8 +100,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
 
   const handleTransitionEnd = () => {
     withTransition.current = false;
-
-    disableWillChange();
 
     if (currentIndex === -1) {
       setCurrentIndex(IMAGES_COUNT - 1);
@@ -136,8 +116,6 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
     if (idx !== normalizedIndex) {
       if (!isReducedMotion) {
         withTransition.current = true;
-
-        enableWillChange();
       }
 
       setCurrentIndex(idx);
