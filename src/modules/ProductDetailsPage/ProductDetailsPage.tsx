@@ -118,7 +118,6 @@ const ProductDetailsPage = () => {
       <Back t={t} />
 
       <article aria-labelledby="product" className={styles.product}>
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h1 id="product" className={clsx(styles.product__heading, "title--lg")}>
           {product?.name}
         </h1>
@@ -128,7 +127,6 @@ const ProductDetailsPage = () => {
 
           <div className={styles.overview__details}>
             <div className={styles.overview__colors}>
-              {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
               <p
                 id="colors-title"
                 className={clsx(styles["overview__colors-title"], "text--sm")}
@@ -164,7 +162,6 @@ const ProductDetailsPage = () => {
             <span className={styles.product__line} />
 
             <div className={styles.overview__variant}>
-              {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
               <p
                 id="variant-title"
                 className={clsx(styles["overview__variant-title"], "text--sm")}
@@ -233,7 +230,6 @@ const ProductDetailsPage = () => {
 
         <div className={styles.product__wrapper}>
           <section aria-labelledby="about" className={styles.about}>
-            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
             <h2 id="about" className={clsx(styles.about__heading, "title--md")}>
               {t("about")}
             </h2>
@@ -255,7 +251,6 @@ const ProductDetailsPage = () => {
           </section>
 
           <section aria-labelledby="techspecs" className={styles.techspecs}>
-            {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
             <h2
               id="techspecs"
               className={clsx(styles.techspecs__heading, "title--md")}

@@ -34,7 +34,6 @@ const CheckoutDialog: React.FC<DialogProps> = ({
       onPointerDown={(e) => e.target === e.currentTarget && onClose()}
     >
       <div className={styles.dialog}>
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h2
           id="checkout-title"
           className={clsx(styles.dialog__heading, "title--lg")}
@@ -42,7 +41,6 @@ const CheckoutDialog: React.FC<DialogProps> = ({
           {t("checkout")}
         </h2>
 
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <p
           id="checkout-desc"
           className={clsx(styles.dialog__message, "text--body")}

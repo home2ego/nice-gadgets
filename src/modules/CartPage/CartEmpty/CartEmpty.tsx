@@ -9,7 +9,6 @@ interface CartEmptyProps {
 const CartEmpty: React.FC<CartEmptyProps> = ({ t }) => {
   return (
     <section aria-labelledby="cart-empty" className={styles.wrapper}>
-      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
       <h1 id="cart-empty" className={clsx(styles.heading, "title--lg")}>
         {t("cartEmpty")}
       </h1>

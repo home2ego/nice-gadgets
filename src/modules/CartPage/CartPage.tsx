@@ -51,7 +51,6 @@ const CartPage = () => {
         <>
           <Back t={t} />
 
-          {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
           <h1 id="cart" className={clsx(styles.heading, "title--xl")}>
             {t("cart")}
           </h1>

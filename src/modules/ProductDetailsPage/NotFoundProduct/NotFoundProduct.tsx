@@ -11,7 +11,6 @@ const NotFoundProduct: React.FC<NotFoundPageProps> = ({ t }) => (
     <title>{t("notFoundProductTitle")}</title>
 
     <section aria-labelledby="not-found-product" className={styles.wrapper}>
-      {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
       <h1 id="not-found-product" className={clsx(styles.heading, "title--lg")}>
         {t("notFoundProductHeading")}
       </h1>

@@ -120,7 +120,6 @@ const SearchDialog: React.FC<DialogProps> = ({
       data-search-dialog-open={isOpen}
     >
       <div className={styles.dialog__wrapper}>
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h2
           id="search-title"
           className={clsx(styles.dialog__heading, "title--lg")}
@@ -128,7 +127,6 @@ const SearchDialog: React.FC<DialogProps> = ({
           {t("searchHeading")}
         </h2>
 
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <p id="search-desc" className="sr-only">
           {t("searchDescription")}
         </p>
@@ -162,7 +160,6 @@ const SearchDialog: React.FC<DialogProps> = ({
           </form>
 
           {isExpanded && (
-            // biome-ignore lint/correctness/useUniqueElementIds: unique per page
             <ul
               id="search-results"
               // biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: valid ARIA listbox usage

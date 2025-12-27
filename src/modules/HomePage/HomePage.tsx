@@ -125,7 +125,6 @@ const HomePage = () => {
         aria-labelledby="categories"
         ref={categoriesRef}
       >
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h2
           id="categories"
           className={clsx(styles.categories__heading, "title--lg")}

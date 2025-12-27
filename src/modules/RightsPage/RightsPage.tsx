@@ -11,7 +11,6 @@ const RightsPage = () => {
       <title>{t("rightsPageTitle")}</title>
 
       <section aria-labelledby="rights">
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h1 id="rights" className={clsx(styles.heading, "title--xl")}>
           {t("rights")}
         </h1>

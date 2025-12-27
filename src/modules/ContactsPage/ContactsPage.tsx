@@ -10,7 +10,6 @@ const ContactsPage = () => {
       <title>{t("contactsPageTitle")}</title>
 
       <section aria-labelledby="contacts">
-        {/* biome-ignore lint/correctness/useUniqueElementIds: unique per page */}
         <h1 id="contacts" className={clsx(styles.heading, "title--xl")}>
           {t("contacts")}
         </h1>
