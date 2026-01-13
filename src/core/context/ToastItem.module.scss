@@ -11,7 +11,6 @@
   padding-inline: 12px 32px;
   border-radius: 8px;
 
-  -webkit-font-smoothing: auto;
   color: $dark-color;
 
   opacity: 1;
@@ -21,6 +20,8 @@
 
   transition: opacity 0.18s, transform 0.28s ease-out,
     display 0.28s allow-discrete;
+
+  -webkit-font-smoothing: auto;
 
   @starting-style {
     transform: translateY(-10px) scale(0.95);

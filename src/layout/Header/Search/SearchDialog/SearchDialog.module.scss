@@ -26,6 +26,10 @@
     position: relative;
   }
 
+  &__form {
+    margin-bottom: 16px;
+  }
+
   &__search {
     width: 100%;
     height: 38px;
@@ -70,7 +74,7 @@
 }
 
 .products {
-  padding-block: 16px;
+  margin-bottom: 16px;
 }
 
 .product {
@@ -86,4 +90,27 @@
 
 .match {
   font-weight: 800;
+}
+
+.keyboard {
+  display: flex;
+  column-gap: 16px;
+
+  &__group {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+  }
+
+  &__key {
+    display: inline-block;
+
+    padding: 4px 8px;
+    border: 1.5px solid var(--icon-color);
+    border-radius: 4px;
+
+    line-height: 16px;
+
+    background-color: var(--bd-color-primary);
+  }
 }

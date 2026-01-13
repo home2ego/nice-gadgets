@@ -132,7 +132,10 @@ const SearchDialog: React.FC<DialogProps> = ({
         </p>
 
         <div className={styles.dialog__field}>
-          <form onSubmit={(e) => e.preventDefault()}>
+          <form
+            className={styles.dialog__form}
+            onSubmit={(e) => e.preventDefault()}
+          >
             <input
               role="combobox"
               type="text"
@@ -186,6 +189,42 @@ const SearchDialog: React.FC<DialogProps> = ({
               ))}
             </ul>
           )}
+
+          <div className={styles.keyboard}>
+            <div className={styles.keyboard__group}>
+              <kbd aria-label="up arrow" className={styles.keyboard__key}>
+                <Icon width="16" height="16">
+                  <path d="m5 12 7-7 7 7m-7 7V5" />
+                </Icon>
+              </kbd>
+
+              <kbd aria-label="down arrow" className={styles.keyboard__key}>
+                <Icon width="16" height="16">
+                  <path d="M12 5v14m7-7-7 7-7-7" />
+                </Icon>
+              </kbd>
+
+              <span className="text--body"> to navigate</span>
+            </div>
+
+            <div className={styles.keyboard__group}>
+              <kbd aria-label="enter" className={styles.keyboard__key}>
+                <Icon width="16" height="16">
+                  <path d="M20 4v7a4 4 0 0 1-4 4H4" />
+                  <path d="m9 10-5 5 5 5" />
+                </Icon>
+              </kbd>
+
+              <span className="text--body"> to select</span>
+            </div>
+
+            <div className={styles.keyboard__group}>
+              <kbd aria-label="escape" className={styles.keyboard__key}>
+                esc
+              </kbd>
+              <span className="text--body"> to close</span>
+            </div>
+          </div>
 
           {query && (
             <button
