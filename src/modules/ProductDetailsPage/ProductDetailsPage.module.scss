@@ -11,6 +11,8 @@
 }
 
 .overview {
+  align-items: start;
+
   @include on-tablet {
     @include page-grid;
   }
