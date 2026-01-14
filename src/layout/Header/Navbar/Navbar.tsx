@@ -148,7 +148,9 @@ const Navbar: React.FC<NavbarProps> = ({
           ))}
         </ul>
 
-        {isDesktop && categoryKey && <Search t={t} categoryKey={categoryKey} />}
+        {isDesktop && categoryKey && (
+          <Search t={t} categoryKey={categoryKey} isDesktop={isDesktop} />
+        )}
 
         <ul className={styles["navbar__list-utility"]}>
           <li>

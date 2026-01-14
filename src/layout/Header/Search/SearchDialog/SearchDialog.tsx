@@ -31,6 +31,7 @@ function highlightMatch(text: string, normalizedQuery: string) {
 interface DialogProps {
   t: TFunction;
   categoryKey: Category;
+  isDesktop?: boolean;
   isOpen: boolean;
   onClose: () => void;
 }
@@ -38,6 +39,7 @@ interface DialogProps {
 const SearchDialog: React.FC<DialogProps> = ({
   t,
   categoryKey,
+  isDesktop,
   isOpen,
   onClose,
 }) => {
@@ -190,41 +192,43 @@ const SearchDialog: React.FC<DialogProps> = ({
             </ul>
           )}
 
-          <div className={styles.keyboard}>
-            <div className={styles.keyboard__group}>
-              <kbd aria-label="up arrow" className={styles.keyboard__key}>
-                <Icon width="16" height="16">
-                  <path d="m5 12 7-7 7 7m-7 7V5" />
-                </Icon>
-              </kbd>
+          {isDesktop && (
+            <div className={styles.keyboard}>
+              <div className={styles.keyboard__group}>
+                <kbd aria-label="up arrow" className={styles.keyboard__key}>
+                  <Icon width="16" height="16">
+                    <path d="m5 12 7-7 7 7m-7 7V5" />
+                  </Icon>
+                </kbd>
 
-              <kbd aria-label="down arrow" className={styles.keyboard__key}>
-                <Icon width="16" height="16">
-                  <path d="M12 5v14m7-7-7 7-7-7" />
-                </Icon>
-              </kbd>
+                <kbd aria-label="down arrow" className={styles.keyboard__key}>
+                  <Icon width="16" height="16">
+                    <path d="M12 5v14m7-7-7 7-7-7" />
+                  </Icon>
+                </kbd>
 
-              <span className="text--body"> {t("toNavigate")}</span>
+                <span className="text--body"> {t("toNavigate")}</span>
+              </div>
+
+              <div className={styles.keyboard__group}>
+                <kbd aria-label="enter" className={styles.keyboard__key}>
+                  <Icon width="16" height="16">
+                    <path d="M20 4v7a4 4 0 0 1-4 4H4" />
+                    <path d="m9 10-5 5 5 5" />
+                  </Icon>
+                </kbd>
+
+                <span className="text--body"> {t("toSelect")}</span>
+              </div>
+
+              <div className={styles.keyboard__group}>
+                <kbd aria-label="escape" className={styles.keyboard__key}>
+                  esc
+                </kbd>
+                <span className="text--body"> {t("toClose")}</span>
+              </div>
             </div>
-
-            <div className={styles.keyboard__group}>
-              <kbd aria-label="enter" className={styles.keyboard__key}>
-                <Icon width="16" height="16">
-                  <path d="M20 4v7a4 4 0 0 1-4 4H4" />
-                  <path d="m9 10-5 5 5 5" />
-                </Icon>
-              </kbd>
-
-              <span className="text--body"> {t("toSelect")}</span>
-            </div>
-
-            <div className={styles.keyboard__group}>
-              <kbd aria-label="escape" className={styles.keyboard__key}>
-                esc
-              </kbd>
-              <span className="text--body"> {t("toClose")}</span>
-            </div>
-          </div>
+          )}
 
           {query && (
             <button

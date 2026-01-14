@@ -8,9 +8,10 @@ import SearchDialog from "./SearchDialog";
 interface SearchProps {
   t: TFunction;
   categoryKey: Category;
+  isDesktop?: boolean;
 }
 
-const Search: React.FC<SearchProps> = ({ t, categoryKey }) => {
+const Search: React.FC<SearchProps> = ({ t, categoryKey, isDesktop }) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const searchBtnRef = useRef<HTMLButtonElement>(null);
   const prevIsDialogOpen = useRef(isDialogOpen);
@@ -43,6 +44,7 @@ const Search: React.FC<SearchProps> = ({ t, categoryKey }) => {
         key={categoryKey}
         t={t}
         categoryKey={categoryKey}
+        isDesktop={isDesktop}
         isOpen={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
       />
