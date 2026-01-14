@@ -56,7 +56,7 @@ const Pagination: React.FC<PaginationProps> = ({
         aria-label={t("prevPageLabel")}
         aria-disabled={isFirstPage}
         tabIndex={isFirstPage ? -1 : undefined}
-        onPointerDown={() => handleInputType("pointer")}
+        onPointerDown={() => !isFirstPage && handleInputType("pointer")}
         onKeyDown={() => handleInputType("keyboard")}
       >
         <Icon>
@@ -107,7 +107,7 @@ const Pagination: React.FC<PaginationProps> = ({
         aria-label={t("nextPageLabel")}
         aria-disabled={isLastPage}
         tabIndex={isLastPage ? -1 : undefined}
-        onPointerDown={() => handleInputType("pointer")}
+        onPointerDown={() => !isLastPage && handleInputType("pointer")}
         onKeyDown={() => handleInputType("keyboard")}
       >
         <Icon>

@@ -25,14 +25,14 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
-  const langRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const openedByKeyboard = useRef(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   const currentLangLabel =
     languages.find((lang) => lang.code === normalizedLang)?.label ?? "";
 
   useEffect(() => {
+    menuRef.current?.toggleAttribute("inert", !isExpanded);
+
     if (!isExpanded) {
       return;
     }
@@ -48,22 +48,6 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
     return () => {
       document.removeEventListener("pointerdown", handleOutsideClick);
     };
-  }, [isExpanded]);
-
-  useEffect(() => {
-    menuRef.current?.toggleAttribute("inert", !isExpanded);
-
-    if (!isExpanded || !openedByKeyboard.current) {
-      return;
-    }
-
-    const target = langRefs.current.find(
-      (lang) => lang?.getAttribute("aria-current") === "true",
-    );
-
-    target?.focus();
-
-    openedByKeyboard.current = false;
   }, [isExpanded]);
 
   const sortedLanguages = [
@@ -87,10 +71,6 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
   const handleToggleKey = (e: React.KeyboardEvent<HTMLButtonElement>) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-
-      if (!isExpanded) {
-        openedByKeyboard.current = true;
-      }
 
       setIsExpanded((prev) => !prev);
     }
@@ -152,16 +132,14 @@ const LangButton: React.FC<LangProps> = ({ normalizedLang, t, i18n }) => {
       </button>
 
       <div className={styles.dropdown__menu} ref={menuRef}>
-        {sortedLanguages.map((lang, idx) => (
+        {sortedLanguages.map((lang) => (
           <button
             key={lang.code}
             className={clsx(styles.dropdown__lang, "text--sm")}
             type="button"
             aria-current={normalizedLang === lang.code ? "true" : undefined}
+            disabled={normalizedLang === lang.code}
             onClick={() => handleLangClick(lang.code)}
-            ref={(el) => {
-              langRefs.current[idx] = el;
-            }}
           >
             <img
               src={lang.icon}

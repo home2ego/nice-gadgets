@@ -82,16 +82,16 @@
       border-bottom: $border-width solid var(--bd-color-primary);
     }
 
-    &[aria-current="true"] {
-      pointer-events: none;
+    &:disabled {
+      cursor: default;
       color: var(--text-color-secondary);
     }
 
-    &[aria-current="true"] img {
+    &:disabled img {
       opacity: 0.5;
     }
 
-    &:not([aria-current="true"]):hover {
+    &:not(:disabled):hover {
       color: $accent-color;
     }
   }

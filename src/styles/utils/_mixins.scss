@@ -74,7 +74,7 @@
 }
 
 @mixin primary-button-disabled {
-  pointer-events: none;
+  cursor: not-allowed;
   border: $border-width solid var(--bd-color-primary);
   background-color: transparent;
 
