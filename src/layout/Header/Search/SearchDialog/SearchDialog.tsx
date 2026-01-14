@@ -204,7 +204,7 @@ const SearchDialog: React.FC<DialogProps> = ({
                 </Icon>
               </kbd>
 
-              <span className="text--body"> to navigate</span>
+              <span className="text--body"> {t("toNavigate")}</span>
             </div>
 
             <div className={styles.keyboard__group}>
@@ -215,14 +215,14 @@ const SearchDialog: React.FC<DialogProps> = ({
                 </Icon>
               </kbd>
 
-              <span className="text--body"> to select</span>
+              <span className="text--body"> {t("toSelect")}</span>
             </div>
 
             <div className={styles.keyboard__group}>
               <kbd aria-label="escape" className={styles.keyboard__key}>
                 esc
               </kbd>
-              <span className="text--body"> to close</span>
+              <span className="text--body"> {t("toClose")}</span>
             </div>
           </div>
 

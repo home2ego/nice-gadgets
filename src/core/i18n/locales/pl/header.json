@@ -23,5 +23,8 @@
     "tablets": "Szukaj tabletów"
   },
   "searchDescription": "Zacznij pisać, aby wyszukać. Poruszaj się po wynikach za pomocą klawiszy strzałek. Naciśnij Enter, aby wybrać.",
-  "searchResults": "Wyniki wyszukiwania produktów"
+  "searchResults": "Wyniki wyszukiwania produktów",
+  "toNavigate": "do nawigacji",
+  "toSelect": "do wyboru",
+  "toClose": "do zamknięcia"
 }

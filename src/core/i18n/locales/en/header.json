@@ -21,5 +21,8 @@
     "tablets": "Search tablets"
   },
   "searchDescription": "Begin typing to search. Use the arrow keys to navigate results. Press Enter to select.",
-  "searchResults": "Product search results"
+  "searchResults": "Product search results",
+  "toNavigate": "to navigate",
+  "toSelect": "to select",
+  "toClose": "to close"
 }

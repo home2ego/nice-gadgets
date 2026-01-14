@@ -21,5 +21,8 @@
     "tablets": "Hae tabletteja"
   },
   "searchDescription": "Aloita kirjoittaminen hakeaksesi. Siirry tuloksissa nuolinäppäimillä. Valitse painamalla Enter.",
-  "searchResults": "Tuotehakutulokset"
+  "searchResults": "Tuotehakutulokset",
+  "toNavigate": "siirtymiseen",
+  "toSelect": "valitsemiseen",
+  "toClose": "sulkemiseen"
 }
