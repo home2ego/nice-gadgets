@@ -28,20 +28,11 @@ Achieved 100/100 on both mobile and desktop. See **Technical Challenges & Soluti
 - `Biome`, `Stylelint` — Linting
 
 ## 💡 Key Features
-- **Context-Aware Internationalization**:  
-Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
-
-- **Global Cart & Favorites**:  
-Global state management with **Redux Toolkit** and `localStorage`.
-
-- **Zero-Library Custom Carousels**:  
-Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
-
-- **URL-Based Product Filtering**:  
-Deep-linkable filtering with custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
-
-- **Adaptive UI**:  
-Fully responsive design across mobile, tablet, and desktop.
+- **Context-Aware Internationalization**: Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
+- **Global Cart & Favorites**: Global state management with **Redux Toolkit** and `localStorage`.
+- **Zero-Library Custom Carousels**: Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
+- **URL-Based Product Filtering**: Deep-linkable filtering with custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
+- **Adaptive UI**: Fully responsive design across mobile, tablet, and desktop.
 
 ## ♿ Accessibility (A11y)
 - **Screen Readers**: ARIA live regions for dynamic updates; ARIA labels (where needed) and descriptive `alt` text on images.
@@ -50,6 +41,21 @@ Fully responsive design across mobile, tablet, and desktop.
 - **Reduced Motion**: Support for the `prefers-reduced-motion` media query.
 
 ## 📝 Technical Challenges & Solutions
+
+### **Performance**
+
+- **Challenge**  
+Performance can become a bottleneck in medium to large applications, so I aimed to achieve consistently high performance without compromising UX.
+
+- **Solution**  
+I focused on the main performance bottlenecks: bundle size, rendering cost, and improving initial loading speed:
+
+1. I implemented **vendor splitting** via `advancedChunks` for large third-party libraries to improve caching and parallel loading.
+2. I implemented **route-based code splitting** for large pages (e.g. product details), displaying skeleton UIs during lazy loading to improve perceived performance.
+3. I optimized **image loading** by lazy-loading below-the-fold images, preloading the LCP image, controlling request priority (`fetchpriority`), and serving responsive, compressed **WebP** assets using `<picture>`.
+4. I applied **memoization selectively**, only where it provided measurable performance benefits, rather than memoizing "just in case".
+5. I minimized **layout thrashing** by avoiding unnecessary DOM updates and favoring compositing-only CSS properties (e.g. transforms and opacity).
+
 
 ## 🚦 How to Run
 
