@@ -1,6 +1,6 @@
 # Nice Gadgets
 
-A modern e-commerce web application for mobile phones, tablets, and accessories, built with **React** and **TypeScript**, with a strong focus on performance, accessibility, and UX.
+An e-commerce web application for mobile phones, tablets, and accessories, built with **React** and **TypeScript**, with a strong focus on performance, accessibility, and UX.
 
 ## [Live Demo](https://nice-gadgets.pages.dev/)
 
@@ -28,11 +28,20 @@ Achieved 100/100 on both mobile and desktop. See **Technical Challenges & Soluti
 - `Biome`, `Stylelint` — Linting
 
 ## 💡 Key Features
-- **Context-Aware Internationalization**: Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
-- **Global Cart & Favorites**: Global state management with **Redux Toolkit** and `localStorage`.
-- **Zero-Library Custom Carousels**: Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
-- **URL-Based Product Filtering**: Deep-linkable filtering with custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
-- **Adaptive UI**: Fully responsive design across mobile, tablet, and desktop.
+- **Context-Aware Internationalization**:  
+Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
+
+- **Global Cart & Favorites**:  
+Global state management with **Redux Toolkit** and `localStorage`.
+
+- **Zero-Library Custom Carousels**:  
+Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
+
+- **URL-Based Product Filtering**:  
+Deep-linkable filtering with custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
+
+- **Adaptive UI**:  
+Fully responsive design across mobile, tablet, and desktop.
 
 ## ♿ Accessibility (A11y)
 - **Screen Readers**: ARIA live regions for dynamic updates; ARIA labels (where needed) and descriptive `alt` text on images.
