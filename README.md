@@ -4,7 +4,7 @@ An e-commerce website for mobile phones, tablets, and accessories built with Rea
 
 ## [Live Demo](https://nice-gadgets.pages.dev/)
 
-## PageSpeed Insights Scores
+## 👀 PageSpeed Insights Scores
 
 Achieved 100/100 on both mobile and desktop.
 
@@ -30,6 +30,10 @@ Achieved 100/100 on both mobile and desktop.
 ## 💡 Key Features
 
 ## ♿ Accessibility (A11y)
+- **Screen Readers**: ARIA live regions for dynamic updates; ARIA labels (where needed) and descriptive `alt` text on images.
+- **Keyboard & Focus**: Full keyboard-only navigation with skip links, arrow-key support, `Esc` to close modals, focus trapping, and visible focus indicators.
+- **Semantic Structure**: Proper semantic HTML and landmark roles for clear screen reader navigation.
+- **Reduced Motion**: Support for the `prefers-reduced-motion` media query.
 
 ## 📝 Technical Challenges & Solutions
 
