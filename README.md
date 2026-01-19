@@ -1,12 +1,12 @@
 # Nice Gadgets
 
-An e-commerce website for mobile phones, tablets, and accessories built with React and TypeScript.
+A modern e-commerce web application for mobile phones, tablets, and accessories, built with **React** and **TypeScript**, with a strong focus on performance, accessibility, and UX.
 
 ## [Live Demo](https://nice-gadgets.pages.dev/)
 
-## 👀 PageSpeed Insights Scores
+## ⭐ PageSpeed Insights Scores
 
-Achieved 100/100 on both mobile and desktop.
+Achieved 100/100 on both mobile and desktop. See **Technical Challenges & Solutions** for details.
 
 <div align="center">
     <img src="/docs/nice-gadgets-speed-m.png" width="400" alt="100/100 Performance on mobile" />
