@@ -50,10 +50,10 @@ Performance can become a bottleneck in medium to large applications, so I aimed 
 I focused on the main performance bottlenecks: bundle size, rendering cost, and improving initial loading speed:
 
 1. Implemented **vendor splitting** via `advancedChunks` for large third-party libraries to improve caching and parallel loading.
-2. Added **route-based code splitting** for large pages (e.g. product details), using skeleton UIs during lazy loading to improve perceived performance.
-3. Optimized **image loading** with lazy loading for below-the-fold images, preloading the LCP image, controlling request priority (`fetchpriority`), and serving responsive **WebP** images via `<picture>`.
-4. Applied **memoization selectively**, only where it provided measurable performance benefits.
-5. Reduced **layout thrashing** by avoiding unnecessary DOM updates and favoring compositing-only CSS properties (e.g. `transform`, `opacity`).
+2. Added **route-based code splitting** for large pages (e.g. product details) to reduce bundle size, with skeleton UIs displayed during lazy loading to improve perceived performance.
+3. Optimized **image loading** with lazy loading for below-the-fold images, preloading the LCP image, controlling request priority (`fetchpriority`), and serving **lossy-compressed WebP** images to improve LCP and overall load performance.
+4. Applied **memoization selectively**, targeting only measurable reductions in re-renders.
+5. Reduced **layout thrashing** by avoiding unnecessary DOM updates and using compositing-only, GPU-accelerated CSS properties (e.g. `transform`, `opacity`).
 
 ### **Vanilla Carousels**
 
