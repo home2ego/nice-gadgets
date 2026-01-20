@@ -28,15 +28,15 @@ Achieved 100/100 on both mobile and desktop. See **Technical Challenges & Soluti
 - `Biome`, `Stylelint` — Linting
 
 ## 💡 Key Features
-- **Context-Aware Internationalization**: Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
+- **Internationalization**: Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
 - **Global Cart & Favorites**: Global state management with **Redux Toolkit** and `localStorage`.
-- **Zero-Library Custom Carousels**: Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
-- **URL-Based Product Filtering**: Deep-linkable filtering with custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
+- **Vanilla Carousels**: Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
+-  **URL-Synchronized Sorting**: Custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
 - **Adaptive UI**: Fully responsive UI across mobile, tablet, and desktop.
 
 ## ♿ Accessibility (A11y)
 - **Screen Readers**: Semantic HTML with ARIA labels and live regions where necessary for dynamic updates.
-- **Keyboard & Focus**: Full keyboard-only navigation with skip links, arrow-key support, `Esc` to close modals, focus trapping, and visible focus indicators.
+- **Keyboard & Focus**: Full keyboard-only navigation with skip links, arrow-key support for widgets, `Esc` handling for overlays, focus trapping for active overlays, and visible focus indicators.
 - **Reduced Motion**: Support for the `prefers-reduced-motion` media query.
 
 ## 📝 Technical Challenges & Solutions
@@ -55,6 +55,14 @@ I focused on the main performance bottlenecks: bundle size, rendering cost, and 
 4. Applied **memoization selectively**, only where it provided measurable performance benefits.
 5. Reduced **layout thrashing** by avoiding unnecessary DOM updates and favoring compositing-only CSS properties (e.g. `transform`, `opacity`).
 
+### **Vanilla Carousels**
+
+- **Motivation**:  
+Most carousel libraries add unnecessary bundle weight, have poor accessibility, and limit styling freedom, so I designed custom carousels to meet my needs.
+
+1. PicturesCarousel (The "Hero" Slider)
+
+2. ProductsCarousel (The "Product Strip")
 
 ## 🚦 How to Run
 
