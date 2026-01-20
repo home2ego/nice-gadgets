@@ -1,6 +1,6 @@
 # Nice Gadgets
 
-An e-commerce web application for mobile phones, tablets, and accessories, built with **React** and **TypeScript**, with a strong focus on performance, accessibility, and UX.
+A **React** and **TypeScript** e-commerce web app for Apple devices, built with a focus on performance, accessibility and UX.
 
 ## [Live Demo](https://nice-gadgets.pages.dev/)
 
@@ -30,39 +30,59 @@ Achieved 100/100 on both mobile and desktop. See **Technical Challenges & Soluti
 ## 💡 Key Features
 - **Internationalization**: Multi-language support with **i18next**, including browser language detection, dynamic pluralization, and locale-aware currency formatting.
 - **Global Cart & Favorites**: Global state management with **Redux Toolkit** and `localStorage`.
-- **Vanilla Carousels**: Two custom carousel implementations (**PicturesCarousel**, **ProductsCarousel**) built without external libraries.
+- **Vanilla Carousels**: Two custom carousels built without external libraries.
 -  **URL-Synchronized Sorting**: Custom select controls (Cheapest, Newest, Alphabetically) and pagination synchronized via URL query parameters.
 - **Adaptive UI**: Fully responsive UI across mobile, tablet, and desktop.
 
 ## ♿ Accessibility (A11y)
 - **Screen Readers**: Semantic HTML with ARIA labels and live regions where necessary for dynamic updates.
-- **Keyboard & Focus**: Full keyboard-only navigation with skip links, arrow-key support for widgets, `Esc` handling for overlays, focus trapping for active overlays, and visible focus indicators.
+- **Keyboard & Focus**: Full keyboard navigation with skip links, arrow-key support for widgets, `Esc` handling for overlays, focus trapping for active overlays, and visible focus indicators.
 - **Reduced Motion**: Support for the `prefers-reduced-motion` media query.
 
 ## 📝 Technical Challenges & Solutions
 
 ### **Performance**
 
+<details>
+<summary>Details about performance</summary>
+
 - **Challenge**  
-Performance can become a bottleneck in medium to large applications, so I aimed to achieve consistently high performance without compromising UX.
+Performance can become a bottleneck in medium to large apps, so I aimed to achieve high performance without compromising UX.
 
 - **Solution**  
-I focused on the main performance bottlenecks: bundle size, rendering cost, and improving initial loading speed:
-
-1. Implemented **vendor splitting** via `advancedChunks` for large third-party libraries to improve caching and parallel loading.
-2. Added **route-based code splitting** for large pages (e.g. product details) to reduce bundle size, with skeleton UIs displayed during lazy loading to improve perceived performance.
-3. Optimized **image loading** with lazy loading for below-the-fold images, preloading the LCP image, controlling request priority (`fetchpriority`), and serving **lossy-compressed WebP** images to improve LCP and overall load performance.
-4. Applied **memoization selectively**, targeting only measurable reductions in re-renders.
-5. Reduced **layout thrashing** by avoiding unnecessary DOM updates and using compositing-only, GPU-accelerated CSS properties (e.g. `transform`, `opacity`).
+1. I improved loading time by splitting React and ReactDOM into vendor chunks using `advancedChunks` in Vite.
+2. I reduced the bundle size using `React.lazy()` and improved perceived performance by showing skeleton UI while pages load.
+3. I improved the LCP metric by preloading the LCP image, controlling `fetchpriority`, and using the WebP format.
+4. I reduced layout thrashing by using GPU-accelerated CSS properties (`transform`, `opacity`, etc.) for animations.
+</details>
 
 ### **Vanilla Carousels**
 
 - **Motivation**:  
 Most carousel libraries add unnecessary bundle weight, have poor accessibility, and limit styling freedom, so I designed custom carousels to meet my needs.
 
-1. PicturesCarousel (The "Hero" Slider)
+<details>
+<summary>Details about the "Hero" carousel (`PicturesCarousel` component)</summary>
 
-2. ProductsCarousel (The "Product Strip")
+- **Challenge**  
+For the first carousel, my goal was to make it infinite with full accessibility compliance, smart autoplay lifecycle management, and mobile touch support.
+
+- **Solution**..
+1. To create the infinite effect, I added duplicates of the first and last slides, and reset the index when reaching the end to loop smoothly.
+2. To implement a smart autoplay, I pause it when the carousel controls gain focus, when the mobile menu opens/closes, or when visibility changes (like switching between tabs, etc.).
+3. I created a custom hook to track `touchstart`/`touchend` events for managing mobile swipe gestures.
+4. I added support for `prefers-reduced-motion` with a custom hook for motion-sensitive users.
+</details>
+
+<details>
+<summary>Details about the "Product Strip" carousel (`ProductsCarousel` component)</summary>
+
+- **Challenge**  
+For the second carousel, my goal was to combine native scroll behavior with accurate detection of the first/last visible product for correct focus management during keyboard navigation and control button disabling.
+
+- **Solution**..
+I used the `IntersectionObserver` API with a `Set` to track visible products for better performance and simpler management. This way I could preserve native scrolling, disable control buttons when the first/last list product is fully visible, and land focus on the first/last visible product during navigation instead of jumping to the first/last product in the list.
+</details>
 
 ## 🚦 How to Run
 
