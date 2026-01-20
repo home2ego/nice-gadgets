@@ -62,12 +62,12 @@ Performance can become a bottleneck in medium to large apps, so I aimed to achie
 Most carousel libraries add unnecessary bundle weight, have poor accessibility, and limit styling freedom, so I designed custom carousels to meet my needs.
 
 <details>
-<summary>Details about the "Hero" carousel (`PicturesCarousel` component)</summary>
+<summary>Details about the "Hero" carousel (<b>PicturesCarousel</b> component)</summary>
 
 - **Challenge**  
 For the first carousel, my goal was to make it infinite with full accessibility compliance, smart autoplay lifecycle management, and mobile touch support.
 
-- **Solution**
+- **Solution**  
 1. To create the infinite effect, I added duplicates of the first and last slides, and reset the index when reaching the end to loop smoothly.
 2. To implement a smart autoplay, I pause it when the carousel controls gain focus, when the mobile menu opens/closes, or when visibility changes (like switching between tabs, etc.).
 3. I created a custom hook to track `touchstart`/`touchend` events for managing mobile swipe gestures.
@@ -75,7 +75,7 @@ For the first carousel, my goal was to make it infinite with full accessibility 
 </details>
 
 <details>
-<summary>Details about the "Product Strip" carousel (`ProductsCarousel` component)</summary>
+<summary>Details about the "Product Strip" carousel (<b>ProductsCarousel</b> component)</summary>
 
 - **Challenge**  
 For the second carousel, my goal was to combine native scroll behavior with accurate detection of the first/last visible product for correct focus management during keyboard navigation and control button disabling.
