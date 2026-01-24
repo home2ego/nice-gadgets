@@ -52,7 +52,7 @@ Performance can become a bottleneck in medium to large apps, so I aimed to achie
 - **Solution**  
 1. I improved loading time by splitting React and ReactDOM into vendor chunks using `advancedChunks` in Vite.
 2. I reduced the bundle size using `React.lazy()` and improved perceived performance by showing skeleton UI while pages load.
-3. I improved the LCP metric (mobile LCP ~1.5s, desktop ~0.5s) by preloading the LCP image, controlling `fetchpriority`, and using the WebP format.
+3. I improved the LCP metric (mobile LCP ~1.5s, desktop ~0.5s) by preloading the LCP image, controlling `fetchpriority`, and serving responsive images via `<picture>` with WebP.
 4. I reduced layout thrashing by using GPU-accelerated CSS properties (`transform`, `opacity`, etc.) for animations.
 </details>
 
