@@ -55,12 +55,15 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
   });
 
   useEffect(() => {
-    images.forEach((img) => {
-      [img.src, img.srcMini].forEach((source) => {
-        const image = new Image();
-        image.src = source;
-        image.decode();
-      });
+    const isMobile = window.matchMedia("(max-width: 440px)").matches;
+
+    const imagesToPreload = images.slice(1);
+
+    imagesToPreload.forEach((img) => {
+      const source = isMobile ? img.srcMini : img.src;
+      const image = new Image();
+      image.src = source;
+      image.decode();
     });
   }, []);
 
@@ -228,7 +231,7 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
       >
         {clonedImages.map((image: SlideImage, idx) => {
           const hasAlt = idx !== 0 && idx !== clonedImages.length - 1;
-          const priority = idx === 1 || idx === clonedImages.length - 1;
+          const hasHighPriority = idx === 1 || idx === clonedImages.length - 1;
 
           return (
             <picture
@@ -255,8 +258,8 @@ const PicturesCarousel: React.FC<CarouselProps> = ({ t }) => {
                       })
                     : ""
                 }
-                fetchPriority={priority ? "high" : "low"}
-                decoding={priority ? "sync" : "async"}
+                fetchPriority={hasHighPriority ? "high" : "low"}
+                decoding={hasHighPriority ? "sync" : "async"}
               />
             </picture>
           );
