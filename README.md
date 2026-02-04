@@ -50,10 +50,10 @@ Achieved 100/100 on both mobile and desktop. See **Technical Challenges & Soluti
 Performance can become a bottleneck in medium to large apps, so I aimed to achieve high performance without compromising UX.
 
 - **Solution**  
-1. I improved loading time by splitting React and ReactDOM into vendor chunks using `advancedChunks` in Rolldown and reduced the bundle size using `React.lazy()`.
-2. I improved perceived performance by showing skeleton UI while pages load and blurred placeholders during image loading.
-3. I improved the LCP metric (mobile LCP ~1.5s, desktop ~0.5s) by preloading the LCP image, controlling `fetchpriority`, and serving responsive images via `<picture>` with WebP.
-4. I reduced layout thrashing by using GPU-accelerated CSS properties (`transform`, `opacity`, etc.) for animations.
+1. I optimized loading time by splitting React and ReactDOM into vendor chunks with `advancedChunks` in Rolldown and reducing bundle size using `React.lazy()`.
+2. I improved perceived performance by rendering skeleton UI for lazy-loaded routes.
+3. I improved LCP (mobile ~1.5s, desktop ~0.5s) by preloading the LCP image, controlling `fetchpriority`, and serving responsive images via `<picture>` with WebP.
+4. I reduced layout thrashing by animating only GPU-accelerated CSS properties like `transform` or `opacity`.
 </details>
 
 ### **Vanilla Carousels**
